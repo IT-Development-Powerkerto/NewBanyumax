@@ -4249,6 +4249,9 @@ textarea.form-control.is-invalid {
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -5482,6 +5485,14 @@ textarea.form-control.is-invalid {
     grid-column: span 3 / span 3;
   }
 
+  .md\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .md\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
   .md\:mr-0 {
     margin-right: 0px;
   }
@@ -5571,6 +5582,11 @@ textarea.form-control.is-invalid {
     padding-right: 0px;
   }
 
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -5605,8 +5621,25 @@ textarea.form-control.is-invalid {
 }
 @media (min-width: 1024px) {
 
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }

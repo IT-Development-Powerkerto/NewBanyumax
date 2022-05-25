@@ -41,40 +41,40 @@
                 </div>
             </div>
             <div class="grid grid-cols-6 md:grid-cols-12 gap-4">
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.advertising-cost /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.total-leads /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.total-closing /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.closing-rate /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.upselling /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.total-box /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.cost-perresult /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.cross-selling /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.caq-lead /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.caq-customer /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.caq-bottle /> 
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.caq-total /> 
                 </div>
             </div>
@@ -148,14 +148,35 @@
                     </div> 
                 </div>
             </div>
-            <div class="flex flex-col md:grid-cols-12 gap-4">
-                <div class="w-full md:col-span-3">
+            <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+                    <livewire:card.product-information /> 
+                </div>
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+                    <livewire:card.product-information /> 
+                </div>
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+                    <livewire:card.product-information /> 
+                </div>
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+                    <livewire:card.product-information /> 
+                </div>
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+                    <livewire:card.product-information /> 
+                </div>
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+                    <livewire:card.product-information /> 
+                </div>
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+                    <livewire:card.product-information /> 
+                </div>
+                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
                     <livewire:card.product-information /> 
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mx-auto md:grid md:grid-cols-12 flex flex-col gap-4 pb-5 px-5 md:px-0">
+    <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">
         <div class="col-span-6">
             <livewire:table.staff /> 
         </div>
