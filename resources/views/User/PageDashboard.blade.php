@@ -148,7 +148,7 @@
     </div>
 
     @livewireScripts
-    <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
-    <script src="../node_modules/tw-elements/dist/js/index.min.js"></script>
+    <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
+    <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
 </body>
 </html>

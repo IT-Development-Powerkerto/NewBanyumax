@@ -4297,6 +4297,9 @@ textarea.form-control.is-invalid {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.mr-2 {
+  margin-right: 0.5rem;
+}
 .box-content {
   box-sizing: content-box;
 }
@@ -4786,6 +4789,10 @@ textarea.form-control.is-invalid {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 .pt-4 {
   padding-top: 1rem;
@@ -5319,6 +5326,10 @@ textarea.form-control.is-invalid {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
+.dark .dark\:focus\:border-blue-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(63 131 248 / var(--tw-border-opacity));
+}
 .dark .dark\:focus\:ring-blue-800:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(30 66 159 / var(--tw-ring-opacity));
@@ -5327,11 +5338,20 @@ textarea.form-control.is-invalid {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(28 100 242 / var(--tw-ring-opacity));
 }
+.dark .dark\:focus\:ring-blue-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(63 131 248 / var(--tw-ring-opacity));
+}
 @media (min-width: 640px) {
 
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
 @media (min-width: 768px) {
