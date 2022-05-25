@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     @livewireStyles
 </head>
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
@@ -128,6 +128,15 @@
                                             </div>
                                             <input type="text" name="link" id="link" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Link Product" required>
                                         </div>
+                                        <div class="relative">
+                                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                                <i class="las la-image text-gray-400"></i>
+                                            </div>
+                                            <label type="file" name="image-product" id="image-product" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Image Product" required>
+                                                <span class="text-gray-500">Image Product</span>
+                                                <input type="file" name="image-product" id="image-product" class="hidden" placeholder="Image Product" required>
+                                            </label>
+                                        </div>
                                         <div class="flex flex-row gap-3">
                                             <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add Product</button>
                                             <button type="submit" class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" data-modal-toggle="add-product">Cancel</button>
@@ -139,8 +148,8 @@
                     </div> 
                 </div>
             </div>
-            <div class="grid grid-cols-6 md:grid-cols-12 gap-4">
-                <div class="col-span-3">
+            <div class="flex flex-col md:grid-cols-12 gap-4">
+                <div class="w-full md:col-span-3">
                     <livewire:card.product-information /> 
                 </div>
             </div>
@@ -150,5 +159,17 @@
     @livewireScripts
     <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
     <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script>
+        $(function() {
+          $('input[name="selectdate"]').daterangepicker({
+            opens: 'left'
+          }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+          });
+        });
+    </script>
 </body>
 </html>

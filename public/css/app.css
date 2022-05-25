@@ -4258,6 +4258,10 @@ textarea.form-control.is-invalid {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -4410,6 +4414,12 @@ textarea.form-control.is-invalid {
 }
 .w-14 {
   width: 3.5rem;
+}
+.w-60 {
+  width: 15rem;
+}
+.w-96 {
+  width: 24rem;
 }
 .max-w-md {
   max-width: 28rem;
@@ -5371,12 +5381,20 @@ textarea.form-control.is-invalid {
     order: 1;
   }
 
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .md\:mr-0 {
     margin-right: 0px;
   }
 
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:flex {
