@@ -2,12 +2,14 @@
 
 namespace App\Http\Livewire\Card;
 
+use App\Models\Product;
 use Livewire\Component;
 
 class ProductInformation extends Component
 {
     public function render()
     {
-        return view('livewire.card.product-information');
+        $products = Product::all();
+        return view('livewire.card.product-information', compact('products'));
     }
 }
