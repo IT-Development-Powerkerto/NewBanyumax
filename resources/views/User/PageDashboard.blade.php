@@ -80,10 +80,10 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-5 md:px-0">
         <livewire:table.lead-tunneling /> 
     </div>
-    <div class="container mx-auto py-5">
+    <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="bg-white rounded-lg w-full shadow-sm p-5 border-2">
             <div class="pb-5">
                 <div class="border-b border-zinc-300 flex flex-row justify-between items-center py-3 px-5">
@@ -153,6 +153,14 @@
                     <livewire:card.product-information /> 
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container mx-auto md:grid md:grid-cols-12 flex flex-col gap-4 pb-5 px-5 md:px-0">
+        <div class="col-span-6">
+            <livewire:table.staff /> 
+        </div>
+        <div class="col-span-6">
+            <livewire:table.announcements /> 
         </div>
     </div>
 

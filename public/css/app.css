@@ -4246,6 +4246,9 @@ textarea.form-control.is-invalid {
 .col-span-3 {
   grid-column: span 3 / span 3;
 }
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -4373,6 +4376,12 @@ textarea.form-control.is-invalid {
 .h-modal {
   height: calc(100% - 2rem);
 }
+.h-16 {
+  height: 4rem;
+}
+.h-96 {
+  height: 24rem;
+}
 .w-full {
   width: 100%;
 }
@@ -4421,6 +4430,18 @@ textarea.form-control.is-invalid {
 .w-96 {
   width: 24rem;
 }
+.w-56 {
+  width: 14rem;
+}
+.w-36 {
+  width: 9rem;
+}
+.w-16 {
+  width: 4rem;
+}
+.w-72 {
+  width: 18rem;
+}
 .max-w-md {
   max-width: 28rem;
 }
@@ -4428,6 +4449,9 @@ textarea.form-control.is-invalid {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+}
+.max-w-xl {
+  max-width: 36rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -4480,6 +4504,9 @@ textarea.form-control.is-invalid {
 }
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
@@ -4602,6 +4629,10 @@ textarea.form-control.is-invalid {
 .rounded-r-lg {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}
+.rounded-b-lg {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 .border-2 {
   border-width: 2px;
@@ -4833,6 +4864,9 @@ textarea.form-control.is-invalid {
 }
 .text-right {
   text-align: right;
+}
+.text-justify {
+  text-align: justify;
 }
 .font-mono {
   font-family: ui-monospace, monospace;
@@ -5401,6 +5435,10 @@ textarea.form-control.is-invalid {
     display: flex;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -5421,12 +5459,30 @@ textarea.form-control.is-invalid {
     width: auto;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:w-fit {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .md\:w-56 {
+    width: 14rem;
+  }
+
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:gap-0 {
+    gap: 0px;
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -5445,6 +5501,11 @@ textarea.form-control.is-invalid {
 
   .md\:p-0 {
     padding: 0px;
+  }
+
+  .md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .md\:text-sm {
