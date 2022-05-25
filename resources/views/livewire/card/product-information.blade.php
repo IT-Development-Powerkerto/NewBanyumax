@@ -1,4 +1,4 @@
-<div class="bg-gradient-to-r from-orange-500 to-red-500 border rounded-lg w-52 md:w-72 h-36">
+<div class="bg-gradient-to-r from-orange-500 to-red-500 border rounded-lg w-full md:w-72 h-36">
     <div class="flex flex-col h-full justify-center gap-4 px-3">
         <div class="flex flex-row border-b py-2 justify-between items-center -mt-1">
             <h1 class="text-white tracking-wide font-semibold text-base ">Etawaku Platinum</h1>
