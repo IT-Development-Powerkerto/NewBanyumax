@@ -42,40 +42,40 @@
             </div>
             <div class="grid grid-cols-6 md:grid-cols-12 gap-4">
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.advertising-cost /> 
+                    <livewire:card.advertising-cost />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.total-leads /> 
+                    <livewire:card.total-leads />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.total-closing /> 
+                    <livewire:card.total-closing />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.closing-rate /> 
+                    <livewire:card.closing-rate />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.upselling /> 
+                    <livewire:card.upselling />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.total-box /> 
+                    <livewire:card.total-box />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.cost-perresult /> 
+                    <livewire:card.cost-perresult />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.cross-selling /> 
+                    <livewire:card.cross-selling />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.caq-lead /> 
+                    <livewire:card.caq-lead />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.caq-customer /> 
+                    <livewire:card.caq-customer />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.caq-bottle /> 
+                    <livewire:card.caq-bottle />
                 </div>
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.caq-total /> 
+                    <livewire:card.caq-total />
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
         @if(session()->has('error'))
             <livewire:flash-message.error />
         @endif
-        <livewire:table.lead-tunneling /> 
+        <livewire:table.lead-tunneling />
     </div>
     <div class="container mx-auto py-5 px-5 md:px-0">
         @if(session()->has('success'))
@@ -108,30 +108,7 @@
                 </div>
             </div>
             <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
-                <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
-                    <livewire:card.product-information /> 
-                </div>
+                <livewire:card.product-information />
             </div>
         </div>
     </div>
@@ -143,7 +120,7 @@
             <livewire:flash-message.error />
         @endif
         <div class="col-span-6">
-            <livewire:table.staff /> 
+            <livewire:table.staff />
         </div>
         <div class="col-span-6">
             @if(session()->has('success'))
@@ -152,7 +129,7 @@
             @if(session()->has('error'))
                 <livewire:flash-message.error />
             @endif
-            <livewire:table.announcements /> 
+            <livewire:table.announcements />
         </div>
     </div>
 

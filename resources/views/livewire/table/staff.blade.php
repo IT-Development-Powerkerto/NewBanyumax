@@ -25,6 +25,7 @@
     <div class="overflow-x-auto h-96 bg-white rounded-b-lg">
         <table class="w-full text-sm text-left">
             <thead class="text-xs font-semibold text-gray-400 bg-gray-50 border-b uppercase font-mono">
+
                 <tr>
                     <th scope="col" class="px-6 py-3">
                        Name
@@ -38,15 +39,17 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($users as $user)
+
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
                         <div class="flex flex-row gap-4 items-center">
                             <img src="assets/img/favicon.png" class="w-10 h-10 rounded-lg shadow-sm border" alt="">
-                            <h1>Fadilatun Nida Rahayu</h1>
+                            <h1>{{ $user->name }}</h1>
                         </div>
                     </td>
                     <td class="px-6 py-4">
-                        Customer Service
+                        {{ $user->role->name }}
                     </td>
                     <td class="px-6 py-4 text-center">
                         <div class="flex flex-row gap-2">
@@ -59,6 +62,7 @@
                         </div>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
