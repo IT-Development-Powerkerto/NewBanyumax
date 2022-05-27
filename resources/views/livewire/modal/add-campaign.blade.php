@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="assets/img/favicon.png" rel="icon">
-    <title>Edit Campaign</title>
-    <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
-    @livewireStyles
-</head>
-<body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar /> 
-    <div class="container mx-auto py-5 px-5 md:px-0">
-        <div class="bg-white p-2 md:p-5 rounded-lg shadow-sm">
+<!-- Main modal -->
+<div id="add-campaign" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+    <div class="relative p-4 w-full max-w-4xl h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow">
+            <button type="button" class="absolute top-5 right-6 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="add-campaign">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+            </button>
             <div class="py-6 px-6 lg:px-8">
-                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Edit Campaign</h3>
+                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Create Campaign</h3>
                 <form class="space-y-6" action="#">
                     <div class="flex flex-row gap-4">
                         <div class="relative w-full">
@@ -35,7 +22,7 @@
                             </div>
                             <select id="product" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Select Product</option>
-                                <option value="Role">Etawaku</option>
+                                <option value="product">Etawaku</option>
                             </select>
                         </div>
                     </div>
@@ -52,7 +39,7 @@
                             </div>
                             <select id="facebook_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Facebook Event</option>
-                                <option value="Role">Add To Cart</option>
+                                <option value="facebook_event">Add To Cart</option>
                             </select>
                         </div>
                     </div>
@@ -69,7 +56,7 @@
                             </div>
                             <select id="tiktok_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Tiktok Event</option>
-                                <option value="Role">Add To Cart</option>
+                                <option value="tiktok_event">Add To Cart</option>
                             </select>
                         </div>
                     </div>
@@ -79,7 +66,7 @@
                         </div>
                         <select id="whatsapp_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                             <option selected hidden>Whatsapp Event</option>
-                            <option value="Role">Add To Cart</option>
+                            <option value="whatsapp_event">Add To Cart</option>
                         </select>
                     </div>
                     <div class="relative">
@@ -111,15 +98,11 @@
                         </div>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save Changes</button>
-                        <a href="/campaign" class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Cancel</a>
+                        <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create Campaign</button>
+                        <button type="submit" class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" data-modal-toggle="add-campaign">Cancel</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-    @livewireScripts
-    <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
-</body>
-</html>
+</div> 

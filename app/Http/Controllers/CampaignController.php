@@ -13,7 +13,19 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        //
+        return view('User.Advertiser.PageCampaign');
+    }
+
+
+    public function editCampaign()
+    {
+        return view('User.EditPage.PageCampaign');
+    }
+
+
+    public function addOperator()
+    {
+        return view('User.Advertiser.PageOperator');
     }
 
     /**

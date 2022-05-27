@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CampaignController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,12 @@ Route::get('/', function () {
 Route::resource('/login', LoginController::class);
 Route::resource('/register', RegisterController::class);
 
-// Users
+// Users    
 Route::resource('/dashboard', DashboardController::class);
+
+// Users.Campaign
+Route::resource('/campaign', CampaignController::class);
+Route::get('/editcampaign', [CampaignController::class, 'editCampaign']);
+Route::get('/addoperator', [CampaignController::class, 'addOperator']);
+
 

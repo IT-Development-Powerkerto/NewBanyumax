@@ -38,7 +38,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><img src="assets/img/logo.png" alt=""></h1>
+      <h1 class="logo me-auto"><img src="assets/img/logo.png" style="width: 210px; hieght:210px" alt=""></h1>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#">Home</a></li>

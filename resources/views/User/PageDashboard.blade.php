@@ -18,7 +18,7 @@
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     
     <livewire:navbar.navbar /> 
-    <div class="container mx-auto py-5">
+    <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="bg-white rounded-lg w-full shadow-sm p-5 border-2">
             <div class="pb-5">
                 <div class="border-b border-zinc-300 flex flex-row justify-between items-center py-3 px-5">
