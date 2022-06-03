@@ -82,10 +82,13 @@
                                         <a href="/campaign" class="block px-4 py-2 hover:bg-gray-100">Campaigns</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
+                                        <a href="/budgetingadvertising" class="block px-4 py-2 hover:bg-gray-100">Budgheting Advertising</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Routine Evaluation</a>
+                                        <a href="/budgetingrealization" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
+                                    </li>
+                                    <li>
+                                        <a href="/routineevaluation" class="block px-4 py-2 hover:bg-gray-100">Routine Evaluation</a>
                                     </li>
                                 </ul>
                             </div>
