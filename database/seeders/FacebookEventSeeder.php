@@ -33,7 +33,7 @@ class FacebookEventSeeder extends Seeder
                 'event_pixel'  => "fbq('track', 'CompleteRegistration');",
             ],
             [
-                'name'        => 'Contack',
+                'name'        => 'Contact',
                 'event_pixel'  => "fbq('track', 'Contact');",
             ],
             [

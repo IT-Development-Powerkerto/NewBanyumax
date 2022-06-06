@@ -25,7 +25,8 @@ class DatabaseSeeder extends Seeder
             PackageSeeder::class,
             UserSeeder::class,
             RoleSeeder::class,
-            FacebookEventSeeder::class
+            FacebookEventSeeder::class,
+            TiktokEventSeeder::class
         ]);
     }
 }
