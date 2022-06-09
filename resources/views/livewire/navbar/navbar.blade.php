@@ -45,10 +45,10 @@
                 <div id="dropdownNavbar-role" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                     <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                         <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">CEO</a>
+                            <a href="/ceo" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">CEO</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Manager</a>
+                            <a href="/manager" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Manager</a>
                         </li>
                         <li>
                             <button id="dropdownNavbarLink" data-dropdown-placement="right" data-dropdown-toggle="dropdownNavbar-finance" class="flex items-center justify-between px-4 py-2 w-full hover:bg-gray-100 text-sm text-gray-700 font-semibold focus:text-cyan-400">
@@ -59,13 +59,13 @@
                             <div id="dropdownNavbar-finance" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
+                                        <a href="/finance" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Budgeting Request</a>
+                                        <a href="/budgetingrequest" class="block px-4 py-2 hover:bg-gray-100">Budgeting Request</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
+                                        <a href="/budgetingrealization" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
                                     </li>
                                 </ul>
                             </div>
@@ -102,16 +102,16 @@
                             <div id="dropdownNavbar-cs" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Create Promotions</a>
+                                        <a href="/createpromotion" class="block px-4 py-2 hover:bg-gray-100">Create Promotions</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Reimbursment CS</a>
+                                        <a href="/reimbursment" class="block px-4 py-2 hover:bg-gray-100">Reimbursment CS</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
+                                        <a href="/budgetingrealization" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Routine Evaluation</a>
+                                        <a href="/routineevaluation" class="block px-4 py-2 hover:bg-gray-100">Routine Evaluation</a>
                                     </li>
                                 </ul>
                             </div>
@@ -125,13 +125,13 @@
                             <div id="dropdownNavbar-inputer" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
+                                        <a href="/inputer" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Budgeting Request</a>
+                                        <a href="/budgetingrequest" class="block px-4 py-2 hover:bg-gray-100">Budgeting Request</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
+                                        <a href="/budgetingrealization" class="block px-4 py-2 hover:bg-gray-100">Budgheting Realization</a>
                                     </li>
                                 </ul>
                             </div>

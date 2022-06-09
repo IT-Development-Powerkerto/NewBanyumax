@@ -10,9 +10,13 @@
 
     @livewireStyles
 </head>
-<body>
-    
-    
+
+<body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
+    <livewire:navbar.navbar />
+    <div class="container mx-auto py-5">
+        <livewire:card.information-inputer />
+        <livewire:table.data-closing />
+    </div>
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>

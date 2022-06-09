@@ -13,7 +13,7 @@ class CeoController extends Controller
      */
     public function index()
     {
-        //
+        return view('User.Ceo.PageCEO');
     }
 
     /**
