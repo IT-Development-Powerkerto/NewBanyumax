@@ -21,11 +21,11 @@
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
 
-    <livewire:navbar.navbar />
+    <livewire:navbar.navbar2 />
     <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="pb-5">
             <div class="flex flex-row justify-between items-center py-3 px-5">
-                <h1 class="text-black font-semibold tracking-wide text-xl" style="">Dashboard Information</h1>
+                <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information</h1>
                 <button id="FilterReporting" data-dropdown-toggle="FiltersReporting"
                     class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
                     type="button">Daily <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-full shadow-sm p-5 border-2">
+        <div class="w-full p-5">
             <div class="grid grid-cols-6 md:grid-cols-12 gap-4">
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.advertising-cost />
@@ -105,10 +105,10 @@
         @if (session()->has('error'))
             <livewire:flash-message.error />
         @endif
-        <div class="bg-white rounded-lg w-full shadow-sm p-5 border-2">
+        <div>
             <div class="pb-5">
-                <div class="border-b border-zinc-300 flex flex-row justify-between items-center py-3 px-5">
-                    <h1 class="text-black font-semibold tracking-wide text-xl">Product Information</h1>
+                <div class="flex flex-row justify-between items-center py-3 px-5">
+                    <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Product Information</h1>
                     <!-- Modal toggle -->
                     <button
                         class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
@@ -119,6 +119,15 @@
                 </div>
             </div>
             <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
+                <livewire:card.product-information />
+                <livewire:card.product-information />
+                <livewire:card.product-information />
+                <livewire:card.product-information />
+            </div>
+            <div class="flex flex-col md:grid md:grid-cols-12 gap-4" style="margin-top:29px;">
+                <livewire:card.product-information />
+                <livewire:card.product-information />
+                <livewire:card.product-information />
                 <livewire:card.product-information />
             </div>
         </div>
@@ -131,16 +140,12 @@
             <livewire:flash-message.error />
         @endif
         <div class="col-span-6">
-            <livewire:table.staff />
-        </div>
-        <div class="col-span-6">
             @if (session()->has('success'))
                 <livewire:flash-message.success />
             @endif
             @if (session()->has('error'))
                 <livewire:flash-message.error />
             @endif
-            <livewire:table.announcements />
         </div>
     </div>
 

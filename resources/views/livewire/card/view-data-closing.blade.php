@@ -8,7 +8,7 @@
             <button
                 class="text-blue-400 w-max shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                 type="button" data-modal-toggle="add-campaign">
-                <span>Edit Data</span>
+                {{-- <span>Edit Data</span> --}}
             </button>
         </div>
     </div>
