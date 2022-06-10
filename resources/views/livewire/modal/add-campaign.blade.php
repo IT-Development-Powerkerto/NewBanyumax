@@ -4,11 +4,12 @@
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow">
             <button type="button" class="absolute top-5 right-6 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="add-campaign">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Create Campaign</h3>
-                <form class="space-y-6" action="#">
+                <form class="space-y-6" method="POST" action="{{ route('campaign.store') }}">
+                    @csrf
                     <div class="flex flex-row gap-4">
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -20,9 +21,11 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="las la-box text-gray-400"></i>
                             </div>
-                            <select id="product" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select name = 'product_id' class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Select Product</option>
-                                <option value="product">Etawaku</option>
+                                @foreach($products as $product)
+                                    <option value="{{$product->id}}">{{$product->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -37,9 +40,11 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-facebook-f text-gray-400"></i>
                             </div>
-                            <select id="facebook_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select name="facebook_pixel_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Facebook Event</option>
-                                <option value="facebook_event">Add To Cart</option>
+                                @foreach($facebookpixel as $fp)
+                                    <option value="{{$fp->id}}">{{$fp->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -54,9 +59,11 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-tumblr text-gray-400"></i>
                             </div>
-                            <select id="tiktok_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select name="tiktok_pixel_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Tiktok Event</option>
-                                <option value="tiktok_event">Add To Cart</option>
+                                @foreach($tiktokpixel as $tp)
+                                    <option value="{{$tp->id}}">{{$tp->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -64,9 +71,11 @@
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <i class="lab la-whatsapp text-gray-400"></i>
                         </div>
-                        <select id="whatsapp_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                        <select name="whatsapp_pixel_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                             <option selected hidden>Whatsapp Event</option>
-                            <option value="whatsapp_event">Add To Cart</option>
+                            @foreach($whatsapppixel as $wp)
+                                <option value="{{$wp->id}}">{{$wp->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="relative">
@@ -99,10 +108,10 @@
                     </div>
                     <div class="flex flex-row gap-3">
                         <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create Campaign</button>
-                        <button type="submit" class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" data-modal-toggle="add-campaign">Cancel</button>
+                        <button action="{{ route('campaign.index') }}" type="submit" class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" data-modal-toggle="add-campaign">Cancel</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</div> 
+</div>

@@ -16,9 +16,10 @@
     @livewireStyles
 </head>
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar /> 
+    @livewire('navbar.navbar')
+    {{-- <livewire:navbar.navbar />  --}}
     <div class="container mx-auto py-5 px-5 md:px-0">
-        <livewire:table.campaign /> 
+        @livewire('table.campaign')
     </div>
 
     @livewireScripts
