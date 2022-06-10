@@ -34,14 +34,19 @@ Route::get('/', function () {
 
 Route::resource('/login', LoginController::class);
 
-// Users    
+// Users
 Route::resource('/dashboard', DashboardController::class);
 Route::resource( '/realization', BudgetingRealizationController::class);
 
 
 // Users.Campaign
-Route::resource('/campaign', CampaignController::class);
-Route::get('/editcampaign', [CampaignController::class, 'editCampaign']);
+// Route::resource('/campaign', CampaignController::class);
+Route::get('/campaign', [CampaignController::class, 'index']) ->name('campaign.index');
+Route::get('/campaign/create', [CampaignController::class, 'create']) ->name('campaign.create');
+Route::post('/campaign/store', [CampaignController::class, 'store']) ->name('campaign.store');
+Route::get('/campaign/edit/{id}', [CampaignController::class, 'edit']) ->name('campaign.edit');
+Route::patch('/campaign/update/{id}', [CampaignController::class, 'update']) ->name('campaign.update');
+Route::get('/campaign/delete/{id}', [CampaignController::class, 'destroy']) ->name('campaign.destroy');
 Route::get('/addoperator', [CampaignController::class, 'addOperator']);
 
 // Users.Budgeting

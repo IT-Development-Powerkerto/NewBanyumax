@@ -32,10 +32,24 @@
                     <livewire:modal.add-campaign />
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+            <button class="text-blue-400 w-56 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center" type="button" data-modal-toggle="add-campaign">
+                {{-- <a href= {{ route('campaign.create') }}> --}}
+                <i class="las la-layer-group text-xl"></i>
+                <span>Create Campaign</span>
+            </button>
+            @livewire('modal.add-campaign')
+>>>>>>> origin
         </div>
         {{--  --}}
     </div>
+<<<<<<< HEAD
     <div class="overflow-x-auto h-96 bg-white -lg">
+=======
+    <div class="overflow-x-auto h-96 bg-white rounded-b-lg">
+        {{-- {{dd($products)}} --}}
+>>>>>>> origin
         <table class="w-full text-sm text-left">
             <thead class="text-xs font-semibold text-gray-400 border-b uppercase font-mono" style="background-color:#06B6D41A">
                 <tr>
@@ -63,12 +77,14 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($campaigns as $campaign)
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        1
+                        {{-- {{$campaign->id}} --}}
+                        {{$loop->iteration}}
                     </td>
                     <td class="px-6 py-4">
-                        Etawaku Platinum
+                        {{$campaign->campaign_name}}
                     </td>
                     <td class="px-6 py-4">
                         Hutari Trinurcahyani
@@ -77,6 +93,7 @@
                         100 Leads
                     </td>
                     <td class="px-6 py-4">
+<<<<<<< HEAD
                         <textarea type="text" id="fp-code" class="rounded-lg text-sm border border-grey-200" style="height: 52px; width:220px" disabled> <!doctype html>
 <html lang="en">...</textarea>
                     </td>
@@ -90,9 +107,82 @@
                                 title="Edit Campaign">
                                 <i class="las la-edit"></i>
                             </a>
+=======
+                        <button type="button" class="flex flex-row gap-2 items-center">
+                            <i class="las la-clipboard text-xl text-gray-400 hover:text-cyan-400"></i>
+                            <span>Facebook Pixel Code</span>
+                        </button type="button">
+                        <div class="hidden">
+                            <textarea name="" id="" cols="30" rows="10">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Optio commodi ex autem magni blanditiis voluptatum assumenda dignissimos
+                                temporibus pariatur accusantium! Architecto earum cum nobis accusamus sunt
+                                perferendis, modi ut perspiciatis sapiente illum aperiam repudiandae
+                                facere sed blanditiis consectetur molestiae, magni aliquam dolorum voluptatibus
+                                est reprehenderit dolorem! Ea excepturi quo soluta aperiam veniam ex.
+                                Facere minus, earum expedita nam tempore commodi nihil dicta delectus voluptatibus maiores sunt,
+                                deleniti ex quidem pariatur aliquam sapiente provident, voluptas animi cumque voluptates ipsa vel qui!
+                                Aliquam veniam pariatur deleniti repudiandae sed explicabo totam impedit,
+                                asperiores eos doloremque nesciunt natus quam dicta non necessitatibus autem modi.
+                            </textarea>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <button type="button" class="flex flex-row gap-2 items-center">
+                            <i class="las la-clipboard text-xl text-gray-400 hover:text-cyan-400"></i>
+                            <span>Tiktok Pixel Code</span>
+                        </button type="button">
+                        <div class="hidden">
+                            <textarea name="" id="" cols="30" rows="10">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Optio commodi ex autem magni blanditiis voluptatum assumenda dignissimos
+                                temporibus pariatur accusantium! Architecto earum cum nobis accusamus sunt
+                                perferendis, modi ut perspiciatis sapiente illum aperiam repudiandae
+                                facere sed blanditiis consectetur molestiae, magni aliquam dolorum voluptatibus
+                                est reprehenderit dolorem! Ea excepturi quo soluta aperiam veniam ex.
+                                Facere minus, earum expedita nam tempore commodi nihil dicta delectus voluptatibus maiores sunt,
+                                deleniti ex quidem pariatur aliquam sapiente provident, voluptas animi cumque voluptates ipsa vel qui!
+                                Aliquam veniam pariatur deleniti repudiandae sed explicabo totam impedit,
+                                asperiores eos doloremque nesciunt natus quam dicta non necessitatibus autem modi.
+                            </textarea>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <button type="button" class="flex flex-row gap-2 items-center">
+                            <i class="las la-clipboard text-xl text-gray-400 hover:text-cyan-400"></i>
+                            <span>Whatsapp Pixel Code</span>
+                        </button type="button">
+                        <div class="hidden">
+                            <textarea name="" id="" cols="30" rows="10">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Optio commodi ex autem magni blanditiis voluptatum assumenda dignissimos
+                                temporibus pariatur accusantium! Architecto earum cum nobis accusamus sunt
+                                perferendis, modi ut perspiciatis sapiente illum aperiam repudiandae
+                                facere sed blanditiis consectetur molestiae, magni aliquam dolorum voluptatibus
+                                est reprehenderit dolorem! Ea excepturi quo soluta aperiam veniam ex.
+                                Facere minus, earum expedita nam tempore commodi nihil dicta delectus voluptatibus maiores sunt,
+                                deleniti ex quidem pariatur aliquam sapiente provident, voluptas animi cumque voluptates ipsa vel qui!
+                                Aliquam veniam pariatur deleniti repudiandae sed explicabo totam impedit,
+                                asperiores eos doloremque nesciunt natus quam dicta non necessitatibus autem modi.
+                            </textarea>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-center">
+                        <div class="flex flex-row gap-2">
+                            <a href="{{ route('campaign.edit',$campaign->id) }}" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl" title="Edit Campaign">
+                                <i class="las la-edit"></i>
+                            </a>
+                            <a href="/addoperator" class="bg-gradient-to-r from-emerald-500 to-green-500 hover:bg-gradient-to-r hover:from-emerald-400 hover:to-green-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl" title="Add Operator">
+                                <i class="las la-users"></i>
+                            </a>
+                            <a href="{{ route('campaign.destroy',$campaign->id) }}" class="bg-gradient-to-r from-orange-500 to-red-500 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl" title="Delete Campaign">
+                                <i class="lar la-trash-alt"></i>
+                            </a>
+>>>>>>> origin
                         </div>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

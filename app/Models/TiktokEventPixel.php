@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class TiktokEventPixel extends Model
 {
     use HasFactory;
-    protected $guarded = ['*'];
+    // protected $fillable = [
+    //     'name',
+    //     'event_pixel',
+    // ];
+
+    protected $table = 'tiktok_event_pixels';
 }

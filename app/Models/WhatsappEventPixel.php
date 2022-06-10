@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FacebookEventPixel extends Model
+class WhatsappEventPixel extends Model
 {
     use HasFactory;
-    protected $table = 'facebook_event_pixels';
+
+    protected $table = 'whatsapp_event_pixels';
 }

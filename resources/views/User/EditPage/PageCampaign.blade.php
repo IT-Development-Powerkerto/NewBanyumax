@@ -16,26 +16,30 @@
     @livewireStyles
 </head>
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar /> 
+    <livewire:navbar.navbar />
     <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="bg-white p-2 md:p-5 rounded-lg shadow-sm">
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Edit Campaign</h3>
-                <form class="space-y-6" action="#">
+                <form method="post" class="space-y-6" action="{{ route('campaign.update',['id' => $campaigns->id]) }}">
+                    @csrf
+                    <input type="hidden" name="_method" value="patch">
                     <div class="flex flex-row gap-4">
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="las la-layer-group text-gray-400"></i>
                             </div>
-                            <input type="text" name="campaign_name" id="campaign_name" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Campaign Name" required>
+                            <input type="text" value="{{$campaigns->campaign_name}}" name="campaign_name" id="campaign_name" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Campaign Name" >
                         </div>
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="las la-box text-gray-400"></i>
                             </div>
-                            <select id="product" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select id="product_id" name='product_id' class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" >
                                 <option selected hidden>Select Product</option>
-                                <option value="Role">Etawaku</option>
+                                @foreach($products as $product)
+                                <option value="{{ $product->id }}" {{ ($product->id == $campaigns->product_id) ? "selected" : "" }}>{{$product->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -44,15 +48,17 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-facebook-f text-gray-400"></i>
                             </div>
-                            <input type="facebook_pixel" name="facebook_pixel" id="facebook_pixel" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Facebook Pixel" required>
+                            <input type="facebook_pixel" value="{{$campaigns->facebook_pixel}}" name="facebook_pixel" id="facebook_pixel" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Facebook Pixel">
                         </div>
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-facebook-f text-gray-400"></i>
                             </div>
-                            <select id="facebook_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select id="facebook_pixel_id" name="facebook_pixel_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Facebook Event</option>
-                                <option value="Role">Add To Cart</option>
+                                @foreach($facebookpixel as $fp)
+                                <option value="{{ $fp->id }}" {{ ($fp->id == $campaigns->facebook_pixel_id) ? "selected" : "" }}>{{$fp->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -61,15 +67,17 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-tumblr text-gray-400"></i>
                             </div>
-                            <input type="tiktok_pixel" name="tiktok_pixel" id="tiktok_pixel" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Tiktok Pixel" required>
+                            <input type="tiktok_pixel" value="{{$campaigns->tiktok_pixel}}" name="tiktok_pixel" id="tiktok_pixel" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Tiktok Pixel">
                         </div>
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-tumblr text-gray-400"></i>
                             </div>
-                            <select id="tiktok_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select id="tiktok_pixel_id" name="tiktok_pixel_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                                 <option selected hidden>Tiktok Event</option>
-                                <option value="Role">Add To Cart</option>
+                                @foreach($tiktokpixel as $tp)
+                                    <option value="{{ $tp->id }}" {{ ($tp->id == $campaigns->tiktok_pixel_id) ? "selected" : "" }}>{{$tp->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -77,28 +85,30 @@
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <i class="lab la-whatsapp text-gray-400"></i>
                         </div>
-                        <select id="whatsapp_event" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                        <select id="whatsapp_pixel_id" name="whatsapp_pixel_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                             <option selected hidden>Whatsapp Event</option>
-                            <option value="Role">Add To Cart</option>
+                            @foreach($whatsapppixel as $wp)
+                                <option value="{{ $wp->id }}" {{ ($wp->id == $campaigns->whatsapp_pixel_id) ? "selected" : "" }}>{{$wp->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="relative">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <i class="las la-user-friends text-gray-400"></i>
                         </div>
-                        <textarea type="customer_cs" name="customer_cs" id="customer_cs" class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Customer to CS" required></textarea>
+                        <textarea value="" type="customer_cs" name="customer_cs" id="customer_cs" class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Customer to CS">{{$campaigns->customer_cs}}</textarea>
                     </div>
                     <div class="relative">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <i class="las la-user-friends text-gray-400"></i>
                         </div>
-                        <textarea type="cs_customer" name="cs_customer" id="cs_customer" class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="CS to Customer" required></textarea>
+                        <textarea value="" type="cs_customer" name="cs_customer" id="cs_customer" class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="CS to Customer">{{$campaigns->cs_customer}}</textarea>
                     </div>
                     <div class="relative">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <i class="las la-sticky-note text-gray-400"></i>
                         </div>
-                        <textarea type="thanks_page" name="thanks_page" id="thanks_page" class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Thanks Page" required></textarea>
+                        <textarea value="" type="thanks_page" name="thanks_page" id="thanks_page" class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Thanks Page" >{{$campaigns->thanks_page}}</textarea>
                     </div>
                     <div class="flex flex-row justify-center gap-5 py-2">
                         <div class="flex items-center">
@@ -112,7 +122,7 @@
                     </div>
                     <div class="flex flex-row gap-3">
                         <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save Changes</button>
-                        <a href="/campaign" class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Cancel</a>
+                        <a href="{{ route('campaign.index') }}" class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Cancel</a>
                     </div>
                 </form>
             </div>

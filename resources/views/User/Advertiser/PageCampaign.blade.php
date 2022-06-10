@@ -20,6 +20,7 @@
 </head>
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
+<<<<<<< HEAD
     <livewire:navbar.navbar />
     <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="flex">
@@ -28,6 +29,12 @@
             <livewire:card.total-lead />
         </div>
         <livewire:table.campaign />
+=======
+    @livewire('navbar.navbar')
+    {{-- <livewire:navbar.navbar />  --}}
+    <div class="container mx-auto py-5 px-5 md:px-0">
+        @livewire('table.campaign')
+>>>>>>> origin
     </div>
 
     @livewireScripts

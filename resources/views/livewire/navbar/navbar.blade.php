@@ -79,7 +79,7 @@
                             <div id="dropdownNavbar-adv" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                     <li>
-                                        <a href="/campaign" class="block px-4 py-2 hover:bg-gray-100">Campaigns</a>
+                                        <a href="{{ route('campaign.index') }}" class="block px-4 py-2 hover:bg-gray-100">Campaigns</a>
                                     </li>
                                     <li>
                                         <a href="/budgetingadvertising" class="block px-4 py-2 hover:bg-gray-100">Budgheting Advertising</a>
