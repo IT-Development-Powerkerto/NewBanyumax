@@ -68,7 +68,7 @@ class BudgetingRealizationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('User.Advertiser.PageBudgetingRealization');
     }
 
     /**

@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-    <div class="h-96 bg-white rounded-b-lg px-5 py-5 ">
+    <div class="h-max bg-white rounded-b-lg px-5 py-5 ">
         <div class="border-t border-black-200">
 
             <div class="flex">
@@ -51,7 +51,7 @@
             </div>
             <div class="flex justify-end w-full">
                 <button type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                    class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">Submit</button>
             </div>
         </div>
     </div>

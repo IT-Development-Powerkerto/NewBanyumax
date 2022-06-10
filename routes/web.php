@@ -10,7 +10,13 @@ use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\BudgetingAdvertisingController;
 use App\Http\Controllers\BudgetingRealizationController;
 use App\Http\Controllers\RoutineEvaluation;
-
+use App\Http\Controllers\CeoController;
+use App\Http\Controllers\CreatePropmotions;
+use App\Http\Controllers\Reimbursment;
+use App\Http\Controllers\BudgetingRequest;
+use App\Http\Controllers\FinanceDashboard;
+use App\Http\Controllers\DashboardInputer;
+use App\Http\Controllers\ViewDataClosing;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,3 +53,20 @@ Route::get('/addoperator', [CampaignController::class, 'addOperator']);
 Route::resource('/budgetingadvertising', BudgetingAdvertisingController::class);
 Route::resource('/budgetingrealization', BudgetingRealizationController::class);
 Route::resource('/routineevaluation', RoutineEvaluation::class);
+
+// User.Ceo
+Route::resource('/ceo', CeoController::class);
+// User.Manager
+Route::resource('/manager', CeoController::class);
+
+// User.Customer Service
+Route::resource('/createpromotion', CreatePropmotions::class);
+Route::resource('/reimbursment', Reimbursment::class);
+
+// User.Finance
+Route::resource('/finance', FinanceDashboard::class);
+Route::resource('/budgetingrequest', BudgetingRequest::class);
+
+//User.Inputer
+Route::resource('/inputer', DashboardInputer::class);
+Route::resource('/viewdataclosing', ViewDataClosing::class);

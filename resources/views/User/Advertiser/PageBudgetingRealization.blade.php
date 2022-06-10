@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/img/favicon.png" rel="icon">
-    <title>Budgeting Advertising</title>
+    <title>Budgeting Realization</title>
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -21,7 +21,7 @@
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar />
-    <div class="px-6 py-6 w-full bg-blue-600 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-6 py-6 w-full bg-white-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="container mx-auto py-5">
             <livewire:card.request-bugeting-realization />
             <livewire:table.activity-logs />
