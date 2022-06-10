@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class FacebookEventPixel extends Model
 {
     use HasFactory;
-    protected $guarded = ['*'];
+    protected $table = 'facebook_event_pixels';
 }
