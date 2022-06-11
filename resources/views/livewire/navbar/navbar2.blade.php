@@ -35,19 +35,19 @@
                 <a href="/dashboard" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Dashboard</a>
             </li>
             <li>
-                <a href="/campaign" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Create Promotion</a>
+                <a href="/campaign" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Campaign</a>
             </li>
             <li>
-                <a href="/dashboard" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Reimbursment</a>
+                <a href="/" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Operator</a>
             </li>
             <li>
-                <a href="/dashboard" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Budgeting Advertising</a>
+                <a href="/budgetingadvertising" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Budgeting Advertising</a>
             </li>
             <li>
-                <a href="/dashboard" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Budgeting Realization</a>
+                <a href="/budgetingrealization" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Budgeting Realization</a>
             </li>
             <li>
-                <a href="/dashboard" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Routine Evaluation</a>
+                <a href="/routineevaluation" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Routine Evaluation</a>
             </li>
         </ul>
         </div>

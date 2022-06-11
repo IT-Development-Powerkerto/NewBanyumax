@@ -13,7 +13,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('User.PageDashboard');
+        return view('User.Advertiser.PageDashboard');
     }
 
     /**
