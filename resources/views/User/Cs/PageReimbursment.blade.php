@@ -20,11 +20,76 @@
 </head>
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar />
-    <div class="px-6 py-6 w-full rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <div class="container mx-auto py-5">
-            <livewire:card.data-reimbursement />
-            <livewire:table.activity-log-reimbursement /> 
+    <livewire:navbar.navbar-cs2 />
+
+    <div class="container mx-auto py-5 px-5 md:px-0">
+        <div class="mx-10">
+            <div class="">
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="font-semibold tracking-wide text-xl">Reimbursement</h1>
+                    <!-- Modal toggle -->
+                    <button
+                        class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                        type="button" data-modal-toggle="add-product">
+                       + Add Reimbursement   
+                    </button>
+                    <livewire:modal.add-product />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto mb-10">
+
+        <div class="grid grid-cols-3 gap-4 mx-10">
+            <div class="bg-white flex flex-row p-4 gap-4 rounded-lg">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#3B82F6">
+                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                </div>
+                <div class="text-blue-500 text-2xl font-bold self-center">
+                    20
+                </div>
+                <div class="text-blue-500 font-bold self-center">
+                    Total Reimbursement
+                </div>
+            </div>
+    
+            <div class="bg-white flex flex-row p-4 gap-4 rounded-lg">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#06B6D4">
+                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                </div>
+                <div class="text-cyan-500 text-2xl font-bold self-center">
+                    20
+                </div>
+                <div class="text-cyan-500 font-bold self-center">
+                    Approved Reimbursement
+                </div>
+            </div>
+            
+            <div class="bg-white flex flex-row p-4 gap-4 rounded-lg">
+                <div class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#EF4444">
+                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                    </svg>
+                </div>
+                <div class="text-red-500 text-2xl font-bold self-center">
+                    20
+                </div>
+                <div class="text-red-500 font-bold self-center">
+                    Rejected Reimbursement
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="px-10 w-full rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div class="container mx-auto">
+            <livewire:table.reimbursment />
         </div>
     </div>
 

@@ -33,7 +33,7 @@
                     <button
                         class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
                         type="button" data-modal-toggle="add-product">
-                        Add Product
+                       + Add Product
                     </button>
                     <livewire:modal.add-product />
                 </div>
