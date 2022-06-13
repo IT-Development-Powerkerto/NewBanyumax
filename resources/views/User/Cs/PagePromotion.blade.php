@@ -20,10 +20,28 @@
 </head>
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar />
-    <div class="px-6 py-6 w-full rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-        <div class="container mx-auto py-5">
-            <livewire:card.create-promotion /> 
+    <livewire:navbar.navbar-cs2 />
+
+    <div class="container mx-auto py-5 px-5 md:px-0">
+        <div class="mx-10">
+            <div class="">
+                <div class="flex flex-row justify-between items-center">
+                    <h1 class="font-semibold tracking-wide text-xl">Promotion</h1>
+                    <!-- Modal toggle -->
+                    <button
+                        class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                        type="button" data-modal-toggle="add-product">
+                        Add Promotion
+                    </button>
+                    <livewire:modal.add-product />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-10 w-full rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+        <div class="container mx-auto">
+            <livewire:table.create-promotion-cs />
         </div>
     </div>
 
