@@ -1,11 +1,23 @@
 <div>
-    <div class="mt-10 flex flex-col w-full">
-        <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color: #7E8299">Weekly Info ADV Activity</h1>
-        <div class="flex flex-row gap-2">
-            <span class="text-gray-300 font-reguler text-sm" style="color: #7E8299">Daily</span>
+    <div class="flex">
+        <div class="mt-1 flex flex-col w-full">
+            <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color:#7E8299">Budgeting Realization</h1>
+            <div class="flex flex-row gap-2">
+                <span class="font-reguler text-sm" style="color:#7E8299">100 Leads</span>
+            </div>
         </div>
+        <button
+            class="text-blue-400 h-max w-56 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+            type="button" data-modal-toggle="add-campaign">
+            {{-- <a href= {{ route('campaign.create') }}> --}}
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                  </svg>
+            <span>Create Budgeting</span>
+        </button>
+        @livewire('modal.add-budgeting')
     </div>
-    <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+    <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg" style="margin-top:20px">
         <div class="flex flex-row justify-between items-center w-full">
             <div class="relative w-36 md:w-fit">
                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -29,44 +41,38 @@
             style="background-color: #06B6D41A">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Period
+                    Time
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Adv Name
+                    Item
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Leads
+                    Division
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Closing
+                    Description
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Quantity
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Omzet (Rp)
+                    Actions
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    Maret - Week 1
+                    2022-05-31 00:00:00
                 </td>
                 <td class="px-6 py-4">
-                    Hutari Trinurcahyani
+                    Iklan Etawaku Platinum
                 </td>
                 <td class="px-6 py-4">
-                    100 Leads
+                    Advertiser
                 </td>
                 <td class="px-6 py-4">
-                    100
+                    -
                 </td>
                 <td class="px-6 py-4">
                     700
-                </td>
-                <td class="px-6 py-4" style="color:#009EF7">
-                    Rp  200.000 ,00
                 </td>
             </tr>
         </tbody>
@@ -99,4 +105,3 @@
         </div>
     </div>
 </div>
-

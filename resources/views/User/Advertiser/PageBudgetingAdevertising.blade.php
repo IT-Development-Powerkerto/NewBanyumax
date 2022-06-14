@@ -16,9 +16,20 @@
     @livewireStyles
 </head>
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar /> 
+    {{-- <livewire:navbar.navbar2 /> --}}
+    @livewire('navbar.navbar2', [
+        'dashboard' => '/dashboard-adv',
+        'campaign' => '/campaign-adv',
+        'operator' => '/operator-adv',
+        'budgetingadvertising' => '/budgetingadvertising-adv',
+        'budgetingrealization' => '/budgetingrealization-adv',
+        'routineevaluation' => '/routineevaluation-adv',
+    ])
+    {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
     <div class="container mx-auto py-5">
-        <livewire:card.data-budgetin-adv />
+        <livewire:table.data-budgeting-adv />
+        <livewire:table.weekly-info-adv />
+        <livewire:table.adv-activity-budgeting />
     </div>
 
     @livewireScripts

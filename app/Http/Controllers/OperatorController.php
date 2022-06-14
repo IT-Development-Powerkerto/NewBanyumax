@@ -13,7 +13,7 @@ class OperatorController extends Controller
      */
     public function index()
     {
-        //
+        return view('User.Advertiser.PageOperator');
     }
 
     /**

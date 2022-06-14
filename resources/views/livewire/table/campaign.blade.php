@@ -1,11 +1,27 @@
 <div>
-    <div class="mt-1 flex flex-col w-full">
-        <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color:#7E8299">Campaigns</h1>
-        <div class="flex flex-row gap-2">
-            <span class="font-reguler text-sm" style="color:#7E8299">100 Campaigns</span>
+    <div class="flex">
+        <div class="mt-1 flex flex-col w-full">
+            <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color:#7E8299">Campaigns</h1>
+            <div class="flex flex-row gap-2">
+                <span class="font-reguler text-sm" style="color:#7E8299">100 Campaigns</span>
+            </div>
         </div>
+        <button
+            class="text-blue-400 h-max w-56 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+            type="button" data-modal-toggle="add-campaign">
+            {{-- <a href= {{ route('campaign.create') }}> --}}
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <span>Create Campaign</span>
+        </button>
+        @livewire('modal.add-campaign')
     </div>
-    <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+
+    <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg"
+        style="margin-top:20px">
         <div class="flex flex-row justify-between items-center w-full">
             <div class="relative w-36 md:w-fit">
                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -19,22 +35,11 @@
                     class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 ring-blue-400 border-blue-400"
                     placeholder="Search..">
             </div>
-
-            <div class="flex flex-col gap-2 md:gap-0 md:flex-row">
-            </div>
-            <button
-                class="text-blue-400 w-56 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-                type="button" data-modal-toggle="add-campaign">
-                {{-- <a href= {{ route('campaign.create') }}> --}}
-                <i class="las la-layer-group text-xl"></i>
-                <span>Create Campaign</span>
-            </button>
-            @livewire('modal.add-campaign')
         </div>
     </div>
-    <div class="overflow-x-auto h-96 bg-white -lg">
+    <div class="h-96 bg-white -lg">
 
-        <div class="overflow-x-auto h-96 bg-white rounded-b-lg">
+        <div class="h-96 bg-white rounded-b-lg">
             {{-- {{dd($products)}} --}}
 
             <table class="w-full text-sm text-left">
