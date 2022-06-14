@@ -28,14 +28,14 @@
         <div class="mx-10">
             <div class="pb-3">
                 <div class="flex flex-row justify-between items-center py-3">
-                    <h1 class="text-gray-400 font-semibold tracking-wide text-xl">Product Information</h1>
+                    <h1 class="text-black font-semibold tracking-wide text-xl">Product Information</h1>
                     <!-- Modal toggle -->
                     <button
-                        class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                        class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
                         type="button" data-modal-toggle="add-product">
                        + Add Product
                     </button>
-                    <livewire:modal.add-product />
+                    <livewire:modal.add-product2 />
                 </div>
             </div>
             <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
