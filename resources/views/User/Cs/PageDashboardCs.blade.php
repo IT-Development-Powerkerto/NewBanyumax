@@ -41,6 +41,8 @@
             <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
                 <livewire:card.product-information />
             </div>
+            <livewire:modal.edit-product />
+            <livewire:modal.delete-product />
         </div>
     </div>
     <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">

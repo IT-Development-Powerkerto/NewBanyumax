@@ -5,8 +5,8 @@
             <div class="flex flex-row border-orange-500 border-b py-2 justify-between items-center -mt-1">
                 <h1 class="text-orange-500 tracking-wide font-semibold text-base ">{{ $product->name }}</h1>
                 <div class="text-white text-xl -mt-1">
-                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-edit hover:text-cyan-500"></i>
-                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-trash-alt hover:text-red-700"></i>
+                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-edit hover:text-cyan-500" data-modal-toggle="edit-product"></i>
+                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-trash-alt hover:text-red-700" data-modal-toggle="delete-product" ></i>
                 </div>
             </div>
             <div class="flex flex-row justify-between items-center gap-2">
