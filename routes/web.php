@@ -17,6 +17,9 @@ use App\Http\Controllers\BudgetingRequest;
 use App\Http\Controllers\FinanceDashboard;
 use App\Http\Controllers\DashboardInputer;
 use App\Http\Controllers\ViewDataClosing;
+use App\Http\Controllers\OperatorController;
+use App\Http\Controllers\EditLeadTunneling;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,25 +37,27 @@ Route::get('/', function () {
 
 Route::resource('/login', LoginController::class);
 
+Route::resource('/editleadtunneling', EditLeadTunneling::class);
 // Users
-Route::resource('/dashboard', DashboardController::class);
+
 Route::resource( '/realization', BudgetingRealizationController::class);
 
 
 // Users.Campaign
 // Route::resource('/campaign', CampaignController::class);
-Route::get('/campaign', [CampaignController::class, 'index']) ->name('campaign.index');
-Route::get('/campaign/create', [CampaignController::class, 'create']) ->name('campaign.create');
-Route::post('/campaign/store', [CampaignController::class, 'store']) ->name('campaign.store');
-Route::get('/campaign/edit/{id}', [CampaignController::class, 'edit']) ->name('campaign.edit');
-Route::patch('/campaign/update/{id}', [CampaignController::class, 'update']) ->name('campaign.update');
-Route::get('/campaign/delete/{id}', [CampaignController::class, 'destroy']) ->name('campaign.destroy');
-Route::get('/addoperator', [CampaignController::class, 'addOperator']);
+Route::get('/campaign-adv', [CampaignController::class, 'index']) ->name('campaign.index');
+Route::get('/campaign-adv/create', [CampaignController::class, 'create']) ->name('campaign.create');
+Route::post('/campaign-adv/store', [CampaignController::class, 'store']) ->name('campaign.store');
+Route::get('/campaign-adv/edit/{id}', [CampaignController::class, 'edit']) ->name('campaign.edit');
+Route::patch('/campaign-adv/update/{id}', [CampaignController::class, 'update']) ->name('campaign.update');
+Route::get('/campaign-adv/delete/{id}', [CampaignController::class, 'destroy']) ->name('campaign.destroy');
 
-// Users.Budgeting
-Route::resource('/budgetingadvertising', BudgetingAdvertisingController::class);
-Route::resource('/budgetingrealization', BudgetingRealizationController::class);
-Route::resource('/routineevaluation', RoutineEvaluation::class);
+// Users.Advertiser
+Route::resource('/dashboard-adv', DashboardController::class);
+Route::resource('/operator-adv', OperatorController::class);
+Route::resource('/budgetingadvertising-adv', BudgetingAdvertisingController::class);
+Route::resource('/budgetingrealization-adv', BudgetingRealizationController::class);
+Route::resource('/routineevaluation-adv', RoutineEvaluation::class);
 
 // User.Ceo
 Route::resource('/ceo', CeoController::class);
