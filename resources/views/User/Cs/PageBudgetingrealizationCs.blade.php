@@ -29,11 +29,11 @@
                     <h1 class="font-semibold tracking-wide text-xl">Budgeting Realization</h1>
                     <!-- Modal toggle -->
                     <button
-                        class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                        type="button" data-modal-toggle="add-product">
+                        class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                        type="button" data-modal-toggle="add-budgeting-realization-cs">
                        + Add Budgeting Realization
                     </button>
-                    <livewire:modal.add-product />
+                    <livewire:modal.add-budgeting-realization-cs />
                 </div>
             </div>
         </div>
