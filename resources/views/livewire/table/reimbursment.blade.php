@@ -60,7 +60,7 @@
                     </Span>
                 </td>
                 <td class="px-6 py-4">
-                    <a href="#" class="text-white bg-red-500 py-2 px-4 rounded-md">
+                    <a data-modal-toggle="delete-product" href="#" class="text-white bg-red-500 py-2 px-4 rounded-md">
                         <i class="las la-trash"></i>
                         Delete
                     </a>

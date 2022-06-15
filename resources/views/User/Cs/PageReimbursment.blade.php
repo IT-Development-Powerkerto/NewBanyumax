@@ -29,11 +29,11 @@
                     <h1 class="font-semibold tracking-wide text-xl">Reimbursement</h1>
                     <!-- Modal toggle -->
                     <button
-                        class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                        type="button" data-modal-toggle="add-product">
+                    class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                        type="button" data-modal-toggle="add-reimbursement">
                        + Add Reimbursement   
                     </button>
-                    <livewire:modal.add-product />
+                    <livewire:modal.add-reimbursement />
                 </div>
             </div>
         </div>
@@ -92,6 +92,7 @@
             <livewire:table.reimbursment />
         </div>
     </div>
+    <livewire:modal.delete-product />
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
