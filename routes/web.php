@@ -67,6 +67,15 @@ Route::resource('/manager', CeoController::class);
 // User.Customer Service
 Route::resource('/createpromotion', CreatePropmotions::class);
 Route::resource('/reimbursment', Reimbursment::class);
+Route::get('/dashboard-cs', function () {
+    return view('User.Cs.PageDashboardCS');
+});
+Route::get('/budgetingrealization-cs', function () {
+    return view('User.Cs.PageBudgetingrealizationCs');
+});
+Route::get('/routineevaluation-cs', function () {
+    return view('User.Cs.PageRoutineEvaluationCs');
+});
 
 // User.Finance
 Route::resource('/finance', FinanceDashboard::class);
