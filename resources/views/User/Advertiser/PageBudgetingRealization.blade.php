@@ -30,10 +30,9 @@
         'routineevaluation' => '/routineevaluation-adv',
     ])
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="px-6 py-6 w-full bg-white-400 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-6 py-6 w-full bg-white-400 rounded-lg dark:bg-gray-800 dark:border-gray-700">
         <div class="container mx-auto py-5">
             <livewire:table.budgeting-realization />
-            <livewire:table.activity-logs />
         </div>
     </div>
 

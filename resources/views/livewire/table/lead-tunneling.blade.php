@@ -245,7 +245,7 @@
                         </div>
                     </td>
                     <td class="px-6 py-4 text-center">
-                        <a href="#"
+                        <a href="/editleadtunneling"
                             class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                             <i class="las la-edit"></i>
                         </a>

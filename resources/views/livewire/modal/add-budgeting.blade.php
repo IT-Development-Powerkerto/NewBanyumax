@@ -63,63 +63,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <i class="lab la-facebook-f text-gray-400"></i>
-                        </div>
-                        <select name="facebook_pixel_id"
-                            class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            required>
-                            <option selected hidden>Facebook Event Form</option>
-                            <option>Add Payment Info</option>
-                            <option>Add to Cart</option>
-                            <option>Add to Wishlist</option>
-                            <option>Complate Registration</option>
-                            <option>Contract</option>
-                            <option>Customize Product</option>
-                            <option>Lead</option>
-                            <option>Purchase</option>
-                            <option>View Content</option>
-                        </select>
-                    </div>
                     <div class="relative">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                             <i class="las la-sticky-note text-gray-400"></i>
                         </div>
-                        <textarea type="thanks_page" name="thanks_page" id="thanks_page"
+                        <textarea type="description_realization" name="description_realization" id="description_realization"
                             class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="Thanks Page" required></textarea>
-                    </div>
-                    <div class="relative w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <i class="lab la-tumblr text-gray-400"></i>
-                        </div>
-                        <select name="facebook_even_wa"
-                            class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            required>
-                            <option selected hidden>Facebook Event WA</option>
-                        </select>
-                    </div>
-                    <div class="relative">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <i class="las la-user-friends text-gray-400"></i>
-                        </div>
-                        <textarea type="customer_cs" name="customer_cs" id="customer_cs"
-                            class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="Customer to CS" required></textarea>
-                    </div>
-                    <div class="relative">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <i class="las la-user-friends text-gray-400"></i>
-                        </div>
-                        <textarea type="cs_customer" name="cs_customer" id="cs_customer"
-                            class="block px-4 py-2 pl-10 h-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                            placeholder="CS to Customer" required></textarea>
+                            placeholder="Description" required></textarea>
                     </div>
                     <div class="flex flex-row gap-3">
                         <button type="submit"
-                            class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create
-                            Campaign</button>
+                            class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Create</button>
                     </div>
                 </form>
             </div>
