@@ -58,31 +58,22 @@
                         Hutari Tri
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#" class="bg-gray-200 py-1 px-3 rounded-lg">
-                            Action ⯆
-                        </a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        Generos Discount 50%
-                    </td>
-                    <td class="px-6 py-4">
-                        Generos
-                    </td>
-                    <td class="px-6 py-4">
-                        Shipping Cost
-                    </td>
-                    <td class="px-6 py-4">
-                        Rp 50.000
-                    </td>
-                    <td class="px-6 py-4">
-                        Hutari Tri
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#" class="bg-gray-200 py-1 px-3 rounded-lg">
-                            Action ⯆
-                        </a>
+                        <button type="button" class="bg-gray-200 py-1 px-3 rounded-lg flex flex-row" aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
+                           Action 
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
+                            <ul class="py-1" aria-labelledby="dropdownAction">
+                                <li>
+                                    <a href="#" data-modal-toggle="edit-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-modal-toggle="delete-product" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 " data-modal-toggle="delete-product">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
                     </td>
                 </tr>
             </tbody>
