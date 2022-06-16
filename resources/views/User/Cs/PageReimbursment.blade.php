@@ -36,8 +36,8 @@
     </div>
 
     <div class="container mx-auto mb-10">
-
-        <div class="grid grid-cols-3 gap-4 px-5">
+        <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5">
+            
             <div class="bg-white flex flex-row p-4 gap-4 rounded-lg">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#3B82F6">
@@ -79,8 +79,8 @@
                     Rejected Reimbursement
                 </div>
             </div>
+
         </div>
-        
     </div>
 
     <div class="px-5 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
