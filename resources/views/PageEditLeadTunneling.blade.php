@@ -29,7 +29,7 @@
                     <label class="px-3 text-gray-500">Advertiser</label>
                     <input type="advertise_lead" id="advertise_lead" name="advertise_lead" disabled
                         placeholder="Alfian Ridho Utama"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="bg-slate-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Advertiser Name</label>
                 </div>
                 <div
@@ -37,7 +37,7 @@
                     <label class="text-gray-500 px-3">Operator</label>
                     <input type="operator_lead" id="operator_lead" name="operator_lead" disabled
                         placeholder="Alfian Ridho Utama"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Advertiser Name</label>
                 </div>
                 <div
@@ -89,7 +89,7 @@
                     <label class="px-3 text-gray-500">Product</label>
                     <input type="product_lead" id="product_lead" name="product_lead" disabled
                         placeholder="Etawaku Platinum"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Product</label>
                 </div>
                 <div
@@ -223,14 +223,14 @@
                     <label class="px-3 text-gray-500">Product Promotion</label>
                     <input type="priceproductpromotion_lead" id="priceproductpromotion_lead"
                         name="priceproductpromotion_lead" disabled placeholder="0"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Product Promotion</label>
                 </div>
                 <div
                     class="text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 space-x-3">
                     <label class="text-gray-500 px-3">Total Price</label>
-                    <input type="totalprice_lead" id="totalprice_lead" name="totalprice_lead" placeholder="0"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <input type="totalprice_lead" id="totalprice_lead" name="totalprice_lead" placeholder="0" disabled
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Total Price</label>
                 </div>
             </div>
@@ -341,7 +341,7 @@
                     <label class="text-gray-500 px-3">Shipping Promotion</label>
                     <input type="shippingpromotion_lead" id="shippingpromotion_lead" name="shippingpromotion_lead"
                         placeholder="25.000" disabled
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Shipping Promotion</label>
                 </div>
                 <div
@@ -349,7 +349,7 @@
                     <label class="text-gray-500 px-3">Total Shipping Price</label>
                     <input type="totalshippingprice_lead" id="totalshippingprice_lead" name="totalshippingprice_lead"
                         placeholder="95.000" disabled
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Total Shipping Price</label>
                 </div>
                 <div
@@ -378,7 +378,7 @@
                     <label class="px-3 text-gray-500">Shipping Admin Cost</label>
                     <input type="shippingadmincost_lead" id="shippingadmincost_lead" name="shippingadmincost_lead"
                         disabled placeholder="0"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Shipping Promotion</label>
                 </div>
                 <div
@@ -393,7 +393,7 @@
                     <label class="text-gray-500 px-3">Total Admin Cost</label>
                     <input type="totaladmincost_lead" id="totaladmincost_lead" name="totaladmincost_lead" disabled
                         placeholder="0"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="border bg-slate-200 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Total Admin Cost</label>
                 </div>
             </div>
@@ -404,14 +404,14 @@
                     class="text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 space-x-3">
                     <label class="px-3 text-gray-500">Grand Total</label>
                     <input type="grandtotal_lead" id="grandtotal_lead" name="grandtotal_lead" disabled placeholder="0"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        class="bg-slate-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <label class="text-gray-500">Auto - Filled Grand Total</label>
                 </div>
                 <div
                     class="text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 space-x-3">
                     <label class="text-gray-500 px-3">Upload Proof</label>
                     <input
-                        class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                        class="block w-full text-sm text-gray-500 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                         id="proof_lead" type="file" multiple>
                 </div>
             </div>
@@ -429,7 +429,7 @@
 
                 <div class="flex flex-col gap-2 md:gap-0 md:flex-row">
                     <div class="mr-2 w-36 md:w-fit">
-                        <a href="#"
+                        <a href="/dashboard-adv"
                             class="text-gray-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2">
                             <span>Cancel</span>
                         </a>
