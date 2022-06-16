@@ -372,24 +372,38 @@
                 </tr>
             </tbody>
         </table>
-        <div class="px-6 py-3 flex flex-row justify-between items-center border rounded-b-lg"
+        <div class="px-6 py-3 flex flex-row-reverse justify-between items-center border rounded-b-lg"
             style="background-color: #06B6D41A">
-            <div class="flex flex-row justify-between items-center w-full">
-                <div class="mt-1 flex w-full">
-                    <span class="font-semibold text-xs antialiased text-white tracking-wide" style="color: #7E8299">Rows per page: 10</span>
-                </div>
-            </div>
-            <div class="flex items-center">
+            <div class="flex flex-row items-center">
                 <!-- Help text -->
-                <span class="text-sm text-gray-700 dark:text-gray-400">
-                    Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to <span class="font-semibold text-gray-900 dark:text-white">10</span> of <span class="font-semibold text-gray-900 dark:text-white">100</span> Entries
-                </span>
+                    <span class="font-semibold text-gray-400 py-2 text-xs antialiased tracking-wide">Rows per page: 10</span>
+                    <button id="FilterDropdown" data-dropdown-toggle="FiltersDropdown"
+                    class="text-gray-400 border-hidden hover:text-cyan-400 font-medium rounded-lg text-sm py-2.5 text-center inline-flex items-center"
+                    type="button"><svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg></button>
+                <!-- Dropdown menu -->
+                <div id="FiltersDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow-lg w-32">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="FilterDropdown">
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">5</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">10</a>
+                        </li>
+                    </ul>
+                </div>
+                    <span class="font-semibold text-gray-400 py-2 px-4 mt-1 text-xs antialiased tracking-wide">1-10 of 276</span>
                 <!-- Buttons -->
                 <div class="inline-flex mt-2 xs:mt-0">
-                    <button class="py-2 px-4 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    <button class="py-2 px-4 text-2xl font-medium hover:text-cyan-400 text-gray-400 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                         <
                     </button>
-                    <button class="py-2 px-4 text-sm font-medium text-white bg-gray-800  hover:bg-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                    <button class="py-2 px-4 text-2xl font-medium hover:text-cyan-400 text-gray-400 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                         >
                     </button>
                 </div>
