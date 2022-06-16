@@ -1,5 +1,5 @@
-<div>
-    <div class="mt-1 flex flex-col w-full">
+<div class="py-5">
+    <div class="mt-1 flex flex-col w-full py-5">
         <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color: #7E8299">Lead Tunneling</h1>
         <div class="flex flex-row gap-2">
             <span class="text-gray-300 font-reguler text-sm" style="color: #7E8299">100 Lead</span>
