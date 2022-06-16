@@ -22,17 +22,15 @@
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-cs2 />
     <div class="container mx-auto py-5 px-5">
-        <div class="pb-3">
-            <div class="flex flex-row justify-between items-center py-3">
-                <h1 class="text-black font-semibold tracking-wide text-xl">Product Information</h1>
-                <!-- Modal toggle -->
-                <button
-                    class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                    type="button" data-modal-toggle="add-product">
-                    + Add Product
-                </button>
-                <livewire:modal.add-product2 />
-            </div>
+        <div class="flex flex-row justify-between items-center pb-5">
+            <h1 class="font-semibold tracking-wide text-xl">Product Information</h1>
+            <!-- Modal toggle -->
+            <button
+                class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                type="button" data-modal-toggle="add-product">
+                + Add Product
+            </button>
+            <livewire:modal.add-product2 />
         </div>
         <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
             <livewire:card.product-information />
@@ -41,7 +39,7 @@
         <livewire:modal.delete-product />
     </div>
 
-    <div class="px-5">
+    <div class="px-5 container mx-auto">
         <livewire:table.lead-tunneling />
     </div>
     
