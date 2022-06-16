@@ -22,26 +22,22 @@
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-cs2 />
 
-    <div class="container mx-auto py-5 px-5 md:px-0">
-        <div class="mx-10">
-            <div class="">
-                <div class="flex flex-row justify-between items-center">
-                    <h1 class="font-semibold tracking-wide text-xl">Reimbursement</h1>
-                    <!-- Modal toggle -->
-                    <button
-                    class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                        type="button" data-modal-toggle="add-reimbursement">
-                       + Add Reimbursement   
-                    </button>
-                    <livewire:modal.add-reimbursement />
-                </div>
-            </div>
+    <div class="container mx-auto py-5 px-5">
+        <div class="flex flex-row justify-between items-center">
+            <h1 class="font-semibold tracking-wide text-xl">Reimbursement</h1>
+            <!-- Modal toggle -->
+            <button
+            class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                type="button" data-modal-toggle="add-reimbursement">
+                + Add Reimbursement   
+            </button>
+            <livewire:modal.add-reimbursement />
         </div>
     </div>
 
     <div class="container mx-auto mb-10">
 
-        <div class="grid grid-cols-3 gap-4 mx-10">
+        <div class="grid grid-cols-3 gap-4 px-5">
             <div class="bg-white flex flex-row p-4 gap-4 rounded-lg">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#3B82F6">
@@ -87,7 +83,7 @@
         
     </div>
 
-    <div class="px-10 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-5 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
         <div class="container mx-auto">
             <livewire:table.reimbursment />
         </div>
