@@ -40,7 +40,7 @@
     </div>
     <livewire:modal.edit-promotion />
     <livewire:modal.delete-product />
-    <div class="px-10 w-full rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-10 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
         <div class="container mx-auto">
             <livewire:table.create-promotion-cs />
         </div>

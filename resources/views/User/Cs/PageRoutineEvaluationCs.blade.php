@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="px-10 w-full rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-10 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
         <div class="container mx-auto">
             <livewire:table.routine-evaluation-cs />
         </div>
