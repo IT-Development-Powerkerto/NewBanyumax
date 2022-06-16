@@ -16,18 +16,67 @@
                     </svg>
                 </div>
                 <input type="search" id="default-search"
-                    class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 ring-blue-400 border-blue-400"
+                    class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border ring-blue-400 border-blue-400"
                     placeholder="Search..">
             </div>
 
             <div class="flex flex-col gap-2 md:gap-0 md:flex-row">
                 <div class="mr-2 w-36 md:w-fit">
-                    <a href="#"
-                        class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2">
+                    <button
+                        class="text-blue-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
+                        type="button" data-modal-toggle="add-manual-closing">
                         <i class="las la-chart-pie text-xl"></i>
                         <span>Add Manual Closing</span>
-                    </a>
+                    </button>
+                    {{-- modal add manual closing --}}
+                    <div id="add-manual-closing" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                            <!-- Modal content -->
+                            <div class="relative bg-slate-100 rounded-lg shadow">
+                                <button type="button" class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="add-manual-closing">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </button>
+                                <div class="py-6 px-6 lg:px-8">
+                                    <h3
+                                        class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
+                                        Add Manual Lead</h3>
+                                    <form class="space-y-6" action="#">
+                                        <div class="relative">
+                                            <input type="text" name="operator" wire:model.defer='operator' id="operator" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Operator" required>
+                                        </div>
+                                        <div class="relative">
+                                            <select name="campaign" id="campaign" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                                                <option disabled selected>Select Campaign</option>
+                                                <option value="1">Campaign One</option>
+                                                <option value="2">Campaign Two</option>
+                                                <option value="3">Campaign Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="text" name="product" wire:model.defer='product' id="product" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product" required>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="text" name="custemer-name" wire:model.defer='custemer-name' id="custemer-name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Customer Name" required>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="text" name="custemer-phone" wire:model.defer='custemer-phone' id="custemer-phone" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Customer Phone" required>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="date" name="date" wire:model.defer='date' id="date" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                                        </div>
+                                        <div class="flex flex-row gap-3">
+                                            <button type="submit"
+                                                class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Export</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- end modal add manual closing --}}
                 </div>
+
                 <div class="mr-2 w-36 md:w-fit">
                     <!-- Modal toggle -->
                     <button
@@ -42,37 +91,29 @@
                         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
                         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                             <!-- Modal content -->
-                            <div class="relative bg-white rounded-lg shadow">
-                                <button type="button"
-                                    class="absolute top-5 right-6 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
-                                    data-modal-toggle="export-lead">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
+                            <div class="relative bg-slate-100 rounded-lg shadow">
+                                <button type="button" class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="export-lead">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                 </button>
                                 <div class="py-6 px-6 lg:px-8">
                                     <h3
                                         class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
-                                        Filter Leads By Date</h3>
+                                        Export to Excel</h3>
                                     <form class="space-y-6" action="#">
-                                        <div class="relative">
-                                            <div
-                                                class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                                                <i class="las la-calendar-week text-gray-400"></i>
+                                        <div class="flex flex-row gap-2">
+                                            <div class="relative">
+                                                <input type="date" name="date-one" wire:model.defer='date-one' id="date-one" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                             </div>
-                                            <input type="text" name="selectdate"
-                                                class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                                placeholder="Select Date" required />
+                                            <div class="relative self-center">
+                                                <p>-</p>
+                                            </div>
+                                            <div class="relative">
+                                                <input type="date" name="date-two" wire:model.defer='date-two' id="date-two" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                                            </div>
                                         </div>
                                         <div class="flex flex-row gap-3">
                                             <button type="submit"
-                                                class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Filter</button>
-                                            <button type="submit"
-                                                class="w-full text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-600 border focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                                                data-modal-toggle="export-lead">Cancel</button>
+                                                class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Export</button>
                                         </div>
                                     </form>
                                 </div>
@@ -90,7 +131,7 @@
                         </svg>
                     </div>
                     <input datepicker datepicker-autohide type="text"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 ring-blue-400 border-blue-400 block w-full pl-10 p-2"
+                        class="bg-gray-50 border text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 ring-blue-400 border-blue-400 block w-full pl-10 p-2"
                         placeholder="Select date">
                 </div>
             </div>
