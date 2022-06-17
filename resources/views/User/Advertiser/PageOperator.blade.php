@@ -30,13 +30,13 @@
         'routineevaluation' => '/routineevaluation-adv',
     ])
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="container mx-auto py-5 px-5 md:px-0">
+    <div class="container mx-auto py-5 px-5 ">
         <div class="flex">
             <livewire:card.total-campaign />
             <livewire:card.total-operator />
             <livewire:card.total-lead />
         </div>
-    <div class="flex container mx-auto py-5 px-5 md:px-0">
+    <div class="flex container mx-auto py-5 px-5">
         <livewire:table.operator-campaign />
         <livewire:table.operator-list />
     </div>

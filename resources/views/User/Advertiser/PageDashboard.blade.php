@@ -31,7 +31,7 @@
         'routineevaluation' => '/routineevaluation-adv',
     ])
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="container mx-auto py-5 px-5 md:px-0">
+    <div class="container mx-auto py-5 px-5">
         <div class="pb-5">
             <div class="flex flex-row justify-between items-center py-3 px-5">
                 <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information
@@ -99,7 +99,7 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto px-5 md:px-0">
+    <div class="container mx-auto px-5">
         @if (session()->has('success'))
             <livewire:flash-message.success />
         @endif
@@ -108,7 +108,7 @@
         @endif
         <livewire:table.lead-tunneling />
     </div>
-    <div class="container mx-auto py-5 px-5 md:px-0">
+    <div class="container mx-auto py-5 px-5">
         @if (session()->has('success'))
             <livewire:flash-message.success />
         @endif
@@ -136,7 +136,7 @@
             <livewire:modal.delete-product />
         </div>
     </div>
-    <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">
+    <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 pb-5 lg:px-0">
         @if (session()->has('success'))
             <livewire:flash-message.success />
         @endif
