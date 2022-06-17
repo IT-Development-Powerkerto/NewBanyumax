@@ -32,7 +32,7 @@
         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-                <a href="{{ $dashboard }}" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Dashboard</a>
+                <a href="{{ $dashboard }}" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700" >Dashboard</a>
             </li>
             <li>
                 <a href="{{$campaign}}" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Campaign</a>
@@ -49,7 +49,6 @@
             <li>
                 <a href="{{ $routineevaluation }}" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Routine Evaluation</a>
             </li>
-        </ul>
         </div>
     </div>
 </nav>

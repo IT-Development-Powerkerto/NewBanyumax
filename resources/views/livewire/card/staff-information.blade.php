@@ -1,13 +1,14 @@
-<div class="px-4">
+<div>
     <div class="flex py-5">
         <div class="mt-1 flex flex-col w-full">
-            <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color:#7E8299">Announcement</h1>
+            <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color:#7E8299">Staff
+                Information</h1>
             <div class="flex flex-row gap-2">
                 <span class="font-reguler text-sm" style="color:#7E8299">73 Staff</span>
             </div>
         </div>
         <button
-            class="text-blue-400 h-max w-max shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+            class="text-blue-400 h-max w-36 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
             type="button" data-modal-toggle="add-campaign">
             {{-- <a href= {{ route('campaign.create') }}> --}}
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -15,7 +16,7 @@
                     d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
                     clip-rule="evenodd" />
             </svg>
-            <span>Add Announcement</span>
+            <span>Add Staff</span>
         </button>
     </div>
     <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
@@ -40,10 +41,10 @@
                 style="background-color: #06B6D41A">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        Announcement
+                        Staff
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        created at
+                        Poin
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Action
@@ -53,16 +54,39 @@
             <tbody>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        Mohon maaf atas ketidaknyamanan pengguna, dikarenakan ada sedikit perbaikan. terimakasih. 
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0">
+                                <img class="w-20 h-max rounded-full" src="assets/img/team/team-1.png" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-semibold text-black truncate dark:text-white">
+                                    Mei Dwila Nawa Sapta Ningtyas
+                                </p>
+                                <p class="text-sm font-reguler text-gray-500 truncate dark:text-white">
+                                    +1234567890
+                                </p>
+                                <p
+                                    class="text-sm w-max py-1 px-2 rounded-lg bg-red-300 text-red-500 truncate dark:text-white border">
+                                    work</p>
+                            </div>
+                        </div>
                     </td>
                     <td class="px-6 py-4">
-                        2022-02-14 14:54:21
+                        <p
+                            class="text-sm w-max py-1 px-2 rounded-lg bg-purple-300 text-purple-500 font-semibold truncate dark:text-white border">
+                            50 Point</p>
                     </td>
                     <td class="px-6 py-4">
+                        <div class="flex flex-row">
+                            <a href="#"
+                                class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
+                                <i class="las la-edit"></i>
+                            </a>
                             <a href="#"
                                 class="bg-gradient-to-r ml-2 from-orange-500 to-red-500 hover:text-red-700 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                                 <i class="las la-trash-alt"></i>
                             </a>
+                        </div>
                     </td>
                 </tr>
             </tbody>
