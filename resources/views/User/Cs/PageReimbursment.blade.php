@@ -88,7 +88,7 @@
             <livewire:table.reimbursment />
         </div>
     </div>
-    <livewire:modal.delete-product />
+    <livewire:modal.delete-reimbursment />
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>

@@ -35,7 +35,7 @@
         </div>
     </div>
     <livewire:modal.edit-promotion />
-    <livewire:modal.delete-product />
+    <livewire:modal.delete-promotion />
     <div class="px-5 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
         <div class="container mx-auto">
             <livewire:table.create-promotion-cs />
