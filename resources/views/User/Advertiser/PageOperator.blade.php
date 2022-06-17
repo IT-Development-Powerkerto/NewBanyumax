@@ -35,7 +35,7 @@
         <livewire:card.total-operator />
         <livewire:card.total-lead />
     </div>
-    <div class="flex flex-col md:grid grid-cols-3 h-full gap-3 mx-auto py-5 px-5">
+    <div class="flex flex-col md:grid lg:grid grid-cols-3 h-full gap-3 mx-auto py-5 px-5">
         <div class="col-span-2">
             <livewire:table.operator-campaign />
         </div>
