@@ -1,4 +1,4 @@
-<div style="width:860px;">
+<div style="w-full">
     <div class="mt-1 flex flex-col w-full">
         <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color: #7E8299">Operator</h1>
         <div class="flex flex-row gap-2">
@@ -15,12 +15,12 @@
                 </svg>
             </div>
             <input type="search" id="default-search"
-                class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 ring-blue-400 border-blue-400"
+                class="block w-full px-4 py-2 pl-10 text-sm text-gray-900 bg-gray-50 rounded-lg border ring-blue-400 border-blue-400"
                 placeholder="Search..">
         </div>
     </div>
-    <div class="overflow-x-auto h-96 bg-white">
-        <table class="w-full text-sm text-left">
+    <div class="h-max bg-white overflow-x-auto">
+        <table class="text-sm text-left w-full">
             <thead class="text-xs font-semibold text-gray-400 border-b uppercase font-mono"
                 style="background-color:#06B6D41A">
                 <tr>
