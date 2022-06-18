@@ -23,7 +23,8 @@
     <livewire:navbar.navbar-admin />
 
     <div class="mx-5 my-10">
-        <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color: #7E8299">Dashboard Information</h1>
+        <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color: #7E8299">Dashboard
+            Information</h1>
     </div>
 
     <div class="flex flex-col md:flex-row container px-5 pb-5 justify-center gap-4">
@@ -39,7 +40,7 @@
     <div class="mx-5 ">
         <livewire:table.closing-customerservice-finance-admin />
         <livewire:table.staff-budgeting-request-finance-admin />
-        <livewire:table.staff-budgeting-information-finance-admin/>
+        <livewire:table.staff-budgeting-information-finance-admin />
         <livewire:table.activitylog-finance-admin />
     </div>
 

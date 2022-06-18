@@ -198,12 +198,12 @@
                         2022-05-25 08:07:30
                     </td>
                     <td class="px-6 py-4">
-                        <div class="text-red-400">
+                        <div class="border w-max rounded-md bg-gray-100 text-zinc-400 px-3 py-1">
                             05:00
                         </div>
                     </td>
                     <td class="px-6 py-4">
-                        <div class="text-zinc-400">
+                        <div class="text-red-400">
                             Waiting
                         </div>
                     </td>
@@ -237,8 +237,8 @@
                         2022-05-25 08:07:30
                     </td>
                     <td class="px-6 py-4">
-                        <div class="text-emerald-300">
-                            02:00
+                        <div class="border w-max rounded-md bg-gray-100 text-zinc-400 px-3 py-1">
+                            05:00
                         </div>
                     </td>
                     <td class="px-6 py-4">
@@ -276,13 +276,13 @@
                         2022-05-25 08:07:30
                     </td>
                     <td class="px-6 py-4">
-                        <div class="text-emerald-300">
-                            02:00
+                        <div class="border w-max rounded-md bg-gray-100 text-zinc-400 px-3 py-1">
+                            05:00
                         </div>
                     </td>
                     <td class="px-6 py-4">
                         <div class="text-emerald-300">
-                            Closing
+                            Complete
                         </div>
                     </td>
                     <td class="px-6 py-4 text-center">
@@ -315,13 +315,13 @@
                         2022-05-25 08:07:30
                     </td>
                     <td class="px-6 py-4">
-                        <div class="text-emerald-300">
+                        <div class="border w-max rounded-md bg-gray-100 text-zinc-400 px-3 py-1">
                             02:00
                         </div>
                     </td>
                     <td class="px-6 py-4">
                         <div class="text-red-400">
-                            Failed
+                            Waiting
                         </div>
                     </td>
                     <td class="px-6 py-4 text-center">
@@ -354,13 +354,13 @@
                         2022-05-25 08:07:30
                     </td>
                     <td class="px-6 py-4">
-                        <div class="text-emerald-300">
+                        <div class="border w-max rounded-md bg-gray-100 text-zinc-400 px-3 py-1">
                             02:00
                         </div>
                     </td>
                     <td class="px-6 py-4">
                         <div class="text-red-400">
-                            Spam
+                            Waiting
                         </div>
                     </td>
                     <td class="px-6 py-4 text-center">

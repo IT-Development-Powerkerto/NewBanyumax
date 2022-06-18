@@ -38,7 +38,7 @@
                 <a href="/dashboard-ceo" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">CEO</a>
             </li>
             <li>
-                <a href="/manager-admin" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Manager</a>
+                <a href="/dashboard-manager" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Manager</a>
             </li>
             <li>
                 <button id="dropdownNavbarAdmin" data-dropdown-toggle="dropdownNavbar-admin" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-semibold text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto hover:border-b hover:border-blue-700">

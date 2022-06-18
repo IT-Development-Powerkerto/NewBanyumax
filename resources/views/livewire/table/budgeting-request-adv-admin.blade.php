@@ -44,132 +44,208 @@
                 style="background-color: #06B6D41A">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        timestamp
+                        No
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Name
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Division
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        Reason
-                    </th>
-                    <th scope="col" class="px-6 py-3">
                         Request
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Submission status
+                        Target
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Target
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Action
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        14/06/2022  14:56
+                        1
                     </td>
                     <td class="px-6 py-4">
-                        Mei Dwila Nawa Sapta Ningtyas
+                        Hanif Muslim Azhar
                     </td>
                     <td class="px-6 py-4">
-                        Admin
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
-                        Biaya Iklan
-                    </td>
-                    <td class="px-6 py-4">
-                            Rp 5.000.000
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
                         <div class="border w-20 px-7 py-1 justify-center rounded-lg text-blue-500 bg-blue-50">
                             Wait
                         </div>
                     </td>
+                    <td class="px-6 py-4">
+                        <button type="button" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row" aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
+                           Action 
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
+                            <ul class="py-1" aria-labelledby="dropdownAction">
+                                <li>
+                                    <a href="#" data-modal-toggle="edit-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-modal-toggle="delete-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
                 </tr>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        14/06/2022  14:56
+                        2
                     </td>
                     <td class="px-6 py-4">
-                        Mei Dwila Nawa Sapta Ningtyas
+                        Awal Azwihani
                     </td>
                     <td class="px-6 py-4">
-                        Admin
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
-                        Biaya Iklan
-                    </td>
-                    <td class="px-6 py-4">
-                            Rp 5.000.000
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
                         <div class="border w-20 px-4 py-1 justify-center rounded-lg text-red-500 bg-red-50">
                             Rejected
                         </div>
                     </td>
+                    <td class="px-6 py-4">
+                        <button type="button" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row" aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
+                           Action 
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
+                            <ul class="py-1" aria-labelledby="dropdownAction">
+                                <li>
+                                    <a href="#" data-modal-toggle="edit-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-modal-toggle="delete-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
                 </tr>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        14/06/2022  14:56
+                        3
                     </td>
                     <td class="px-6 py-4">
-                        Mei Dwila Nawa Sapta Ningtyas
+                        Rifan Tri Yulianto
                     </td>
                     <td class="px-6 py-4">
-                        Admin
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
-                        Biaya Iklan
-                    </td>
-                    <td class="px-6 py-4">
-                            Rp 5.000.000
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
                         <div class="border w-20 px-4 py-1 justify-center rounded-lg text-red-500 bg-red-50">
                             Rejected
                         </div>
-                    </td>                </tr>
+                    </td>
+                    <td class="px-6 py-4">
+                        <button type="button" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row" aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
+                           Action 
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
+                            <ul class="py-1" aria-labelledby="dropdownAction">
+                                <li>
+                                    <a href="#" data-modal-toggle="edit-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-modal-toggle="delete-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        14/06/2022  14:56
+                        4
                     </td>
                     <td class="px-6 py-4">
-                        Mei Dwila Nawa Sapta Ningtyas
+                        Isnan Aditia
                     </td>
                     <td class="px-6 py-4">
-                        Admin
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
-                        Biaya Iklan
-                    </td>
-                    <td class="px-6 py-4">
-                            Rp 5.000.000
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
                         <div class="border w-20 px-7 py-1 justify-center rounded-lg text-blue-500 bg-blue-50">
                             Wait
                         </div>
                     </td>
+                    <td class="px-6 py-4">
+                        <button type="button" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row" aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
+                           Action 
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
+                            <ul class="py-1" aria-labelledby="dropdownAction">
+                                <li>
+                                    <a href="#" data-modal-toggle="edit-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-modal-toggle="delete-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
                 </tr>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        14/06/2022  14:56
+                        5
                     </td>
                     <td class="px-6 py-4">
-                        Mei Dwila Nawa Sapta Ningtyas
+                        Jihad Salahudin
                     </td>
                     <td class="px-6 py-4">
-                        Admin
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
-                        Biaya Iklan
-                    </td>
-                    <td class="px-6 py-4">
-                            Rp 5.000.000
+                        Rp 21.000.000
                     </td>
                     <td class="px-6 py-4">
                         <div class="border w-20 px-4 py-1 justify-center rounded-lg text-red-500 bg-red-50">
                             Rejected
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        <button type="button" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row" aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
+                           Action 
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
+                            <ul class="py-1" aria-labelledby="dropdownAction">
+                                <li>
+                                    <a href="#" data-modal-toggle="edit-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-modal-toggle="delete-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                </li>
+                            </ul>
                         </div>
                     </td>
                 </tr>

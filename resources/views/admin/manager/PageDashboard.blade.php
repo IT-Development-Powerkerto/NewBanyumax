@@ -21,7 +21,7 @@
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-admin />
-
+    
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
     <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="flex flex-row justify-between items-center py-3 px-5">
@@ -91,6 +91,7 @@
             Information
         </div>
     </div>
+    
     <div class="container mx-auto px-5 md:px-0">
         <livewire:table.weekly-info-adv-admin />
         <livewire:table.budgeting-request-adv-admin />
