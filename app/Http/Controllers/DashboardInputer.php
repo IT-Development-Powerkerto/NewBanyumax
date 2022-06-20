@@ -13,7 +13,7 @@ class DashboardInputer extends Controller
      */
     public function index()
     {
-        return view('User.Inputer.PageInputer');
+        return view('admin.inputer.PageDashboard');
     }
 
     /**
