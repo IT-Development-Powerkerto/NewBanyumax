@@ -1,20 +1,21 @@
 <div class="py-5">
     <div class="flex">
         <div class="mt-1 flex flex-col w-full">
-            <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color:#7E8299">Customer Service</h1>
+            <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color:#7E8299">Budgeting Request</h1>
             <div class="flex flex-row gap-2">
                 <span class="font-reguler text-sm" style="color:#7E8299">100 Leads</span>
             </div>
         </div>
         <button
-            class="text-blue-400 h-max w-80 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-            type="button" data-modal-toggle="add-budgeting-realization-admin">
+            class="text-blue-400 h-max w-60 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+            type="button" data-modal-toggle="add-budgeting-request-admin">
             {{-- <a href= {{ route('campaign.create') }}> --}}
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
                   </svg>
-            <span>Customer Service</span>
+            <span>Request Budgeting</span>
         </button>
+        @livewire('modal.add-budgeting-request-admin')
     </div>
     <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
         <div class="flex flex-row justify-between items-center w-full">
@@ -39,81 +40,59 @@
                 style="background-color: #06B6D41A">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        No
+                        Time
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Name CS
+                        division
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        email
+                        Reason
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        phone
+                        nominal
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Action
+                        submission status
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        1
+                        2022-05-31 00:00:00
                     </td>
                     <td class="px-6 py-4">
-                        Hanif Muslim Azhar
+                        Advertiser
                     </td>
                     <td class="px-6 py-4">
-                        Hanif_Muslim@gmail.com
+                        Iklan Etawaku Platinum
                     </td>
                     <td class="px-6 py-4">
-                        081234567890
+                        Rp 500.000
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#"
-                            class="bg-gradient-to-r from-orange-500 to-red-500 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
-                            title="Delete">
-                            <i class="lar la-trash-alt"></i>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        2
-                    </td>
-                    <td class="px-6 py-4">
-                        Awal Azwihani
-                    </td>
-                    <td class="px-6 py-4">
-                        awalazwihani_adv@gmail.com
-                    </td>
-                    <td class="px-6 py-4">
-                        081234567890
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#"
-                            class="bg-gradient-to-r from-orange-500 to-red-500 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
-                            title="Delete">
-                            <i class="lar la-trash-alt"></i>
+                        <div class="border w-20 px-4 py-1 justify-center rounded-lg text-red-500 bg-red-50">
+                            Rejected
+                        </div>
                     </td>
                 </tr>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        3
+                        2022-05-31 00:00:00
                     </td>
                     <td class="px-6 py-4">
-                        Rifan Tri Yulianto
+                        Advertiser
                     </td>
                     <td class="px-6 py-4">
-                        rifantriyulianto_adv@gmail.com
+                        Iklan Etawaku Platinum
                     </td>
                     <td class="px-6 py-4">
-                        081234567890
+                        Rp 500.000
                     </td>
                     <td class="px-6 py-4">
-                        <a href="#"
-                            class="bg-gradient-to-r from-orange-500 to-red-500 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
-                            title="Delete">
-                            <i class="lar la-trash-alt"></i>
+                        <div class="border w-20 px-7 py-1 justify-center rounded-lg text-blue-500 bg-blue-50">
+                            Wait
+                        </div>
                     </td>
                 </tr>
             </tbody>

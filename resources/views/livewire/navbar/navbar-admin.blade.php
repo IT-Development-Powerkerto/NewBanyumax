@@ -73,13 +73,13 @@
                 <div id="dropdownInputer-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                     <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                         <li>
-                            <a href="/dashboard-finance" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Finance Dashboard</a>
+                            <a href="/dashboard-inputer" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Dashboard Inputer</a>
                         </li>
                         <li>
-                            <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Budgeting Request</a>
+                            <a href="budgetingrequest-inputer" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Budgeting Request</a>
                         </li>
                         <li>
-                            <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Budgeting Request</a>
+                            <a href="/budgetingrealization-inputer" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Budgeting Realization</a>
                         </li>
                     </ul>
                 </div>

@@ -34,7 +34,7 @@
                                 <span class="">
                                     <img class="img-previewEdit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
                                 </span>
-                                <input class="hidden" value="{{url($product->image)}}" type="file" name="image" id="imageEdit" onchange="previewImageEdit()">
+                                <input class="hidden" value="" type="file" name="image" id="imageEdit" onchange="previewImageEdit()">
                             </label>
                     </div>
 
