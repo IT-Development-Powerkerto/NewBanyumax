@@ -5,8 +5,9 @@
             <div class="flex flex-row border-orange-500 border-b py-2 justify-between items-center -mt-1">
                 <h1 class="text-orange-500 tracking-wide font-semibold text-base ">{{ $product->name }}</h1>
                 <div class="text-white text-xl -mt-1">
-                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-edit hover:text-cyan-500" data-modal-toggle="edit-product"></i>
-                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-trash-alt hover:text-red-700" data-modal-toggle="delete-product" ></i>
+                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-edit hover:text-cyan-500" data-modal-toggle="edit-product{{$product->id}}"></i>
+                    <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-trash-alt hover:text-red-700" data-modal-toggle="delete-product{{$product->id}}" ></i>
+                    {{-- <i class="bg-gradient-to-r from-orange-500 to-red-500 rounded las la-trash-alt hover:text-red-700" onclick="confirmDelete({{$product->id}})" type="submit"></i> --}}
                 </div>
             </div>
             <div class="flex flex-row justify-between items-center gap-2">
@@ -23,5 +24,32 @@
         </div>
     </div>
 </div>
+<livewire:modal.edit-product />
 @endforeach
+
+{{-- <div id="delete-product{{$product->id}}" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+        <!-- Modal content -->
+        <div class="relative rounded-lg shadow bg-slate-100" >
+            <div class="py-6 px-6 lg:px-8">
+                <form class="space-y-6" action="{{ route('product.destroy', ['product'=>$product->id]) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <div class="text-center text-xl text-gray-700 font-bold mb-12">
+                        <h1>Delete Product ?</h1>
+                    </div>
+                    <div class="flex flex-row gap-3">
+                        <button type="submit" class="w-full bg-red-600 text-white border font-medium rounded-xl text-sm px-5 py-2.5 text-center">Delete</button>
+                        <button class="w-full text-gray-400 font-medium rounded-xl text-sm px-5 py-2.5 text-center border-2" data-modal-toggle="delete-product">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+
+
+
+
 
