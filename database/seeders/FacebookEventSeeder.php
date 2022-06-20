@@ -18,39 +18,35 @@ class FacebookEventSeeder extends Seeder
         $event_pixel = [
             [
                 'name'        => 'Add Payment Info',
-                'event_pixel'  => "fbq('track', 'AddPaymentInfo');",
+                'event_pixel'  => "ttq.track('AddPaymentInfo');",
             ],
             [
                 'name'        => 'Add To Cart',
-                'event_pixel'  => "fbq('track', 'AddToCart');",
+                'event_pixel'  => "ttq.track('AddToCart') ;",
             ],
             [
                 'name'        => 'Add To Wishlist',
-                'event_pixel'  => "fbq('track', 'AddToWishlist');",
+                'event_pixel'  => "ttq.track('AddToWishlist');",
             ],
             [
                 'name'        => 'Complete Registration',
-                'event_pixel'  => "fbq('track', 'CompleteRegistration');",
+                'event_pixel'  => "ttq.track('CompleteRegistration') ;",
             ],
             [
                 'name'        => 'Contact',
-                'event_pixel'  => "fbq('track', 'Contact');",
+                'event_pixel'  => "ttq.track('Contact') ;",
             ],
             [
-                'name'        => 'Customize Product',
-                'event_pixel'  => "fbq('track', 'CustomizeProduct');",
+                'name'        => 'Submit Form',
+                'event_pixel'  => "ttq.track('SubmitForm');",
             ],
             [
-                'name'        => 'Lead',
-                'event_pixel'  => "fbq('track', 'Lead');",
-            ],
-            [
-                'name'        => 'Purchase',
-                'event_pixel'  => "fbq('track', 'Purchase', {value: 0.00, currency: 'IDR'});",
+                'name'        => 'Initiate Checkout',
+                'event_pixel'  => "ttq.track('InitiateCheckout');",
             ],
             [
                 'name'        => 'View Content',
-                'event_pixel'  => "fbq('track', 'ViewContent');",
+                'event_pixel'  => "ttq.track('ViewContent') ;",
             ],
         ];
 

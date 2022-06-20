@@ -28,10 +28,7 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->foreign('facebook_pixel_id')->references('id')->on('facebook_event_pixels');
-            $table->foreign('tiktok_pixel_id')->references('id')->on('tiktok_event_pixels');
-            $table->foreign('whatsapp_pixel_id')->references('id')->on('whatsapp_event_pixels');
+
         });
     }
 

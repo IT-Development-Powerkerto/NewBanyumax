@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class AddProduct extends Component
 {
-    public $name, $sku, $price, $link;
+    public $name, $sku, $price, $product_link;
     public function render()
     {
         return view('livewire.modal.add-product');
@@ -19,7 +19,7 @@ class AddProduct extends Component
             'admin_id' => 1,
             'sku' => $this->sku,
             'price' => $this->price,
-            'link' => $this->link,
+            'product_link' => $this->product_link,
         ]);
         $this->emit('productStored', $product);
     }
