@@ -132,7 +132,7 @@
             <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
                 <livewire:card.product-information />
             </div>
-            <livewire:modal.edit-product />
+            {{-- <livewire:modal.edit-product /> --}}
             <livewire:modal.delete-product />
         </div>
     </div>

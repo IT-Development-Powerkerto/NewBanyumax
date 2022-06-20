@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -21,7 +21,7 @@
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    
+
     <!-- Template Main CSS File -->
     <link href="assets/css/login.css" rel="stylesheet">
   </head>
@@ -44,7 +44,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-          <form action="#" method="POST" class="sign-in-form">
+          <form action="{{route('login.store')}}" method="POST" class="sign-in-form">
             @csrf
             <h2 class="title">Sign in</h2>
             <div class="input-field">
@@ -93,7 +93,7 @@
         <a href="https://banyumax.id/">banyumax.id</a>
       </div>
     </div>
-    
+
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <script>
       const sign_in_btn = document.querySelector("#sign-in-btn");
@@ -107,7 +107,7 @@
       sign_in_btn.addEventListener("click", () => {
         container.classList.remove("sign-up-mode");
       });
-      
+
     </script>
   </body>
 </html>

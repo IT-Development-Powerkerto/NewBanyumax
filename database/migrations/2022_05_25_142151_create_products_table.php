@@ -17,10 +17,12 @@ return new class extends Migration
             $table->id();
             $table->integer('admin_id');
             $table->string('name');
-            $table->string('sku');
+            $table->string('sku')->nullable();
             $table->integer('price');
+            $table->integer('lead')->default(0);
+            // $table->double('discount')->nullable();
+            $table->string('product_link')->nullable();
             $table->string('image')->nullable();
-            $table->string('link')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

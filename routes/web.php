@@ -19,6 +19,7 @@ use App\Http\Controllers\DashboardInputer;
 use App\Http\Controllers\ViewDataClosing;
 use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\EditLeadTunneling;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Login Logout
 Route::resource('/login', LoginController::class);
+Route::get('/logout',[LoginController::class, 'logout']);
 
 Route::resource('/editleadtunneling', EditLeadTunneling::class);
 // Users
@@ -44,13 +47,12 @@ Route::resource( '/realization', BudgetingRealizationController::class);
 
 
 // Users.Campaign
-// Route::resource('/campaign', CampaignController::class);
-Route::get('/campaign-adv', [CampaignController::class, 'index']) ->name('campaign.index');
-Route::get('/campaign-adv/create', [CampaignController::class, 'create']) ->name('campaign.create');
-Route::post('/campaign-adv/store', [CampaignController::class, 'store']) ->name('campaign.store');
-Route::get('/campaign-adv/edit/{id}', [CampaignController::class, 'edit']) ->name('campaign.edit');
-Route::patch('/campaign-adv/update/{id}', [CampaignController::class, 'update']) ->name('campaign.update');
-Route::get('/campaign-adv/delete/{id}', [CampaignController::class, 'destroy']) ->name('campaign.destroy');
+Route::resource('/campaign', CampaignController::class);
+
+
+// Users.Product
+Route::resource('/product', ProductController::class);
+
 
 // Users.Advertiser
 Route::resource('/dashboard-adv', DashboardController::class);

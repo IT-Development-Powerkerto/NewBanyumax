@@ -42,7 +42,7 @@
     <div class="px-5 container mx-auto">
         <livewire:table.lead-tunneling />
     </div>
-    
+
 
     @livewireScripts
     <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
