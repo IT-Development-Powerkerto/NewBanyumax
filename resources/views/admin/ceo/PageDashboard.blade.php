@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/img/favicon.png" rel="icon">
-    <title>Dashboard</title>
+    <title>Dashboard CEO</title>
     <link href="../css/app.css" rel="stylesheet">
 
     <link rel="stylesheet"
@@ -21,7 +21,7 @@
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-admin />
-
+    
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
     <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="flex flex-row justify-between items-center py-3 px-5">
@@ -86,20 +86,22 @@
                     <livewire:card.caq-lead-admin />
                 </div>
             </div>
-        </div>
-        <div class="mt-5 mx-5 px-6 py-2 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
-            Information
+            <div class="mt-5 px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
+                Information
+            </div>
+            <div class="container mx-auto px-5 md:px-0">
+                <livewire:table.weekly-info-adv-admin />
+                <livewire:table.budgeting-request-adv-admin />
+                <livewire:table.budgeting-request-non-adv-admin />
+                <livewire:table.realization-adv2 />
+                <livewire:table.realization-non-adv />
+                <livewire:table.activity-evaluation />
+                <livewire:table.activity-logs-ceo />
+            </div>
         </div>
     </div>
-    <div class="container mx-auto px-5 md:px-0">
-        <livewire:table.weekly-info-adv-admin />
-        <livewire:table.budgeting-request-adv-admin />
-        <livewire:table.budgeting-request-non-adv-admin />
-        <livewire:table.realization-adv2 />
-        <livewire:table.realization-non-adv />
-        <livewire:table.activity-evaluation />
-        <livewire:table.activity-logs-ceo />
-    </div>
+    
+    
 
     @livewireScripts
     <script src="assets/vendor/flowbite/dist/flowbite.js"></script>

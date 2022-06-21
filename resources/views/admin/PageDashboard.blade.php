@@ -89,66 +89,67 @@
                     <livewire:card.caq-total />
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="container mx-auto px-5 md:px-0">
-        @if (session()->has('success'))
-            <livewire:flash-message.success />
-        @endif
-        @if (session()->has('error'))
-            <livewire:flash-message.error />
-        @endif
-        <livewire:table.lead-tunneling />
-    </div>
-    <div class="container mx-auto py-5 px-5 md:px-0">
-        @if (session()->has('success'))
-            <livewire:flash-message.success />
-        @endif
-        @if (session()->has('error'))
-            <livewire:flash-message.error />
-        @endif
-        <div>
-            <div class="pb-5">
-                <div class="flex flex-row justify-between items-center py-3 px-5">
-                    <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Product
-                        Information</h1>
-                    <!-- Modal toggle -->
-                    <button
-                        class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                        type="button" data-modal-toggle="add-product">
-                        Add Product
-                    </button>
-                    <livewire:modal.add-product2 />
+            <div class="container mx-auto px-5 md:px-0">
+                @if (session()->has('success'))
+                    <livewire:flash-message.success />
+                @endif
+                @if (session()->has('error'))
+                    <livewire:flash-message.error />
+                @endif
+                <livewire:table.lead-tunneling />
+            </div>
+            <div class="container mx-auto py-5 px-5 md:px-0">
+                @if (session()->has('success'))
+                    <livewire:flash-message.success />
+                @endif
+                @if (session()->has('error'))
+                    <livewire:flash-message.error />
+                @endif
+                <div>
+                    <div class="pb-5">
+                        <div class="flex flex-row justify-between items-center py-3 px-5">
+                            <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Product
+                                Information</h1>
+                            <!-- Modal toggle -->
+                            <button
+                                class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                                type="button" data-modal-toggle="add-product">
+                                Add Product
+                            </button>
+                            <livewire:modal.add-product2 />
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
+                        <livewire:card.product-information />
+                    </div>
+                    <livewire:modal.edit-product />
+                    <livewire:modal.delete-product />
+                </div>
+                <div class="flex container mx-auto py-5 px-5   ">
+                    <livewire:card.staff-information />
+                    <livewire:table.announcements />
                 </div>
             </div>
-            <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
-                <livewire:card.product-information />
+        
+            <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">
+                @if (session()->has('success'))
+                    <livewire:flash-message.success />
+                @endif
+                @if (session()->has('error'))
+                    <livewire:flash-message.error />
+                @endif
+                <div class="col-span-6">
+                    @if (session()->has('success'))
+                        <livewire:flash-message.success />
+                    @endif
+                    @if (session()->has('error'))
+                        <livewire:flash-message.error />
+                    @endif
+                </div>
             </div>
-            <livewire:modal.edit-product />
-            <livewire:modal.delete-product />
-        </div>
-        <div class="flex container mx-auto py-5 px-5   ">
-            <livewire:card.staff-information />
-            <livewire:table.announcements />
         </div>
     </div>
-
-    <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">
-        @if (session()->has('success'))
-            <livewire:flash-message.success />
-        @endif
-        @if (session()->has('error'))
-            <livewire:flash-message.error />
-        @endif
-        <div class="col-span-6">
-            @if (session()->has('success'))
-                <livewire:flash-message.success />
-            @endif
-            @if (session()->has('error'))
-                <livewire:flash-message.error />
-            @endif
-        </div>
-    </div>
+    
 
     @livewireScripts
     <script src="assets/vendor/flowbite/dist/flowbite.js"></script>

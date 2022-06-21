@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/img/favicon.png" rel="icon">
-    <title>Dashboard</title>
+    <title>Dashboard Inputer</title>
     <link href="../css/app.css" rel="stylesheet">
 
     <link rel="stylesheet"
@@ -48,7 +48,6 @@
                 </ul>
             </div>
         </div>
-
         <div class="flex container px-5 pb-5">
             <livewire:card.warehouse-admin />
             <livewire:card.payment-admin />
@@ -58,10 +57,11 @@
         <div class="mt-5 mx-5 px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
             Data Budgeting
         </div>
-    </div>
-    <div class="container mx-auto px-5 md:px-0">
-        <livewire:table.customer-service />
-        <livewire:table.data-closing />
+
+        <div class="container mx-auto px-5 md:px-0">
+            <livewire:table.customer-service />
+            <livewire:table.data-closing />
+        </div>
     </div>
 
     @livewireScripts
