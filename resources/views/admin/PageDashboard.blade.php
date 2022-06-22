@@ -125,7 +125,7 @@
                     <livewire:modal.edit-product />
                     <livewire:modal.delete-product />
                 </div>
-                <div class="flex container mx-auto py-5 px-5   ">
+                <div class="flex flex-col container mx-auto py-5 px-5 md:grid lg:grid grid-cols-2">
                     <livewire:card.staff-information />
                     <livewire:table.announcements />
                 </div>
