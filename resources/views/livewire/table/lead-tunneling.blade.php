@@ -7,7 +7,7 @@
         <div class="">
         <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Lead Tunneling</h1>
         <div class="flex flex-row gap-2 py-2">
-            <span class="text-gray-300 font-medium text-sm text-zinc-400">1000 Data</span>
+            <span class="font-medium text-sm text-zinc-400">1000 Data</span>
         </div>
     </div>
 
