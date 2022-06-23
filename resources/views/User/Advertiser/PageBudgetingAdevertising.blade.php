@@ -28,8 +28,11 @@
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
     <div class="container mx-auto py-5 px-5">
         <livewire:table.data-budgeting-adv />
+        <livewire:table.adv-activity-week />
+        <livewire:table.adv-activity-last-month />
         <livewire:table.weekly-info-adv />
-        <livewire:table.adv-activity-budgeting />
+        <livewire:card.budgeting-request />
+        <livewire:table.data-budgeting-adv-log-activity />
     </div>
 
     @livewireScripts

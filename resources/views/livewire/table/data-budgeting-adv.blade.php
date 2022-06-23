@@ -114,7 +114,7 @@
                     Quantity
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Omzet (Rp)
+                    Omzet
                 </th>
             </tr>
         </thead>
@@ -135,7 +135,7 @@
                 <td class="px-6 py-4">
                     700 Box
                 </td>
-                <td class="px-6 py-4" style="color:#009EF7">
+                <td class="px-6 py-4">
                     Rp 200.000 ,00
                 </td>
             </tr>

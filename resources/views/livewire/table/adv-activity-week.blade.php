@@ -1,12 +1,11 @@
-<div class="mt-10 px-6 py-3 flex flex-row justify-start items-center bg-white border rounded-t-lg">
+<div class="mt-10 px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Weekly Info ADV Activity</h1>
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">ADV Activity Last Week</h1>
             <div class="flex flex-row gap-2 py-2">
                 <span class="font-medium text-sm text-zinc-400">1000 Data</span>
             </div>
         </div>
-
     </div>
 </div>
 <div class="h-max bg-white overflow-x-auto">
@@ -14,16 +13,13 @@
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Period
-                </th>
-                <th scope="col" class="px-6 py-3">
                     Adv Name
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Leads
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Closing
+                    Total Closing
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Quantity
@@ -35,9 +31,6 @@
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    July - Week 2
-                </td>
                 <td class="px-6 py-4">
                     Hutari Trinurcahyani
                 </td>
@@ -51,7 +44,7 @@
                     700 Box
                 </td>
                 <td class="px-6 py-4">
-                    Rp 100.000 ,00
+                    Rp 200.000 ,00
                 </td>
             </tr>
         </tbody>

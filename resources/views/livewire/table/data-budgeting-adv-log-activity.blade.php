@@ -1,7 +1,7 @@
-<div class="mt-10 px-6 py-3 flex flex-row justify-start items-center bg-white border rounded-t-lg">
+<div class="mt-10 px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Weekly Info ADV Activity</h1>
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV Log Activity</h1>
             <div class="flex flex-row gap-2 py-2">
                 <span class="font-medium text-sm text-zinc-400">1000 Data</span>
             </div>
@@ -14,44 +14,59 @@
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Period
+                    Date
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Adv Name
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Leads
+                    REQUEST
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Closing
+                    TARGET
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Quantity
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Omzet
+                    STATUS
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    July - Week 2
+                    22-06-2022
                 </td>
                 <td class="px-6 py-4">
                     Hutari Trinurcahyani
                 </td>
-                <td class="px-6 py-4 text-blue-500">
-                    100 Leads
-                </td>
-                <td class="px-6 py-4 text-orange-400">
-                    100 Leads
+                <td class="px-6 py-4">
+                    Rp 139.000.000
                 </td>
                 <td class="px-6 py-4">
-                    700 Box
+                    Rp 140.000.000
                 </td>
                 <td class="px-6 py-4">
-                    Rp 100.000 ,00
+                    <Span class="bg-lime-100 text-lime-500 py-2 px-4 font-semibold rounded-md">
+                        Approved
+                    </Span>
+                </td>
+            </tr>
+            <tr class="bg-white border-b text-xs text-black">
+                <td class="px-6 py-4">
+                    22-06-2022
+                </td>
+                <td class="px-6 py-4">
+                    Hutari Trinurcahyani
+                </td>
+                <td class="px-6 py-4">
+                    Rp 139.000.000
+                </td>
+                <td class="px-6 py-4">
+                    Rp 140.000.000
+                </td>
+                <td class="px-6 py-4">
+                    <Span class="bg-red-100 text-red-500 py-2 px-4 font-semibold rounded-md">
+                        Rejected
+                    </Span>
                 </td>
             </tr>
         </tbody>
