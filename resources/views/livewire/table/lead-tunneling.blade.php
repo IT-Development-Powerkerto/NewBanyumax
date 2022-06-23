@@ -169,7 +169,7 @@
 </div>
 <div class="h-max bg-white overflow-x-auto px-5">
     <table class="w-full text-sm text-left">
-        <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
+        <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
                 <th scope="col" class="px-6 py-3">
                     Order ID
