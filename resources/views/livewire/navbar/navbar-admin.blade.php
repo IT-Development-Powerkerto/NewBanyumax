@@ -101,16 +101,16 @@
                 <div id="dropdownCs-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                     <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                         <li>
-                            <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Create Promotion</a>
+                            <a href="/createpromotion-cs-admin" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Create Promotion</a>
                         </li>
                         <li>
-                            <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Reimbursment</a>
+                            <a href="/reimbursment-cs-admin" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Reimbursment</a>
                         </li>
                         <li>
-                            <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Budgeting Realization</a>
+                            <a href="/budgetingrealization-cs-admin" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Budgeting Realization</a>
                         </li>
                         <li>
-                            <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Routine Evaluation</a>
+                            <a href="/routineevaluation-cs-admin" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 font-semibold">Routine Evaluation</a>
                         </li>
                     </ul>
                 </div>

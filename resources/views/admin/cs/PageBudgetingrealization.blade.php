@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/img/favicon.png" rel="icon">
-    <title>Promotion</title>
+    <title>Budgeting Realization</title>
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -20,19 +20,16 @@
 </head>
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar-cs2 />
+    <livewire:navbar.navbar-admin />
 
-    <div class="px-5">
-        <div class="flex flex-row justify-between items-center">
-            <livewire:modal.add-promotion />
+    <div class="container mx-auto py-5 px-5">
+            <livewire:modal.add-budgeting-realization-cs />
         </div>
     </div>
-    <livewire:modal.edit-promotion />
-    <livewire:modal.delete-promotion />
-    <div class="px-5">
-        <livewire:table.create-promotion-cs />  
-    </div>
 
+    <div class="px-5 ">
+        <livewire:table.budgeting-realization-cs />
+    </div>
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
