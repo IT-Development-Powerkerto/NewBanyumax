@@ -22,15 +22,8 @@
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-cs2 />
 
-    <div class="container mx-auto py-5 px-5">
+    <div class="px-5">
         <div class="flex flex-row justify-between items-center">
-            <h1 class="font-semibold tracking-wide text-xl">Promotion</h1>
-            <!-- Modal toggle -->
-            <button
-            class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-            type="button" data-modal-toggle="add-promotion">
-                + Add Promotion
-            </button>
             <livewire:modal.add-promotion />
         </div>
     </div>

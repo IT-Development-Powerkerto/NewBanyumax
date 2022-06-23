@@ -22,20 +22,7 @@
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-cs2 />
 
-    <div class="container mx-auto py-5 px-5">
-        <div class="flex flex-row justify-between items-center">
-            <h1 class="font-semibold tracking-wide text-xl">Reimbursement</h1>
-            <!-- Modal toggle -->
-            <button
-            class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                type="button" data-modal-toggle="add-reimbursement">
-                + Add Reimbursement   
-            </button>
-            <livewire:modal.add-reimbursement />
-        </div>
-    </div>
-
-    <div class="container mx-auto mb-10">
+    <div class="container mx-auto py-5  mb-10">
         <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5">
             
             <div class="bg-white flex flex-row p-4 gap-2 rounded-lg">
@@ -83,12 +70,11 @@
         </div>
     </div>
 
-    <div class="px-5 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
-        <div class="container mx-auto">
-            <livewire:table.reimbursment />
-        </div>
+    <div class="px-5">
+         <livewire:table.reimbursment />
     </div>
     <livewire:modal.delete-reimbursment />
+    <livewire:modal.add-reimbursement />
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>

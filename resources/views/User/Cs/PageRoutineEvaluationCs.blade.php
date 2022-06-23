@@ -23,22 +23,11 @@
     <livewire:navbar.navbar-cs2 />
 
     <div class="container mx-auto py-5 px-5">
-        <div class="flex flex-row justify-between items-center">
-            <h1 class="font-semibold tracking-wide text-xl">Routine Evaluation</h1>
-            <!-- Modal toggle -->
-            <button
-                class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                type="button" data-modal-toggle="add-evaluation-cs">
-                + Add Evaluation
-            </button>
-            <livewire:modal.add-evaluation-cs />
-        </div>
+        <livewire:modal.add-evaluation-cs />
     </div>
 
-    <div class="px-5 w-full rounded-lg dark:bg-gray-800 dark:border-gray-700">
-        <div class="container mx-auto">
-            <livewire:table.routine-evaluation-cs />
-        </div>
+    <div class="px-5">
+        <livewire:table.routine-evaluation-cs />
     </div>
 
     @livewireScripts

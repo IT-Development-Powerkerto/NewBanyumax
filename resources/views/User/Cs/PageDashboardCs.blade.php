@@ -26,7 +26,7 @@
             <h1 class="font-semibold tracking-wide text-xl">Product Information</h1>
             <!-- Modal toggle -->
             <button
-                class="text-white shadow bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                class="text-blue-400 h-max shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                 type="button" data-modal-toggle="add-product">
                 + Add Product
             </button>
