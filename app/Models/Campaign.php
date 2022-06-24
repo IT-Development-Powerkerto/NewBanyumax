@@ -12,19 +12,16 @@ class Campaign extends Model
 
     protected $guarded = [];
 
-    public function products(){
-    	return $this->belongsTo(Product::class,'product_id','id');
+    // public function products(){
+    // 	return $this->belongsTo(Product::class,'product_id','id');
+    // }
+
+    public function facebook_event(){
+    	return $this->belongsTo(FacebookEvent::class,'facebook_event_id','id');
     }
 
-    public function facebookpixel(){
-    	return $this->belongsTo(FacebookEventPixel::class,'facebook_pixel_id','id');
+    public function facebook_wa(){
+    	return $this->belongsTo(FacebookEvent::class,'facebook_wa_id','id');
     }
 
-    public function tiktokpixel(){
-    	return $this->belongsTo(TiktokEventPixel::class,'tiktok_pixel_id','id');
-    }
-
-    public function whatsapppixel(){
-    	return $this->belongsTo(TiktokEventPixel::class,'whatsapp_pixel_id','id');
-    }
 }
