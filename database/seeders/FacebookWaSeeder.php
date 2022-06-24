@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class FacebookEventSeeder extends Seeder
+class FacebookWaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -50,6 +50,6 @@ class FacebookEventSeeder extends Seeder
             ],
         ];
 
-        DB::table('facebook_events')->insert($event_pixel);
+        DB::table('facebook_was')->insert($event_pixel);
     }
 }
