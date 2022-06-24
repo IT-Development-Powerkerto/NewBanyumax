@@ -76,7 +76,7 @@
                             {{ $loop->iteration }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ $campaign->campaign_name }}
+                            {{-- {{ $campaign->campaign_name }} --}}
                         </td>
                         <td class="px-6 py-4">
                             Hutari Trinurcahyani
@@ -163,7 +163,8 @@
                         </td>
                         <td class="px-6 py-4 text-center">
                             <div class="flex flex-row gap-2">
-                                <a href="{{ route('campaign.edit', $campaign->id) }}"
+                                <a href=""
+                                    {{-- {{ route('campaign.edit', $campaign->id) }} --}}
                                     class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
                                     title="Edit Campaign">
                                     <i class="las la-edit"></i>
@@ -173,7 +174,7 @@
                                     title="Add Operator">
                                     <i class="las la-users"></i>
                                 </a>
-                                <a href="{{ route('campaign.destroy', $campaign->id) }}"
+                                <a href=""
                                     class="bg-gradient-to-r from-orange-500 to-red-500 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
                                     title="Delete Campaign">
                                     <i class="lar la-trash-alt"></i>

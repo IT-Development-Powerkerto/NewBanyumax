@@ -32,19 +32,10 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-facebook-f text-gray-400"></i>
                             </div>
-                            <select name="facebook_pixel_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select name="facebook_event_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Facebook Event Form</option>
-                                @foreach($facebookpixel as $fp)
-                                    <option value="{{$fp->id}}">{{$fp->name}}</option>
-                                    <option>Add Payment Info</option>
-                                    <option>Add to Cart</option>
-                                    <option>Add to Wishlist</option>
-                                    <option>Complate Registration</option>
-                                    <option>Contract</option>
-                                    <option>Customize Product</option>
-                                    <option>Lead</option>
-                                    <option>Purchase</option>
-                                    <option>View Content</option>
+                                @foreach($facebook_event as $fe)
+                                    <option value="{{$fe->id}}">{{$fe->name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -58,10 +49,10 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="lab la-tumblr text-gray-400"></i>
                             </div>
-                            <select name="facebook_even_wa" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                            <select name="facebook_wa_id" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                                 <option selected hidden>Facebook Event WA</option>
-                                @foreach($tiktokpixel as $tp)
-                                    <option value="{{$tp->id}}">{{$tp->name}}</option>
+                                @foreach($facebook_wa as $fw)
+                                    <option value="{{$fw->id}}">{{$fw->name}}</option>
                                 @endforeach
                             </select>
                         </div>
