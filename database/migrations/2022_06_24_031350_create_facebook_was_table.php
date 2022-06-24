@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tiktok_event_pixels', function (Blueprint $table) {
+        Schema::create('facebook_was', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('event_pixel');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tiktok_event_pixels');
+        Schema::dropIfExists('facebook_was');
     }
 };

@@ -35,7 +35,7 @@
                             </label>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add Product</button>
+                        <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add Product</button>
                     </div>
                 </form>
             </div>
@@ -43,19 +43,3 @@
     </div>
 </div>
 
-<script>
-    function previewImage(){
-
-        const image = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
-
-        imgPreview.style.display = 'block';
-
-        const oFReader = new FileReader();
-
-        oFReader.readAsDataURL(image.files[0]);
-        oFReader.onload = function(oFREvent){
-        imgPreview.src = oFREvent.target.result;
-        }
-        }
-</script>

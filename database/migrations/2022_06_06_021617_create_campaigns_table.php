@@ -16,12 +16,10 @@ return new class extends Migration
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->string('campaign_name');
+            $table->string('product');
             $table->string('facebook_pixel');
-            $table->string('tiktok_pixel');
-            $table->foreignId('product_id');
-            $table->foreignId('facebook_pixel_id');
-            $table->foreignId('tiktok_pixel_id');
-            $table->foreignId('whatsapp_pixel_id');
+            $table->foreignId('facebook_event_id');
+            $table->foreignId('facebook_wa_id');
             $table->string('customer_cs');
             $table->string('cs_customer');
             $table->string('thanks_page')->nullable();

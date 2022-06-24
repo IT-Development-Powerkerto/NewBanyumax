@@ -50,6 +50,6 @@ class FacebookEventSeeder extends Seeder
             ],
         ];
 
-        DB::table('facebook_event_pixels')->insert($event_pixel);
+        DB::table('facebook_events')->insert($event_pixel);
     }
 }

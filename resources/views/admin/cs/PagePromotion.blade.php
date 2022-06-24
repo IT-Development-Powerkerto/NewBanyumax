@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar-cs2 />
+    <livewire:navbar.navbar-admin />
 
     <div class="px-5">
         <div class="flex flex-row justify-between items-center">
@@ -30,9 +30,9 @@
     <livewire:modal.edit-promotion />
     <livewire:modal.delete-promotion />
     <div class="px-5">
-        <livewire:table.create-promotion-cs />  
+            <livewire:table.create-promotion-cs />
     </div>
-
+    
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
