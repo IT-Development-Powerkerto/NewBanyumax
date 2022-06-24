@@ -26,13 +26,13 @@
         <h1 class="font-semibold text-xl antialiased text-white tracking-wide" style="color: #7E8299">Dashboard
             Information</h1>
     </div>
-
-    <div class="flex flex-col md:flex-row container px-5 pb-5 justify-center gap-4">
-        <livewire:card.staffbudgetingapproved-finance />
-        <livewire:card.totalexpence-finance />
-        <livewire:card.staffbudgetingrequest-finance />
+    <div class="container mx-auto py-5 px-5 md:px-0">
+        <div class="flex flex-col md:flex-row container px-5 pb-5 justify-self-center gap-4">
+            <livewire:card.staffbudgetingapproved-finance />
+            <livewire:card.totalexpence-finance />
+            <livewire:card.staffbudgetingrequest-finance />
+        </div>
     </div>
-
     <div class="mt-5 mx-5 px-6 py-2 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
         Data Budgeting
     </div>
