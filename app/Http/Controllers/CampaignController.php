@@ -21,19 +21,16 @@ class CampaignController extends Controller
         $campaigns = Campaign::all();
         $facebook_event = FacebookEvent::all();
         $facebook_wa    = FacebookWa::all();
-        return view('User.Advertiser.PageCampaign', compact('campaigns', 'facebook_event'));
+        return view('User.Advertiser.PageCampaign', compact('campaigns', 'facebook_event', 'facebook_wa'));
 
     }
 
     public function edit($id)
     {
-        $products = Product::all();
-        $facebookpixel = FacebookEventPixel::all();
-        $tiktokpixel = TiktokEventPixel::all();
-        $whatsapppixel = WhatsappEventPixel::all();
-        $campaigns = Campaign::findOrFail($id);
-        // $whatsapppixel = WhatsaapEventPixel::latest()->get();
-        return view('User.EditPage.PageCampaign', compact('campaigns', 'products', 'facebookpixel', 'tiktokpixel', 'whatsapppixel'));
+        $campaigns = Campaign::all();
+        $facebook_event = FacebookEvent::all();
+        $facebook_wa    = FacebookWa::all();
+        return view('User.EditPage.PageCampaign', compact('campaigns', 'facebook_event', 'facebook_wa'));
     }
 
 
@@ -49,11 +46,10 @@ class CampaignController extends Controller
      */
     public function create()
     {
-        $products = Product::All();
-        $facebookpixel = FacebookEventPixel::all();
-        $tiktokpixel = TiktokEventPixel::all();
-        $whatsapppixel = WhatsaapEventPixel::all();
-        return view('livewire.modal.add-campaign', compact('products', 'facebookpixel', 'tiktokpixel', 'whatsapppixel'));
+        $campaigns = Campaign::all();
+        $facebook_event = FacebookEvent::all();
+        $facebook_wa    = FacebookWa::all();
+        return view('livewire.modal.add-campaign', compact('campaigns', 'facebook_event', 'facebook_wa'));
     }
 
     /**
