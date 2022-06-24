@@ -125,6 +125,7 @@ class ProductController extends Controller
             'admin_id'     => auth()->user()->admin_id,
             'name'         => $request->name,
             'price'        => $request->price,
+            'sku'          => $request->sku,
             // 'discount'     => $request->discount,
             'image'        => $image,
             'product_link' => $request->product_link,

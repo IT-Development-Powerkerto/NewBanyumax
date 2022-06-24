@@ -14,32 +14,31 @@
                     @csrf
                     @method('PATCH')
                     <div class="relative">
-                        <input type="text" value="{{$product->name}}"  name="name" wire:model.defer='name' id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
+                        <input type="text" value="{{$product->name}}"  name="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
                     </div>
                     <div class="relative">
-                        <input type="text" value="{{$product->sku}}" name="sku" wire:model.defer='sku' id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
+                        <input type="text" value="{{$product->sku}}" name="sku"  id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
                     </div>
                     <div class="relative">
-                        <input type="number" value="{{$product->price}}" name="price" wire:model.defer='price' id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
+                        <input type="number" value="{{$product->price}}" name="price" id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
                     </div>
                     {{-- <div class="relative">
                         <input type="number" name="discount" wire:model.defer='discount' id="discount" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Discount" required>
                     </div> --}}
                     <div class="relative">
-                        <input type="text" value="{{$product->product_link}}" name="product_link" wire:model.defer='product_link' id="linkproduct" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="linkproduct" required>
+                        <input type="text" value="{{$product->product_link}}" name="product_link" id="linkproduct" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="linkproduct" required>
                     </div>
                     <div class="relative">
                         <span class="text-gray-500 px-1 mb-2">Image</span>
                             <label type="file" name="image-product" id="image-product" required>
                                 <span class="">
-                                    <img class="img-previewEdit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
+                                    <img class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
                                 </span>
-                                <input class="hidden" value="" type="file" name="image" id="imageEdit" onchange="previewImageEdit()">
+                                <input class="hidden" value="{{$product->image}}" type="file" name="image" id="image" onchange="previewImage()">
                             </label>
                     </div>
-
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Save Changes</button>
+                        <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Save Changes</button>
                     </div>
                 </form>
             </div>
@@ -47,19 +46,4 @@
     </div>
 </div>
 @endforeach
-<script>
-    function previewImageEdit(){
 
-        const imageEdit = document.querySelector('#imageEdit');
-        const imgPreviewEdit = document.querySelector('.img-previewEdit');
-
-        imgPreviewEdit.style.display = 'block';
-
-        const oFReader = new FileReader();
-
-        oFReader.readAsDataURL(imageEdit.files[0]);
-        oFReader.onload = function(oFREvent){
-        imgPreviewEdit.src = oFREvent.target.result;
-        }
-        }
-</script>
