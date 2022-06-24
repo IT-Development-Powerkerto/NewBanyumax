@@ -4,10 +4,8 @@ namespace App\Http\Livewire\Table;
 
 use Livewire\Component;
 use App\Models\Campaign as Campaign_model;
-use App\Models\Product;
-use App\Models\FacebookEventPixel;
-use App\Models\TiktokEventPixel;
-use App\Models\WhatsappEventPixel;
+use App\Models\FacebookEvent;
+use App\Models\FacebookWa;
 
 class Campaign extends Component
 {
@@ -19,12 +17,10 @@ class Campaign extends Component
 
     public function render()
     {
-        $campaigns = Campaign_model::all();
-        $products = Product::all();
-        $facebookpixel = FacebookEventPixel::all();
-        $tiktokpixel = TiktokEventPixel::all();
-        $whatsapppixel = WhatsappEventPixel::all();
+        $campaigns = Campaign::all();
+        $facebook_event = FacebookEvent::all();
+        $facebook_wa    = FacebookWa::all();
         //$whatsapppixel = WhatsappEventPixel::latest()->get();
-        return view('livewire.table.campaign', ['campaigns'=>$campaigns  ,'products'=>$products, 'facebookpixel'=>$facebookpixel, 'tiktokpixel'=>$tiktokpixel, 'whatsapppixel'=>$whatsapppixel]);
+        return view('livewire.table.campaign', ['campaigns'=>$campaigns  ,'facebook_event'=>$facebook_event, 'facebook_wa'=>$facebook_wa]);
     }
 }

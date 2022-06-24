@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Campaign;
 use App\Models\Product;
-use App\Models\FacebookEventPixel;
-use App\Models\TiktokEventPixel;
-use App\Models\WhatsappEventPixel;
+use App\Models\FacebookEvent;
+use App\Models\FacebookWa;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -20,26 +19,12 @@ class CampaignController extends Controller
     public function index()
     {
         $campaigns = Campaign::all();
-        $products = Product::all();
-        $facebookpixel = FacebookEventPixel::all();
-        $tiktokpixel = TiktokEventPixel::all();
-        $whatsapppixel = WhatsappEventPixel::all();
-        // $whatsapppixel = WhatsaapEventPixel::latest()->get();
-        return view('User.Advertiser.PageCampaign', compact('products', 'campaigns', 'facebookpixel', 'tiktokpixel', 'whatsapppixel'));
+        $facebook_event = FacebookEvent::all();
+        $facebook_wa    = FacebookWa::all();
+        return view('User.Advertiser.PageCampaign', compact('campaigns', 'facebook_event'));
 
     }
 
-    // public function addCampaign()
-    // {
-    //     $products = Products::latest()->get();
-    //     $facebookeventpixel = FacebookEventPixel::latest()->get();
-    //     $tiktokeventpixel = TiktokEventPixel::latest()->get();
-
-    //     return view('lifewire.modal.add-campaign');
-    // }
-
-
-    //public function editCampaign()
     public function edit($id)
     {
         $products = Product::all();
