@@ -54,7 +54,7 @@
             <livewire:card.staff-budgeting-request-admin />
         </div>
 
-        <div class="mt-5 mx-5 px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
+        <div class="mt-5 mx-auto px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
             Data Budgeting
         </div>
 
