@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <div class="flex container px-5 pb-5">
+        <div class="flex flex-col md:flex-row container px-5 pb-5 justify-center gap-4">
             <livewire:card.leads />
             <livewire:card.omzet />
             <livewire:card.expense />
@@ -60,44 +60,41 @@
             </h1>
         </div>
         <div class="w-full p-5">
-            <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5">
-                <div class="mx-auto">
-                    <livewire:card.advertising-cost-admin />
-                </div>
-                <div class="mx-auto">
-                    <livewire:card.total-lead-admin />
-                </div>
-                <div class="mx-auto">
-                    <livewire:card.total-closing-admin />
-                </div>
+            <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5 mb-5">
+                <livewire:card.advertising-cost-admin />
+                <livewire:card.total-lead-admin />
+                <livewire:card.total-closing-admin />
             </div>
-            <div class="grid grid-cols-6 md:grid-cols-12 gap-4 my-5">
-
-                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.total-box-admin />
-                </div>
-                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.cost-per-result-admin />
-                </div>
-                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.cross-selling-admin />
-                </div>
-                <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
-                    <livewire:card.caq-lead-admin />
-                </div>
+            <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-4 gap-4 mx-5 mb-10">
+                <livewire:card.total-box-admin />
+                <livewire:card.cost-per-result-admin />
+                <livewire:card.cross-selling-admin />
+                <livewire:card.caq-lead-admin />
             </div>
             <div class="mt-5 px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
                 Information
             </div>
-            <div class="container mx-auto px-5 md:px-0">
+            <div class="mx-5">
                 <livewire:table.weekly-info-adv-admin />
-                <livewire:table.budgeting-request-adv-admin />
-                <livewire:table.budgeting-request-non-adv-admin />
-                <livewire:table.realization-adv2 />
-                <livewire:table.realization-non-adv />
-                <livewire:table.activity-evaluation />
-                <livewire:table.activity-logs-ceo />
             </div>
+            <div class="mx-5">
+                <livewire:table.budgeting-request-adv-admin />
+            </div>
+            <div class="mx-5">
+                <livewire:table.budgeting-request-non-adv-admin />
+            </div>
+            <div class="mx-5">
+                <livewire:table.realization-adv2 />
+            </div>
+            <div class="mx-5">
+                <livewire:table.realization-non-adv />
+            </div>
+            <div class="mx-5">
+                <livewire:table.activity-evaluation />
+            </div>
+            <div class="mx-5">
+                <livewire:table.activity-logs-ceo />
+            </div>  
         </div>
     </div>
     
