@@ -19,7 +19,7 @@
                         <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">My Profile</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                        <a href="{{route('logout')}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                     </li>
                 </ul>
             </div>
