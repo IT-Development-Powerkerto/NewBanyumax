@@ -8,13 +8,17 @@
         </div>
 
     </div>
-    <div class="flex justify-around">
-        <div class="flex">
-        <h1 class="text-2xl font-semibold">Rp</h1>
-        <input class=" bg-gray-100 border w-80 px-3 ml-5 py-1 rounded-lg w-max" placeholder="Request">
-        <input class=" bg-gray-100 border w-80 px-3 ml-5 py-1 rounded-lg w-max" placeholder="Target">
-        </div>
+    <div class="flex flex-col md:flex-row lg:flex-row gap-4">
         <div>
+            <h1 class="text-2xl font-semibold">Rp</h1>
+        </div>
+        <div class="w-full">
+            <input class=" bg-gray-100 border px-3 py-1 rounded-lg w-full" placeholder="Request">
+        </div>
+        <div class="w-full">
+            <input class=" bg-gray-100 border px-3 py-1 rounded-lg w-full" placeholder="Target">
+        </div>
+        <div class="">
             <button class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 text-white rounded-lg px-24 py-1"> Submit</button>
         </div>
     </div>
