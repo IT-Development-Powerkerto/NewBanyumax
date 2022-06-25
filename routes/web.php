@@ -33,6 +33,8 @@ use App\Http\Controllers\CreatePromotionCustomerService;
 use App\Http\Controllers\ReimbursmentCustomerService;
 use App\Http\Controllers\BudgetingRealizationCustomerService;
 use App\Http\Controllers\RoutineEvaluationCustomerService;
+use App\Http\Controllers\ProductController;
+use App\Http\Livewire\Modal\AddProduct2;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,6 +97,8 @@ Route::post('/campaign-adv/store', [CampaignController::class, 'store']) ->name(
 Route::get('/campaign-adv/edit/{id}', [CampaignController::class, 'edit']) ->name('campaign.edit');
 Route::patch('/campaign-adv/update/{id}', [CampaignController::class, 'update']) ->name('campaign.update');
 Route::get('/campaign-adv/delete/{id}', [CampaignController::class, 'destroy']) ->name('campaign.destroy');
+
+// Add.Product
 Route::resource('/product', ProductController::class);
 // Users.Advertiser
 Route::resource('/dashboard-adv', DashboardController::class);
@@ -127,3 +131,6 @@ Route::resource('/budgetingrequest', BudgetingRequest::class);
 
 //User.Inputer
 Route::resource('/viewdataclosing', ViewDataClosing::class);
+
+//Product Component
+// Route::get('/product/add', AddProduct2::class)->name('addproduct');

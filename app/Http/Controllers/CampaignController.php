@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\FacebookEvent;
 use App\Models\FacebookWa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 class CampaignController extends Controller
@@ -21,13 +22,18 @@ class CampaignController extends Controller
         $campaigns = Campaign::all();
         $facebook_event = FacebookEvent::all();
         $facebook_wa    = FacebookWa::all();
-        return view('User.Advertiser.PageCampaign', compact('campaigns', 'facebook_event', 'facebook_wa'));
-
+        $user=auth()->user();
+        if($user->role_id == 4){
+            // return view('campaignADV', ['eventWa'=>$eventWa])->with('campaigns', $campaigns)->with('products', $product)->with('events', $events);
+            return view('User.Advertiser.PageCampaign', compact('campaigns'));
+        }else{
+            abort(404);
+        }
     }
 
     public function edit($id)
     {
-        $campaigns = Campaign::all();
+        $campaigns = Campaign::where('admin_id', auth()->user()->admin_id)->findOrFail($id);
         $facebook_event = FacebookEvent::all();
         $facebook_wa    = FacebookWa::all();
         return view('User.EditPage.PageCampaign', compact('campaigns', 'facebook_event', 'facebook_wa'));
@@ -60,40 +66,20 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-        $validateData = $request->validate([
-            'campaign_name'=>['required'],
-            'facebook_pixel'=>['required'],
-            'tiktok_pixel'=>['required'],
-            'product_id'=>['required'],
-            'facebook_pixel_id'=>['required'],
-            'tiktok_pixel_id'=>['required'],
-            'whatsapp_pixel_id'=>['required'],
-            'customer_cs'=>['required'],
-            'cs_customer'=>['required'],
-            'thanks_page'=>[]
-        ]);
-
-        // dd($validateData);
-
-        $campaign_id = Campaign::insertGetId([
-            'campaign_name' => $validateData['campaign_name'],
-            'facebook_pixel' => $validateData['facebook_pixel'],
-            'tiktok_pixel' => $validateData['tiktok_pixel'],
-            'product_id' => $validateData['product_id'],
-            'facebook_pixel_id' => $validateData['facebook_pixel_id'],
-            'tiktok_pixel_id' => $validateData['tiktok_pixel_id'],
-            'whatsapp_pixel_id' => $validateData['whatsapp_pixel_id'],
-            'customer_cs' => $validateData['customer_cs'],
-            'cs_customer' => $validateData['cs_customer'],
-            'thanks_page' => $validateData['thanks_page'],
-
+        $campaign_id = DB::table('campaigns')->insertGetId([
+            'user_id'         => Auth()->user()->id,
+            'admin_id'        => auth()->user()->admin_id,
+            'campaign_name'   => $request->campaign_name,
+            'facebook_event_id' =>$request-> facebook_event_id,
+            'facebook_wa_id'    =>$request-> facebook_wa_id,
+            'customer_cs'  => $request->cs_to_customer,
+            'cs_customer'  => $request->customer_to_cs,
             'created_at' => Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon::now()->toDateTimeString(),
-
         ]);
+        // dd($validateData);
         $request->session()->flash('pesan','Data Berhasil di Tambahkan');
         return redirect() ->route('campaign.index');
-        // return view('User.Advertiser.PageCampaign');
     }
 
     /**
@@ -102,9 +88,9 @@ class CampaignController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($campaign)
     {
-        //
+
     }
 
     /**
@@ -122,36 +108,37 @@ class CampaignController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $campaign)
     {
-        $validateData = $request->validate([
-            'campaign_name'=>'',
-            'facebook_pixel' =>'',
-            'tiktok_pixel' => '',
-            'product_id'=>'',
-            'facebook_pixel_id'=>'',
-            'tiktok_pixel_id'=>'',
-            'whatsapp_pixel_id'=>'',
-            'customer_cs'=>'',
-            'cs_customer'=>'',
-            'thanks_page'=>'',
-        ]);
-
-        // $campaign_id = $request->id;
-        Campaign::findOrFail($id)->update([
-            'campaign_name' => $request->campaign_name,
-            'facebook_pixel' => $request->facebook_pixel,
-            'tiktok_pixel' => $request->tiktok_pixel,
-            'product_id' => $request->product_id,
-            'facebook_pixel_id' => $request->facebook_pixel_id,
-            'tiktok_pixel_id' => $request->tiktok_pixel_id,
-            'whatsapp_pixel_id' => $request->whatsapp_pixel_id,
-            'customer_cs' => $request->customer_cs,
-            'cs_customer' => $request->cs_customer,
-            'thanks_page' => $request->thanks_page,
-
-            'updated_at'=> Carbon::now()->toDateTimeString(),
-        ]);
+        if (auth()->user()->role_id == 1){
+            DB::table('campaigns')->where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
+                'admin_id'          => auth()->user()->admin_id,
+                'title'             => $request->title,
+                'product_id'        => $request->product_id,
+                'message'           => $request->tp,
+                'facebook_pixel'    => $request->fbp,
+                'event_pixel_id'    => $request->event_id,
+                'event_wa_id'       => $request->event_wa,
+                'cs_to_customer'    => $request->cs_to_customer,
+                'customer_to_cs'    => $request->customer_to_cs,
+                'updated_at'        => Carbon::now()->toDateTimeString(),
+            ]);
+        }
+        else{
+            DB::table('campaigns')->where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
+                'user_id'           => Auth()->user()->id,
+                'admin_id'          => auth()->user()->admin_id,
+                'title'             => $request->title,
+                'product_id'        => $request->product_id,
+                'message'           => $request->tp,
+                'facebook_pixel'    => $request->fbp,
+                'event_pixel_id'    => $request->event_id,
+                'event_wa_id'       => $request->event_wa,
+                'cs_to_customer'    => $request->cs_to_customer,
+                'customer_to_cs'    => $request->customer_to_cs,
+                'updated_at'        => Carbon::now()->toDateTimeString(),
+            ]);
+        }
         $request->session()->flash('pesan','Data Berhasil di Ubah');
         return redirect() ->route('campaign.index');
         // return view('User.Advertiser.PageCampaign');
