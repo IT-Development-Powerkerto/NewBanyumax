@@ -37,11 +37,26 @@
         Data Budgeting
     </div>
 
-    <div class="mx-5 ">
-        <livewire:table.closing-customerservice-finance-admin />
-        <livewire:table.staff-budgeting-request-finance-admin />
-        <livewire:table.staff-budgeting-information-finance-admin />
-        <livewire:table.activitylog-finance-admin />
+    <div class="mx-20">
+        <livewire:table.weekly-info-adv-admin />
+    </div>
+    <div class="mx-5">
+        <livewire:table.budgeting-request-adv-admin />
+    </div>
+    <div class="mx-5">
+        <livewire:table.budgeting-request-non-adv-admin  />
+    </div>
+    <div class="mx-5">
+        <livewire:table.realization-adv2 />
+    </div>
+    <div class="mx-5">
+        <livewire:table.realization-non-adv/>
+    </div>
+    <div class="mx-5">
+        <livewire:table.activity-evaluation  />
+    </div>
+    <div class="mx-5">
+        <livewire:table.activity-logs-ceo />
     </div>
 
 

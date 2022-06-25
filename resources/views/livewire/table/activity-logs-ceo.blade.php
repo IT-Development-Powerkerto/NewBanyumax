@@ -5,7 +5,7 @@
 <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-        <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Request Adv</h1>
+        <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Activity Logs</h1>
         <div class="flex flex-row gap-2 py-2">
             <span class="font-medium text-sm text-zinc-400">10 Request</span>
         </div>
