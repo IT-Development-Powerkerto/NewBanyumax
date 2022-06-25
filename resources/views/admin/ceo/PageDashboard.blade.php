@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="assets/img/favicon.png" rel="icon">
-    <title>Finance</title>
+    <title>Dashboard CEO</title>
     <link href="../css/app.css" rel="stylesheet">
 
     <link rel="stylesheet"
@@ -28,16 +28,16 @@
     </div>
     <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="flex flex-col md:flex-row container px-5 pb-5 justify-self-center gap-4">
-            <livewire:card.staffbudgetingapproved-finance />
-            <livewire:card.totalexpence-finance />
-            <livewire:card.staffbudgetingrequest-finance />
+            <livewire:card.leads />
+            <livewire:card.omzet />
+            <livewire:card.expense />
         </div>
     </div>
-    <div class="mt-5 mx-5 px-6 py-2 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
-        Data Budgeting
+    <div class="mt-5 mx-5 px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
+        Informartion
     </div>
 
-    <div class="mx-20">
+    <div class="mx-5">
         <livewire:table.weekly-info-adv-admin />
     </div>
     <div class="mx-5">
