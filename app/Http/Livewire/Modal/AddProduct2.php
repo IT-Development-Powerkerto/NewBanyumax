@@ -8,12 +8,12 @@ use Livewire\WithFileUploads;
 class AddProduct2 extends Component
 {
     use WithFileUploads;
-    public $name, $sku, $price, $product_link, $image;
+    public $name, $sku, $price, $product_link, $image, $admin_id;
 
     public function store(){
         $product = Product::create([
             'name' => $this->name,
-            'admin_id' => 1,
+            'admin_id' => auth()->user()->admin_id,
             'sku' => $this->sku,
             'price' => $this->price,
             'product_link' => $this->product_link,

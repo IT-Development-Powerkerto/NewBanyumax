@@ -10,11 +10,9 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Edit Product</h3>
-                <form class="space-y-6" action="{{ route('product.update',['product' => $product->id]) }}" method="post" enctype="multipart/form-data">
-                    @csrf
-                    @method('PATCH')
+                <form class="space-y-6" method="post" enctype="multipart/form-data">
                     <div class="relative">
-                        <input type="text" value="{{$product->name}}"  name="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
+                        <input type="text" wire:model.defer='name'  name="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
                     </div>
                     <div class="relative">
                         <input type="text" value="{{$product->sku}}" name="sku"  id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
