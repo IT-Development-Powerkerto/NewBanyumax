@@ -122,8 +122,8 @@ class CampaignController extends Controller
                 'facebook_event_id' => $request->facebook_event_id,
                 'facebook_wa_id'    => $request->facebook_wa_id,
                 'thanks_page'       => $request->thanks_page,
-                'cs_to_customer'    => $request->cs_to_customer,
-                'customer_to_cs'    => $request->customer_to_cs,
+                'cs_customer'    => $request->cs_customer,
+                'customer_cs'    => $request->customer_cs,
                 'updated_at'        => Carbon::now()->toDateTimeString(),
             ]);
         }
@@ -137,14 +137,13 @@ class CampaignController extends Controller
                 'facebook_event_id' => $request->facebook_event_id,
                 'facebook_wa_id'    => $request->facebook_wa_id,
                 'thanks_page'       => $request->thanks_page,
-                'cs_to_customer'    => $request->cs_to_customer,
-                'customer_to_cs'    => $request->customer_to_cs,
+                'cs_customer'    => $request->cs_customer,
+                'customer_cs'    => $request->customer_cs,
                 'updated_at'        => Carbon::now()->toDateTimeString(),
             ]);
         }
         // $request->session()->flash('pesan','Data Berhasil di Ubah');
-        return redirect() ->route('campaign.index');
-        // return view('User.Advertiser.PageCampaign');
+        return redirect() ->route('campaign-adv.index');
     }
 
     /**
