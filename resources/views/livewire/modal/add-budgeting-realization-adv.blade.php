@@ -11,7 +11,7 @@
                 <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
-                        <input type="text" name="division" wire:model.defer='division' id="division" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Division" required>
+                        <input type="text" name="item" wire:model.defer='item' id="item" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Item" required>
                     </div>
                     <div class="relative">
                         <input type="text" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
