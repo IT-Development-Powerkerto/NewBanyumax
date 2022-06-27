@@ -4,7 +4,7 @@
             <div class="">
                 <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Campaign</h1>
                 <div class="flex flex-row gap-2 py-2">
-                    <span class="font-medium text-sm text-zinc-400">1000 Data</span>
+                    <span class="font-medium text-sm text-zinc-400">{{$jml_campaign}} Campaign</span>
                 </div>
             </div>
 
@@ -96,7 +96,8 @@
                             <html lang="en">...</textarea>
                         <td class="px-6 py-4">
                             <div class="flex flex-row gap-2">
-                                <a href="/editcampaign"
+                                <a href=""
+                                {{-- {{route('campaign-adv.edit', ['campaign' => $campaign->id])}} --}}
                                     class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
                                     title="Edit Campaign">
                                     <i class="las la-edit"></i>
