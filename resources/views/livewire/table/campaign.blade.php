@@ -76,7 +76,7 @@
                             {{ $loop->iteration }}
                         </td>
                         <td class="px-6 py-4">
-                            {{-- {{ $campaign->campaign_name }} --}}
+                            {{ $campaign->campaign_name }}
                         </td>
                         <td class="px-6 py-4">
                             Hutari Trinurcahyani

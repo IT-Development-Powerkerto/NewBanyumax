@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
+            $table->integer('admin_id');
+            $table->foreignId('user_id');
             $table->string('campaign_name');
             $table->string('product');
             $table->string('facebook_pixel');

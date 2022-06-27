@@ -35,6 +35,7 @@ use App\Http\Controllers\BudgetingRealizationCustomerService;
 use App\Http\Controllers\RoutineEvaluationCustomerService;
 use App\Http\Controllers\ProductController;
 use App\Http\Livewire\Modal\AddProduct2;
+use App\Http\Livewire\Modal\EditProduct;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,6 +53,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/login', LoginController::class);
+Route::get('/logout',[LoginController::class, 'logout']);
 
 Route::resource('/editleadtunneling', EditLeadTunneling::class);
 // Users
@@ -89,16 +91,9 @@ Route::get('/dashboard-budgetrealization-finance', function () {
     return view('admin.finance.PageBudgetRealizationFinance');
 });
 
-// Users.Campaign
-// Route::resource('/campaign', CampaignController::class);
-Route::get('/campaign-adv', [CampaignController::class, 'index']) ->name('campaign.index');
-Route::get('/campaign-adv/create', [CampaignController::class, 'create']) ->name('campaign.create');
-Route::post('/campaign-adv/store', [CampaignController::class, 'store']) ->name('campaign.store');
-Route::get('/campaign-adv/edit/{id}', [CampaignController::class, 'edit']) ->name('campaign.edit');
-Route::patch('/campaign-adv/update/{id}', [CampaignController::class, 'update']) ->name('campaign.update');
-Route::get('/campaign-adv/delete/{id}', [CampaignController::class, 'destroy']) ->name('campaign.destroy');
-
-// Add.Product
+// Adv.Campaign
+Route::resource('/campaign-adv', CampaignController::class);
+// Product
 Route::resource('/product', ProductController::class);
 // Users.Advertiser
 Route::resource('/dashboard-adv', DashboardController::class);
@@ -132,5 +127,7 @@ Route::resource('/budgetingrequest', BudgetingRequest::class);
 //User.Inputer
 Route::resource('/viewdataclosing', ViewDataClosing::class);
 
+
 //Product Component
 // Route::get('/product/add', AddProduct2::class)->name('addproduct');
+// Route::get('/product/edit/{id}', EditProduct::class)->name('editproduct');

@@ -23,7 +23,7 @@
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Edit Campaign</h3>
                 <form method="post" class="space-y-6" action="{{ route('campaign.update',['id' => $campaigns->id]) }}">
                     @csrf
-                    <input type="hidden" name="_method" value="patch">
+                    @method('PATCH')
                     <div class="flex flex-row gap-4">
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">

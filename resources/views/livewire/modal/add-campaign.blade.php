@@ -8,7 +8,7 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Create Campaign</h3>
-                <form class="space-y-6" method="POST" action="{{ route('campaign.store') }}">
+                <form class="space-y-6" method="POST" action="{{ route('campaign-adv.store') }}">
                     @csrf
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -20,7 +20,7 @@
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                                 <i class="las la-box text-gray-400"></i>
                             </div>
-                            <input type="text" name="campaign_product" id="campaign_product" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product" required>
+                            <input type="text" name="product" id="product" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product" required>
                         </div>
                         <div class="relative w-full">
                             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">

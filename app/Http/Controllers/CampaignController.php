@@ -19,13 +19,13 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        $campaigns = Campaign::all();
+        $campaigns = Campaign::where('admin_id', auth()->user()->admin_id)->get();
         $facebook_event = FacebookEvent::all();
         $facebook_wa    = FacebookWa::all();
         $user=auth()->user();
         if($user->role_id == 4){
             // return view('campaignADV', ['eventWa'=>$eventWa])->with('campaigns', $campaigns)->with('products', $product)->with('events', $events);
-            return view('User.Advertiser.PageCampaign', compact('campaigns'));
+            return view('User.Advertiser.PageCampaign', compact('campaigns', 'facebook_event', 'facebook_wa'));
         }else{
             abort(404);
         }
@@ -70,16 +70,19 @@ class CampaignController extends Controller
             'user_id'         => Auth()->user()->id,
             'admin_id'        => auth()->user()->admin_id,
             'campaign_name'   => $request->campaign_name,
+            'product'         => $request->product,
+            'facebook_pixel'  => $request->facebook_pixel,
             'facebook_event_id' =>$request-> facebook_event_id,
             'facebook_wa_id'    =>$request-> facebook_wa_id,
-            'customer_cs'  => $request->cs_to_customer,
-            'cs_customer'  => $request->customer_to_cs,
+            'customer_cs'  => $request->cs_customer,
+            'cs_customer'  => $request->customer_cs,
+            'thanks_page'  => $request->thanks_page,
             'created_at' => Carbon::now()->toDateTimeString(),
             'updated_at' => Carbon::now()->toDateTimeString(),
         ]);
         // dd($validateData);
-        $request->session()->flash('pesan','Data Berhasil di Tambahkan');
-        return redirect() ->route('campaign.index');
+        // $request->session()->flash('pesan','Data Berhasil di Tambahkan');
+        return back();
     }
 
     /**
@@ -113,12 +116,12 @@ class CampaignController extends Controller
         if (auth()->user()->role_id == 1){
             DB::table('campaigns')->where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
                 'admin_id'          => auth()->user()->admin_id,
-                'title'             => $request->title,
-                'product_id'        => $request->product_id,
-                'message'           => $request->tp,
-                'facebook_pixel'    => $request->fbp,
-                'event_pixel_id'    => $request->event_id,
-                'event_wa_id'       => $request->event_wa,
+                'campaign_name'     => $request->campaign_name,
+                'product'           => $request->product,
+                'facebook_pixel'    => $request->facebook_pixel,
+                'facebook_event_id' => $request->facebook_event_id,
+                'facebook_wa_id'    => $request->facebook_wa_id,
+                'thanks_page'       => $request->thanks_page,
                 'cs_to_customer'    => $request->cs_to_customer,
                 'customer_to_cs'    => $request->customer_to_cs,
                 'updated_at'        => Carbon::now()->toDateTimeString(),
@@ -128,18 +131,18 @@ class CampaignController extends Controller
             DB::table('campaigns')->where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
                 'user_id'           => Auth()->user()->id,
                 'admin_id'          => auth()->user()->admin_id,
-                'title'             => $request->title,
-                'product_id'        => $request->product_id,
-                'message'           => $request->tp,
-                'facebook_pixel'    => $request->fbp,
-                'event_pixel_id'    => $request->event_id,
-                'event_wa_id'       => $request->event_wa,
+                'campaign_name'     => $request->campaign_name,
+                'product'           => $request->product,
+                'facebook_pixel'    => $request->facebook_pixel,
+                'facebook_event_id' => $request->facebook_event_id,
+                'facebook_wa_id'    => $request->facebook_wa_id,
+                'thanks_page'       => $request->thanks_page,
                 'cs_to_customer'    => $request->cs_to_customer,
                 'customer_to_cs'    => $request->customer_to_cs,
                 'updated_at'        => Carbon::now()->toDateTimeString(),
             ]);
         }
-        $request->session()->flash('pesan','Data Berhasil di Ubah');
+        // $request->session()->flash('pesan','Data Berhasil di Ubah');
         return redirect() ->route('campaign.index');
         // return view('User.Advertiser.PageCampaign');
     }
@@ -154,7 +157,7 @@ class CampaignController extends Controller
     {
         Campaign::findOrFail($id)->delete();
 
-        $request->session()->flash('pesan','Data Berhasil di Hapus');
+        // $request->session()->flash('pesan','Data Berhasil di Hapus');
         return redirect()->back();
 
     }
