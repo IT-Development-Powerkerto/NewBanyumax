@@ -3,11 +3,13 @@
 namespace App\Http\Livewire\Card;
 
 use Livewire\Component;
+use App\Models\Campaign;
 
 class TotalCampaign extends Component
 {
     public function render()
     {
-        return view('livewire.card.total-campaign');
+        $data['jml_campaign'] = Campaign::all()->count();
+        return view('livewire.card.total-campaign', $data);
     }
 }
