@@ -6,10 +6,12 @@ use Livewire\Component;
 use File;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Livewire\WithFileUploads;
 
 class EditProduct extends Component
 {
-    public $name, $sku, $price, $product_link, $image;
+    // use WithFileUploads;
+    // public $name, $sku, $price, $product_link, $image;
 
     // public function mount($id)
     // {
@@ -23,8 +25,8 @@ class EditProduct extends Component
     //         'name'         => $this->name,
     //         'price'        => $this->price,
     //         'sku'          => $this->sku,
-    //         // 'discount'     => $this->discount,
-    //         // 'image'        => $image,
+    //         // 'discount'  => $this->discount,
+    //         // 'image'     => $this->image->storeAs('assets/img/product', 'product-'),
     //         'product_link' => $this->product_link,
     //         'updated_at'   => Carbon::now()->toDateTimeString(),
     //     ]);

@@ -10,9 +10,11 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Edit Product</h3>
-                <form class="space-y-6" method="post" enctype="multipart/form-data">
+                <form class="space-y-6" action="{{ route('product.update',['product' => $product->id]) }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('PATCH')
                     <div class="relative">
-                        <input type="text" wire:model.defer='name'  name="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
+                        <input type="text" value="{{$product->name}}" name="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
                     </div>
                     <div class="relative">
                         <input type="text" value="{{$product->sku}}" name="sku"  id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
@@ -32,11 +34,11 @@
                                 <span class="">
                                     <img class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" src="{{ asset($product->image) }}" alt="">
                                 </span>
-                                <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
+                                <input class="hidden" value="{{$product->image}}" type="file" name="image" id="image" onchange="previewImage()">
                             </label>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Save Changes</button>
+                        <button wire:click="update" type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Save Changes</button>
                     </div>
                 </form>
             </div>
