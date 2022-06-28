@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('admin_id');
             $table->string('operator');
-            $table->foreignId('product_id');
+            $table->foreignId('campaign_id');
+            $table->string('product_name');
             $table->string('customer_name');
             $table->string('customer_phone');
             $table->date('date');

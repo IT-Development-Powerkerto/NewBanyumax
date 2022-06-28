@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('product_id');
             $table->integer('promotion_product_price')->nullable();
             $table->integer('promotion_product_percent')->nullable();
-            $table->integer('total_promotion');
+            $table->integer('total_promotion')->nullable;
             $table->timestamps();
             $table->softDeletes();
         });
