@@ -8,11 +8,11 @@
             <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Promotion</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">1000 Data</span>
+                <span class="font-medium text-sm text-zinc-400">{{$jml_promotion}} Promotion</span>
             </div>
         </div>
-    
-    
+
+
             <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
                 <div class="relative mr-2">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -58,25 +58,26 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($promotion as $promotion)
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        Generos Discount 50%
+                        {{$promotion->promotion_name}}
                     </td>
                     <td class="px-6 py-4">
-                        Generos
+                        {{$promotion->product->name}}
                     </td>
                     <td class="px-6 py-4">
                         Shipping Cost
                     </td>
                     <td class="px-6 py-4">
-                        Rp 50.000
+                        {{ number_format($promotion->total_promotion, 2, ',', '.')  }}
                     </td>
                     <td class="px-6 py-4">
                         Hutari Tri
                     </td>
                     <td class="px-6 py-4">
                         <button type="button" class="bg-gray-200 py-1 px-3 rounded-lg flex flex-row" aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
-                           Action 
+                           Action
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
                           </svg>
@@ -84,15 +85,16 @@
                         <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
                             <ul class="py-1" aria-labelledby="dropdownAction">
                                 <li>
-                                    <a href="#" data-modal-toggle="edit-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                    <a data-modal-toggle="edit-promotion{{$promotion->id}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
                                 </li>
                                 <li>
-                                    <a href="#" data-modal-toggle="delete-promotion" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                    <a data-modal-toggle="delete-promotion{{$promotion->id}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
                                 </li>
                             </ul>
                         </div>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
