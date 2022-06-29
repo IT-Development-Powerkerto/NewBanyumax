@@ -45,7 +45,7 @@ class CreatePropmotions extends Controller
     {
         $total_promotion = $request->promotion_product_price;
 
-        DB::table('promotions')->insert([
+        Promotion::insert([
             'admin_id'                      => auth()->user()->admin_id,
             'user_id'                       => auth()->user()->id,
             'promotion_name'                => $request->promotion_name,
@@ -97,7 +97,7 @@ class CreatePropmotions extends Controller
     {
         $total_promotion = $request->promotion_product_price;
 
-        DB::table('promotions')->where('id',$id)->update([
+        Promotion::where('id',$id)->update([
             'admin_id'                      => auth()->user()->admin_id,
             'user_id'                       => auth()->user()->id,
             'promotion_name'                => $request->promotion_name,
