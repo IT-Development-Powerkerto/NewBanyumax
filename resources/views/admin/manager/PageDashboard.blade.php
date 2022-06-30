@@ -78,7 +78,7 @@
             Information
         </div>
     </div>
-    <div class="container mx-auto px-5 md:px-0">
+    <div class="container mx-auto px-5 mb-10">
         <livewire:table.weekly-info-adv-admin />
         <livewire:table.budgeting-request-adv-admin />
         <livewire:table.budgeting-request-non-adv-admin />
