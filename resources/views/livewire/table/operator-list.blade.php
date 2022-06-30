@@ -1,4 +1,4 @@
-<div class="p-4 mt-12 h-96 overflow-y-auto bg-white rounded-lg border shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div class="p-4 py-6 h-96 overflow-y-auto bg-white rounded-lg border shadow-md dark:bg-gray-800 dark:border-gray-700">
     <div class="flex justify-between items-center mb-4">
         <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white ">Operator List</h5>
     </div>

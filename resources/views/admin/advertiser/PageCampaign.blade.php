@@ -28,7 +28,7 @@
         <livewire:card.total-operator />
         <livewire:card.total-lead />
     </div>
-    <div class="container mx-auto py-5 px-5">
+    <div class="py-5 mx-5">
         @livewire('table.campaign')
     </div>
 

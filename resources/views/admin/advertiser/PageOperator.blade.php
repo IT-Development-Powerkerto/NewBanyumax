@@ -23,9 +23,9 @@
     <livewire:navbar.navbar-admin />
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
     <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5 my-5">
-        <livewire:card.total-campaign />
         <livewire:card.total-operator />
         <livewire:card.total-lead />
+        <livewire:card.total-campaign />
     </div>
     <div class="flex flex-col md:grid lg:grid grid-cols-3 h-full gap-3 mx-auto py-5 px-5">
         <div class="col-span-2">

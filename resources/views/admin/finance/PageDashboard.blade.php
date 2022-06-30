@@ -37,7 +37,7 @@
         Data Budgeting
     </div>
 
-    <div class="mx-5 ">
+    <div class="mx-5 mb-10">
         <livewire:table.closing-customerservice-finance-admin />
         <livewire:table.staff-budgeting-request-finance-admin />
         <livewire:table.staff-budgeting-information-finance-admin />
