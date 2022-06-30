@@ -14,7 +14,7 @@
             <div class="mr-2 w-36 md:w-fit">
                 <button
                     class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
-                    type="button" data-modal-toggle="add-manual-closing">
+                    type="button" data-modal-toggle="add-budgeting-realization-inputer">
                     <i class="las la-plus text-xl"></i>
                     <span>Add Budgeting Realization</span>
                 </button>

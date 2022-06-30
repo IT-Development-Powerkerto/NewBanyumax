@@ -16,7 +16,7 @@
                         <input type="text" name="phone" wire:model.defer='phone' id="phone" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Phone" required>
                     </div>
                     <div class="relative">
-                        <input type="text" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal" required>
+                        <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal" required>
                     </div>
                     <div class="relative">
                         <div class="-mt-2 text-sm mb-3 text-gray-600">

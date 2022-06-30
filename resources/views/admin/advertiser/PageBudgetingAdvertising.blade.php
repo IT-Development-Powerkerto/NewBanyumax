@@ -15,7 +15,7 @@
 
     @livewireStyles
 </head>
-<body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
+<body class="bg-zinc-200 pb-10" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-admin />
 
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
@@ -27,5 +27,6 @@
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
+    <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
 </body>
 </html>

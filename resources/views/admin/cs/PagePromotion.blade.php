@@ -30,7 +30,7 @@
     <livewire:modal.edit-promotion />
     <livewire:modal.delete-promotion />
     <div class="px-5">
-            <livewire:table.create-promotion-cs />
+    <livewire:table.create-promotion-cs />
     </div>
     
 

@@ -23,8 +23,9 @@
     <livewire:navbar.navbar-admin />
 
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="container mx-auto px-5 py-10 md:px-0">
+    <div class="container mx-auto px-5 py-10 ">
         <livewire:table.budgeting-realization-inputer />
+        <livewire:modal.add-budgeting-realization-inputer />
     </div>
 
     @livewireScripts

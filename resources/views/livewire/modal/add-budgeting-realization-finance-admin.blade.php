@@ -14,7 +14,7 @@
                         <input type="text" name="item" wire:model.defer='item' id="item" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Add Item" required>
                     </div>
                     <div class="relative">
-                        <input type="text" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
+                        <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
                     </div>
                     <div class="relative">
                         <textarea name="reason" wire:model.defer='reason' id="reason" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Reason" required></textarea>
