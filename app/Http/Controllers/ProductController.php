@@ -121,7 +121,7 @@ class ProductController extends Controller
             $image = DB::table('products')->where('admin_id', auth()->user()->admin_id)->where('id', $product->id)->implode('image');
         }
 
-        DB::table('products')->where('id', $product->id)->update([
+        Product::where('id', $product->id)->update([
             'admin_id'     => auth()->user()->admin_id,
             'name'         => $request->name,
             'price'        => $request->price,

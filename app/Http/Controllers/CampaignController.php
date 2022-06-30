@@ -66,7 +66,7 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-        $campaign_id = DB::table('campaigns')->insertGetId([
+        $campaign_id = Campaign::insertGetId([
             'user_id'         => Auth()->user()->id,
             'admin_id'        => auth()->user()->admin_id,
             'campaign_name'   => $request->campaign_name,
@@ -114,7 +114,7 @@ class CampaignController extends Controller
     public function update(Request $request, $campaign)
     {
         if (auth()->user()->role_id == 1){
-            DB::table('campaigns')->where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
+            Campaign::where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
                 'admin_id'          => auth()->user()->admin_id,
                 'campaign_name'     => $request->campaign_name,
                 'product'           => $request->product,
@@ -128,7 +128,7 @@ class CampaignController extends Controller
             ]);
         }
         else{
-            DB::table('campaigns')->where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
+            Campaign::where('id', $campaign)->where('admin_id', auth()->user()->admin_id)->update([
                 'user_id'           => Auth()->user()->id,
                 'admin_id'          => auth()->user()->admin_id,
                 'campaign_name'     => $request->campaign_name,
