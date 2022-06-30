@@ -23,7 +23,7 @@
     <livewire:navbar.navbar-admin />
 
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="container mx-auto py-5 px-5 md:px-0">
+    <div class="container mx-auto py-5 px-5 ">
         <div class="flex flex-row justify-between items-center py-3 px-5">
             <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information
             </h1>
@@ -57,8 +57,7 @@
         <div class="mt-5 mx-auto px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
             Data Budgeting
         </div>
-
-        <div class="container mx-auto px-5 md:px-0">
+        <div class="container mx-auto px-5">
             <livewire:table.customer-service />
             <livewire:table.data-closing />
         </div>
