@@ -36,7 +36,15 @@
         </div>
     </div>
 </div>
-
+<div class="relative">
+    <span class="text-gray-500 px-1 mb-2">Attachment</span>
+        <label type="file" name="image-product" id="image-product" required>
+            <span class="">
+                <img class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
+            </span>
+            <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
+        </label>
+</div>
 <script>
     function previewImage(){
 

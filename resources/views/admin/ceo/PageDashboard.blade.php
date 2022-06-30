@@ -79,8 +79,8 @@
         </div>
     </div>
     <div class="container mx-auto px-5 md:px-0">
-        <livewire:table.weekly-info-adv-admin />
-        <livewire:table.budgeting-request-adv-admin />
+        {{-- <livewire:table.weekly-info-adv-admin />
+        <livewire:table.budgeting-request-adv-admin /> --}}
         <livewire:table.budgeting-request-non-adv-admin />
         <livewire:table.realization-adv2 />
         <livewire:table.realization-non-adv />
