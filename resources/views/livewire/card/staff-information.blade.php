@@ -72,10 +72,10 @@
                     </td>
                     <td class="px-6 py-4">
                         <div class="flex flex-row">
-                            <a href="#"
+                            <button data-modal-toggle="edit-staff-on-admin" type="button"
                                 class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                                 <i class="las la-edit"></i>
-                            </a>
+                            </button>
                             <button data-modal-toggle="delete-staff-on-admin" type="button"
                                 class="bg-gradient-to-r ml-2 from-orange-500 to-red-500 hover:text-red-700 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                                 <i class="las la-trash-alt"></i>
