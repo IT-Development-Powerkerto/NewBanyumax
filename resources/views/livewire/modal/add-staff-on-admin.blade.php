@@ -19,13 +19,13 @@
                     <div class="relative">
                         <input type="text" name="poin" wire:model.defer='poin' id="poin" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Poin" required>
                     </div>
-                    <div class="relative">
+                   <div class="relative">
                         <span class="text-gray-500 px-1 mb-2">Attachment</span>
-                            <label type="file" name="image" id="image" required>
+                            <label type="file" name="image-product" id="image-product" required>
                                 <span class="">
-                                    <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
+                                    <img src="assets/img/icon-foto.png" class="img-preview-staff w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
                                 </span>
-                                <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
+                                <input class="hidden" type="file" name="image" id="image-staff" onchange="previewImageStaff()">
                             </label>
                     </div>
                     <div class="flex flex-row gap-3">
@@ -38,10 +38,10 @@
 </div>
 
 <script>
-    function previewImage(){
+    function previewImageStaff(){
 
-        const image = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
+        const image = document.querySelector('#image-staff');
+        const imgPreview = document.querySelector('.img-preview-staff');
 
         imgPreview.style.display = 'block';
 

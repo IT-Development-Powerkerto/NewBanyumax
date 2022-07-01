@@ -32,9 +32,9 @@
                         <span class="text-gray-500 px-1 mb-2">Image</span>
                             <label type="file" name="image-product" id="image-product" required>
                                 <span class="">
-                                    <img class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" src="{{ asset($product->image) }}" alt="">
+                                    <img class="img-preview-edit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" src="{{ asset($product->image) }}" alt="">
                                 </span>
-                                <input class="hidden" value="{{$product->image}}" type="file" name="image" id="image" onchange="previewImage()">
+                                <input class="hidden" value="{{$product->image}}" type="file" name="image" id="image-edit" onchange="previewImageEdit()">
                             </label>
                     </div>
                     <div class="flex flex-row gap-3">
@@ -46,4 +46,21 @@
     </div>
 </div>
 @endforeach
+
+<script>
+    function previewImageEdit(){
+
+        const image = document.querySelector('#image-edit');
+        const imgPreview = document.querySelector('.img-preview-edit');
+
+        imgPreview.style.display = 'block';
+
+        const oFReader = new FileReader();
+
+        oFReader.readAsDataURL(image.files[0]);
+        oFReader.onload = function(oFREvent){
+        imgPreview.src = oFREvent.target.result;
+        }
+        }
+</script>
 
