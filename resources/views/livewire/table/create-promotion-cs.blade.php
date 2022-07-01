@@ -58,7 +58,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($promotion as $promotion)
+                @foreach ($promotions as $promotion)
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
                         {{$promotion->promotion_name}}
@@ -85,10 +85,10 @@
                         <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdownAction">
                             <ul class="py-1" aria-labelledby="dropdownAction">
                                 <li>
-                                    <a data-modal-toggle="edit-promotion{{$promotion->id}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                    <button data-modal-toggle="edit-promotion{{$promotion->id}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</button>
                                 </li>
                                 <li>
-                                    <a data-modal-toggle="delete-promotion{{$promotion->id}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                    <button data-modal-toggle="delete-promotion{{$promotion->id}}" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</button>
                                 </li>
                             </ul>
                         </div>
@@ -185,3 +185,26 @@
 </div>
 
 </div>
+{{-- <div>
+    <!-- Main modal -->
+    <div id="modal_delete" tabindex="-1" aria-hidden="true" class="modal fade hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow bg-slate-100" >
+                <div class="py-6 px-6 lg:px-8">
+                    <form id="formDelete" class="space-y-6" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <div class="text-center text-xl text-gray-700 font-bold mb-12">
+                            <h1>Delete Promotion ?</h1>
+                        </div>
+                        <div class="flex flex-row gap-3">
+                            <button type="submit" class="w-full bg-red-600 text-white border font-medium rounded-xl text-sm px-5 py-2.5 text-center">Delete</button>
+                            <button type="button" class="w-full text-gray-400 font-medium rounded-xl text-sm px-5 py-2.5 text-center border-2" data-modal-toggle="delete-promotion">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}

@@ -33,9 +33,21 @@
         <livewire:table.create-promotion-cs />
     </div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    {{-- @livewire('livewire-ui-modal') --}}
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     console.log('hello worldf');
+        // })
+        $(document).ready(function() {})
+
+        function confirmDelete(id) {
+            $('#deleteForm').attr('action', `/createpromotion/${id}/delete`);
+            $('#modal_delete').modal('show')
+        }
+    </script>
 </body>
 
 </html>

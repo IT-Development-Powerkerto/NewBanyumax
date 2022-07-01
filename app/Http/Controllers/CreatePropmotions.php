@@ -45,6 +45,7 @@ class CreatePropmotions extends Controller
     {
         $total_promotion = $request->promotion_product_price;
 
+        // dd(auth()->user());
         Promotion::insert([
             'admin_id'                      => auth()->user()->admin_id,
             'user_id'                       => auth()->user()->id,
@@ -79,7 +80,7 @@ class CreatePropmotions extends Controller
      */
     public function edit($id)
     {
-        $product = Prfoduct::where('admin_id', auth()->user()->admin_id)->get();
+        $product = Product::where('admin_id', auth()->user()->admin_id)->get();
         $promotion = Promotion::where('admin_id', auth()->user()->admin_id)->whereId($id)->get();
         if(auth()->user()->role_id == 5 || auth()->user()->role_id == 13){
             return view('livewire.modal.edit-promotion', ['promotion' => $promotion])->with('product', $product);
@@ -93,11 +94,11 @@ class CreatePropmotions extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Promotion $createpromotion)
     {
         $total_promotion = $request->promotion_product_price;
 
-        Promotion::where('id',$id)->update([
+        Promotion::where('id',$createpromotion->id)->update([
             'admin_id'                      => auth()->user()->admin_id,
             'user_id'                       => auth()->user()->id,
             'promotion_name'                => $request->promotion_name,
@@ -117,9 +118,9 @@ class CreatePropmotions extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Promotion $promotion)
+    public function destroy(Promotion $createpromotion)
     {
-        $promotion->delete();
+        $createpromotion->delete();
         return back();
     }
 }

@@ -9,7 +9,7 @@ class DeletePromotion extends Component
 {
     public function render()
     {
-        $promotion = Promotion::all();
-        return view('livewire.modal.delete-promotion', compact('promotion'));
+        $promotions = Promotion::all();
+        return view('livewire.modal.delete-promotion', compact('promotions'));
     }
 }
