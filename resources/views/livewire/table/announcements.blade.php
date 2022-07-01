@@ -54,10 +54,10 @@
                         2022-02-14 14:54:21
                     </td>
                     <td class="px-6 py-4">
-                            <a href="#"
-                                class="bg-gradient-to-r ml-2 from-orange-500 to-red-500 hover:text-red-700 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
-                                <i class="las la-trash-alt"></i>
-                            </a>
+                        <button data-modal-toggle="delete-announcement-on-admin" type="button"
+                            class="bg-gradient-to-r ml-2 from-orange-500 to-red-500 hover:text-red-700 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
+                            <i class="las la-trash-alt"></i>
+                        </button>
                     </td>
                 </tr>
             </tbody>

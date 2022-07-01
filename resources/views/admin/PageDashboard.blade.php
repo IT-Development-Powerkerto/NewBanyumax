@@ -125,9 +125,15 @@
                             <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Product
                                 Information</h1>
                             <!-- Modal toggle -->
+                            
                             <button
-                                class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
+                                class="flex flex-row text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
                                 type="button" data-modal-toggle="add-product">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
                                 Add Product
                             </button>
                             <livewire:modal.add-product2 />
@@ -141,8 +147,14 @@
                 </div>
                 <div class="flex flex-col gap-4 container mx-auto py-5 px-5 md:grid lg:grid grid-cols-2">
                     <livewire:card.staff-information />
+                    <livewire:modal.delete-staff-on-admin/>
+                    <livewire:modal.add-staff-on-admin />
+
                     <livewire:table.announcements />
+                    <livewire:modal.delete-announcement-on-admin/>
+                    <livewire:modal.add-announcement-on-admin />
                 </div>
+               
             </div>
         
             <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">
