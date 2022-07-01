@@ -149,6 +149,7 @@
                     <livewire:card.staff-information />
                     <livewire:modal.delete-staff-on-admin/>
                     <livewire:modal.add-staff-on-admin />
+                    <livewire:modal.edit-staff-on-admin />
 
                     <livewire:table.announcements />
                     <livewire:modal.delete-announcement-on-admin/>
