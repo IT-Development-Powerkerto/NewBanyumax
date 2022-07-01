@@ -1,5 +1,5 @@
-<div class="py-5">
-    <div class="mt-1 flex flex-col w-full py-5">
+<div class="pb-5">
+    <div class="flex flex-col w-full">
     </div>
 </div>
 <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
@@ -399,5 +399,8 @@
             </li>
         </ul>
     </nav>
+    <div>
+
+    </div>
 
 </div>

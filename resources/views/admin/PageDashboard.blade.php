@@ -51,7 +51,21 @@
             </div>
         </div>
         <div class="w-full p-5">
-            <div class="grid grid-cols-6 md:grid-cols-12 gap-4">
+            <div class="flex flex-wrap gap-4">
+                <livewire:card.advertising-cost />
+                <livewire:card.total-leads />
+                <livewire:card.total-closing />
+                <livewire:card.closing-rate />
+                <livewire:card.upselling />
+                <livewire:card.total-box />
+                <livewire:card.cost-perresult />
+                <livewire:card.cross-selling />
+                <livewire:card.caq-lead />
+                <livewire:card.caq-customer />
+                <livewire:card.caq-bottle />
+                <livewire:card.caq-total />
+            </div>
+            {{-- <div class="grid grid-cols-6 md:grid-cols-12 gap-4">
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.advertising-cost />
                 </div>
@@ -88,7 +102,7 @@
                 <div class="col-span-3 md:col-span-6 lg:col-span-3 mx-auto">
                     <livewire:card.caq-total />
                 </div>
-            </div>
+            </div> --}}
             <div class="container mx-auto px-5 md:px-0">
                 @if (session()->has('success'))
                     <livewire:flash-message.success />
@@ -119,13 +133,13 @@
                             <livewire:modal.add-product2 />
                         </div>
                     </div>
-                    <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
+                    <div class="flex flex-col md:grid md:grid-cols-12 px-5">
                         <livewire:card.product-information />
                     </div>
                     <livewire:modal.edit-product />
                     <livewire:modal.delete-product />
                 </div>
-                <div class="flex flex-col container mx-auto py-5 px-5 md:grid lg:grid grid-cols-2">
+                <div class="flex flex-col gap-4 container mx-auto py-5 px-5 md:grid lg:grid grid-cols-2">
                     <livewire:card.staff-information />
                     <livewire:table.announcements />
                 </div>

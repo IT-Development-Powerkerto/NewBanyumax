@@ -74,7 +74,7 @@
                 <livewire:card.caq-lead-admin />
             </div>
         </div>
-        <div class="mt-5 mx-5 px-6 py-2 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
+        <div class="mt-5 mx-5 px-6 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
             Information
         </div>
     </div>
