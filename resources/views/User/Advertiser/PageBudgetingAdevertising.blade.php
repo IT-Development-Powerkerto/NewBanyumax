@@ -26,7 +26,7 @@
         'routineevaluation' => '/routineevaluation-adv',
     ])
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="container mx-auto py-5 px-5">
+    <div class="container mx-auto py-5 px-5 mb-10">
         <livewire:table.data-budgeting-adv />
         <livewire:table.adv-activity-week />
         <livewire:table.adv-activity-last-month />

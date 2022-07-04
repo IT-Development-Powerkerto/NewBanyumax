@@ -1,10 +1,7 @@
 <div class="mt-10 px-6 py-5 justify-start items-center bg-white border rounded-lg">
     <div class="flex flex-row justify-between items-center w-full">
-        <div class="">
-            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Weekly Info ADV Activity</h1>
-            <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">1000 Data</span>
-            </div>
+        <div class="mb-5">
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Request</h1>
         </div>
 
     </div>
@@ -13,10 +10,10 @@
             <h1 class="text-2xl font-semibold">Rp</h1>
         </div>
         <div class="w-full">
-            <input class=" bg-gray-100 border px-3 py-1 rounded-lg w-full" placeholder="Request">
+            <input type="number" class=" bg-gray-100 border px-3 py-1 rounded-lg w-full" placeholder="Request">
         </div>
         <div class="w-full">
-            <input class=" bg-gray-100 border px-3 py-1 rounded-lg w-full" placeholder="Target">
+            <input type="number" class=" bg-gray-100 border px-3 py-1 rounded-lg w-full" placeholder="Target">
         </div>
         <div class="">
             <button class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 text-white rounded-lg px-24 py-1"> Submit</button>
