@@ -8,22 +8,21 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Add Product</h3>
-                <form class="space-y-6" action="{{route('product.store')}}" method="POST" enctype="multipart/form-data">
-                    @csrf
+                <form class="space-y-6">
                     <div class="relative">
-                        <input type="text" name="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
+                        <input type="text"  wire:model.defer="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
                     </div>
                     <div class="relative">
-                        <input type="text" name="sku" id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
+                        <input type="text" wire:model.defer="sku" id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
                     </div>
                     <div class="relative">
-                        <input type="number" name="price" id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
+                        <input type="number" wire:model.defer="price" id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
                     </div>
                     {{-- <div class="relative">
                         <input type="number" name="discount" wire:model.defer='discount' id="discount" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Discount" required>
                     </div> --}}
                     <div class="relative">
-                        <input type="text" name="product_link" id="product_link" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="linkproduct" required>
+                        <input type="text" wire:model.defer="product_link" id="product_link" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="linkproduct" required>
                     </div>
                     <div class="relative">
                         <span class="text-gray-500 px-1 mb-2">Image</span>
@@ -31,11 +30,11 @@
                                 <span class="">
                                     <img class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
                                 </span>
-                                <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
+                                <input class="hidden" wire:model.defer="image" type="file" id="image" onchange="previewImage()">
                             </label>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add Product</button>
+                        <button wire:click="store" type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add Product</button>
                     </div>
                 </form>
             </div>
