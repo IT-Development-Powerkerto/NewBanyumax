@@ -11,10 +11,24 @@ class Promotion extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = 'promotions';
+    // protected $table = 'promotions';
 
-    public function product(){
-    	return $this->belongsTo(Product::class);
+    protected $fillable = [
+        'admin_id',
+        'promotion_name',
+        'product_id',
+        'promotion_product_price',
+        'promotion_product_percent',
+        // 'total_promotion',
+    ];
+
+    public function product()
+    {
+    	return $this->belongsTo(Product::class, 'product_id', 'id');
+    }
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
 }

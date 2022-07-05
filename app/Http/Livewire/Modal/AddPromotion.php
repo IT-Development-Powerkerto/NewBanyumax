@@ -18,15 +18,15 @@ class AddPromotion extends Component
 
     public function store()
     {
-        // $total_promotion = $this->promotion_product_price;
+        $total_promotion = $this->promotion_product_price;
         Promotion::create([
-            // 'admin_id'                      => auth()->user()->admin_id,
-            // 'user_id'                       => auth()->user()->id,
+            'admin_id'                      => auth()->user()->admin_id,
+            'user_id'                       => auth()->user()->id,
             'promotion_name'                => $this->promotion_name,
             'product_id'                    => $this->product_id,
             'promotion_product_price'       => $this->promotion_product_price,
             'promotion_product_percent'     => $this->promotion_product_percent,
-            // 'total_promotion'               => $total_promotion,
+            'total_promotion'               => $total_promotion,
             'created_at'                    => Carbon::now()->toDateTimeString(),
             'updated_at'                    => Carbon::now()->toDateTimeString(),
         ]);
