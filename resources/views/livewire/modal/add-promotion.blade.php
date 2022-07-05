@@ -1,5 +1,5 @@
 <!-- Main modal -->
-<div id="add-promotion" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+<div wire:ignore.self id="add-promotion" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative rounded-lg shadow bg-slate-100" >
@@ -11,10 +11,10 @@
                 <form method="POST" class="space-y-6" action="{{route('createpromotion.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
-                        <input type="text" name="promotion_name" wire:model.defer='promotion-name' id="promotion-name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Promotion Name" required>
+                        <input type="text" name="promotion_name" wire:model.defer='promotion_name' id="promotion_name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Promotion Name" required>
                     </div>
                     <div class="relative">
-                        <select name="product_id" id="product" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                        <select name="product_id" wire:model.defer="product_id" id="product_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                             <option disabled selected>Select Product</option>
                             @foreach ($products as $product)
                                 <option value="{{$product->id}}">{{$product->name}}</option>
@@ -22,7 +22,7 @@
                         </select>
                     </div>
                     <div class="relative">
-                        <select name="promotion-type" id="promotion-type" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                        <select name="promotion-type" wire:model.defer="promotion_type" id="promotion-type" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                             <option disabled selected>Select Promotion Type</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -39,19 +39,19 @@
                         <div class="flex w-9 justify-center absolute rounded-l-lg inset-y-0 left-0 items-center pointer-events-none bg-gray-200 text-xs text-gray-400">
                             IDR
                         </div>
-                        <input type="number" name="promotion_product_price" wire:model.defer='price' id="price" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        <input type="number" name="promotion_product_price" wire:model.defer='promotion_product_price' id="price" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
                     </div>
                     <div class="relative">
                         <div class="flex w-9 justify-center absolute rounded-l-lg inset-y-0 left-0 items-center pointer-events-none bg-gray-200 text-xs text-gray-400">
                             %
                         </div>
-                        <input type="number" name="promotion_product_percent" wire:model.defer='discount' id="discount" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        <input type="number" name="promotion_product_percent" wire:model.defer='promotion_product_percent' id="discount" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
                     </div>
                     <div class="relative">
-                        <input type="number" disabled name="total_promotion" wire:model.defer='total' id="total" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Total Promotion">
+                        <input type="number" disabled name="total_promotion" wire:model.defer='total_promotion' id="total" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Total Promotion">
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit"  class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create Promotion</button>
+                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create Promotion</button>
                     </div>
                 </form>
             </div>

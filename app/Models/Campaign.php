@@ -23,5 +23,7 @@ class Campaign extends Model
     public function facebook_wa(){
     	return $this->belongsTo(FacebookEvent::class,'facebook_wa_id','id');
     }
-
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

@@ -54,5 +54,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Promotion::class);
     }
+    public function campaign(){
+        return $this->hasMany(Campaign::class);
+    }
+    public function evaluation(){
+        return $this->hasMany(Evalution::class);
+    }
+    public function budgeting_realization(){
+        return $this->hasMany(BudgetingRealization::class);
+    }
 
 }
