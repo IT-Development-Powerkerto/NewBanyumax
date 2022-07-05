@@ -91,6 +91,11 @@ Route::get('/dashboard-budgetrealization-finance', function () {
     return view('admin.finance.PageBudgetRealizationFinance');
 });
 
+
+Route::get('/live-reporting', function () {
+    return view('admin.LiveReporting');
+});
+
 // Adv.Campaign
 Route::resource('/campaign-adv', CampaignController::class);
 // Product
