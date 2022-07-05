@@ -26,7 +26,7 @@
             <h1 class="font-semibold tracking-wide text-xl">Product Information</h1>
             <!-- Modal toggle -->
             <button
-                class="text-blue-400 h-max shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+                class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                 type="button" data-modal-toggle="add-product">
                 + Add Product
             </button>
@@ -39,7 +39,7 @@
         <livewire:modal.delete-product />
     </div>
 
-    <div class="px-5 container mx-auto">
+    <div class="px-5 -mt-10 mb-10 container mx-auto">
         <livewire:table.lead-tunneling />
     </div>
 

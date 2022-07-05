@@ -44,7 +44,7 @@
                             </button>
                             <div class="py-6 px-6 lg:px-8">
                                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
-                                    Add Manual Lead</h3>
+                                    Add Manual Closing</h3>
                                 <form class="space-y-6" action="#">
                                     <div class="relative">
                                         <input type="text" name="operator" wire:model.defer='operator' id="operator"
@@ -237,7 +237,7 @@
                     </div>
                 </td>
                 <td class="px-6 py-4 text-center">
-                    <a href="#"
+                    <a href="/editleadtunneling"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                         <i class="las la-edit"></i>
                     </a>
@@ -276,7 +276,7 @@
                     </div>
                 </td>
                 <td class="px-6 py-4 text-center">
-                    <a href="#"
+                    <a href="/editleadtunneling"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                         <i class="las la-edit"></i>
                     </a>
