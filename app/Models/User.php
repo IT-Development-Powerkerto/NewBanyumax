@@ -50,4 +50,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Package::class);
     }
+    public function promotion()
+    {
+        return $this->hasMany(Promotion::class);
+    }
+
 }

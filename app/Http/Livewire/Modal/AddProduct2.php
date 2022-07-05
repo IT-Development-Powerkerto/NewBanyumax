@@ -20,7 +20,7 @@ class AddProduct2 extends Component
             'sku' => $this->sku,
             'price' => $this->price,
             'product_link' => $this->product_link,
-            'image' => $nameFile
+            // 'image' => $nameFile
         ]);
     }
     public function render()
