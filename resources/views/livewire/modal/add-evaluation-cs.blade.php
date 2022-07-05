@@ -1,5 +1,5 @@
 <!-- Main modal -->
-<div id="add-evaluation-cs" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+<div wire:ignore.self id="add-evaluation-cs" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative rounded-lg shadow bg-slate-100" >
@@ -8,13 +8,13 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Add Evaluation</h3>
-                <form class="space-y-6" action="#">
+                <form class="space-y-6" action="">
                     <div class="relative">
-                        <select name="product" id="product" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                        <select name="product_id" wire:model.defer ="product_id" id="product" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                             <option disabled selected>Select Product</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                                @foreach ($products as $product)
+                                    <option value="{{$product->id}}">{{$product->name}}</option>
+                                @endforeach
                         </select>
                     </div>
                     <div class="relative">

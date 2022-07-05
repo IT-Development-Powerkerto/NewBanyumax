@@ -13,8 +13,14 @@ class Product extends Model
 
     protected $guarded = ['id'];
 
-    public function promotion(){
+    public function promotion()
+    {
         return $this->hasMany(Promotion::class);
+    }
+
+    public function evaluation()
+    {
+        return $this->hasMany(Evaluation::class);
     }
 
 }
