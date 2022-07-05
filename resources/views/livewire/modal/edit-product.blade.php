@@ -32,7 +32,7 @@
                         <span class="text-gray-500 px-1 mb-2">Image</span>
                             <label type="file" name="image-product" id="image-product" required>
                                 <span class="">
-                                    <img class="img-preview-edit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" src="{{ asset($product->image) }}" alt="">
+                                    <img src="assets/img/icon-foto.png" class="img-preview-edit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" src="{{ asset($product->image) }}" alt="">
                                 </span>
                                 <input class="hidden" value="{{$product->image}}" type="file" name="image" id="image-edit" onchange="previewImageEdit()">
                             </label>

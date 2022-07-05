@@ -30,12 +30,12 @@
         'routineevaluation' => '/routineevaluation-adv',
     ])
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5 my-5">
+    <div class="flex flex-col md:grid lg:grid justify-between grid-cols-3 gap-4 mx-5 my-5">
         <livewire:card.total-campaign />
         <livewire:card.total-operator />
         <livewire:card.total-lead />
     </div>
-    <div class="container mx-auto py-5 px-5">
+    <div class="w-full mx-auto py-5 px-5">
         @livewire('table.campaign')
     </div>
 

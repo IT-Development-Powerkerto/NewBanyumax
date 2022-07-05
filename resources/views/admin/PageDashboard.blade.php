@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="w-full p-5">
-            <div class="flex flex-wrap gap-4">
+            <div class="flex flex-wrap gap-4 justify-between">
                 <livewire:card.advertising-cost />
                 <livewire:card.total-leads />
                 <livewire:card.total-closing />
