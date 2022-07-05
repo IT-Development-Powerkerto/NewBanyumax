@@ -54,5 +54,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Promotion::class);
     }
+    public function campaign(){
+        return $this->hasMany(Campaign::class);
+    }
 
 }

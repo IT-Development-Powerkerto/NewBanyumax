@@ -5,10 +5,11 @@ namespace App\Http\Livewire\Modal;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Promotion;
+use Carbon\Carbon;
 
 class AddPromotion extends Component
 {
-    public $promotion_name, $product_id, $promotion_product_price, $promotion_product_percent, $total_promotion, $admin_id;
+    public $promotion_name, $product_id, $promotion_product_price, $promotion_product_percent, $total_promotion, $admin_id, $user_id;
 
     public function render()
     {
@@ -21,7 +22,7 @@ class AddPromotion extends Component
         $total_promotion = $this->promotion_product_price;
         Promotion::create([
             'admin_id'                      => auth()->user()->admin_id,
-            'user_id'                       => auth()->user()->id,
+            'user_id'                       => Auth()->user()->id,
             'promotion_name'                => $this->promotion_name,
             'product_id'                    => $this->product_id,
             'promotion_product_price'       => $this->promotion_product_price,

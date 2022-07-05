@@ -15,11 +15,12 @@ class Promotion extends Model
 
     protected $fillable = [
         'admin_id',
+        'user_id',
         'promotion_name',
         'product_id',
         'promotion_product_price',
         'promotion_product_percent',
-        // 'total_promotion',
+        'total_promotion',
     ];
 
     public function product()
@@ -28,7 +29,7 @@ class Promotion extends Model
     }
     public function users()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class);
     }
 
 }
