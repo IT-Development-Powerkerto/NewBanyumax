@@ -68,17 +68,17 @@
         <!-- Tab Contents -->
         <div id="tab-contents">
             <div id="first" class="p-4">
-                <canvas id="lineChartTotalOmset"></canvas>
+                <canvas class="p-4" id="lineChartTotalOmset"></canvas>
                 {{-- <canvas id="chartLine"> </canvas> --}}
             </div>
             <div id="second" class="hidden p-4">
-                Second tab
+                <canvas class="p-4" id="lineChartTotalBottle"></canvas>
             </div>
             <div id="third" class="hidden p-4">
-                Third tab
+                <canvas class="p-4" id="lineChartTotalLead"></canvas>
             </div>
             <div id="fourth" class="hidden p-4">
-                Fourth tab
+                <canvas class="p-4" id="lineChartTotalClosing"></canvas>
             </div>
         </div>
     </div>
@@ -86,7 +86,7 @@
 
     @livewireScripts
     <script>
-        //Chart Bisnis Mingguan
+        //Chart Total Omset
         var ctxL = document.getElementById("lineChartTotalOmset").getContext('2d');
         var myLineChart = new Chart(ctxL, {
           type: 'line',
@@ -118,7 +118,112 @@
             responsive: true
           }
         });
-        </script>
+    </script>
+
+    <script>
+        //Chart Total Bottle
+        var ctxL = document.getElementById("lineChartTotalBottle").getContext('2d');
+        var myLineChart = new Chart(ctxL, {
+          type: 'line',
+          data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Agst", "Sept", "Okt" ,"Nov", "Dec"],
+            datasets: [
+            {
+              label: "Generous",
+              data: [49,5,17,23,20,15,21,5,26,40,16,36],
+              backgroundColor: ['rgb(0, 178, 255, .2)'],
+              borderColor: ['#00B2FF'],
+              borderWidth: 2
+            }, {
+              label: "Freshmag",
+              data: [ 30, 45, 5, 2, 20, 30, 45,0, 10, 5, 2, 20],
+              backgroundColor: ['rgb(59, 130, 246, .2)'],
+              borderColor: ['#3B82F6'],
+              borderWidth: 2
+            },{
+              label: "Gizdat",
+              data:  [1, 18, 38, 43, 27, 31, 14, 0, 20, 5, 15, 25, 34], 
+              backgroundColor: ['rgb(0, 187, 85, .2)'],
+              borderColor: ['#00BB55'],
+              borderWidth: 2
+            },
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        });
+    </script>
+
+    <script>
+        //Chart Total Lead
+        var ctxL = document.getElementById("lineChartTotalLead").getContext('2d');
+        var myLineChart = new Chart(ctxL, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Agst", "Sept", "Okt" ,"Nov", "Dec"],
+            datasets: [
+            {
+            label: "Generous",
+            data: [0, 10,  45, 5, 2, 20, 30, 45, 5, 2, 20, 30],
+            backgroundColor: ['rgb(0, 178, 255, .2)'],
+            borderColor: ['#00B2FF'],
+            borderWidth: 2
+            }, {
+            label: "Freshmag",
+            data: [10, 20, 5, 43, 27, 31, 14, 15, 25, 34, 18, 38],
+            backgroundColor: ['rgb(59, 130, 246, .2)'],
+            borderColor: ['#3B82F6'],
+            borderWidth: 2
+            },{
+            label: "Gizdat",
+            data: [15,26,17,23,20,15,20 ,40,16,36,49,5],
+            backgroundColor: ['rgb(0, 187, 85, .2)'],
+            borderColor: ['#00BB55'],
+            borderWidth: 2
+            },
+            ]
+        },
+        options: {
+            responsive: true
+        }
+        });
+    </script>
+
+    <script>
+        //Chart Total Closing
+        var ctxL = document.getElementById("lineChartTotalClosing").getContext('2d');
+        var myLineChart = new Chart(ctxL, {
+        type: 'line',
+        data: {
+            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Agst", "Sept", "Okt" ,"Nov", "Dec"],
+            datasets: [
+            {
+            label: "Generous",
+            data: [49,5,17,5,26,40,16,36,23,20,15,21],
+            backgroundColor: ['rgb(0, 178, 255, .2)'],
+            borderColor: ['#00B2FF'],
+            borderWidth: 2
+            }, {
+            label: "Freshmag",
+            data: [ 30, 45, 5, 2, 20, 5, 2, 20, 30, 45,0, 10],
+            backgroundColor: ['rgb(59, 130, 246, .2)'],
+            borderColor: ['#3B82F6'],
+            borderWidth: 2
+            },{
+            label: "Gizdat",
+            data:  [1, 18,  20, 5, 15, 25, 34, 38, 43, 27, 31, 14, 0], 
+            backgroundColor: ['rgb(0, 187, 85, .2)'],
+            borderColor: ['#00BB55'],
+            borderWidth: 2
+            },
+            ]
+        },
+        options: {
+            responsive: true
+        }
+        });
+    </script>
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
