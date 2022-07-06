@@ -68,12 +68,12 @@
 
     </div>
 
-    <div class="flex-col gap-4 md:grid lg-grid grid-cols-4  py-5 mx-5">
+    <div class="flex-col gap-4 md:grid lg-grid grid-cols-4 py-5 mx-5">
         <div class="col-span-1 mb-5">
             <livewire:card.adv-ranking/>
         </div>
-        <div class="col-span-1 mb-5 bg-red-500">
-            1
+        <div class="col-span-1 mb-5">
+            <livewire:card.cs-ranking/>
         </div>
         <div class="col-span-2 mb-5 bg-gray-500">
             1
