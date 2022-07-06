@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('budgeting_realizations', function (Blueprint $table) {
             $table->id();
+            $table->integer('admin_id');
+            $table->foreignId('user_id');
             $table->string('item');
             $table->integer('nominal');
             $table->string('description');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
