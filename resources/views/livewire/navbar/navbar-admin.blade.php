@@ -138,7 +138,7 @@
                 </div>
             </li>
             <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Live Reporting</a>
+                <a href="/live-reporting" class="block py-2 pr-4 pl-3 text-gray-700 font-semibold border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 hover:border-b hover:border-blue-700">Live Reporting</a>
             </li>
         </ul>
         </div>
