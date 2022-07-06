@@ -3,11 +3,11 @@
             <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Realization</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">1000 Data</span>
+                <span class="font-medium text-sm text-zinc-400">{{$jml_budgetingadv}} data</span>
             </div>
         </div>
-    
-    
+
+
             <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
                 <div class="relative mr-2">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -54,21 +54,22 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($budgeting_reals as $budgeting_real)
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    22-06-2022
+                    {{$budgeting_real->created_at}}{{-- 22-06-2022 --}}
                 </td>
                 <td class="px-6 py-4">
-                    Iklan Etawaku Platinum
+                    {{$budgeting_real->item}}
                 </td>
                 <td class="px-6 py-4">
                     Advertiser
                 </td>
                 <td class="px-6 py-4">
-                    Rp 2.000.000
+                    {{$budgeting_real->nominal}}
                 </td>
                 <td class="px-6 py-4">
-                    700
+                    {{$budgeting_real->description}}
                 </td>
                 <td class="px-6 py-4">
                     <button class="text-white text-sm py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg">
@@ -76,6 +77,7 @@
                     </button>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
@@ -161,7 +163,7 @@
     </nav>
 
     <div>
-        
+
     </div>
 
 </div>
