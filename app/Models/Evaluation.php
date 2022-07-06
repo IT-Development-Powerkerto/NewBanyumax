@@ -12,6 +12,8 @@ class Evaluation extends Model
     use SoftDeletes;
 
     protected $fillable = [
+        'admin_id',
+        'user_id',
         'product_id',
         'date',
         'time',

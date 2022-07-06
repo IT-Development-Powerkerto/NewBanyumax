@@ -11,6 +11,14 @@ class BudgetingRealization extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'admin_id',
+        'user_id',
+        'item',
+        'nominal',
+        'description',
+    ];
+
     public function users()
     {
         return $this->belongsTo(User::class);
