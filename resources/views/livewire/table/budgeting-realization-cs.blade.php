@@ -8,11 +8,11 @@
             <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Realization</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">1000 Data</span>
+                <span class="font-medium text-sm text-zinc-400">{{$jml_budgetingadv}} data</span>
             </div>
         </div>
-    
-    
+
+
             <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
                 <div class="relative mr-2">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -58,21 +58,22 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($budgeting_reals as $budgeting_real)
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        16/6/2022
+                        {{$budgeting_real ->created_at}}
                     </td>
                     <td class="px-6 py-4">
-                        Pulsa 100.000
+                        {{$budgeting_real->item}}
                     </td>
                     <td class="px-6 py-4">
                         Customer Services
                     </td>
                     <td class="px-6 py-4">
-                        Rp 101.000
+                        {{$budgeting_real->nominal}}
                     </td>
                     <td class="px-6 py-4">
-                        Pulsa Digunakan untuk beli....
+                        {{$budgeting_real->description}}
                     </td>
                     <td class="px-6 py-4">
                         <a href="#" class=" text-white bg-blue-600 py-1 justify-center rounded-md flex flex-row">
@@ -83,81 +84,7 @@
                         </a>
                     </td>
                 </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        16/6/2022
-                    </td>
-                    <td class="px-6 py-4">
-                        Pulsa 100.000
-                    </td>
-                    <td class="px-6 py-4">
-                        Customer Services
-                    </td>
-                    <td class="px-6 py-4">
-                        Rp 101.000
-                    </td>
-                    <td class="px-6 py-4">
-                        Pulsa Digunakan untuk beli....
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#" class=" text-white bg-blue-600 py-1 justify-center rounded-md flex flex-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        16/6/2022
-                    </td>
-                    <td class="px-6 py-4">
-                        Pulsa 100.000
-                    </td>
-                    <td class="px-6 py-4">
-                        Customer Services
-                    </td>
-                    <td class="px-6 py-4">
-                        Rp 101.000
-                    </td>
-                    <td class="px-6 py-4">
-                        Pulsa Digunakan untuk beli....
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#" class=" text-white bg-blue-600 py-1 justify-center rounded-md flex flex-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        16/6/2022
-                    </td>
-                    <td class="px-6 py-4">
-                        Pulsa 100.000
-                    </td>
-                    <td class="px-6 py-4">
-                        Customer Services
-                    </td>
-                    <td class="px-6 py-4">
-                        Rp 101.000
-                    </td>
-                    <td class="px-6 py-4">
-                        Pulsa Digunakan untuk beli....
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="#" class=" text-white bg-blue-600 py-1 justify-center rounded-md flex flex-row">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            Download
-                        </a>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -193,8 +120,8 @@
                 </li>
             </ul>
         </div>
-    
-    
+
+
         <nav aria-label="Page navigation example">
             <ul class="inline-flex items-center -space-x-px">
                 <li>
@@ -241,9 +168,9 @@
                 </li>
             </ul>
         </nav>
-    
+
         <div></div>
-    
+
     </div>
 
 </div>

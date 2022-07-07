@@ -21,6 +21,7 @@ class AddBudgetingRealizationCs extends Component
             'item' => $this->item,
             'nominal' => $this->nominal,
             'description'=> $this->description,
+            'created_at' => Carbon::now()->toDateTimeString(),
         ]);
     }
 }

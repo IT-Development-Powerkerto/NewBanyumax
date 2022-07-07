@@ -12,7 +12,8 @@ class AddProduct2 extends Component
 
     public function store()
     {
-        // $namaFile =  'product-'.time().'.'.$this->image->getClientOriginalExtension();
+        // dd($this->image);
+        // $namaFile =  $this->image->getClientOriginalName();
         // $this->image->storeAs('public/assets/img/product', $nameFile);
         $product = Product::create([
             'name' => $this->name,
