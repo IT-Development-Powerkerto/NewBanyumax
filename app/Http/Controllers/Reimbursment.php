@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Reimbursement;
 
 class Reimbursment extends Controller
 {
@@ -13,7 +14,9 @@ class Reimbursment extends Controller
      */
     public function index()
     {
-        return view('User.Cs.PageReimbursment');
+        $reimbursements = Reimbursement::all();
+        $data['jml_reimbursement'] = Reimbursement::all()->count();
+        return view('User.Cs.PageReimbursment', $data, compact('reimbursements'));
     }
 
     /**

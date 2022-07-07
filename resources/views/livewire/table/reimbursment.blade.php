@@ -3,7 +3,7 @@
         <div class="">
         <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Reimbursement</h1>
         <div class="flex flex-row gap-2 py-2">
-            <span class="font-medium text-sm text-zinc-400">1000 Data</span>
+            <span class="font-medium text-sm text-zinc-400">{{$jml_reimbursment}} data</span>
         </div>
     </div>
 
@@ -53,18 +53,19 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($reimbursements as $reimbursement)
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    10/6/2022
+                    {{$reimbursment -> created_at}}
                 </td>
                 <td class="px-6 py-4">
                     Alam Syah
                 </td>
                 <td class="px-6 py-4">
-                    Pulsa untuk Paket Internet
+                    {{$reimbursment -> reason}}
                 </td>
                 <td class="px-6 py-4">
-                    Rp 100.000
+                    {{$reimbursment -> nominal}}
                 </td>
                 <td class="px-6 py-4">
                     <Span class="bg-blue-100 text-blue-500 py-2 px-4 rounded-md">
@@ -80,60 +81,7 @@
                     </a>
                 </td>
             </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    10/6/2022
-                </td>
-                <td class="px-6 py-4">
-                    Alam Syah
-                </td>
-                <td class="px-6 py-4">
-                    Pulsa untuk Paket Internet
-                </td>
-                <td class="px-6 py-4">
-                    Rp 100.000
-                </td>
-                <td class="px-6 py-4">
-                    <Span class="bg-red-100 text-red-500 py-2 px-4 rounded-md">
-                        Rejected
-                    </Span>
-                </td>
-                <td class="px-6 py-4 ">
-                    <a href="#" class="text-white bg-gray-500 py-2 px-4 rounded-md flex flex-row justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 self-center" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                        </svg>
-                        Delete
-                    </a>
-                </td>
-            </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    10/6/2022
-                </td>
-                <td class="px-6 py-4">
-                    Alam Syah
-                </td>
-                <td class="px-6 py-4">
-                    Pulsa untuk Paket Internet
-                </td>
-                <td class="px-6 py-4">
-                    Rp 100.000
-                </td>
-                <td class="px-6 py-4">
-                    <Span class="bg-cyan-100 text-cyan-500 py-2 px-4 rounded-md">
-                        Approved
-                    </Span>
-                </td>
-                <td class="px-6 py-4 ">
-                    <a href="#" class="text-white bg-gray-500 py-2 px-4 rounded-md flex flex-row justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 self-center" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                        </svg>
-                        Delete
-                    </a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
