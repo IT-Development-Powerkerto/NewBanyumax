@@ -23,4 +23,14 @@ class Product extends Model
         return $this->hasMany(Evaluation::class);
     }
 
+    public function campaign()
+    {
+        return $this->hasMany(Campaign::class);
+    }
+
+    public function lead()
+    {
+        return $this->hasMany(Lead::class);
+    }
+
 }
