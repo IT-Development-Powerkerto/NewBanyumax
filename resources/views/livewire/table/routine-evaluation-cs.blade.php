@@ -8,11 +8,11 @@
             <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Routine Evaluation</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">1000 Data</span>
+                <span class="font-medium text-sm text-zinc-400">{{$jml_evaluation}}</span>
             </div>
         </div>
-    
-    
+
+
             <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
                 <div class="relative mr-2">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -55,74 +55,25 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($evaluations as $evaluation)
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        Rube
+                        {{$evaluation->product->name}}
                     </td>
                     <td class="px-6 py-4">
-                        16/6/2022
+                        {{$evaluation->date}}
                     </td>
                     <td class="px-6 py-4">
-                        16.45
+                        {{$evaluation->time}}
                     </td>
                     <td class="px-6 py-4">
-                        Custemer Slow Respon
+                        {{$evaluation->resistance}}
                     </td>
                     <td class="px-6 py-4">
-                        Follow p setiap hari agar di notice
+                        {{$evaluation->solution}}
                     </td>
                 </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        Rube
-                    </td>
-                    <td class="px-6 py-4">
-                        16/6/2022
-                    </td>
-                    <td class="px-6 py-4">
-                        16.45
-                    </td>
-                    <td class="px-6 py-4">
-                        Custemer Slow Respon
-                    </td>
-                    <td class="px-6 py-4">
-                        Follow p setiap hari agar di notice
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        Rube
-                    </td>
-                    <td class="px-6 py-4">
-                        16/6/2022
-                    </td>
-                    <td class="px-6 py-4">
-                        16.45
-                    </td>
-                    <td class="px-6 py-4">
-                        Custemer Slow Respon
-                    </td>
-                    <td class="px-6 py-4">
-                        Follow p setiap hari agar di notice
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        Rube
-                    </td>
-                    <td class="px-6 py-4">
-                        16/6/2022
-                    </td>
-                    <td class="px-6 py-4">
-                        16.45
-                    </td>
-                    <td class="px-6 py-4">
-                        Custemer Slow Respon
-                    </td>
-                    <td class="px-6 py-4">
-                        Follow p setiap hari agar di notice
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -159,8 +110,8 @@
                 </li>
             </ul>
         </div>
-    
-    
+
+
         <nav aria-label="Page navigation example">
             <ul class="inline-flex items-center -space-x-px">
                 <li>
@@ -207,9 +158,9 @@
                 </li>
             </ul>
         </nav>
-    
+
         <div></div>
-    
+
     </div>
 
 </div>

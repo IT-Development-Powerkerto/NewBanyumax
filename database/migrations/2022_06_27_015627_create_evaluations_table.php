@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('resistance');
             $table->string('solution');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
