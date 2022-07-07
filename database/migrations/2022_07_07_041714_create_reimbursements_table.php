@@ -13,17 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('evaluations', function (Blueprint $table) {
+        Schema::create('reimbursements', function (Blueprint $table) {
             $table->id();
-            $table->integer('admin_id');
             $table->foreignId('user_id');
-            $table->foreignId('product_id');
-            $table->date('date');
-            $table->time('time');
-            $table->string('resistance');
-            $table->string('solution');
+            $table->string('reason');
+            $table->string('phone');
+            $table->integer('nominal');
+            $table->string('attachment');
+            $table->boolean('status')->nullable();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('evaluations');
+        Schema::dropIfExists('reimbursements');
     }
 };

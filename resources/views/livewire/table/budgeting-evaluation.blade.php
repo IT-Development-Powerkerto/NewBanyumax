@@ -3,7 +3,7 @@
         <div class="">
         <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Routine Evaluation</h1>
         <div class="flex flex-row gap-2 py-2">
-            <span class="font-medium text-sm text-zinc-400">1000 Data</span>
+            <span class="font-medium text-sm text-zinc-400">{{$jml_evaluation}}</span>
         </div>
     </div>
         <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
@@ -52,46 +52,28 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($evaluations as $evaluation)
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    1
+                    {{$loop -> iteration}}
                 </td>
                 <td class="px-6 py-4">
-                    Iklan Etawaku Platinum
+                    {{$evaluation->product->name}}
                 </td>
                 <td class="px-6 py-4">
-                    10/06/2022
+                    {{$evaluation->date}}
                 </td>
                 <td class="px-6 py-4">
-                    09:23
+                    {{$evaluation->time}}
                 </td>
                 <td class="px-6 py-4">
-                    -
+                    {{$evaluation->resistance}}
                 </td>
                 <td class="px-6 py-4">
-                    -
+                    {{$evaluation->solution}}
                 </td>
             </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    2
-                </td>
-                <td class="px-6 py-4">
-                    Iklan Freshmag
-                </td>
-                <td class="px-6 py-4">
-                    10/06/2022
-                </td>
-                <td class="px-6 py-4">
-                    09:23
-                </td>
-                <td class="px-6 py-4">
-                    -
-                </td>
-                <td class="px-6 py-4">
-                    -
-                </td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
