@@ -75,8 +75,8 @@
         <div class="col-span-1 mb-5">
             <livewire:card.cs-ranking/>
         </div>
-        <div class="col-span-2 mb-5 bg-gray-500">
-            1
+        <div class="col-span-2 mb-5">
+            <livewire:card.product-ranking/>
         </div>
     </div>
 
