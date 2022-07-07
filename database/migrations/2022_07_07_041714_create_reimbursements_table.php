@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('reimbursements', function (Blueprint $table) {
             $table->id();
+            $table->integer('admin_id');
             $table->foreignId('user_id');
             $table->string('reason');
             $table->string('phone');
