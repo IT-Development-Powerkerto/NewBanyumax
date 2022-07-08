@@ -17,6 +17,16 @@
                         <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
                     </div>
                     <div class="relative">
+                        <select name="campaign" id="campaign"
+                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                            required>
+                            <option disabled selected>Select Campaign</option>
+                            <option value="1">Campaign One</option>
+                            <option value="2">Campaign Two</option>
+                            <option value="3">Campaign Three</option>
+                        </select>
+                    </div>
+                    <div class="relative">
                         <textarea name="description" wire:model.defer='description' id="description" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description" required></textarea>
                     </div>
                     <div class="relative">

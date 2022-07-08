@@ -1,4 +1,4 @@
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 mt-5 flex flex-row justify-between items-center bg-white border rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV</h1>
@@ -78,19 +78,6 @@
                     </div>
                 </div>
             </div>
-            <div class="relative mr-2 w-36 md:w-56">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0  00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-                <input datepicker datepicker-autohide type="text"
-                    class="bg-white text-gray-400 border-gray-200 shadow sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 placeholder-gray-400 font-medium"
-                    placeholder="Select Date">
-            </div>
         </div>
     </div>
 </div>
@@ -99,10 +86,7 @@
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    Period
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Adv Name
+                    advertising costs
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Leads
@@ -121,19 +105,22 @@
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    09- Mar- 2022
+                    Rp 140.000
                 </td>
                 <td class="px-6 py-4">
-                    Hutari Trinurcahyani
-                </td>
-                <td class="px-6 py-4 text-blue-500">
-                    100 Leads
+                    <div class="flex flex-col text-[#464E5F]">
+                        <h1 class="font-medium">0 Daily Leads</h1>
+                        <h1 class="font-semibold">108 Total Leads</h1>
+                    </div>
                 </td>
                 <td class="px-6 py-4 text-orange-400">
-                    100 Leads
+                    <div class="flex flex-col text-[#464E5F]">
+                        <h1 class="font-medium">0 Daily Closing</h1>
+                        <h1 class="font-semibold">108 Total Closing</h1>
+                    </div>
                 </td>
                 <td class="px-6 py-4">
-                    700 Box
+                    32
                 </td>
                 <td class="px-6 py-4">
                     Rp 200.000 ,00

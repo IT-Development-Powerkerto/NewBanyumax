@@ -33,11 +33,28 @@
     <div class="px-6 py-6 w-full bg-white-400 rounded-lg dark:bg-gray-800 dark:border-gray-700">
         <div class="container mx-auto py-5">
             <livewire:table.budgeting-realization />
+            <livewire:table.data-budgeting-adv />
         </div>
     </div>
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
+    <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script>
+        $(function() {
+          $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+          }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+          });
+        });
+        </script>
 </body>
 
 </html>
