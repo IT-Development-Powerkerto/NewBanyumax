@@ -1,4 +1,4 @@
-<div class="flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500 ml-5 border rounded-lg w-96 h-96 mr-2 px-6 py-6 ml-51 text-white ">
+<div class="flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500 border rounded-lg w-96 h-96 px-6 py-6 text-white ">
     <h1 class="text-xl font-semibold">Payment</h1>
     <div class="flex flex-col mt-10">
         <span class="text-xs flex justify-center">Total Payment</span>

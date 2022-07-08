@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="px-5">
+    <div class="px-5 mb-10">
          <livewire:table.reimbursment />
     </div>
     <livewire:modal.delete-reimbursment />
