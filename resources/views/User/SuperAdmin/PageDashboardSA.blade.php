@@ -25,12 +25,22 @@
         <div class="fixed">
             <livewire:navbar.sidebar-sa/>
         </div>
-        <div class="container text-4xl md:ml-64 px-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In aspernatur cum aut veniam labore doloremque, perspiciatis ipsam dolor. Dolorum aut mollitia eligendi voluptates dolores ipsum quia accusamus id dolore aspernatur.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sed aperiam laboriosam sunt! Sint dolor labore, iure optio excepturi unde soluta magni eos laboriosam est sequi voluptatem vitae, voluptates animi?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis debitis molestiae corrupti autem recusandae ea quidem deleniti? A fuga, tempora laborum inventore, perferendis alias nulla adipisci sit sapiente dicta facilis!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt quia, sit beatae omnis atque doloribus at, ut aspernatur neque numquam suscipit animi. Blanditiis, odit maxime sint tempora corrupti error?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolor blanditiis, ducimus maxime incidunt neque? Odit quis sed quas sit, delectus impedit velit ratione pariatur eaque quos corporis doloribus tempore.
+        <div class="container md:ml-64 px-5">
+            <div class="py-10">
+                <p class="font-bold text-xl mb-2">
+                    Welcome, Super Veza
+                </p>
+                <p class="text-gray-400">
+                    Super Admin
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-between pb-5 gap-2">
+                <livewire:card.user-activity-on-sa />
+                <livewire:card.total-pricing-on-sa />
+                <livewire:card.user-nonactive-on-sa />
+            </div>
+
         </div>
     </div>
     
