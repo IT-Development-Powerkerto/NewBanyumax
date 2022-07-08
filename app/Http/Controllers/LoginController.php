@@ -50,13 +50,13 @@ class LoginController extends Controller
             //     $request->session()->regenerate();
             //     return redirect()->intended('/superadmin');
             // }
-            // elseif($role_id == 1){
-            //     $request->session()->regenerate();
-            //     return redirect()->intended('/dashboard');
-            // }
             if($role_id == 4){
                 $request->session()->regenerate();
                 return redirect()->intended('/dashboard-adv');
+            }
+            elseif($role_id == 1){
+                $request->session()->regenerate();
+                return redirect()->intended('/dashboard-admin');
             }
             elseif($role_id == 5 || $role_id == 13){
                 $request->session()->regenerate();

@@ -48,19 +48,25 @@ use App\Http\Livewire\Modal\EditProduct;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::middleware(['guest'])->group(function(){
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::resource('/login', LoginController::class);
-Route::get('/logout',[LoginController::class, 'logout']);
+    Route::resource('/login', LoginController::class);
+});
+Route::middleware(['auth'])->group(function(){
+
+    Route::get('/logout',[LoginController::class, 'logout']);
+    // Admin.Dashboard
+    Route::resource('/dashboard-admin', DashboardAdmin::class);
+});
 
 Route::resource('/editleadtunneling', EditLeadTunneling::class);
 // Users
 
 Route::resource( '/realization', BudgetingRealizationController::class);
-// Admin.Dashboard
-Route::resource('/dashboard-admin', DashboardAdmin::class);
+
 // Admin.CEO.Dashboard
 Route::resource('/dashboard-ceo', DashboardCeo::class);
 // Admin.Manager.Admin
@@ -131,6 +137,7 @@ Route::resource('/budgetingrequest', BudgetingRequest::class);
 
 //User.Inputer
 Route::resource('/viewdataclosing', ViewDataClosing::class);
+
 
 
 //Product Component
