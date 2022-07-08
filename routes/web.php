@@ -143,3 +143,8 @@ Route::resource('/viewdataclosing', ViewDataClosing::class);
 //Product Component
 // Route::get('/product/add', AddProduct2::class)->name('addproduct');
 // Route::get('/product/edit/{id}', EditProduct::class)->name('editproduct');
+
+//Super Admin
+Route::get('/dashboard-sa', function () {
+    return view('User.SuperAdmin.PageDashboardSA');
+});

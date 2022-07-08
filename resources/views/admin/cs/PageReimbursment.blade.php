@@ -24,7 +24,7 @@
 
     <div class="container mx-auto py-5  mb-10">
         <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5">
-            
+
             <div class="bg-white flex flex-row p-4 gap-2 rounded-lg">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#3B82F6">
@@ -32,13 +32,13 @@
                     </svg>
                 </div>
                 <div class="text-blue-500 text-2xl font-bold self-center">
-                    20
+                    {{$jml_reimbursement}}
                 </div>
                 <div class="text-blue-500 font-bold self-center">
                     Total Reimbursement
                 </div>
             </div>
-    
+
             <div class="bg-white flex flex-row p-4 gap-2 rounded-lg">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#06B6D4">
@@ -52,7 +52,7 @@
                     Approved Reimbursement
                 </div>
             </div>
-            
+
             <div class="bg-white flex flex-row p-4 gap-2 rounded-lg">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" viewBox="0 0 20 20" fill="#EF4444">
@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="px-5">
+    <div class="px-5 mb-10">
          <livewire:table.reimbursment />
     </div>
     <livewire:modal.delete-reimbursment />

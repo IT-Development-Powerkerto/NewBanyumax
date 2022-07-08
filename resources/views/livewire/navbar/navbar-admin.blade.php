@@ -1,6 +1,6 @@
 <nav class="bg-white border shadow-sm border-gray-200 px-2 sm:px-4 py-2.5">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="#" class="flex items-center">
+        <a href="/dashboard-admin" class="flex items-center">
             <img src="assets/img/logo.png" class="mr-2 h-3" alt="Banyumax Logo" />
         </a>
         <div class="flex items-center md:order-2">

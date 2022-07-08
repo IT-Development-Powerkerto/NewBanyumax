@@ -24,7 +24,7 @@
 
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
     <div class="container mx-auto py-5 px-5 ">
-        <div class="flex flex-row justify-between items-center py-3 px-5">
+        <div class="flex flex-row justify-between items-center py-3">
             <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information
             </h1>
             <button id="FilterReporting" data-dropdown-toggle="FiltersReporting"
@@ -48,7 +48,7 @@
                 </ul>
             </div>
         </div>
-        <div class="flex container px-5 pb-5">
+        <div class="flex flex-wrap justify-between pb-5 gap-2">
             <livewire:card.warehouse-admin />
             <livewire:card.payment-admin />
             <livewire:card.staff-budgeting-request-admin />
@@ -57,7 +57,7 @@
         <div class="mt-5 mx-auto px-6 py-4 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
             Data Budgeting
         </div>
-        <div class="container mx-auto px-5">
+        <div class="container mx-auto">
             <livewire:table.customer-service />
             <livewire:table.data-closing />
         </div>
