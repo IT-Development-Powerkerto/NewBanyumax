@@ -11,15 +11,15 @@
             <!-- Dropdown menu -->
             <div class="hidden z-50 my-4 w-52 text-base list-none bg-white rounded divide-y divide-gray-100 shadow" id="dropdown">
                 <div class="py-3 px-4">
-                    <span class="block text-sm text-gray-900">Muhammad Faizal</span>
-                    <span class="block text-sm font-medium text-gray-500 truncate">Admin</span>
+                    <span class="block text-sm text-gray-900">{{ $user->name }}</span>
+                    <span class="block text-sm font-medium text-gray-500 truncate">{{ $user->role->name }}</span>
                 </div>
                 <ul class="py-1" aria-labelledby="dropdown">
                     <li>
                         <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">My Profile</a>
                     </li>
                     <li>
-                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+                        <a href="/logout" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                     </li>
                 </ul>
             </div>
