@@ -16,14 +16,14 @@ return new class extends Migration
         Schema::create('leads', function (Blueprint $table) {
             $table->id();
             $table->integer('admin_id');
+            $table->foreignId('user_id');
             $table->string('advertiser');
             $table->foreignId('operator_id')->nullable();
             $table->foreignId('campaign_id')->nullable();
-            // $table->foreignId('client_id');
+            $table->foreignId('client_id');
             $table->string('client_name')->nullable();
             $table->string('client_whatsapp')->nullable();
-            $table->foreignId('product_id');
-            $table->foreignId('user_id');
+            // $table->foreignId('product_id');
             $table->integer('quantity')->nullable();
             $table->integer('price');
             $table->integer('total_price')->nullable();

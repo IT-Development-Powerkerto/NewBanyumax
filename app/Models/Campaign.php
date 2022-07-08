@@ -16,18 +16,25 @@ class Campaign extends Model
     // 	return $this->belongsTo(Product::class,'product_id','id');
     // }
 
-    public function facebook_event(){
+    public function facebook_event()
+    {
     	return $this->belongsTo(FacebookEvent::class,'facebook_event_id','id');
     }
 
-    public function facebook_wa(){
+    public function facebook_wa()
+    {
     	return $this->belongsTo(FacebookEvent::class,'facebook_wa_id','id');
     }
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
     public function product()
     {
         return $this->belongsTo(Product::class, 'product_id', 'id');
+    }
+    public function lead()
+    {
+        return $this->hasMany(Lead::class);
     }
 }
