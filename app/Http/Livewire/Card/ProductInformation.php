@@ -9,14 +9,23 @@ use Livewire\WithFileUploads;
 class ProductInformation extends Component
 {
     use WithFileUploads;
-    public $name, $sku, $price, $product_link, $image, $admin_id;
-
-    public $isOpenEdit = 0;
+    public $product, $name, $sku, $price, $product_link, $image, $admin_id;
+    // public $deletedId = '';
+    public $listeners = [
+        'productDeleted' => '$refresh'
+    ];
+    public $isOpenEdit = false;
     public $isOpenDelete = 0;
 
-    public function openModalEdit()
+    public function openModalEdit($id)
     {
-        $this->isOpenEdit = true;
+        // return response()->json($id);
+        // ddd($id);
+        // $this->isOpenEdit = true;
+        // $product = Product::find($id);
+        // dd($product);
+
+        $this->emit('getProduct', $id);
     }
 
     public function closeModalEdit()
@@ -24,9 +33,10 @@ class ProductInformation extends Component
         $this->isOpenEdit = false;
     }
 
-    public function openModalDelete()
+    public function openModalDelete($id)
     {
         $this->isOpenDelete = true;
+        $this->emit('deleteId', $id);
     }
 
     public function closeModalDelete()

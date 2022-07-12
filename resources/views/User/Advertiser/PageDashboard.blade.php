@@ -104,9 +104,11 @@
                         <livewire:modal.add-product2 />
                     </div>
                 </div>
-                <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
-                    <livewire:card.product-information />
-                </div>
+                {{-- <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
+                    @foreach ($products as $product)
+                    @endforeach
+                </div> --}}
+                <livewire:card.product-information />
                 <livewire:modal.edit-product />
                 <livewire:modal.delete-product />
             </div>
