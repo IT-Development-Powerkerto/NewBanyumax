@@ -67,7 +67,7 @@
                         {{$promotion->product->name}}
                     </td>
                     <td class="px-6 py-4">
-                        Shipping Cost
+                        {{$promotion->type_promotion->name}}
                     </td>
                     <td class="px-6 py-4">
                         {{ number_format($promotion->total_promotion, 2, ',', '.')  }}

@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Modal;
 use Livewire\Component;
 use App\Models\Product;
 use App\Models\Promotion;
+use App\Models\TypePromotion;
 use Carbon\Carbon;
 
 class AddPromotion extends Component
@@ -14,7 +15,8 @@ class AddPromotion extends Component
     public function render()
     {
         $products = Product::all();
-        return view('livewire.modal.add-promotion', compact('products'));
+        $type_promotions = TypePromotion::all();
+        return view('livewire.modal.add-promotion', compact('products', 'type_promotions'));
     }
 
     public function store()

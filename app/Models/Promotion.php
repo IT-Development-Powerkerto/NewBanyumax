@@ -16,6 +16,7 @@ class Promotion extends Model
     protected $fillable = [
         'admin_id',
         'user_id',
+        'promotion_type_id',
         'promotion_name',
         'product_id',
         'promotion_product_price',

@@ -50,6 +50,7 @@ class CreatePropmotions extends Controller
             'admin_id'                      => auth()->user()->admin_id,
             'user_id'                       => auth()->user()->id,
             'promotion_name'                => $request->promotion_name,
+            'promotion_type_id'             => $request->promotion_type_id,
             'product_id'                    => $request->product_id,
             'promotion_product_price'       => $request->promotion_product_price,
             'promotion_product_percent'     => $request->promotion_product_percent,
