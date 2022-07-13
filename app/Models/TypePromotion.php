@@ -9,7 +9,12 @@ class TypePromotion extends Model
 {
     use HasFactory;
 
-    public function promotion(){
+    protected $fillable = [
+        'name',
+    ];
+
+    public function promotion()
+    {
         return $this->hasMany(Promotion::class);
     }
 }
