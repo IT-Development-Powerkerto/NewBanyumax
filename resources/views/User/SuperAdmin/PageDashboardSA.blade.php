@@ -35,7 +35,7 @@
                 </p>
             </div>
             
-            <div class="flex flex-wrap justify-between pb-5 gap-2">
+            <div class="flex flex-wrap justify-between pb-5">
                 <livewire:card.user-activity-on-sa />
                 <livewire:card.total-pricing-on-sa />
                 <livewire:card.user-nonactive-on-sa />
