@@ -31,5 +31,9 @@ class Promotion extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function type_promotion()
+    {
+    	return $this->belongsTo(TypePromotion::class, 'promotion_type_id', 'id');
+    }
 
 }
