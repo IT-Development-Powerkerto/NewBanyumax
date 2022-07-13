@@ -25,7 +25,7 @@
         <div class="fixed">
             <livewire:navbar.sidebar-sa/>
         </div>
-        <div class="container md:ml-64 px-5">
+        <div class="container px-5 md:ml-64 lg:ml-64 ">
             <div class="py-10">
                 <p class="font-bold text-xl mb-2">
                     Welcome, Super Veza
