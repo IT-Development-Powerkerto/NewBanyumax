@@ -2,7 +2,7 @@
     @foreach ($products as $product)
     <div class="md:col-span-6 lg:col-span-3 flex justify-center">
         <div class="bg-white rounded-lg w-full md:w-72 h-36">
-            <div class="flex flex-col h-full justify-center gap-4 px-3">
+            <div class="flex flex-col h-full justify-center shadow-lg border rounded-md gap-4 px-3">
                 <div class="flex flex-row border-orange-500 border-b py-2 justify-between items-center -mt-1">
                     <h1 class="text-orange-500 tracking-wide font-semibold text-base ">{{ $product->name }}</h1>
                     <div class="text-white text-xl -mt-1">
