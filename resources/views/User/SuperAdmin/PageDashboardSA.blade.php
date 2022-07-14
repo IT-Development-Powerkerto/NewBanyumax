@@ -24,7 +24,7 @@
 
 <div class="flex">
     <livewire:sidebar.sidebar-sa />
-    <main>
+    <main class="w-screen">
         <div class="px-5 mt-5">
             <div class="py-5">
                 <p class="font-bold text-xl mb-2">
