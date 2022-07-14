@@ -1,6 +1,6 @@
 <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
     @foreach ($products as $product)
-    <div class="w-full md:col-span-6 lg:col-span-3 flex justify-center">
+    <div class="md:col-span-6 lg:col-span-3 flex justify-center">
         <div class="bg-white rounded-lg w-full md:w-72 h-36">
             <div class="flex flex-col h-full justify-center gap-4 px-3">
                 <div class="flex flex-row border-orange-500 border-b py-2 justify-between items-center -mt-1">

@@ -19,133 +19,102 @@
     @livewireStyles
 </head>
 
-<body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-
-    {{-- <livewire:navbar.navbar2 /> --}}
-    @livewire('navbar.navbar2', [
-        'dashboard' => '/dashboard-adv',
-        'campaign' => '/campaign-adv',
-        'operator' => '/operator-adv',
-        'budgetingadvertising' => '/budgetingadvertising-adv',
-        'budgetingrealization' => '/budgetingrealization-adv',
-        'routineevaluation' => '/routineevaluation-adv',
-    ])
-    {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="container mx-auto py-5 px-5 md:px-0">
-        <div class="pb-5">
-            <div class="flex flex-row justify-between items-center py-3 px-5">
-                <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information
-                </h1>
-                <button id="FilterReporting" data-dropdown-toggle="FiltersReporting"
-                    class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
-                    type="button">Daily <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg></button>
-                <!-- Dropdown menu -->
-                <div id="FiltersReporting" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow-lg w-32">
-                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="FilterReporting">
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Daily</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Weekly</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Monthly</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="w-full p-5">
-            <div class="flex flex-wrap gap-4 justify-between">
-                <livewire:card.advertising-cost />
-                <livewire:card.total-leads />
-                <livewire:card.total-closing />
-                <livewire:card.closing-rate />
-                <livewire:card.upselling />
-                <livewire:card.total-box />
-                <livewire:card.cost-perresult />
-                <livewire:card.cross-selling />
-                <livewire:card.caq-lead />
-                <livewire:card.caq-customer />
-                <livewire:card.caq-bottle />
-                <livewire:card.caq-total />
-            </div>
-        </div>
-        <div class="container mx-auto px-5">
-            @if (session()->has('success'))
-                <livewire:flash-message.success />
-            @endif
-            @if (session()->has('error'))
-                <livewire:flash-message.error />
-            @endif
-            <livewire:table.lead-tunneling />
-        </div>
-        <div class="container mx-auto py-5 px-5">
-            @if (session()->has('success'))
-                <livewire:flash-message.success />
-            @endif
-            @if (session()->has('error'))
-                <livewire:flash-message.error />
-            @endif
-            <div>
+<body class="bg-white" style="font-family: 'Poppins', sans-serif;" x-data="sidebar()"
+    @resize.window="handleResize()">
+    <div class="flex">
+        <livewire:sidebar.sidebar-adv />
+        <main class="w-screen">
+            <div class="container mx-auto py-5 px-5 md:px-0">
                 <div class="pb-5">
                     <div class="flex flex-row justify-between items-center py-3 px-5">
-                        <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Product
+                        <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard
+                            Information
+                        </h1>
+                        <button id="FilterReporting" data-dropdown-toggle="FiltersReporting"
+                            class="text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                            type="button">Daily <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="FiltersReporting"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow-lg w-32">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="FilterReporting">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Daily</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Weekly</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Monthly</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full p-5">
+                    <div class="flex flex-wrap gap-4 justify-between">
+                        <livewire:card.advertising-cost />
+                        <livewire:card.total-leads />
+                        <livewire:card.total-closing />
+                        <livewire:card.closing-rate />
+                        <livewire:card.upselling />
+                        <livewire:card.total-box />
+                        <livewire:card.cost-perresult />
+                        <livewire:card.cross-selling />
+                        <livewire:card.caq-lead />
+                        <livewire:card.caq-customer />
+                        <livewire:card.caq-bottle />
+                        <livewire:card.caq-total />
+                    </div>
+                </div>
+                <div class="container mx-auto px-5">
+                    <livewire:table.lead-tunneling />
+                    <div class="flex flex-row justify-between items-center py-3 px-20">
+                        <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">
+                            Product
                             Information</h1>
                         <!-- Modal toggle -->
                         <button
-                        class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+                            class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                             type="button" data-modal-toggle="add-product">
                             Add Product
                         </button>
                         <livewire:modal.add-product2 />
                     </div>
+                    <div class="px-20">
+                        <livewire:card.product-information />
+                        <livewire:modal.edit-product />
+                        <livewire:modal.delete-product />
+                    </div>
                 </div>
-                {{-- <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
-                    @foreach ($products as $product)
-                    @endforeach
-                </div> --}}
-                <livewire:card.product-information />
-                <livewire:modal.edit-product />
-                <livewire:modal.delete-product />
-            </div>
-        </div>
-        <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 pb-5 lg:px-0">
-            @if (session()->has('success'))
-                <livewire:flash-message.success />
-            @endif
-            @if (session()->has('error'))
-                <livewire:flash-message.error />
-            @endif
-            <div class="col-span-6">
-                @if (session()->has('success'))
-                    <livewire:flash-message.success />
-                @endif
-                @if (session()->has('error'))
-                    <livewire:flash-message.error />
-                @endif
-            </div>
-        </div>
 
-        @livewireScripts
-        <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
-        <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-        <script>
-            $(function() {
-                $('input[name="selectdate"]').daterangepicker({
-                    opens: 'left'
-                }, function(start, end, label) {
-                    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
-                        .format('YYYY-MM-DD'));
-                });
-            });
-        </script>
+
+                @livewireScripts
+                <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
+                <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+                <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+                <script>
+                    $(function() {
+                        $('input[name="selectdate"]').daterangepicker({
+                            opens: 'left'
+                        }, function(start, end, label) {
+                            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
+                                .format('YYYY-MM-DD'));
+                        });
+                    });
+                </script>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
