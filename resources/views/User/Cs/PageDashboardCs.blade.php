@@ -29,7 +29,7 @@
                 <div class="py-5 mb-10 flex justify-between">
                     <div>
                         <p class="font-bold text-lg tracking-wide mb-2">
-                            Hi! Bambang Virgiawan
+                            Hi! Marsha Lenathea
                         </p>
                         <p class="text-xs text-gray-400">
                             Good Morning!
@@ -65,8 +65,8 @@
                                 <div class="divide-y divide-gray-100 dark:divide-gray-700">
                                     <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700">
                                         <div class="flex-shrink-0">
-                                            <img class="rounded-full w-11 h-11"
-                                                src="assets/img/favicon.png" alt="Jese image">
+                                            <img class="rounded-full w-11 h-11" src="assets/img/zee.jpeg"
+                                                alt="Zee image">
                                             <div
                                                 class="absolute flex items-center justify-center w-5 h-5 ml-6 -mt-5 bg-blue-600 border border-white rounded-full dark:border-gray-800">
                                                 <svg class="w-3 h-3 text-white" aria-hidden="true" fill="currentColor"
@@ -82,8 +82,8 @@
                                         </div>
                                         <div class="w-full pl-3">
                                             <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400">New message
-                                                from <span class="font-semibold text-gray-900 dark:text-white">Jese
-                                                    Leos</span>: "Hey, what's up? All set for the presentation?"</div>
+                                                from <span class="font-semibold text-gray-900 dark:text-white">Azizi
+                                                    Asadel</span>: "Hey, what's up? All set for the presentation?"</div>
                                             <div class="text-xs text-blue-600 dark:text-blue-500">a few moments ago
                                             </div>
                                         </div>
@@ -96,7 +96,7 @@
                                 class="flex mr-3 text-sm bg-gray-800 rounded-lg md:mr-0 focus:ring-4 focus:ring-gray-300"
                                 id="user-menu-button" aria-expanded="false" type="button"
                                 data-dropdown-toggle="dropdown">
-                                <img class="w-8 h-8 rounded-full" src="assets/img/favicon.png" alt="user photo">
+                                <img class="w-8 h-8 rounded-lg" src="assets/img/marsha.jpeg" alt="user photo">
                             </button>
                         </div>
                     </div>
