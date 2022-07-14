@@ -1,4 +1,4 @@
-<div class="mt-10 px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV Log Activity</h1>
@@ -31,7 +31,7 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </div>
-                <input name="daterange"
+                <input datepicker datepicker-autohide type="text"
                     class="bg-white text-gray-400 border-gray-200 shadow sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 placeholder-gray-400 font-medium"
                     placeholder="Select Date">
             </div>
@@ -47,61 +47,48 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto">
+<div class="h-max bg-white overflow-x-auto px-5">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
-                <th scope="col" class="px-6 py-3">
-                    Date
+                <th scope="col" class=" py-3">
+                    TIMESTAMP
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Adv Name
+                <th scope="col" class=" py-3">
+                    ADV NAME
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    REQUEST
+                <th scope="col" class=" py-3">
+                    NOMINAL
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    TARGET
+                <th scope="col" class=" py-3">
+                    NO. REKENING
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
+                    TARGET OMZET
+                </th>
+                <th scope="col" class=" py-3">
                     STATUS
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    22-06-2022
+                <td class=" py-4">
+                    22-06-2022 10:37
                 </td>
-                <td class="px-6 py-4">
-                    Hutari Trinurcahyani
+                <td class=" py-4">
+                    Isnan Aditia
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Rp 139.000.000
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
+                    1809876500000876
+                </td>
+                <td class=" py-4">
                     Rp 140.000.000
                 </td>
-                <td class="px-6 py-4">
-                    <Span class="bg-lime-100 text-lime-500 py-2 px-4 font-semibold rounded-md">
-                        Approved
-                    </Span>
-                </td>
-            </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    22-06-2022
-                </td>
-                <td class="px-6 py-4">
-                    Hutari Trinurcahyani
-                </td>
-                <td class="px-6 py-4">
-                    Rp 139.000.000
-                </td>
-                <td class="px-6 py-4">
-                    Rp 140.000.000
-                </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <Span class="bg-red-100 text-red-500 py-2 px-4 font-semibold rounded-md">
                         Rejected
                     </Span>
@@ -110,7 +97,7 @@
         </tbody>
     </table>
 </div>
-<div class="px-6 py-3 flex justify-between items-center border rounded-b-lg bg-white">
+<div class=" py-3 flex justify-between items-center border rounded-b-lg bg-white">
 
     <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
         class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

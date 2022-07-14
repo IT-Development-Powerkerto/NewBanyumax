@@ -5,7 +5,7 @@
 
                 <div class="mt-5 grid grid-cols-12 bg-gray-200 justify-between  justify-items-center items-center">
                     <div class="col-span-10 ">
-                        <a href="#" class="flex">
+                        <a href="/dashboard-adv" class="flex">
                             <img src="assets/img/logo.png" class="mr-2 h-3" alt="Banyumax Logo" />
                         </a>
                     </div>
@@ -49,7 +49,7 @@
                                             class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Operator</a>
                                     </li>
                                     <li>
-                                        <a href="#"
+                                        <a href="/budgetingdibursement-adv"
                                             class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Budgeting Disbursement</a>
                                     </li>
                                     <li>
