@@ -46,6 +46,11 @@
                 <livewire:modal.add-admin />
             </div>
 
+            <div class="py-5 mb-10">
+                <livewire:card.expedition />
+                <livewire:modal.add-expedition />
+            </div>
+
         </div>
     </div>
     
