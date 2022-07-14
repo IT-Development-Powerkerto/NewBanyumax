@@ -12,7 +12,8 @@ class ProductInformation extends Component
     public $product, $name, $sku, $price, $product_link, $image, $admin_id;
     // public $deletedId = '';
     public $listeners = [
-        'productDeleted' => '$refresh'
+        'productDeleted' => '$refresh',
+        'productCreated' => '$refresh'
     ];
     public $isOpenEdit = false;
     public $isOpenDelete = 0;

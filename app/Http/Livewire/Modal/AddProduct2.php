@@ -32,6 +32,7 @@ class AddProduct2 extends Component
             'product_link' => $this->product_link,
             'image' => $path
         ]);
+        $this->emit('productCreated');
     }
     public function render()
     {
