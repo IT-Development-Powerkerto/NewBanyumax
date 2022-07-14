@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mb-32 px-5">
+                    <div class="mb-28 px-5">
                         <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                             <li>
                                 <a href="#"
