@@ -7,6 +7,7 @@ use Livewire\Component;
 // use LivewireUI\Modal\ModalComponent;
 use App\Models\Product;
 use App\Models\Promotion;
+use App\Models\TypePromotion;
 
 class EditPromotion extends Component
 {
@@ -14,6 +15,7 @@ class EditPromotion extends Component
     {
         $promotions = Promotion::all();
         $products = Product::where('admin_id', auth()->user()->admin_id)->get();
-        return view('livewire.modal.edit-promotion', compact('products', 'promotions'));
+        $type_promotions = TypePromotion::all();
+        return view('livewire.modal.edit-promotion', compact('products', 'promotions','type_promotions'));
     }
 }

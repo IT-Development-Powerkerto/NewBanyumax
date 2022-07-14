@@ -16,6 +16,7 @@ class Promotion extends Model
     protected $fillable = [
         'admin_id',
         'user_id',
+        'promotion_type_id',
         'promotion_name',
         'product_id',
         'promotion_product_price',
@@ -30,6 +31,10 @@ class Promotion extends Model
     public function users()
     {
         return $this->belongsTo(User::class);
+    }
+    public function type_promotion()
+    {
+    	return $this->belongsTo(TypePromotion::class, 'promotion_type_id', 'id');
     }
 
 }

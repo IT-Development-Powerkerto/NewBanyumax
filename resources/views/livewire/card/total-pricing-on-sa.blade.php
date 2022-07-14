@@ -1,4 +1,4 @@
-<div class="flex flex-col bg-cyan-500 border rounded-lg w-72 h-96 px-6 py-6 text-white ">
+<div class="flex flex-col bg-cyan-500 border rounded-lg w-80 h-96 px-6 py-6 text-white ">
     <h1 class="text-xl font-semibold">Total Pricing</h1>
     <div class="flex flex-col mt-10">
         <span class="text-xs flex justify-center">Your Balance</span>

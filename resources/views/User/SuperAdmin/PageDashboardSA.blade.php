@@ -19,14 +19,14 @@
     @livewireStyles
 </head>
 
-<body class="bg-white" style="font-family: 'Poppins', sans-serif;">
+<body class="bg-white" style="font-family: 'Poppins', sans-serif;" x-data="sidebar()"
+    @resize.window="handleResize()">
 
-    <div class="flex">
-        <div class="fixed">
-            <livewire:navbar.sidebar-sa/>
-        </div>
-        <div class="container md:ml-64 px-5">
-            <div class="py-10">
+<div class="flex">
+    <livewire:sidebar.sidebar-sa />
+    <main class="w-screen">
+        <div class="px-5 mt-5">
+            <div class="py-5">
                 <p class="font-bold text-xl mb-2">
                     Welcome, Super Veza
                 </p>
@@ -34,39 +34,29 @@
                     Super Admin
                 </p>
             </div>
-            
-            <div class="flex flex-wrap justify-between pb-5 gap-2">
+
+            <div class="flex flex-wrap justify-center md:justify-between py-5">
                 <livewire:card.user-activity-on-sa />
                 <livewire:card.total-pricing-on-sa />
                 <livewire:card.user-nonactive-on-sa />
             </div>
 
+            <div class="py-5">
+                <livewire:table.admin />
+                <livewire:modal.add-admin />
+            </div>
+
+            <div class="py-5 mb-10">
+                <livewire:card.expedition />
+                <livewire:modal.add-expedition />
+            </div>
+
         </div>
-    </div>
-    
-   
+    </main>
+</div>
 
-
-    @livewireScripts
-    <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
-    <script>
-        var sideBar = document.getElementById("mobile-nav");
-        var openSidebar = document.getElementById("openSideBar");
-        var closeSidebar = document.getElementById("closeSideBar");
-        sideBar.style.transform = "translateX(-260px)";
-
-        function sidebarHandler(flag) {
-            if (flag) {
-                sideBar.style.transform = "translateX(0px)";
-                openSidebar.classList.add("hidden");
-                closeSidebar.classList.remove("hidden");
-            } else {
-                sideBar.style.transform = "translateX(-260px)";
-                closeSidebar.classList.add("hidden");
-                openSidebar.classList.remove("hidden");
-            }
-        }
-    </script>
+@livewireScripts
+<script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
 </body>
 
 </html>

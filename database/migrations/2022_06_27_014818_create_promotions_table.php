@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('admin_id');
             $table->foreignId('user_id');
             $table->string('promotion_name');
+            $table->foreignId('promotion_type_id');
             $table->foreignId('product_id');
             $table->integer('promotion_product_price')->nullable();
             $table->integer('promotion_product_percent')->nullable();

@@ -1,8 +1,4 @@
-<div class="py-5">
-    <div class="mt-1 flex flex-col w-full py-5">
-    </div>
-</div>
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
         <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Lead Tunneling</h1>
@@ -42,7 +38,7 @@
                                         clip-rule="evenodd"></path>
                                 </svg>
                             </button>
-                            <div class="py-6 px-6 lg:px-8">
+                            <div class="py-6  lg:px-8">
                                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
                                     Add Manual Closing</h3>
                                 <form class="space-y-6" action="#">
@@ -120,7 +116,7 @@
                                         clip-rule="evenodd"></path>
                                 </svg>
                             </button>
-                            <div class="py-6 px-6 lg:px-8">
+                            <div class="py-6  lg:px-8">
                                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
                                     Export to Excel</h3>
                                 <form class="space-y-6" action="#">
@@ -171,72 +167,72 @@
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Order ID
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Advertiser
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Operator
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Customer
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     No. Whatsapp
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Product
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Date
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Response
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Progress
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class=" py-3">
                     Actions
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Ord-41737
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Rifan Tri Yulianto
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Fadilatun Nida Rahayu
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Lilin Sugiarti
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     6281348948716
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Generos
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     2022-05-25 08:07:30
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
                         05:00
                     </div>
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
                         Waiting
                     </div>
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class=" py-4 text-center">
                     <a href="/editleadtunneling"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                         <i class="las la-edit"></i>
@@ -244,38 +240,38 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Ord-41737
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Rifan Tri Yulianto
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Fadilatun Nida Rahayu
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Lilin Sugiarti
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     6281348948716
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Generos
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     2022-05-25 08:07:30
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
                         05:00
                     </div>
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
                         Processing
                     </div>
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class=" py-4 text-center">
                     <a href="/editleadtunneling"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                         <i class="las la-edit"></i>
@@ -283,38 +279,38 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Ord-41737
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Rifan Tri Yulianto
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Fadilatun Nida Rahayu
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Lilin Sugiarti
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     6281348948716
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Generos
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     2022-05-25 08:07:30
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
                         05:00
                     </div>
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
                         Complete
                     </div>
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class=" py-4 text-center">
                     <a href="/editleadtunneling"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                         <i class="las la-edit"></i>
@@ -322,38 +318,38 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Ord-41737
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Rifan Tri Yulianto
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Fadilatun Nida Rahayu
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Lilin Sugiarti
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     6281348948716
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Generos
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     2022-05-25 08:07:30
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
                         02:00
                     </div>
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
                         Waiting
                     </div>
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class=" py-4 text-center">
                     <a href="#"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                         <i class="las la-edit"></i>
@@ -361,38 +357,38 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Ord-41737
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Rifan Tri Yulianto
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Fadilatun Nida Rahayu
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Lilin Sugiarti
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     6281348948716
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     Generos
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     2022-05-25 08:07:30
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
                         02:00
                     </div>
                 </td>
-                <td class="px-6 py-4">
+                <td class=" py-4">
                     <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
                         Spam
                     </div>
                 </td>
-                <td class="px-6 py-4 text-center">
+                <td class=" py-4 text-center">
                     <a href="#"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                         <i class="las la-edit"></i>
@@ -402,7 +398,7 @@
         </tbody>
     </table>
 </div>
-<div class="px-6 py-3 flex justify-between items-center border rounded-b-lg bg-white">
+<div class=" py-3 flex justify-between items-center border rounded-b-lg bg-white">
 
     <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
         class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -485,6 +481,4 @@
 
     <div></div>
 
-</div>
-</div>
 </div>

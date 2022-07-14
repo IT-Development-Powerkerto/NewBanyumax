@@ -8,24 +8,9 @@
                     <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                         <li>
                             <a href="#"
-                                class="flex items-center p-3 text-base font-normal text-gray-900 bg-white hover:bg-blue-300 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                </svg>
+                                class="flex items-center px-3 py-2 text-base font-normal text-gray-900 bg-white bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 hover:text-white rounded-lg">
+                                <span class="iconify w-5 h-5" data-icon="ant-design:home-filled"></span>
                                 <span class="ml-3">Dashboard</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center p-3 text-base font-normal text-gray-900 bg-white hover:bg-blue-300 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                </svg>
-                                <span class="ml-3">Flip</span>
                             </a>
                         </li>
                     </ul>
@@ -35,12 +20,8 @@
                     <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                         <li>
                             <a href="#"
-                                class="flex items-center p-3 text-base font-normal text-gray-900 bg-white hover:bg-blue-300 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                </svg>
+                                class="flex items-center px-3 py-2 text-base font-normal text-white bg-blue-600 hover:bg-white hover:text-gray-900 rounded-lg">
+                                <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                 <span class="ml-3">Logout</span>
                             </a>
                         </li>
@@ -51,7 +32,7 @@
     </div>
 
     {{-- Mobile Nav --}}
-    <div class="w-64 h-screen bg-gray-200 shadow md:h-full flex-col justify-between sm:hidden transition duration-150 ease-in-out"
+    <div class="w-64 h-screen bg-gray-200 shadow md:h-screen flex-col justify-between sm:hidden transition duration-150 ease-in-out"
         id="mobile-nav">
         <button aria-label="toggle sidebar" id="openSideBar"
             class="h-10 w-10 bg-gray-800 absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 rounded focus:ring-gray-800"
@@ -74,24 +55,9 @@
                     <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                         <li>
                             <a href="#"
-                                class="flex items-center p-3 text-base font-normal text-gray-900 bg-white hover:bg-blue-300 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                </svg>
+                                class="flex items-center px-3 py-2 text-base font-normal text-gray-900 bg-white bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 hover:text-white rounded-lg">
+                                <span class="iconify w-5 h-5" data-icon="ant-design:home-filled"></span>
                                 <span class="ml-3">Dashboard</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center p-3 text-base font-normal text-gray-900 bg-white hover:bg-blue-300 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                </svg>
-                                <span class="ml-3">Flip</span>
                             </a>
                         </li>
                     </ul>
@@ -101,12 +67,8 @@
                     <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                         <li>
                             <a href="#"
-                                class="flex items-center p-3 text-base font-normal text-gray-900 bg-white hover:bg-blue-300 rounded-lg">
-                                <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                </svg>
+                                class="flex items-center px-3 py-2 text-base font-normal text-white bg-blue-600 hover:bg-white hover:text-gray-900 rounded-lg">
+                                <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                 <span class="ml-3">Logout</span>
                             </a>
                         </li>
@@ -116,7 +78,7 @@
         </div>
     </div>
 
-
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     {{-- <div class="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
         <div class="w-full h-full rounded border-dashed border-2 border-gray-300 text-3xl">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, ad hic! Quae consectetur obcaecati,
