@@ -32,7 +32,7 @@
     </div>
 
     {{-- Mobile Nav --}}
-    <div class="w-64 h-screen bg-gray-200 shadow md:h-full flex-col justify-between sm:hidden transition duration-150 ease-in-out"
+    <div class="w-64 h-screen bg-gray-200 shadow md:h-screen flex-col justify-between sm:hidden transition duration-150 ease-in-out"
         id="mobile-nav">
         <button aria-label="toggle sidebar" id="openSideBar"
             class="h-10 w-10 bg-gray-800 absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 rounded focus:ring-gray-800"

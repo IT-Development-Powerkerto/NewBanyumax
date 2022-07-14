@@ -26,7 +26,7 @@
             <livewire:navbar.sidebar-sa/>
         </div>
         <div class="container px-5 md:ml-64 lg:ml-64 ">
-            <div class="py-10">
+            <div class="py-5">
                 <p class="font-bold text-xl mb-2">
                     Welcome, Super Veza
                 </p>
@@ -35,10 +35,15 @@
                 </p>
             </div>
             
-            <div class="flex flex-wrap justify-between pb-5">
+            <div class="flex flex-wrap justify-center md:justify-between py-5">
                 <livewire:card.user-activity-on-sa />
                 <livewire:card.total-pricing-on-sa />
                 <livewire:card.user-nonactive-on-sa />
+            </div>
+
+            <div class="py-5">
+                <livewire:table.admin />
+                <livewire:modal.add-admin />
             </div>
 
         </div>
