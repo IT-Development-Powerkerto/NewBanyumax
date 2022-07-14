@@ -36,6 +36,7 @@ use App\Http\Controllers\RoutineEvaluationCustomerService;
 use App\Http\Controllers\ProductController;
 use App\Http\Livewire\Modal\AddProduct2;
 use App\Http\Livewire\Modal\EditProduct;
+use App\Http\Controllers\BudgetingDibursement;
 
 /*
 |--------------------------------------------------------------------------
@@ -112,6 +113,7 @@ Route::resource('/operator-adv', OperatorController::class);
 Route::resource('/budgetingadvertising-adv', BudgetingAdvertisingController::class);
 Route::resource('/budgetingrealization-adv', BudgetingRealizationController::class);
 Route::resource('/routineevaluation-adv', RoutineEvaluation::class);
+Route::resource('/budgetingdibursement-adv', BudgetingDibursement::class);
 
 // User.Ceo
 Route::resource('/ceo', CeoController::class);
