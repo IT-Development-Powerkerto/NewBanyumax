@@ -1,4 +1,4 @@
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
+<div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
         <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Lead Tunneling</h1>
@@ -163,38 +163,38 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto border-x px-5">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Order ID
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Advertiser
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Operator
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Customer
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     No. Whatsapp
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Product
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Date
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Response
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Progress
                 </th>
-                <th scope="col" class=" py-3">
+                <th scope="col" class="py-3 px-5">
                     Actions
                 </th>
             </tr>
@@ -398,7 +398,7 @@
         </tbody>
     </table>
 </div>
-<div class=" py-3 flex justify-between items-center border rounded-b-lg bg-white">
+<div class="py-3 px-5 flex justify-between items-center border rounded-b-lg bg-white">
 
     <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
         class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
