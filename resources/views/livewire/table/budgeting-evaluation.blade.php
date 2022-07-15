@@ -1,83 +1,96 @@
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-        <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Routine Evaluation</h1>
-        <div class="flex flex-row gap-2 py-2">
-            <span class="font-medium text-sm text-zinc-400">{{$jml_evaluation}}</span>
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Routine Evaluation</h1>
+            <div class="flex flex-row gap-2 py-2">
+                <span class="font-medium text-sm text-zinc-400">1.000 Data</span>
+            </div>
         </div>
-    </div>
+
+
         <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
             <div class="relative mr-2">
                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                    <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
                 </div>
-                <input type="search" id="default-search" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..">
+                <input type="search" id="default-search"
+                    class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Search..">
             </div>
-            <button
-            class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-            type="button" data-modal-toggle="add-routine-evaluation">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                    d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                    clip-rule="evenodd" />
-            </svg>
-            <span>Routine Evaluation</span>
-        </button>
-        @livewire('modal.add-routine-evaluation')
+
+            <div class="mr-2 w-36 md:w-fit">
+                <button
+                    class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
+                    type="button" data-modal-toggle="add-routine-evaluation">
+                    <i class="las la-plus text-xl"></i>
+                    <span>Routine Evaluation</span>
+                </button>
+            </div>
+            @livewire('modal.add-routine-evaluation')
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto">
+<div class="h-max bg-white overflow-x-auto px-5">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
-                <th scope="col" class="px-6 py-3">
-                    No
+                <th scope="col" class="text-center py-3">
+                    NO
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Product
+                <th scope="col" class="text-center py-3">
+                    PRODUCT
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Date
+                <th scope="col" class="text-center py-3">
+                    DATE
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Time
+                <th scope="col" class="text-center py-3">
+                    TIME
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Resistance
+                <th scope="col" class="text-center py-3">
+                    RESISTANCE
                 </th>
-                <th scope="col" class="px-6 py-3">
-                    Solution
+                <th scope="col" class="text-center py-3">
+                    SOLUTION
+                </th>
+                <th scope="col" class="text-center py-3">
+                    ATTACHMENT
                 </th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($evaluations as $evaluation)
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    {{$loop -> iteration}}
+                    1
                 </td>
                 <td class="px-6 py-4">
-                    {{$evaluation->product->name}}
+                    Etawaku Platinum
                 </td>
                 <td class="px-6 py-4">
-                    {{$evaluation->date}}
+                    22-06-2022
                 </td>
                 <td class="px-6 py-4">
-                    {{$evaluation->time}}
+                    10:18 WIB
                 </td>
                 <td class="px-6 py-4">
-                    {{$evaluation->resistance}}
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
                 </td>
                 <td class="px-6 py-4">
-                    {{$evaluation->solution}}
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
+                </td>
+                <td class="px-6 py-4">
+                    <button class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 py-2 px-4 rounded-md">
+                        Download
+                    </button>
                 </td>
             </tr>
-            @endforeach
         </tbody>
-    </table>
+    </table>                    
 </div>
-<div class="px-6 py-3 flex justify-between items-center border rounded-b-lg bg-white">
+<div class=" py-3 px-5 flex justify-between items-center border rounded-b-lg bg-white">
 
     <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
         class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

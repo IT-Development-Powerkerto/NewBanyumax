@@ -13,18 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('evaluations', function (Blueprint $table) {
+        Schema::create('budgeting_disbursements', function (Blueprint $table) {
             $table->id();
             $table->integer('admin_id');
             $table->foreignId('user_id');
-            $table->foreignId('product_id');
-            $table->date('date');
-            $table->time('time');
-            $table->string('resistance');
-            $table->string('solution');
-            $table->string('image')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
+            $table->foreignId('role_id');
+            $table->integer('nominal');
+            $table->string('no_rek');
+            $table->integer('target_omzet');
+            $table->boolean('status')->default('2');
+            $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 
@@ -35,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('evaluations');
+        Schema::dropIfExists('budgeting_disbursements');
     }
 };

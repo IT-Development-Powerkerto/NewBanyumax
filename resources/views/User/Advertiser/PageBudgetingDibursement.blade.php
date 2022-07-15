@@ -29,10 +29,10 @@
                 <div class="py-5 mb-10 flex justify-between">
                     <div>
                         <p class="font-bold text-lg tracking-wide mb-2">
-                            Hi! Marsha Lenathea
+                            Budgeting Disbursement
                         </p>
                         <p class="text-xs text-gray-400">
-                            Good Morning!
+                            Adv Role
                         </p>
                     </div>
 

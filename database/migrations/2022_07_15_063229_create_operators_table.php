@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('evaluations', function (Blueprint $table) {
+        Schema::create('operators', function (Blueprint $table) {
             $table->id();
             $table->integer('admin_id');
-            $table->foreignId('user_id');
-            $table->foreignId('product_id');
-            $table->date('date');
-            $table->time('time');
-            $table->string('resistance');
-            $table->string('solution');
-            $table->string('image')->nullable();
+            $table->foreignId('campaign_id')->cascadeOnDelete();
+            $table->foreignId('user_id')->cascadeOnDelete();
+            $table->string('name');
+            // $table->double('closing_rate');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('evaluations');
+        Schema::dropIfExists('operators');
     }
 };

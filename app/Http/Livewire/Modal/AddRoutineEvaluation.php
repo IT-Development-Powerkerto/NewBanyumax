@@ -4,13 +4,15 @@ namespace App\Http\Livewire\Modal;
 
 use Livewire\Component;
 use App\Models\Evaluation;
+use App\Models\Product;
 
 class AddRoutineEvaluation extends Component
 {
     public $admin_id, $user_id, $product_id, $date, $time, $resistance, $solution;
     public function render()
     {
-        return view('livewire.modal.add-routine-evaluation');
+        $products = Product::all();
+        return view('livewire.modal.add-routine-evaluation', compact('products'));
     }
 
     public function store()

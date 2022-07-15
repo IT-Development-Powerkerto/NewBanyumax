@@ -1,9 +1,9 @@
 <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV Log Activity</h1>
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Routine Evaluation</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">{{$jml_budgetdis}}</span>
+                <span class="font-medium text-sm text-zinc-400">{{$jml_eval}} Data</span>
             </div>
         </div>
 
@@ -22,28 +22,15 @@
                     placeholder="Search..">
             </div>
 
-            <div class="relative mr-2 w-36 md:w-56">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0  00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-                <input datepicker datepicker-autohide type="text"
-                    class="bg-white text-gray-400 border-gray-200 shadow sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 placeholder-gray-400 font-medium"
-                    placeholder="Select Date">
-            </div>
             <div class="mr-2 w-36 md:w-fit">
                 <button
                     class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
-                    type="button" data-modal-toggle="add-budgeting-request-adv">
+                    type="button" data-modal-toggle="add-routine-evaluation">
                     <i class="las la-plus text-xl"></i>
-                    <span>Budgeting Request</span>
+                    <span>Routine Evaluation</span>
                 </button>
             </div>
-            <livewire:modal.add-budgeting-request-adv />
+            @livewire('modal.add-routine-evaluation')
         </div>
     </div>
 </div>
@@ -51,53 +38,59 @@
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
-                <th scope="col" class=" py-3">
-                    TIMESTAMP
+                <th scope="col" class="text-center py-3">
+                    NO
                 </th>
-                <th scope="col" class=" py-3">
-                    ADV NAME
+                <th scope="col" class="text-center py-3">
+                    PRODUCT
                 </th>
-                <th scope="col" class=" py-3">
-                    NOMINAL
+                <th scope="col" class="text-center py-3">
+                    DATE
                 </th>
-                <th scope="col" class=" py-3">
-                    NO. REKENING
+                <th scope="col" class="text-center py-3">
+                    TIME
                 </th>
-                <th scope="col" class=" py-3">
-                    TARGET OMZET
+                <th scope="col" class="text-center py-3">
+                    RESISTANCE
                 </th>
-                <th scope="col" class=" py-3">
-                    STATUS
+                <th scope="col" class="text-center py-3">
+                    SOLUTION
+                </th>
+                <th scope="col" class="text-center py-3">
+                    ATTACHMENT
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
-                <td class=" py-4">
-                    22-06-2022 10:37
+                <td class="px-6 py-4">
+                    1
                 </td>
-                <td class=" py-4">
-                    Isnan Aditia
+                <td class="px-6 py-4">
+                    Etawaku Platinum
                 </td>
-                <td class=" py-4">
-                    Rp 139.000.000
+                <td class="px-6 py-4">
+                    22-06-2022
                 </td>
-                <td class=" py-4">
-                    1809876500000876
+                <td class="px-6 py-4">
+                    10:18 WIB
                 </td>
-                <td class=" py-4">
-                    Rp 140.000.000
+                <td class="px-6 py-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
                 </td>
-                <td class=" py-4">
-                    <Span class="bg-red-100 text-red-500 py-2 px-4 font-semibold rounded-md">
-                        Rejected
-                    </Span>
+                <td class="px-6 py-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
+                </td>
+                <td class="px-6 py-4">
+                    <button class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 py-2 px-4 rounded-md">
+                        Download
+                    </button>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
-<div class=" py-3 flex justify-between items-center border rounded-b-lg bg-white">
+<div class=" py-3 px-5 flex justify-between items-center border rounded-b-lg bg-white">
 
     <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
         class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"

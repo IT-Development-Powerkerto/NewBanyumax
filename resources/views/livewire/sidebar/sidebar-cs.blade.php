@@ -65,7 +65,7 @@
                     <div class="mb-28 px-5">
                         <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                             <li>
-                                <a href="#"
+                                <a href="/logout"
                                     class="flex items-center px-3 py-2 text-base font-normal  text-gray-900  hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
                                     <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                     <span class="ml-3">Logout</span>

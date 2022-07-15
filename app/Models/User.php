@@ -66,5 +66,8 @@ class User extends Authenticatable
     public function reimbursement(){
         return $this->hasMany(Reimbursement::class);
     }
+    public function budgeting_disbursement(){
+        return $this->hasMany(BudgetingDisbursement::class);
+    }
 
 }
