@@ -73,7 +73,8 @@ class ProductInformation extends Component
     {
         $product = Product::where('id', $productId)->first();
         if($this->image_temp){
-            Storage::disk('public')->delete($product->image);
+            // if
+            // Storage::disk('public')->delete($product->image);
             $path = $this->image_temp->store('public/image');
         }else{
             $path = $product->image;

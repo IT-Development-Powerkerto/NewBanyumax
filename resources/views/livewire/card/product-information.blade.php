@@ -67,7 +67,11 @@
                                     {{-- dlkfjsdkj --}}
                                     <img src="{{ $image }}" class="img-preview-edit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
                                     @endif
+
                                 <input class="hidden" wire:model="image_temp" type="file" name="image" id="image-edit" onchange="previewImageEdit()">
+                                <div wire:loading wire:target="image_temp">
+                                    Uploading image...
+                                </div>
                             </label>
                     </div>
                     <div class="flex flex-row gap-3">
