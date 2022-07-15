@@ -1,9 +1,9 @@
 <aside class="h-screen sticky top-0">
     <div class="xl:flex">
-        <div x-show="isOpen()" class="fixed xl:static inset-0 flex bg-gray-200 h-screen">
-            <div @click.away="handleAway()" class="w-64 text-white bg-gray-200 shadow">
+        <div x-show="isOpen()" class="fixed xl:static inset-0 flex bg-white h-screen shadow-lg">
+            <div @click.away="handleAway()" class="w-64 text-white bg-white shadow">
 
-                <div class="mt-5 grid grid-cols-12 bg-gray-200 justify-between  justify-items-center items-center">
+                <div class="mt-5 grid grid-cols-12 bg-white justify-between justify-items-center items-center">
                     <div class="col-span-10 ">
                         <a href="/dashboard-adv" class="flex">
                             <img src="assets/img/logo.png" class="mr-2 h-3" alt="Banyumax Logo" />
@@ -27,9 +27,9 @@
                         <ul class="space-y-2">
                             <li>
                                 <button type="button"
-                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
                                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                                    <span class="iconify w-5 h-5 rounded-lg text-gray-500" data-icon="ant-design:home-filled"></span>
+                                    <span class="iconify w-5 h-5" data-icon="iconoir:home-simple"></span>
                                     <span class="flex-1 ml-3 text-left "
                                         >Advertiser Management</span>
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
@@ -42,34 +42,30 @@
                                 <ul id="dropdown-example" class="hidden py-2 space-y-2">
                                     <li>
                                         <a href=""
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Campaign</a>
+                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Campaign</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Operator</a>
+                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Operator</a>
                                     </li>
                                     <li>
                                         <a href="/budgetingdibursement-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Budgeting Disbursement</a>
+                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Disbursement</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Budgeting Realization</a>
+                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Realization</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">coba</a>
+                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">coba</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#"
-                                    class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
-                                    </svg>
+                                <a href="/routineevaluation-adv"
+                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
+                                    <span class="iconify w-5 h-5" data-icon="ant-design:clock-circle-outlined"></span>
                                     <span class="ml-3">Routine Evaluation</span>
                                 </a>
                             </li>
@@ -82,7 +78,7 @@
                         <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                             <li>
                                 <a href="/logout"
-                                    class="flex items-center px-3 py-2 text-base font-normal text-white bg-blue-600 hover:bg-white hover:text-gray-900 rounded-lg">
+                                class="flex items-center px-3 py-2 text-base font-normal text-gray-900 hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
                                     <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                     <span class="ml-3">Logout</span>
                                 </a>
