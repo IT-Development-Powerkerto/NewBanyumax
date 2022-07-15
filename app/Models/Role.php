@@ -13,4 +13,8 @@ class Role extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public function budgeting_disbursement(){
+        return $this->hasMany(BudgetingDisbursement::class);
+    }
 }
