@@ -149,7 +149,7 @@
                     <livewire:card.caq-total />
                 </div>
 
-                <div class="flex flex-row justify-between items-center pb-5">
+                <div class="flex flex-row justify-between items-center py-10">
                     <h1 class="font-semibold text-[#7E8299] tracking-wide text-xl">Product Information</h1>
                     <!-- Modal toggle -->
                     <button
@@ -164,6 +164,10 @@
                     <livewire:card.product-information />
                     <livewire:modal.edit-product />
                     <livewire:modal.delete-product />
+                </div>
+
+                <div class="py-10">
+                    <livewire:table.lead-tunneling />
                 </div>
 
                 <div class="py-10">

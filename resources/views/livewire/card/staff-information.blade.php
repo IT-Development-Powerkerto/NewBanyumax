@@ -114,11 +114,11 @@
                 <td class=" py-4">
                     <div class="flex items-center space-x-4">
                         <div class="flex-shrink-0">
-                            <img class="w-20 h-max rounded-full" src="assets/img/marsha.jpeg" alt="Ava image">
+                            <img class="w-20 h-max rounded-full" src="assets/img/zee.jpeg" alt="Ava image">
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm font-semibold text-black truncate dark:text-white">
-                                Marsha Lenathea
+                                Azizi Asadel
                             </p>
                             <p class="text-sm font-reguler text-gray-500 truncate dark:text-white">
                                 +1234567890
