@@ -17,20 +17,12 @@
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Add Evaluation</h3>
                 <form class="space-y-6" action="#">
                     <div class="relative">
-                        <select name="product" id="product"
+                        <select name="product_id" id="product_id" wire:model.defer="product_id"
                             class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                             required>
-                            <option selected hidden>Select Product</option>
-                            <option>Add Payment Info</option>
-                            <option>Gizidat</option>
-                            <option>Etawaku Platinum</option>
-                            <option>Rube</option>
-                            <option>Freshmag</option>
-                            <option>Generos</option>
-                            <option>Weight Herba</option>
-                            <option>Nutriflakes</option>
-                            <option>New Briswa</option>
-                        </select>
+                            @foreach($products as $product)
+                                <option value="{{$product->id}}">{{$product->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="relative">
