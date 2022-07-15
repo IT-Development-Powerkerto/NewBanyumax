@@ -1,7 +1,7 @@
-@foreach ($products as $product)
+{{-- @foreach ($products as $product) --}}
 {{-- {{dd($product)}} --}}
 <!-- Main modal -->
-<div id="edit-product" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+<div id="edit-product" wire:ignore.self tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative rounded-lg shadow bg-slate-100" >
@@ -10,31 +10,38 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Edit Product</h3>
-                <form class="space-y-6" action="{{ route('product.update',['product' => $product->id]) }}" method="post" enctype="multipart/form-data">
+                <form class="space-y-6" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <div class="relative">
-                        <input type="text" value="{{$product->name}}" name="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
+                        <input type="text" name="name" value="{{ $this->name ?? 'sdasds' }}" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
                     </div>
                     <div class="relative">
-                        <input type="text" value="{{$product->sku}}" name="sku"  id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
+                        <input type="text" wire:model="sku" name="sku"  id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
                     </div>
                     <div class="relative">
-                        <input type="number" value="{{$product->price}}" name="price" id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
+                        <input type="number" wire:model="price" name="price" id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
                     </div>
                     {{-- <div class="relative">
                         <input type="number" name="discount" wire:model.defer='discount' id="discount" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Discount" required>
                     </div> --}}
                     <div class="relative">
-                        <input type="text" value="{{$product->product_link}}" name="product_link" id="linkproduct" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="linkproduct" required>
+                        <input type="text" value="{{ $product_link }}" name="product_link" id="linkproduct" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="linkproduct" required>
                     </div>
                     <div class="relative">
                         <span class="text-gray-500 px-1 mb-2">Image</span>
-                            <label type="file" name="image-product" id="image-product" required>
-                                <span class="">
-                                    <img src="assets/img/icon-foto.png" class="img-preview-edit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" src="{{ asset($product->image) }}" alt="">
-                                </span>
-                                <input class="hidden" value="{{$product->image}}" type="file" name="image" id="image-edit" onchange="previewImageEdit()">
+                            <label name="image-product" id="image-product" required>
+                                {{-- <span class=""> --}}
+
+                                    {{-- <img src="{{ $image }}" class="img-preview-edit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt=""> --}}
+                                {{-- </span> --}}
+                                {{-- {{ $image }} --}}
+                                {{-- <input class="hidden" wire:model="image" type="file" name="image" id="image-edit" onchange="previewImageEdit()"> --}}
+                                {{-- @if ($image)
+                                    ada
+                                @else
+                                    dlkfjsdkj
+                                @endif --}}
                             </label>
                     </div>
                     <div class="flex flex-row gap-3">
@@ -45,7 +52,7 @@
         </div>
     </div>
 </div>
-@endforeach
+{{-- @endforeach --}}
 
 <script>
     function previewImageEdit(){

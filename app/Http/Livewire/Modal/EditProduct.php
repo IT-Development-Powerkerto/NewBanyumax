@@ -10,8 +10,13 @@ use Livewire\WithFileUploads;
 
 class EditProduct extends Component
 {
+
     // use WithFileUploads;
-    // public $name, $sku, $price, $product_link, $image;
+    public $name, $sku, $price, $product_link;
+    public $image = '';
+    public $listeners = [
+        'getProduct' => 'showProduct'
+    ];
 
     // public function mount($id)
     // {
@@ -33,7 +38,24 @@ class EditProduct extends Component
     // }
     public function render()
     {
-        $products = Product::all();
-        return view('livewire.modal.edit-product', compact('products'));
+        // $products = Product::all();
+        return view('livewire.modal.edit-product');
     }
+    public function showProduct($id)
+    {
+        // dd($id);
+        $product = Product::find($id);
+        $this->name = $product->name;
+        $this->sku = $product->sku;
+        $this->price = $product->price;
+        $this->product_link = $product->product_link;
+        $this->image = url( $product->image != null ? 'storage/'.str_replace('public/', '',$product->image) : 'assets/img/icon-foto.png');
+        // $this->image = '';
+        $this->render();
+        // dd($this->image);
+    }
+    // public function productImage()
+    // {
+    //     return $this->image ? url('storage/'.str_replace('public', '',$this->image)) : url('assets/img/icon-foto.png');
+    // }
 }
