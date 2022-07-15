@@ -14,13 +14,17 @@
                         <input type="text" name="name" wire:model.defer='name' id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Staff Name" required>
                     </div>
                     <div class="relative">
-                        <input type="text" name="telp" wire:model.defer='telp' id="telp" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Telp" required>
-                    </div>
-                    <div class="relative">
-                        <input type="text" name="poin" wire:model.defer='poin' id="poin" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Poin" required>
+                        <select name="position" id="position" wire:model.defer="position"
+                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                            required>
+                            <option>Position</option>
+                            <option>Frontend</option>
+                            <option>Backend</option>
+                            <option>UI/UX</option>
+                        </select>
                     </div>
                    <div class="relative">
-                        <span class="text-gray-500 px-1 mb-2">Attachment</span>
+                        <span class="text-gray-500 px-1 mb-2">Photo</span>
                             <label type="file" name="image-product" id="image-product" required>
                                 <span class="">
                                     <img src="assets/img/icon-foto.png" class="img-preview-staff w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
