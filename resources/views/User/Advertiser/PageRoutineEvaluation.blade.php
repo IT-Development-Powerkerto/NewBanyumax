@@ -104,7 +104,7 @@
                 </div>
 
                 <div class="py-5">
-                    <livewire:table.budgeting-evaluation />
+                    <livewire:table.routine-evaluation-adv />
                 </div>
 
 

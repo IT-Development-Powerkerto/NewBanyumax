@@ -22,6 +22,7 @@ return new class extends Migration
             $table->time('time');
             $table->string('resistance');
             $table->string('solution');
+            $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
