@@ -6,6 +6,7 @@ use Livewire\Component;
 use File;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
 
 class EditProduct extends Component
@@ -60,7 +61,10 @@ class EditProduct extends Component
         $validated = $this->validate();
         if($this->image_temp){
             // if
-            // Storage::disk('public')->delete($product->image);
+            if($product->image){
+
+                Storage::disk('public')->delete(str_replace('public/', '', $product->image));
+            }
             $path = $this->image_temp->store('public/image');
         }else{
             $path = $product->image;
