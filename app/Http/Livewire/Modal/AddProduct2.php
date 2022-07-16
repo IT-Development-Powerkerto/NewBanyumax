@@ -14,7 +14,7 @@ class AddProduct2 extends Component
     {
         $this->validate([
             'name' => 'required',
-            'image' => 'image|nullable', // 1MB Max
+            'image' => 'image|nullable',
             'price' => 'required',
             'sku' => 'required'
         ]);

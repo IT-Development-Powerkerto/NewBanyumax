@@ -21,7 +21,7 @@
 
 <body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
     <livewire:navbar.navbar-admin />
-    
+
     {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
     <div class="container mx-auto py-5 px-5 md:px-0">
         <div class="pb-5">
@@ -125,7 +125,7 @@
                             <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Product
                                 Information</h1>
                             <!-- Modal toggle -->
-                            
+
                             <button
                                 class="flex flex-row text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
                                 type="button" data-modal-toggle="add-product">
@@ -139,10 +139,8 @@
                             <livewire:modal.add-product2 />
                         </div>
                     </div>
-                    <div class="flex flex-col md:grid md:grid-cols-12 px-5">
-                        <livewire:card.product-information />
-                    </div>
-                    <livewire:modal.edit-product />
+                    <livewire:card.product-information />
+                    {{-- <livewire:modal.edit-product /> --}}
                     <livewire:modal.delete-product />
                 </div>
                 <div class="flex flex-col gap-4 container mx-auto py-5 px-5 md:grid lg:grid grid-cols-2">
@@ -155,9 +153,9 @@
                     <livewire:modal.delete-announcement-on-admin/>
                     <livewire:modal.add-announcement-on-admin />
                 </div>
-               
+
             </div>
-        
+
             <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">
                 @if (session()->has('success'))
                     <livewire:flash-message.success />
@@ -176,7 +174,7 @@
             </div>
         </div>
     </div>
-    
+
 
     @livewireScripts
     <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
@@ -196,21 +194,21 @@
     </script>
     <script>
         function previewImage(){
-    
+
             const image = document.querySelector('#image');
             const imgPreview = document.querySelector('.img-preview');
-    
+
             imgPreview.style.display = 'block';
-    
+
             const oFReader = new FileReader();
-    
+
             oFReader.readAsDataURL(image.files[0]);
             oFReader.onload = function(oFREvent){
             imgPreview.src = oFREvent.target.result;
             }
             }
     </script>
-    
+
 </body>
 
 </html>

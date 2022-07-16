@@ -1,5 +1,5 @@
 <!-- Main modal -->
-<div wire:ignore.self id="add-product" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+<div id="add-product" wire:ignore.self tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative rounded-lg shadow bg-slate-100" >
@@ -8,7 +8,7 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Add Product</h3>
-                <form class="space-y-6" enctype="multipart/form-data">
+                <form class="space-y-6" wire:submit.prevent="store" enctype="multipart/form-data">
                     <div class="relative">
                         <input type="text"  wire:model.defer="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
                     </div>
@@ -26,10 +26,15 @@
                     </div>
                     <div class="relative">
                         <span class="text-gray-500 px-1 mb-2">Image</span>
-                        <input wire:model="image" type="file" id="image">
+                        {{-- @if ($image)
+                        <img src="{{ $image->temporaryUrl() }}" class="img d-block mt-2 w-100 rounded">
+                        @else
+                        kosong
+                        @endif --}}
+                        <input wire:model.defer="image" type="file" id="image">
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button wire:click.prevent="store" data-modal-toggle="add-product" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add Product</button>
+                        <button type="submit" data-modal-toggle="add-product" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add Product</button>
                     </div>
                 </form>
             </div>
