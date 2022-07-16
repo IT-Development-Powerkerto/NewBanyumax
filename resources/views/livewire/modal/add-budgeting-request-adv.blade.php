@@ -11,7 +11,7 @@
                 <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
-                        <input type="text" name="nominal_req" wire:model.defer='nominal_req' id="nominal_req" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal Request" required>
+                        <input type="text" name="nominal" wire:model.defer='nominal_req' id="nominal_req" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal Request" required>
                     </div>
                     <div class="relative">
                         <input type="text" name="no_rek" wire:model.defer='no_rek' id="no_rek" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="No. Rekening" required>
