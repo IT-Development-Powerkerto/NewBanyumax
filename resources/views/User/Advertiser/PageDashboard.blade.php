@@ -162,30 +162,49 @@
                         + Add Product
                     </button>
                     {{-- <livewire:modal.add-product2 /> --}}
-                    <div id="add-product" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                    <div id="add-product" tabindex="-1" aria-hidden="true"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
                         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                             <!-- Modal content -->
-                            <div class="relative rounded-lg shadow bg-slate-100" >
-                                <button type="button" class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="add-product">
-                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            <div class="relative rounded-lg shadow bg-slate-100">
+                                <button type="button"
+                                    class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                    data-modal-toggle="add-product">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
                                 </button>
                                 <div class="py-6 px-6 lg:px-8">
-                                    <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Add Product</h3>
-                                    <form class="space-y-6" wire:submit.prevent="store" enctype="multipart/form-data">
+                                    <h3
+                                        class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
+                                        Add Product</h3>
+                                    <form class="space-y-6" wire:submit.prevent="store"
+                                        enctype="multipart/form-data">
                                         <div class="relative">
-                                            <input type="text"  wire:model.defer="name" id="name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Product Name" required>
+                                            <input type="text" wire:model.defer="name" id="name"
+                                                class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                                placeholder="Product Name" required>
                                         </div>
                                         <div class="relative">
-                                            <input type="text" wire:model.defer="sku" id="sku" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="SKU" required>
+                                            <input type="text" wire:model.defer="sku" id="sku"
+                                                class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                                placeholder="SKU" required>
                                         </div>
                                         <div class="relative">
-                                            <input type="number" wire:model.defer="price" id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
+                                            <input type="number" wire:model.defer="price" id="price"
+                                                class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                                placeholder="Price" required>
                                         </div>
                                         {{-- <div class="relative">
                                             <input type="number" name="discount" wire:model.defer='discount' id="discount" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Discount" required>
                                         </div> --}}
                                         <div class="relative">
-                                            <input type="text" wire:model.defer="product_link" id="product_link" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="linkproduct" required>
+                                            <input type="text" wire:model.defer="product_link" id="product_link"
+                                                class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                                placeholder="linkproduct" required>
                                         </div>
                                         <div class="relative">
                                             <span class="text-gray-500 px-1 mb-2">Image</span>
@@ -194,10 +213,22 @@
                                             @else
                                             kosong
                                             @endif --}}
+
+                                            {{-- <label type="file" name="image-product" id="image-product" required>
+                                                <span class="">
+                                                    <img src="assets/img/icon-foto.png"
+                                                        class="img-preview-staff-edit w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer"
+                                                        alt="">
+                                                </span>
+                                                <input class="hidden" type="file" name="image"
+                                                    id="image-staff-edit" onchange="previewImageStaffEdit()">
+                                            </label> --}}
                                             <input wire:model="image" type="file" id="image">
                                         </div>
                                         <div class="flex flex-row gap-3">
-                                            <button type="submit" data-modal-toggle="add-product" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add Product</button>
+                                            <button type="submit" data-modal-toggle="add-product"
+                                                class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Add
+                                                Product</button>
                                         </div>
                                     </form>
                                 </div>
@@ -240,14 +271,17 @@
 
 
     @livewireScripts
-    <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
+    <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
     <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
+
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script>
         $(function() {
-            $('input[name="selectdate"]').daterangepicker({
+            $('input[name="daterange"]').daterangepicker({
                 opens: 'left'
             }, function(start, end, label) {
                 console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end

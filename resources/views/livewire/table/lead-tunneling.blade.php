@@ -1,94 +1,34 @@
 <div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-        <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Lead Tunneling</h1>
-        <div class="flex flex-row gap-2 py-2">
-            <span class="font-medium text-sm text-zinc-400">{{$jml_lead}}</span>
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Lead Tunneling</h1>
+            <div class="flex flex-row gap-2 py-2">
+                <span class="font-medium text-sm text-zinc-400">{{ $jml_lead }}</span>
+            </div>
         </div>
-    </div>
 
 
         <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
             <div class="relative mr-2">
                 <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                    <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
                 </div>
-                <input type="search" id="default-search" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..">
+                <input type="search" id="default-search"
+                    class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Search..">
             </div>
             <div class="mr-2 w-36 md:w-fit">
                 <button
                     class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
-                    type="button" data-modal-toggle="add-manual-closing">
-                    <i class="las la-chart-bar text-xl"></i>
-                    <span>Add Manual Closing</span>
+                    type="button" data-modal-toggle="filter-lead-tunneling">
+                    <i class="las la-filter text-xl"></i>
+                    <span>Filter</span>
                 </button>
-                {{-- modal add manual closing --}}
-                <div id="add-manual-closing" tabindex="-1" aria-hidden="true"
-                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-                    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-                        <!-- Modal content -->
-                        <div class="relative bg-slate-100 rounded-lg shadow">
-                            <button type="button"
-                                class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
-                                data-modal-toggle="add-manual-closing">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                            <div class="py-6  lg:px-8">
-                                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
-                                    Add Manual Closing</h3>
-                                <form class="space-y-6" action="#">
-                                    <div class="relative">
-                                        <input type="text" name="operator" wire:model.defer='operator' id="operator"
-                                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                            placeholder="Operator" required>
-                                    </div>
-                                    <div class="relative">
-                                        <select name="campaign" id="campaign"
-                                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                            required>
-                                            <option disabled selected>Select Campaign</option>
-                                            <option value="1">Campaign One</option>
-                                            <option value="2">Campaign Two</option>
-                                            <option value="3">Campaign Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="text" name="product" wire:model.defer='product' id="product"
-                                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                            placeholder="Product" required>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="text" name="custemer-name" wire:model.defer='custemer-name'
-                                            id="custemer-name"
-                                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                            placeholder="Customer Name" required>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="text" name="custemer-phone" wire:model.defer='custemer-phone'
-                                            id="custemer-phone"
-                                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                            placeholder="Customer Phone" required>
-                                    </div>
-                                    <div class="relative">
-                                        <input type="date" name="date" wire:model.defer='date' id="date"
-                                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-                                            required>
-                                    </div>
-                                    <div class="flex flex-row gap-3">
-                                        <button type="submit"
-                                            class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Export</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {{-- end modal add manual closing --}}
+                <livewire:modal.filter-lead-tunneling />
             </div>
 
             <div class="mr-2 w-36 md:w-fit">
@@ -156,7 +96,7 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </div>
-                <input datepicker datepicker-autohide type="text"
+                <input name="daterange"
                     class="bg-white text-gray-400 border-gray-200 shadow sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 placeholder-gray-400 font-medium"
                     placeholder="Select Date">
             </div>
