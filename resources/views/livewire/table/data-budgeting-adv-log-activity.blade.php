@@ -67,6 +67,9 @@
                     TARGET OMZET
                 </th>
                 <th scope="col" class=" py-3">
+                    CAMPAIGN
+                </th>
+                <th scope="col" class=" py-3">
                     STATUS
                 </th>
             </tr>
@@ -87,6 +90,9 @@
                 </td>
                 <td class=" py-4">
                     Rp 140.000.000
+                </td>
+                <td class=" py-4">
+                    Etawaku
                 </td>
                 <td class=" py-4">
                     <Span class="bg-red-100 text-red-500 py-2 px-4 font-semibold rounded-md">
