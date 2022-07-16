@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -80,5 +81,22 @@ class DashboardController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function dashboard()
+    {
+        $user = Auth::user();
+        if($user->role_id == 1){
+            return redirect('/dashboard-admin');
+        }elseif ($user->role_id == 2) {
+            return redirect('/dashboard-ceo');
+        }elseif ($user->role_id == 3) {
+            return redirect('/dashboard-manager');
+        }elseif ($user->role_id == 4) {
+            return redirect('/dashboard-adv');
+        }elseif ($user->role_id == 5) {
+            return redirect('/dashboard-cs');
+        }else {
+            return abort(404);
+        }
     }
 }

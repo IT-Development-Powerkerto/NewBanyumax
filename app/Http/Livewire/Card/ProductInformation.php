@@ -14,7 +14,7 @@ class ProductInformation extends Component
     // public $deletedId = '';
     public $listeners = [
         'productDeleted' => '$refresh',
-        'productCreated' => '$refresh',
+        // 'productCreated' => '$refresh',
         'productUpdated' => '$refresh',
         'updateProduct' => 'updateProduct',
         'getProduct' => 'showProduct'

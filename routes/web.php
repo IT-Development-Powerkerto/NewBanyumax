@@ -66,6 +66,8 @@ Route::middleware(['auth'])->group(function(){
 Route::resource('/editleadtunneling', EditLeadTunneling::class);
 // Users
 
+Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+
 Route::resource( '/realization', BudgetingRealizationController::class);
 
 // Admin.CEO.Dashboard
