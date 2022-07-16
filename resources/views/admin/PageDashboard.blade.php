@@ -161,32 +161,9 @@
                 </div>
 
                 <div>
-<<<<<<< HEAD
-                    <div class="pb-5">
-                        <div class="flex flex-row justify-between items-center py-3 px-5">
-                            <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Product
-                                Information</h1>
-                            <!-- Modal toggle -->
 
-                            <button
-                                class="flex flex-row text-blue-400 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center"
-                                type="button" data-modal-toggle="add-product">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Add Product
-                            </button>
-                            <livewire:modal.add-product2 />
-                        </div>
-                    </div>
                     <livewire:card.product-information />
                     {{-- <livewire:modal.edit-product /> --}}
-=======
-                    <livewire:card.product-information />
-                    <livewire:modal.edit-product />
->>>>>>> 5ccbf18b5fceadade35f37651cf360b6cf1650c0
                     <livewire:modal.delete-product />
                 </div>
 
@@ -204,7 +181,6 @@
                 <div class="py-10">
                     <livewire:table.announcements />
                     <livewire:modal.delete-announcement-on-admin/>
-<<<<<<< HEAD
                     <livewire:modal.add-announcement-on-admin />
                 </div>
 
@@ -224,9 +200,6 @@
                     @if (session()->has('error'))
                         <livewire:flash-message.error />
                     @endif
-=======
-                    <livewire:modal.add-announcement-on-admin/>
->>>>>>> 5ccbf18b5fceadade35f37651cf360b6cf1650c0
                 </div>
 
             </div>
@@ -251,13 +224,10 @@
         <livewire:modal.delete-product />
     </div>
 
-<<<<<<< HEAD
-=======
     <div class="px-5 -mt-10 mb-10 container mx-auto">
         <livewire:table.lead-tunneling />
     </div> --}}
 
->>>>>>> 5ccbf18b5fceadade35f37651cf360b6cf1650c0
 
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
@@ -278,11 +248,7 @@
         });
         </script>
     <script>
-<<<<<<< HEAD
-        function previewImage(){
-=======
         function previewImage() {
->>>>>>> 5ccbf18b5fceadade35f37651cf360b6cf1650c0
 
             const image = document.querySelector('#image');
             const imgPreview = document.querySelector('.img-preview');
@@ -297,10 +263,6 @@
             }
         }
     </script>
-<<<<<<< HEAD
-
-=======
->>>>>>> 5ccbf18b5fceadade35f37651cf360b6cf1650c0
 </body>
 
 </html>
