@@ -157,8 +157,8 @@
                         type="button" data-modal-toggle="add-product">
                         + Add Product
                     </button>
-                    <livewire:modal.add-product2 />
                 </div>
+                <livewire:modal.add-product2 />
 
                 <div>
 
