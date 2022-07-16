@@ -163,7 +163,7 @@
                 <div>
 
                     <livewire:card.product-information />
-                    {{-- <livewire:modal.edit-product /> --}}
+                    <livewire:modal.edit-product />
                     <livewire:modal.delete-product />
                 </div>
 

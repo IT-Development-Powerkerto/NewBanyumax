@@ -38,7 +38,8 @@ class AddProduct2 extends Component
         // dd($path);
         // dd($validated);
         Product::create($validated);
-        return redirect('/dashboard');
+        // return redirect('/dashboard');
+        $this->emit('productCreated');
     }
     public function render()
     {

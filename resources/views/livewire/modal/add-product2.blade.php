@@ -20,7 +20,7 @@
                         </div>
                         <div class="relative">
                             <input type="number" wire:model.debounce.500ms="price" id="price" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Price" required>
-                            @error('name') <span class="text-red-500">{{ $message }}</span> @enderror
+                            @error('price') <span class="text-red-500">{{ $message }}</span> @enderror
                         </div>
                         {{-- <div class="relative">
                             <input type="number" name="discount" wire:model.defer='discount' id="discount" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Discount" required>
