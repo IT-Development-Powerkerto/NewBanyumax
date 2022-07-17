@@ -8,30 +8,37 @@ use Livewire\Component;
 class AddProduct2 extends Component
 {
     use WithFileUploads;
-    public $name, $sku, $price, $product_link, $image, $admin_id, $isUploaded = false;
-
+    public $name, $sku, $price, $product_link = null, $image, $admin_id, $isUploaded = false;
+    protected $rules = [
+        'name' => 'required',
+        'image' => 'image|nullable',
+        'price' => 'required',
+        'sku' => 'required|min:3',
+        'product_link' => 'nullable'
+    ];
+    public function updated()
+    {
+        $this->validate();
+    }
     public function store()
     {
-        $this->validate([
-            'name' => 'required',
-            'image' => 'image|nullable', // 1MB Max
-            'price' => 'required',
-            'sku' => 'required'
-        ]);
-        $this->isUploaded = true;
+        // dd($this->all());
+        $validated = $this->validate();
+        // $this->isUploaded = true;
         // dd($this->all());
         // $namaFile =  $this->image->getClientOriginalName();
         // dd($namaFile);
-        $path = $this->image->store('public/image');
+        if(!$this->image){
+            $path = null;
+        }else{
+            $path = $this->image->store('public/image');
+        }
+        $validated['admin_id'] = auth()->user()->admin_id;
+        $validated['image'] = $path;
         // dd($path);
-        $product = Product::create([
-            'name' => $this->name,
-            'admin_id' => auth()->user()->admin_id,
-            'sku' => $this->sku,
-            'price' => $this->price,
-            'product_link' => $this->product_link,
-            'image' => $path
-        ]);
+        // dd($validated);
+        Product::create($validated);
+        // return redirect('/dashboard');
         $this->emit('productCreated');
     }
     public function render()

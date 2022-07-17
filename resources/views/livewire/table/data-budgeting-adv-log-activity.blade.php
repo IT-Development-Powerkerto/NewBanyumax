@@ -3,7 +3,7 @@
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV Log Activity</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">{{$jml_budgetdis}}</span>
+                <span class="font-medium text-sm text-zinc-400">{{$jml_budgetdis}} Data</span>
             </div>
         </div>
 
@@ -67,6 +67,9 @@
                     TARGET OMZET
                 </th>
                 <th scope="col" class=" py-3">
+                    CAMPAIGN
+                </th>
+                <th scope="col" class=" py-3">
                     STATUS
                 </th>
             </tr>
@@ -87,6 +90,9 @@
                 </td>
                 <td class=" py-4">
                     Rp 140.000.000
+                </td>
+                <td class=" py-4">
+                    Etawaku
                 </td>
                 <td class=" py-4">
                     <Span class="bg-red-100 text-red-500 py-2 px-4 font-semibold rounded-md">

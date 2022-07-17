@@ -6,36 +6,31 @@ use Livewire\Component;
 use File;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Livewire\WithFileUploads;
 
 class EditProduct extends Component
 {
 
-    // use WithFileUploads;
-    public $name, $sku, $price, $product_link;
+    use WithFileUploads;
+    public $name, $sku, $price, $product_link, $productId, $image_temp;
     public $image = '';
     public $listeners = [
-        'getProduct' => 'showProduct'
+        'getProduct' => 'showProduct',
+        'updateProduct' => 'updateProduct',
     ];
 
-    // public function mount($id)
-    // {
-    //     $product = Product::where('admin_id', auth()->user()->admin_id)->findOrFail($id);
-    // }
-
-    // public function update(Product $product)
-    // {
-    //     DB::table('products')->where('id', $product->id)->update([
-    //         'admin_id'     => auth()->user()->admin_id,
-    //         'name'         => $this->name,
-    //         'price'        => $this->price,
-    //         'sku'          => $this->sku,
-    //         // 'discount'  => $this->discount,
-    //         // 'image'     => $this->image->storeAs('assets/img/product', 'product-'),
-    //         'product_link' => $this->product_link,
-    //         'updated_at'   => Carbon::now()->toDateTimeString(),
-    //     ]);
-    // }
+    protected $rules = [
+        'name' => 'required',
+        'image_temp' => 'image|nullable',
+        'price' => 'required',
+        'sku' => 'required|min:3',
+        'product_link' => 'nullable'
+    ];
+    public function updated()
+    {
+        $this->validate();
+    }
     public function render()
     {
         // $products = Product::all();
@@ -44,18 +39,38 @@ class EditProduct extends Component
     public function showProduct($id)
     {
         // dd($id);
+        $this->reset('image_temp');
         $product = Product::find($id);
+        $this->productId = $product->id;
         $this->name = $product->name;
         $this->sku = $product->sku;
         $this->price = $product->price;
         $this->product_link = $product->product_link;
         $this->image = url( $product->image != null ? 'storage/'.str_replace('public/', '',$product->image) : 'assets/img/icon-foto.png');
         // $this->image = '';
-        $this->render();
+        // $this->render();
         // dd($this->image);
     }
     // public function productImage()
     // {
     //     return $this->image ? url('storage/'.str_replace('public', '',$this->image)) : url('assets/img/icon-foto.png');
     // }
+    public function updateProduct($productId)
+    {
+        $product = Product::where('id', $productId)->first();
+        $validated = $this->validate();
+        if($this->image_temp){
+            // if
+            if($product->image){
+
+                Storage::disk('public')->delete(str_replace('public/', '', $product->image));
+            }
+            $path = $this->image_temp->store('public/image');
+        }else{
+            $path = $product->image;
+        }
+        $validated['image'] = $path;
+        $product->update($validated);
+        $this->emit('productUpdated');
+    }
 }

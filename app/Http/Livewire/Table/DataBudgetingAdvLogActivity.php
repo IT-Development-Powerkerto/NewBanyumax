@@ -13,4 +13,5 @@ class DataBudgetingAdvLogActivity extends Component
         $data['jml_budgetdis'] = BudgetingDisbursement::all()->count();
         return view('livewire.table.data-budgeting-adv-log-activity', $data, ['budgeting_dis'=>$budgeting_dis]);
     }
+
 }

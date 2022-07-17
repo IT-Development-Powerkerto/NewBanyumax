@@ -157,10 +157,11 @@
                         type="button" data-modal-toggle="add-product">
                         + Add Product
                     </button>
-                    <livewire:modal.add-product2 />
                 </div>
+                <livewire:modal.add-product2 />
 
                 <div>
+
                     <livewire:card.product-information />
                     <livewire:modal.edit-product />
                     <livewire:modal.delete-product />
@@ -180,7 +181,25 @@
                 <div class="py-10">
                     <livewire:table.announcements />
                     <livewire:modal.delete-announcement-on-admin/>
-                    <livewire:modal.add-announcement-on-admin/>
+                    <livewire:modal.add-announcement-on-admin />
+                </div>
+
+            </div>
+
+            <div class="container mx-auto lg:grid lg:grid-cols-12 flex flex-col gap-4 px-5 md:px-0 pb-5 lg:px-0">
+                @if (session()->has('success'))
+                    <livewire:flash-message.success />
+                @endif
+                @if (session()->has('error'))
+                    <livewire:flash-message.error />
+                @endif
+                <div class="col-span-6">
+                    @if (session()->has('success'))
+                        <livewire:flash-message.success />
+                    @endif
+                    @if (session()->has('error'))
+                        <livewire:flash-message.error />
+                    @endif
                 </div>
 
             </div>
