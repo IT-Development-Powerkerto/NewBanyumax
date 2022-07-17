@@ -116,6 +116,9 @@ Route::resource('/budgetingadvertising-adv', BudgetingAdvertisingController::cla
 Route::resource('/budgetingrealization-adv', BudgetingRealizationController::class);
 Route::resource('/routineevaluation-adv', RoutineEvaluation::class);
 Route::resource('/budgetingdibursement-adv', BudgetingDibursement::class);
+Route::get('/profile-adv', function () {
+    return view('User.Advertiser.PageProfile');
+});
 
 // User.Ceo
 Route::resource('/ceo', CeoController::class);
