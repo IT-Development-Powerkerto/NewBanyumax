@@ -42,7 +42,7 @@ class AddRoutineEvaluation extends Component
         $validated['created_at']= Carbon::now()->toDateTimeString();
         $validated['updated_at']= Carbon::now()->toDateTimeString();
 
-        Evaluation::insert($validated);
+        Evaluation::create($validated);
 
         $this->emit('routineEvaluationCreated');
     }
