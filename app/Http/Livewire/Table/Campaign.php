@@ -23,7 +23,9 @@ class Campaign extends Component
         $facebook_wa    = FacebookWa::all();
         $user=auth()->user();
         // return view('livewire.table.campaign', ['campaigns'=>$campaigns  ,'facebook_event'=>$facebook_event, 'facebook_wa'=>$facebook_wa]);
-        if($user->role_id == 4){
+        if($user->role_id == 1){
+            return view('livewire.table.campaign',$data, ['campaigns'=>$campaigns  ,'facebook_event'=>$facebook_event, 'facebook_wa'=>$facebook_wa]);
+        }elseif($user->role_id == 4){
             return view('livewire.table.campaign',$data, ['campaigns'=>$campaigns  ,'facebook_event'=>$facebook_event, 'facebook_wa'=>$facebook_wa]);
         }else{
             abort(404);

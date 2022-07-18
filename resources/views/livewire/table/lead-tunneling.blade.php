@@ -108,10 +108,10 @@
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
                 <th scope="col" class="py-3 px-5">
-                    Order ID
+                    Advertiser
                 </th>
                 <th scope="col" class="py-3 px-5">
-                    Advertiser
+                    Order ID
                 </th>
                 <th scope="col" class="py-3 px-5">
                     Operator
@@ -140,51 +140,62 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class=" py-4">
-                    Ord-41737
-                </td>
+            @forelse ($leads as $lead)
+                <tr class="bg-white border-b text-xs text-black">
+                    <td class=" py-4">
+                        Ord-41737
+                    </td>
+                    <td class=" py-4">
+                        Rifan Tri Yulianto
+                    </td>
+                    <td class=" py-4">
+                        Fadilatun Nida Rahayu
+                    </td>
+                    <td class=" py-4">
+                        Lilin Sugiarti
+                    </td>
+                    <td class=" py-4">
+                        6281348948716
+                    </td>
+                    <td class=" py-4">
+                        Generos
+                    </td>
+                    <td class=" py-4">
+                        2022-05-25 08:07:30
+                    </td>
+                    <td class=" py-4">
+                        <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
+                            05:00
+                        </div>
+                    </td>
+                    <td class=" py-4">
+                        <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                            Waiting
+                        </div>
+                    </td>
+                    <td class=" py-4 text-center">
+                        <a href="/editleadtunneling"
+                            class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
+                            <i class="las la-edit"></i>
+                        </a>
+                    </td>
+                </tr>
+            @empty
+                <tr class="bg-white border-b text-xs text-black">
+                    <td class="py-4" colspan="10">
+                        <div class="text-gray-400 rounded-md px-3 py-1 text-center">
+                            Data Not Available
+                        </div>
+                    </td>
+                </tr>
+            @endforelse
+
+            {{-- <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
                     Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Fadilatun Nida Rahayu
-                </td>
-                <td class=" py-4">
-                    Lilin Sugiarti
-                </td>
-                <td class=" py-4">
-                    6281348948716
-                </td>
-                <td class=" py-4">
-                    Generos
-                </td>
-                <td class=" py-4">
-                    2022-05-25 08:07:30
-                </td>
-                <td class=" py-4">
-                    <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
-                        05:00
-                    </div>
-                </td>
-                <td class=" py-4">
-                    <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
-                        Waiting
-                    </div>
-                </td>
-                <td class=" py-4 text-center">
-                    <a href="/editleadtunneling"
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
-                        <i class="las la-edit"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class=" py-4">
                     Ord-41737
-                </td>
-                <td class=" py-4">
-                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
@@ -220,10 +231,10 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    Ord-41737
+                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Rifan Tri Yulianto
+                    Ord-41737
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
@@ -259,10 +270,10 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    Ord-41737
+                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Rifan Tri Yulianto
+                    Ord-41737
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
@@ -298,10 +309,10 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    Ord-41737
+                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Rifan Tri Yulianto
+                    Ord-41737
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
@@ -334,7 +345,7 @@
                         <i class="las la-edit"></i>
                     </a>
                 </td>
-            </tr>
+            </tr> --}}
         </tbody>
     </table>
 </div>
@@ -352,10 +363,6 @@
         data-popper-placement="bottom"
         style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(351.5px, 735.5px, 0px);">
         <ul class="py-1 text-sm text-gray-700 text-center dark:text-gray-200" aria-labelledby="dropdownDefault">
-            <li>
-                <a href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">1</a>
-            </li>
             <li>
                 <a href="#"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">5</a>
