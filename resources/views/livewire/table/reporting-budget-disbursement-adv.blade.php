@@ -1,7 +1,7 @@
-<div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
+<div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg overflow-x-auto">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV</h1>
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Reporting Budget Disbursement</h1>
             <div class="flex flex-row gap-2 py-2">
                 <span class="font-medium text-sm text-zinc-400">1.000 Data</span>
             </div>
@@ -78,56 +78,26 @@
                     </div>
                 </div>
             </div>
+            <div class="mr-2 w-36 md:w-fit">
+                <button
+                    class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
+                    type="button" data-modal-toggle="add-budgeting-dibusbursement-adv">
+                    <i class="las la-plus text-xl"></i>
+                    <span>Budget Disbursment</span>
+                </button>
+                <livewire:modal.add-budgeting-dibusbursement-adv />
+            </div>
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto border-x px-5">
-    <table class="w-full text-sm text-left">
-        <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
-            <tr>
-                <th scope="col" class="py-3 px-5">
-                    advertising costs
-                </th>
-                <th scope="col" class="py-3 px-5">
-                    LEAD
-                </th>
-                <th scope="col" class="py-3 px-5">
-                    CLOSING
-                </th>
-                <th scope="col" class="py-3 px-5">
-                    Quantity
-                </th>
-                <th scope="col" class="py-3 px-5">
-                    OMZET
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class=" py-4 px-6">
-                    Rp 140.000
-                </td>
-                <td class=" py-4 px-6">
-                    <div class="flex flex-col text-[#464E5F]">
-                        <h1 class="font-medium">0 Daily Leads</h1>
-                        <h1 class="font-semibold">108 Total Leads</h1>
-                    </div>
-                </td>
-                <td class=" py-4 px-6">
-                    <div class="flex flex-col text-[#464E5F]">
-                        <h1 class="font-medium">0 Daily Closing</h1>
-                        <h1 class="font-semibold">108 Total Closing</h1>
-                    </div>
-                </td>
-                <td class=" py-4 px-6">
-                    26
-                </td>
-                <td class=" py-4 px-6">
-                    Rp 140.000.000
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="h-max bg-white border-x px-5">
+    <div class="flex gap-1 ">
+        <livewire:card.initial-card />
+        <livewire:card.initial-card />
+        <livewire:card.initial-card />
+    </div>
+    <livewire:modal.edit-reporitng-budget-disbursement />
+    <livewire:modal.delete-reporitng-budget-disbursement />
 </div>
 <div class="py-3 px-5 flex justify-between items-center border rounded-b-lg bg-white">
 
@@ -138,8 +108,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
         </svg></button>
     <!-- Dropdown menu -->
-    <div id="dropdownFilter"
-        class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-20 dark:bg-gray-700"
+    <div id="dropdownFilter" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-20 dark:bg-gray-700"
         data-popper-placement="bottom"
         style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(351.5px, 735.5px, 0px);">
         <ul class="py-1 text-sm text-gray-700 text-center dark:text-gray-200" aria-labelledby="dropdownDefault">

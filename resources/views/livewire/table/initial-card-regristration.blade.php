@@ -1,7 +1,7 @@
 <div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV</h1>
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Initial Card Registrations</h1>
             <div class="flex flex-row gap-2 py-2">
                 <span class="font-medium text-sm text-zinc-400">1.000 Data</span>
             </div>
@@ -78,6 +78,16 @@
                     </div>
                 </div>
             </div>
+            <div class="mr-2 w-36 md:w-fit">
+                <button
+                    class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
+                    type="button" data-modal-toggle="add-card-regristration-adv">
+                    <i class="las la-plus text-xl"></i>
+                    <span>Card Registration</span>
+                </button>
+                <livewire:modal.add-card-regristration />
+                
+            </div>
         </div>
     </div>
 </div>
@@ -86,44 +96,32 @@
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
                 <th scope="col" class="py-3 px-5">
-                    advertising costs
+                    CARD HOLDER NAME
                 </th>
                 <th scope="col" class="py-3 px-5">
-                    LEAD
+                    Card Number
                 </th>
                 <th scope="col" class="py-3 px-5">
-                    CLOSING
+                    Card info
                 </th>
                 <th scope="col" class="py-3 px-5">
-                    Quantity
-                </th>
-                <th scope="col" class="py-3 px-5">
-                    OMZET
+                    BANK INFO
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
-                <td class=" py-4 px-6">
-                    Rp 140.000
+                <td class=" py-4">
+                    Abdan Syakuro Syalala
                 </td>
-                <td class=" py-4 px-6">
-                    <div class="flex flex-col text-[#464E5F]">
-                        <h1 class="font-medium">0 Daily Leads</h1>
-                        <h1 class="font-semibold">108 Total Leads</h1>
-                    </div>
+                <td class=" py-4">
+                    1234567890123456
                 </td>
-                <td class=" py-4 px-6">
-                    <div class="flex flex-col text-[#464E5F]">
-                        <h1 class="font-medium">0 Daily Closing</h1>
-                        <h1 class="font-semibold">108 Total Closing</h1>
-                    </div>
+                <td class=" py-4">
+                    Primary Card
                 </td>
-                <td class=" py-4 px-6">
-                    26
-                </td>
-                <td class=" py-4 px-6">
-                    Rp 140.000.000
+                <td class=" py-4">
+                    Jenius
                 </td>
             </tr>
         </tbody>
