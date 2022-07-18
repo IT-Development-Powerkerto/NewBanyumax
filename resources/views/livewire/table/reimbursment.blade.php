@@ -1,7 +1,7 @@
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg shadow">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
-        <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Reimbursement</h1>
+        <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Activity Logs Reimbursement</h1>
         <div class="flex flex-row gap-2 py-2">
             <span class="font-medium text-sm text-zinc-400">{{$jml_reimbursment}} Data</span>
         </div>
@@ -16,7 +16,7 @@
                 <input type="search" id="default-search" class="block px-4 py-2 pl-10 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..">
             </div>
             <button
-                class="w-56 hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+                class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                 type="button" data-modal-toggle="add-reimbursement">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
@@ -28,7 +28,7 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max border-x bg-white overflow-x-auto px-5">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
             <tr>
@@ -45,6 +45,9 @@
                     NOMINAL
                 </th>
                 <th scope="col" class="px-6 py-3">
+                    NO REKENING
+                </th>
+                <th scope="col" class="px-6 py-3">
                     STATUS
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -53,24 +56,36 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($reimbursements as $reimbursement)
+            {{-- @foreach ($reimbursements as $reimbursement) --}}
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    {{$reimbursment -> created_at}}
+                    22/06/2022
+                    {{-- {{$reimbursment -> created_at}} --}}
                 </td>
                 <td class="px-6 py-4">
                     Alam Syah
                 </td>
                 <td class="px-6 py-4">
-                    {{$reimbursment -> reason}}
+                    pulsa untuk paket
+                    {{-- {{$reimbursment -> reason}} --}}
                 </td>
                 <td class="px-6 py-4">
-                    {{$reimbursment -> nominal}}
+                    Rp. 100.000
+                    {{-- {{$reimbursment -> nominal}} --}}
                 </td>
                 <td class="px-6 py-4">
-                    <Span class="bg-blue-100 text-blue-500 py-2 px-4 rounded-md">
+                    112030187303719
+                </td>
+                <td class="px-6 py-4">
+                    <Span class="bg-blue-100 font-semibold text-blue-500 py-2 px-4 rounded-md">
                         Submited
                     </Span>
+                    {{-- <Span class="bg-cyan-100 font-semibold text-cyan-500 py-2 px-4 rounded-md">
+                        Approved
+                    </Span>
+                    <Span class="bg-red-100 font-semibold text-red-500 py-2 px-4 rounded-md">
+                        Reject
+                    </Span> --}}
                 </td>
                 <td class="px-6 py-4 ">
                     <a data-modal-toggle="delete-reimbursment" href="#" class="text-white bg-red-500 py-2 px-4 rounded-md flex flex-row justify-center">
@@ -81,7 +96,7 @@
                     </a>
                 </td>
             </tr>
-            @endforeach
+            {{-- @endforeach --}}
         </tbody>
     </table>
 </div>

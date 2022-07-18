@@ -26,7 +26,7 @@
         <livewire:sidebar.sidebar-cs />
         <main class="w-screen">
             <div class="px-5 mt-5">
-                <div class="py-5 mb-10 flex justify-between">
+                <div class="py-5 flex justify-between">
                     <div>
                         <p class="font-bold text-lg tracking-wide mb-2">
                             Promotion
@@ -103,7 +103,7 @@
 
                 </div>
 
-                <div class="px-5">
+                <div class="px-5 py-5">
                     <livewire:table.create-promotion-cs />
                     <livewire:modal.add-promotion />
                     <livewire:modal.edit-promotion />
