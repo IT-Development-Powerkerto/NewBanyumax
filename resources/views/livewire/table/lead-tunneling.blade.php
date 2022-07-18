@@ -108,10 +108,10 @@
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
                 <th scope="col" class="py-3 px-5">
-                    Order ID
+                    Advertiser
                 </th>
                 <th scope="col" class="py-3 px-5">
-                    Advertiser
+                    Order ID
                 </th>
                 <th scope="col" class="py-3 px-5">
                     Operator
@@ -192,10 +192,10 @@
 
             {{-- <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    Ord-41737
+                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Rifan Tri Yulianto
+                    Ord-41737
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
@@ -231,10 +231,10 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    Ord-41737
+                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Rifan Tri Yulianto
+                    Ord-41737
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
@@ -270,10 +270,10 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    Ord-41737
+                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Rifan Tri Yulianto
+                    Ord-41737
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
@@ -309,10 +309,10 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    Ord-41737
+                    Rifan Tri Yulianto
                 </td>
                 <td class=" py-4">
-                    Rifan Tri Yulianto
+                    Ord-41737
                 </td>
                 <td class=" py-4">
                     Fadilatun Nida Rahayu
