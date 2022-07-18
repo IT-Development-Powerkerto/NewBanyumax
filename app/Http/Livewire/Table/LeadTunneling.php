@@ -5,12 +5,16 @@ namespace App\Http\Livewire\Table;
 use Livewire\Component;
 use App\Models\Lead;
 use Carbon\Carbon;
+use Livewire\WithPagination;
 
 class LeadTunneling extends Component
 {
+    use WithPagination;
     public function render()
     {
-        $leads = Lead::all();
+        // dd(date('Y-m-d'));
+        $leads = Lead::all()->take(30);
+        // dd($leads);
         $data['jml_lead'] = Lead::all()->count();
         return view('livewire.table.lead-tunneling', $data, compact('leads'));
     }
