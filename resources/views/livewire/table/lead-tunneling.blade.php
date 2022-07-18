@@ -171,12 +171,12 @@
                     <td class=" py-4">
                         {{-- Waiting --}}
                         @if ($lead->status_id == 3)
-                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                            <div class="text-blue-400 bg-blue-100 rounded-md px-3 py-1 text-center">
                                 {{ $lead->status->name }}
                             </div>
                         {{-- Processing --}}
                         @elseif($lead->status_id == 4)
-                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                            <div class="text-orange-400 bg-orange-100 rounded-md px-3 py-1 text-center">
                                 {{ $lead->status->name }}
                             </div>
                         {{-- Closing --}}
@@ -186,12 +186,12 @@
                             </div>
                         {{-- Spam --}}
                         @elseif($lead->status_id == 6)
-                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                            <div class="text-purple-400 bg-purple-100 rounded-md px-3 py-1 text-center">
                                 {{ $lead->status->name }}
                             </div>
                         {{-- Failed --}}
                         @elseif($lead->status_id == 7)
-                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                            <div class="text-red-400 bg-red-100 rounded-md px-3 py-1 text-center">
                                 {{ $lead->status->name }}
                             </div>
                         @else
