@@ -29,6 +29,12 @@
                     <div class="relative">
                         <textarea name="solution" wire:model.defer='solution' id="solution" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Solution" required></textarea>
                     </div>
+                    <div class="relative">
+                        <div class="-mt-2 text-sm mb-3 text-gray-600">
+                            Attachment
+                        </div>
+                        <input type="file" name="image" id="image" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                    </div>
                     <div class="flex flex-row gap-3">
                         <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Submit</button>
                     </div>

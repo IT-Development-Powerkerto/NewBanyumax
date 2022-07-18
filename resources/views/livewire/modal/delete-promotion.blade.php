@@ -10,7 +10,7 @@
                         @csrf
                         @method('DELETE')
                         <div class="text-center text-xl text-gray-700 font-bold mb-12">
-                            <h1>Delete Product ?</h1>
+                            <h1>Delete Promotion ?</h1>
                         </div>
                         <div class="flex flex-row gap-3">
                             <button type="submit" class="w-full bg-red-600 text-white border font-medium rounded-xl text-sm px-5 py-2.5 text-center">Delete</button>
