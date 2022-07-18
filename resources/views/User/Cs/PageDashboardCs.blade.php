@@ -106,12 +106,14 @@
                 <div class="flex flex-row justify-between items-center pb-5">
                     <h1 class="font-semibold text-[#7E8299] tracking-wide text-xl">Product Information</h1>
                     <!-- Modal toggle -->
-                    <button
-                        class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-orange-500 to-red-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-                        type="button" data-modal-toggle="add-product">
-                        + Add Product
-                    </button>
-                    <livewire:modal.add-product2 />
+                    <div class="">
+                        <button
+                            class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-orange-500 to-red-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+                            type="button" data-modal-toggle="add-product">
+                            + Add Product
+                        </button>
+                        <livewire:modal.add-product2 />
+                    </div>
                 </div>
 
                 <div>
@@ -120,7 +122,7 @@
                     <livewire:modal.delete-product />
                 </div>
 
-                <div class="py-5">
+                <div class="py-10 px-5">
                     <livewire:table.lead-tunneling />
                 </div>
 
