@@ -62,24 +62,25 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($evaluations as $evaluation)
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    1
+                    {{$loop->iteration}}
                 </td>
                 <td class="px-6 py-4">
-                    Etawaku Platinum
+                    {{$evaluation->product->name}}
                 </td>
                 <td class="px-6 py-4">
-                    22-06-2022
+                    {{$evaluation->date}}
                 </td>
                 <td class="px-6 py-4">
-                    10:18 WIB
+                    {{$evaluation->time}}
                 </td>
                 <td class="px-6 py-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
+                    {{$evaluation->resistance}}
                 </td>
                 <td class="px-6 py-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
+                    {{$evaluation->solution}}
                 </td>
                 <td class="px-6 py-4">
                     <button class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 py-2 px-4 rounded-md">
@@ -87,6 +88,7 @@
                     </button>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
