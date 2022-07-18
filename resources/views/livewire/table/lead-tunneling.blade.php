@@ -143,25 +143,25 @@
             @forelse ($leads as $lead)
                 <tr class="bg-white border-b text-xs text-black">
                     <td class=" py-4">
-                        Ord-41737
+                        {{ $lead->advertiser }}
                     </td>
                     <td class=" py-4">
-                        Rifan Tri Yulianto
+                        {{ 'Ord - '.$lead->id }}
                     </td>
                     <td class=" py-4">
-                        Fadilatun Nida Rahayu
+                        {{ $lead->operator->name }}
                     </td>
                     <td class=" py-4">
-                        Lilin Sugiarti
+                        {{ $lead->client_name }}
                     </td>
                     <td class=" py-4">
-                        6281348948716
+                        {{ $lead->client_whatsapp }}
                     </td>
                     <td class=" py-4">
-                        Generos
+                        {{ $lead->product->name }}
                     </td>
                     <td class=" py-4">
-                        2022-05-25 08:07:30
+                        {{ $lead->created_at }}
                     </td>
                     <td class=" py-4">
                         <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
@@ -169,9 +169,33 @@
                         </div>
                     </td>
                     <td class=" py-4">
-                        <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
-                            Waiting
-                        </div>
+                        {{-- Waiting --}}
+                        @if ($lead->status_id == 3)
+                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Processing --}}
+                        @elseif($lead->status_id == 4)
+                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Closing --}}
+                        @elseif($lead->status_id == 5)
+                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Spam --}}
+                        @elseif($lead->status_id == 6)
+                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Failed --}}
+                        @elseif($lead->status_id == 7)
+                            <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        @else
+                        @endif
                     </td>
                     <td class=" py-4 text-center">
                         <a href="/editleadtunneling"

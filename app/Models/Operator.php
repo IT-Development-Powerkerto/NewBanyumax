@@ -21,4 +21,8 @@ class Operator extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+    public function lead()
+    {
+        return $this->hasMany(Lead::class);
+    }
 }

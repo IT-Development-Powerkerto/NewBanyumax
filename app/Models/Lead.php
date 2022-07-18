@@ -23,4 +23,12 @@ class Lead extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function operator()
+    {
+        return $this->belongsTo(Operator::class)->withTrashed();
+    }
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
 }

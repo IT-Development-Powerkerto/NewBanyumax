@@ -13,7 +13,10 @@ class LeadTunneling extends Component
     public function render()
     {
         // dd(date('Y-m-d'));
-        $leads = Lead::all()->take(30);
+        $leads = Lead::with([
+            'operator',
+            'product'
+        ])->get()->take(5);
         // dd($leads);
         $data['jml_lead'] = Lead::all()->count();
         return view('livewire.table.lead-tunneling', $data, compact('leads'));
