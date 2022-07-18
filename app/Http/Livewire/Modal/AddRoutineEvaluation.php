@@ -12,22 +12,23 @@ class AddRoutineEvaluation extends Component
     use WithFileUploads;
     public $admin_id, $user_id, $product_id, $date, $time, $resistance, $solution, $image = null;
 
-    public $rules = [
+    protected $rules = [
         'product_id'    =>'required',
         'date'          =>'required',
         'time'          =>'required',
         'resistance'    =>'required',
         'solution'      =>'required',
-        'image'         =>'nullable'
+        'image'         =>'image|nullable'
     ];
 
-    public function updated()
-    {
-        $this->validate();
-    }
+    // public function updated()
+    // {
+    //     $this->validate();
+    // }
 
     public function store()
     {
+        // dd($this->all());
         $validated= $this->validate();
         // dd($this->all());
         if(!$this->image){
