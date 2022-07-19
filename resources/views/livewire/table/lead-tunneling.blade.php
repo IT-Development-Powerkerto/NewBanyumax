@@ -6,17 +6,6 @@
                 <span class="font-medium text-sm text-zinc-400">{{ $jml_lead }}</span>
             </div>
         </div>
-
-    <div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
-        <div class="flex flex-row justify-between items-center w-full">
-            <div class="">
-                <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Lead Tunneling</h1>
-                <div class="flex flex-row gap-2 py-2">
-                    <span class="font-medium text-sm text-zinc-400">{{ $leads->count() }}</span>
-                </div>
-            </div>
-
-
             <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
                 <div class="relative mr-2">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
