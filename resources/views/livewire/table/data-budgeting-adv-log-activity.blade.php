@@ -84,13 +84,13 @@
                     {{$budget_dis->user->name}}
                 </td>
                 <td class=" py-4">
-                    {{$budget_dis->nominal}}
+                    Rp. {{ number_format($budget_dis->nominal, 2, ',', '.')  }}
                 </td>
                 <td class=" py-4">
                     {{$budget_dis->no_rek}}
                 </td>
                 <td class=" py-4">
-                    {{$budget_dis->target_omzet}}
+                    Rp. {{ number_format($budget_dis->target_omzet, 2, ',', '.')  }}
                 </td>
                 <td class=" py-4">
                     {{$budget_dis->campaign->campaign_name}}
