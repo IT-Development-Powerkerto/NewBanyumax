@@ -10,13 +10,14 @@ use Livewire\WithPagination;
 class LeadTunneling extends Component
 {
     use WithPagination;
+    public $paginate = 10;
     public function render()
     {
         // dd(date('Y-m-d'));
         $leads = Lead::with([
             'operator',
             'product'
-        ])->get()->take(5);
+        ])->paginate($this->paginate);
         // dd($leads);
         $data['jml_lead'] = Lead::all()->count();
         return view('livewire.table.lead-tunneling', $data, compact('leads'));
