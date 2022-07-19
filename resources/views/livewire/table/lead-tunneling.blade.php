@@ -1,4 +1,11 @@
-<div>
+<div class="py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
+    <div class="flex flex-row justify-between items-center w-full">
+        <div class="">
+            <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Lead Tunneling</h1>
+            <div class="flex flex-row gap-2 py-2">
+                <span class="font-medium text-sm text-zinc-400">{{ $jml_lead }}</span>
+            </div>
+        </div>
 
     <div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
         <div class="flex flex-row justify-between items-center w-full">
@@ -282,9 +289,33 @@
                         </div>
                     </td>
                     <td class=" py-4">
-                        <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
-                            Complete
-                        </div>
+                        {{-- Waiting --}}
+                        @if ($lead->status_id == 3)
+                            <div class="font-semibold text-blue-700 bg-blue-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Processing --}}
+                        @elseif($lead->status_id == 4)
+                            <div class="font-semibold text-orange-500 bg-orange-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Closing --}}
+                        @elseif($lead->status_id == 5)
+                            <div class="font-semibold text-gray-700 bg-gray-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Spam --}}
+                        @elseif($lead->status_id == 6)
+                            <div class="font-semibold text-purple-700 bg-purple-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        {{-- Failed --}}
+                        @elseif($lead->status_id == 7)
+                            <div class="font-semibold text-red-700 bg-red-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                {{ $lead->status->name }}
+                            </div>
+                        @else
+                        @endif
                     </td>
                     <td class=" py-4 text-center">
                         <a href="/editleadtunneling"

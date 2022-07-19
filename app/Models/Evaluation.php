@@ -19,6 +19,7 @@ class Evaluation extends Model
         'time',
         'resistance',
         'solution',
+        'image'
     ];
 
     public function product()

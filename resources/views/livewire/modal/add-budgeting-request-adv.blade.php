@@ -1,5 +1,5 @@
 <!-- Main modal -->
-<div id="add-budgeting-request-adv" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+<div id="add-budgeting-request-adv" wire:ignore.self tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative rounded-lg shadow bg-slate-100" >
@@ -8,16 +8,16 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Request Budgeting</h3>
-                <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
+                <form class="space-y-6" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
-                        <input type="text" name="nominal" wire:model.defer='nominal_req' id="nominal_req" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal Request" required>
+                        <input type="text" wire:model.debounce.500ms='nominal_req' id="nominal_req" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal Request" required>
                     </div>
                     <div class="relative">
-                        <input type="text" name="no_rek" wire:model.defer='no_rek' id="no_rek" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="No. Rekening" required>
+                        <input type="text" wire:model.debounce.500ms='no_rek' id="no_rek" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="No. Rekening" required>
                     </div>
                     <div class="relative">
-                        <input type="text" name="target_omzet" wire:model.defer='target_omzet' id="target_omzet" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Target Omzet" required>
+                        <input type="text" wire:model.debounce.500ms='target_omzet' id="target_omzet" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Target Omzet" required>
                     </div>
                     <div class="relative">
                         <select name="campaign" id="campaign"
@@ -30,7 +30,7 @@
                         </select>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
+                        <button type="button" wire:click.prevent='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
                     </div>
                 </form>
             </div>
@@ -38,19 +38,3 @@
     </div>
 </div>
 
-<script>
-    function previewImage(){
-
-        const image = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
-
-        imgPreview.style.display = 'block';
-
-        const oFReader = new FileReader();
-
-        oFReader.readAsDataURL(image.files[0]);
-        oFReader.onload = function(oFREvent){
-        imgPreview.src = oFREvent.target.result;
-        }
-        }
-</script>

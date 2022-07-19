@@ -12,12 +12,17 @@ class BudgetingDisbursement extends Model
     protected $fillable =[
         'admin_id',
         'user_id',
-        'role_id',
+        // 'role_id',
+        'campaign_id',
         'nominal',
         'no_rek',
         'target_omzet',
         'status',
     ];
+
+    public function campaign() {
+        return $this->belongsTo(Campaign::class, 'campaign_id','id');
+    }
 
     public function user(){
         return $this->belongsTo(User::class);
@@ -25,5 +30,9 @@ class BudgetingDisbursement extends Model
 
     public function role(){
         return $this->belongsTo(Role::class);
+    }
+
+    public function status(){
+        return $this->belongsTo(Status::class);
     }
 }

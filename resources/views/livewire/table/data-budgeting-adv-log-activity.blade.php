@@ -75,24 +75,25 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($budgeting_dis as $budget_dis)
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    22-06-2022 10:37
+                    {{$budget_dis->created_at}}
                 </td>
                 <td class=" py-4">
-                    Isnan Aditia
+                    {{$budget_dis->user->name}}
                 </td>
                 <td class=" py-4">
-                    Rp 139.000.000
+                    Rp. {{ number_format($budget_dis->nominal, 2, ',', '.')  }}
                 </td>
                 <td class=" py-4">
-                    1809876500000876
+                    {{$budget_dis->no_rek}}
                 </td>
                 <td class=" py-4">
-                    Rp 140.000.000
+                    Rp. {{ number_format($budget_dis->target_omzet, 2, ',', '.')  }}
                 </td>
                 <td class=" py-4">
-                    Etawaku
+                    {{$budget_dis->campaign->campaign_name}}
                 </td>
                 <td class=" py-4">
                     <Span class="bg-red-100 text-red-500 py-2 px-4 font-semibold rounded-md">
@@ -100,6 +101,7 @@
                     </Span>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

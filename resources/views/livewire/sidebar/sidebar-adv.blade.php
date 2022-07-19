@@ -53,12 +53,8 @@
                                             class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Disbursement</a>
                                     </li>
                                     <li>
-                                        <a href="#"
+                                        <a href="/budgetingrealization-adv"
                                             class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Realization</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">coba</a>
                                     </li>
                                 </ul>
                             </li>

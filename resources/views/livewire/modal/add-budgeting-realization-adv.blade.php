@@ -11,6 +11,16 @@
                 <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
+                        <select name="advertiser-name" id="advertiser-name"
+                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                            required>
+                            <option disabled selected>Advertiser Name</option>
+                            <option value="1">Azizi Asadel</option>
+                            <option value="2">Marsha Lenathea</option>
+                            <option value="3">Yesica Tamara</option>
+                        </select>
+                    </div>
+                    <div class="relative">
                         <input type="text" name="item" wire:model.defer='item' id="item" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Item" required>
                     </div>
                     <div class="relative">
@@ -27,10 +37,13 @@
                         </select>
                     </div>
                     <div class="relative">
+                        <input type="number" name="funds" wire:model.defer='funds' id="funds" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Remaining Funds (Rp)" required>
+                    </div>
+                    <div class="relative">
                         <textarea name="description" wire:model.defer='description' id="description" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description" required></textarea>
                     </div>
                     <div class="relative">
-                        <span class="text-gray-500 px-1 mb-2">Attachment</span>
+                        <span class="text-gray-500 px-1 mb-2">Upload Proof</span>
                             <label type="file" name="image-product" id="image-product" required>
                                 <span class="">
                                     <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
