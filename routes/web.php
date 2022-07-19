@@ -137,6 +137,10 @@ Route::get('/budgetingrealization-cs', function () {
 Route::get('/routineevaluation-cs', function () {
     return view('User.Cs.PageRoutineEvaluationCs');
 });
+Route::get('/profil-cs', function () {
+    return view('User.Cs.PageProfilCS');
+});
+
 
 // User.Finance
 Route::resource('/finance', FinanceDashboard::class);
