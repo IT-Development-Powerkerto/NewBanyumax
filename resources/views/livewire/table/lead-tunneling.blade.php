@@ -178,28 +178,29 @@
                         </td>
                         <td class=" py-4">
                             {{-- Waiting --}}
+                            {{-- Waiting --}}
                             @if ($lead->status_id == 3)
-                                <div class="text-blue-400 bg-blue-100 rounded-md px-3 py-1 text-center">
+                                <div class="font-semibold text-blue-700 bg-blue-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
                             {{-- Processing --}}
                             @elseif($lead->status_id == 4)
-                                <div class="text-orange-400 bg-orange-100 rounded-md px-3 py-1 text-center">
+                                <div class="font-semibold text-orange-500 bg-orange-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
                             {{-- Closing --}}
                             @elseif($lead->status_id == 5)
-                                <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
+                                <div class="font-semibold text-gray-700 bg-gray-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
                             {{-- Spam --}}
                             @elseif($lead->status_id == 6)
-                                <div class="text-purple-400 bg-purple-100 rounded-md px-3 py-1 text-center">
+                                <div class="font-semibold text-purple-700 bg-purple-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
                             {{-- Failed --}}
                             @elseif($lead->status_id == 7)
-                                <div class="text-red-400 bg-red-100 rounded-md px-3 py-1 text-center">
+                                <div class="font-semibold text-red-700 bg-red-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
                             @else
@@ -221,187 +222,6 @@
                         </td>
                     </tr>
                 @endforelse
-
-                {{-- <tr class="bg-white border-b text-xs text-black">
-                    <td class=" py-4">
-                        Rifan Tri Yulianto
-                    </td>
-                    <td class=" py-4">
-                        Ord-41737
-                    </td>
-                    <td class=" py-4">
-                        Fadilatun Nida Rahayu
-                    </td>
-                    <td class=" py-4">
-                        Lilin Sugiarti
-                    </td>
-                    <td class=" py-4">
-                        6281348948716
-                    </td>
-                    <td class=" py-4">
-                        Generos
-                    </td>
-                    <td class=" py-4">
-                        2022-05-25 08:07:30
-                    </td>
-                    <td class=" py-4">
-                        <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
-                            05:00
-                        </div>
-                    </td>
-                    <td class=" py-4">
-                        <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
-                            Processing
-                        </div>
-                    </td>
-                    <td class=" py-4 text-center">
-                        <a href="/editleadtunneling"
-                            class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
-                            <i class="las la-edit"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class=" py-4">
-                        Rifan Tri Yulianto
-                    </td>
-                    <td class=" py-4">
-                        Ord-41737
-                    </td>
-                    <td class=" py-4">
-                        Fadilatun Nida Rahayu
-                    </td>
-                    <td class=" py-4">
-                        Lilin Sugiarti
-                    </td>
-                    <td class=" py-4">
-                        6281348948716
-                    </td>
-                    <td class=" py-4">
-                        Generos
-                    </td>
-                    <td class=" py-4">
-                        2022-05-25 08:07:30
-                    </td>
-                    <td class=" py-4">
-                        <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
-                            05:00
-                        </div>
-                    </td>
-                    <td class=" py-4">
-                        {{-- Waiting --}}
-                        @if ($lead->status_id == 3)
-                            <div class="font-semibold text-blue-700 bg-blue-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
-                                {{ $lead->status->name }}
-                            </div>
-                        {{-- Processing --}}
-                        @elseif($lead->status_id == 4)
-                            <div class="font-semibold text-orange-500 bg-orange-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
-                                {{ $lead->status->name }}
-                            </div>
-                        {{-- Closing --}}
-                        @elseif($lead->status_id == 5)
-                            <div class="font-semibold text-gray-700 bg-gray-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
-                                {{ $lead->status->name }}
-                            </div>
-                        {{-- Spam --}}
-                        @elseif($lead->status_id == 6)
-                            <div class="font-semibold text-purple-700 bg-purple-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
-                                {{ $lead->status->name }}
-                            </div>
-                        {{-- Failed --}}
-                        @elseif($lead->status_id == 7)
-                            <div class="font-semibold text-red-700 bg-red-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
-                                {{ $lead->status->name }}
-                            </div>
-                        @else
-                        @endif
-                    </td>
-                    <td class=" py-4 text-center">
-                        <a href="/editleadtunneling"
-                            class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
-                            <i class="las la-edit"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class=" py-4">
-                        Rifan Tri Yulianto
-                    </td>
-                    <td class=" py-4">
-                        Ord-41737
-                    </td>
-                    <td class=" py-4">
-                        Fadilatun Nida Rahayu
-                    </td>
-                    <td class=" py-4">
-                        Lilin Sugiarti
-                    </td>
-                    <td class=" py-4">
-                        6281348948716
-                    </td>
-                    <td class=" py-4">
-                        Generos
-                    </td>
-                    <td class=" py-4">
-                        2022-05-25 08:07:30
-                    </td>
-                    <td class=" py-4">
-                        <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
-                            02:00
-                        </div>
-                    </td>
-                    <td class=" py-4">
-                        <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
-                            Waiting
-                        </div>
-                    </td>
-                    <td class=" py-4 text-center">
-                        <a href="#"
-                            class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
-                            <i class="las la-edit"></i>
-                        </a>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class=" py-4">
-                        Rifan Tri Yulianto
-                    </td>
-                    <td class=" py-4">
-                        Ord-41737
-                    </td>
-                    <td class=" py-4">
-                        Fadilatun Nida Rahayu
-                    </td>
-                    <td class=" py-4">
-                        Lilin Sugiarti
-                    </td>
-                    <td class=" py-4">
-                        6281348948716
-                    </td>
-                    <td class=" py-4">
-                        Generos
-                    </td>
-                    <td class=" py-4">
-                        2022-05-25 08:07:30
-                    </td>
-                    <td class=" py-4">
-                        <div class="w-max rounded-md bg-red-100 text-red-400 px-3 py-1">
-                            02:00
-                        </div>
-                    </td>
-                    <td class=" py-4">
-                        <div class="text-gray-400 bg-gray-100 rounded-md px-3 py-1 text-center">
-                            Spam
-                        </div>
-                    </td>
-                    <td class=" py-4 text-center">
-                        <a href="#"
-                            class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
-                            <i class="las la-edit"></i>
-                        </a>
-                    </td>
-                </tr> --}}
             </tbody>
         </table>
     </div>
