@@ -13,7 +13,7 @@ use Livewire\WithFileUploads;
 class AddBudgetingRequestAdv extends Component
 {
     use WithFileUploads;
-    public $admin_id, $user_id, $role_id, $nominal, $no_rek, $target_omzet, $status;
+    public $admin_id, $user_id, $role_id, $nominal, $no_rek, $target_omzet, $status, $campaign_id;
 
     protected $rules = [
         'campaign_id'   =>'required',
@@ -29,7 +29,7 @@ class AddBudgetingRequestAdv extends Component
 
     public function store()
     {
-        $advertiser = User::where('id', Campaign::where('id', $request->campaign_id)->value('user_id'))->value('name');
+        $advertiser = User::where('id', Campaign::where('id', $this->campaign_id)->value('user_id'))->value('name');
 
         $validated = $this->validate();
 
@@ -45,6 +45,7 @@ class AddBudgetingRequestAdv extends Component
 
     public function render()
     {
-        return view('livewire.modal.add-budgeting-request-adv');
+        $campaigns = Campaign::all();
+        return view('livewire.modal.add-budgeting-request-adv', compact('campaigns'));
     }
 }
