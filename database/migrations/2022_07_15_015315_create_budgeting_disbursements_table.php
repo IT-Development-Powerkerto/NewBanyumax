@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('admin_id');
             $table->foreignId('user_id');
-            $table->foreignId('role_id');
+            $table->foreignId('campaign_id');
+            // $table->foreignId('role_id');
             $table->integer('nominal');
             $table->string('no_rek');
             $table->integer('target_omzet');

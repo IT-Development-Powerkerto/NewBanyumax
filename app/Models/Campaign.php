@@ -37,4 +37,8 @@ class Campaign extends Model
     {
         return $this->hasMany(Lead::class);
     }
+    public function disbursement()
+    {
+        return $this->hasMany(BudgetingDisbursement::class);
+    }
 }
