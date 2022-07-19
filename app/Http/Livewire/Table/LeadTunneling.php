@@ -10,7 +10,7 @@ use Livewire\WithPagination;
 class LeadTunneling extends Component
 {
     use WithPagination;
-    public $paginate = 10;
+    public $paginate = 5;
     public function render()
     {
         // dd(date('Y-m-d'));
@@ -39,5 +39,11 @@ class LeadTunneling extends Component
             'created_at'      => Carbon::now()->toDateTimeString(),
             'updated_at'      => Carbon::now()->toDateTimeString(),
         ]);
+    }
+    public function setPaginate($int)
+    {
+        // dd($int);
+        $this->paginate = $int;
+        $this->render();
     }
 }
