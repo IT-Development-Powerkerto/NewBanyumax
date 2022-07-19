@@ -33,8 +33,8 @@
                                                 <div class="text-lg font-semibold">
                                                     User Info
                                                 </div>
-                                                <div class="text-xs text-blue-600 font-semibold">
-                                                    <a href="">Edit</a>
+                                                <div class="text-xs text-blue-600">
+                                                    <button class="font-semibold" type="button" data-modal-toggle="edit-userinfo">Edit</button>
                                                 </div>
                                             </div>
                                             <div class="py-5">
@@ -93,8 +93,8 @@
                                                 <div class="text-lg font-semibold">
                                                     Company Info
                                                 </div>
-                                                <div class="text-xs text-blue-600 font-semibold">
-                                                    <a href="">Edit</a>
+                                                <div class="text-xs text-blue-600">
+                                                    <button class="font-semibold" type="button" data-modal-toggle="edit-companyinfo">Edit</button>
                                                 </div>
                                             </div>
                                             <div class="py-5">

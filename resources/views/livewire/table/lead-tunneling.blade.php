@@ -216,14 +216,15 @@
             </tbody>
         </table>
     </div>
-    <div class="py-3 px-5 flex justify-between items-center border rounded-b-lg bg-white">
+    <div class="py-3 px-5 justify-between flex items-center border rounded-b-lg">
 
         <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
             class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button">{{ $paginate }}<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg></button>
+            </svg>
+        </button>
         <!-- Dropdown menu -->
         <div id="dropdownFilter"
             class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-20 dark:bg-gray-700"
@@ -244,8 +245,11 @@
                 </li>
             </ul>
         </div>
+
         {{-- {{ $leads->links() }} --}}
         {{ $leads->onEachSide(1)->links('livewire.custom-pagination-links-view') }}
+        <div>
+        </div>
 
 
 

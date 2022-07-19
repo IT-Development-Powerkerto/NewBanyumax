@@ -33,6 +33,9 @@
                     <livewire:card.profil />
 
                     <livewire:card.personal-info />
+                    <livewire:modal.edit-userinfo />
+                    <livewire:modal.edit-companyinfo />
+                    
                 </div>
             </div>
         </main>
