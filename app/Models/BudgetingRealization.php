@@ -14,13 +14,21 @@ class BudgetingRealization extends Model
     protected $fillable = [
         'admin_id',
         'user_id',
+        'campaign_id',
+        'advertiser_id',
+        'role_id',
         'item',
         'nominal',
         'description',
+        'image'
     ];
 
     public function users()
     {
         return $this->belongsTo(User::class);
+    }
+    public function campaign()
+     {
+        return $this->belongsTo(Campaign::class, 'campaign_id','id');
     }
 }

@@ -41,4 +41,9 @@ class Campaign extends Model
     {
         return $this->hasMany(BudgetingDisbursement::class);
     }
+
+    public function realization()
+    {
+        return $this->hasMany(BudgetingRealizaftion::class);
+    }
 }
