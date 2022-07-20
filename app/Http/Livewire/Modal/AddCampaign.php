@@ -6,42 +6,66 @@ use Livewire\Component;
 use App\Models\Product;
 use App\Models\FacebookEvent;
 use App\Models\FacebookWa;
+use App\Models\TiktokEvent;
 use Carbon\Carbon;
 use App\Models\Campaign;
 
 class AddCampaign extends Component
 {
+    public $admin_id;
+    public $user_id;
     public $campaign_name;
     public $facebook_event_id;
     public $facebook_wa_id;
+    public $tiktok_event_id;
     public $customer_cs;
     public $cs_customer;
     public $facebook_pixel;
-    public $product;
-    public $thanks_page;
+    public $tiktok_pixel;
+    public $product_id;
+    public $thanks_page = null;
 
     public function render()
     {
         $facebook_event = FacebookEvent::all();
         $facebook_wa    = FacebookWa::all();
-        return view('livewire.modal.add-campaign', ['facebook_event'=>$facebook_event, 'facebook_wa'=>$facebook_wa]);
+        $tiktok_event   = TiktokEvent::all();
+        $products       = Product::all();
+        // $products       = Product::where('admin_id', auth()->user()->admin_id)->get();
+        return view('livewire.modal.add-campaign', compact('facebook_event', 'facebook_wa', 'tiktok_event', 'products'));
     }
 
+    protected $rules = [
+        'campaign_name'     =>'required',
+        'product_id'        =>'required',
+        'facebook_pixel'    =>'required',
+        'tiktok_pixel'      =>'required',
+        'facebook_event_id' =>'required',
+        'facebook_wa_id'    =>'required',
+        'tiktok_event_id'   =>'required',
+        'customer_cs'       =>'required',
+        'cs_customer'       =>'required',
+        'thanks_page'       =>'nullable'
+    ];
+
+    // public function updated()
+    // {
+    //     $this->validate();
+    // }
+
     public function store(){
+
+        $validated = $this->validate();
+
+        $validated['admin_id'] = auth()->user()->admin_id;
+        $validated['user_id'] = auth()->user()->id;
+        $validated['created_at']= Carbon::now()->toDateTimeString();
+        $validated['updated_at']= Carbon::now()->toDateTimeString();
+
         // dd($this->all());
-        $campaign_id = Campaign::insertGetId([
-            'user_id'           => Auth()->user()->id,
-            'admin_id'          => auth()->user()->admin_id,
-            'campaign_name'     => $this->campaign_name,
-            'product'           => $this->product,
-            'facebook_pixel'    => $this->facebook_pixel,
-            'facebook_event_id' => $this-> facebook_event_id,
-            'facebook_wa_id'    => $this-> facebook_wa_id,
-            'customer_cs'       => $this->customer_cs,
-            'cs_customer'       => $this->cs_customer,
-            'thanks_page'       => $this->thanks_page,
-            'created_at' => Carbon::now()->toDateTimeString(),
-            'updated_at' => Carbon::now()->toDateTimeString(),
-        ]);
+
+        Campaign::create($validated);
+
+        // $this->emit('campaignCreated');
     }
 }
