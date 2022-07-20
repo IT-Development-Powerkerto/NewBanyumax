@@ -7,6 +7,9 @@ use App\Models\BudgetingDisbursement;
 
 class DataBudgetingAdvLogActivity extends Component
 {
+    public $listeners = [
+        'disbursementCreated' => '$refresh',
+    ];
     public function render()
     {
         $budgeting_dis = BudgetingDisbursement::all();

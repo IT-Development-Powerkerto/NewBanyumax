@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Livewire\Table;
-
+use App\Models\Campaign;
 use Livewire\Component;
 use App\Models\BudgetingRealization as BudgetingReal;
 
 class BudgetingRealization extends Component
 {
+    public $listeners =[
+        'realizationCreated' => '$refresh'
+    ];
     public function render()
     {
         $budgeting_reals = BudgetingReal::all();

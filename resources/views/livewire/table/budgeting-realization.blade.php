@@ -3,7 +3,7 @@
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Realization</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">1.000 Data</span>
+                <span class="font-medium text-sm text-zinc-400">{{$jml_budgetingadv}} Data</span>
             </div>
         </div>
 
@@ -136,27 +136,28 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($budgeting_reals as $budgeting_real)
             <tr class="bg-white border-b text-xs text-black">
                 <td class=" py-4">
-                    22-06-2022
+                    {{$budgeting_real->created_at}}
                 </td>
                 <td class=" py-4">
-                    Iklan Etawaku Platinum
+                    {{$budgeting_real->item}}
                 </td>
                 <td class=" py-4">
                     Advertiser
                 </td>
                 <td class=" py-4">
-                    Rp 2.000.000
+                    Rp. {{ number_format($budgeting_real->nominal, 2, ',', '.')  }}
                 </td>
                 <td class=" py-4">
-                    Etawaku
+                    {{$budgeting_real->campaign->campaign_name}}
                 </td>
                 <td class=" py-4">
-                    Rp 2.000.000
+                    {{$budgeting_real->fund}}
                 </td>
                 <td class=" py-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam
+                    {{$budgeting_real->description}}
                 </td>
                 <td class=" py-4">
                     <button
@@ -165,6 +166,7 @@
                     </button>
                 </td>
             </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

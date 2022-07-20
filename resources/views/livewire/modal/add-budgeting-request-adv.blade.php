@@ -11,26 +11,29 @@
                 <form class="space-y-6" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
-                        <input type="text" wire:model.debounce.500ms='nominal_req' id="nominal_req" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal Request" required>
+                        <input type="text" wire:model.debounce.500ms='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal Request" required>
+                        @error('nominal') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <input type="text" wire:model.debounce.500ms='no_rek' id="no_rek" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="No. Rekening" required>
+                        @error('no_rek') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <input type="text" wire:model.debounce.500ms='target_omzet' id="target_omzet" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Target Omzet" required>
+                        @error('target_omzet') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
-                        <select name="campaign" id="campaign"
+                        <select wire:model.debounce.500ms="campaign_id" id="campaign_id"
                             class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                             required>
-                            <option disabled selected>Select Campaign</option>
-                            <option value="1">Campaign One</option>
-                            <option value="2">Campaign Two</option>
-                            <option value="3">Campaign Three</option>
+                            <option value="">Select Campaign</option>
+                            @foreach ($campaigns as $campaign)
+                                <option value="{{$campaign->id}}">{{$campaign->campaign_name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="button" wire:click.prevent='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
+                        <button type="button" wire:click.prevent='store' data-modal-toggle="add-budgeting-request-adv" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
                     </div>
                 </form>
             </div>

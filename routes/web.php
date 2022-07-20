@@ -134,6 +134,9 @@ Route::get('/dashboard-cs', function () {
 Route::get('/budgetingrealization-cs', function () {
     return view('User.Cs.PageBudgetingrealizationCs');
 });
+Route::get('/crm', function () {
+    return view('User.Cs.PageCRM');
+});
 Route::get('/routineevaluation-cs', function () {
     return view('User.Cs.PageRoutineEvaluationCs');
 });
