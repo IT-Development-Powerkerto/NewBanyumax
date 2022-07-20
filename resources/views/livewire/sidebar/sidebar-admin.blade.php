@@ -27,7 +27,7 @@
                         <ul class="space-y-2">
                             <li>
                                 <button type="button"
-                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
                                     aria-controls="dropdown-adminmanagement"
                                     data-collapse-toggle="dropdown-adminmanagement">
                                     <span class="iconify w-5 h-5" data-icon="iconoir:home-simple"></span>
@@ -44,170 +44,104 @@
                                         <ul class="px-5">
                                             <li class="px-3">
                                                 <a href=""
-                                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">CEO</a>
+                                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">CEO</a>
                                             </li>
                                             <li class="px-3">
                                                 <a href=""
-                                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Manager</a>
+                                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Manager</a>
                                             </li>
                                             <li>
-                                                <button type="button"
-                                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
-                                                    aria-controls="dropdown-finance-admin"
-                                                    data-collapse-toggle="dropdown-finance-admin">
-                                                    <span></span>
+                                                <button id="dropdownNavbarLink" data-dropdown-placement="right" data-dropdown-toggle="dropdown-finance-admin" class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
                                                     <span class="flex-1 ml-3 text-left ">Finance</span>
-                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd"
-                                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                            clip-rule="evenodd"></path>
-                                                    </svg>
+                                                    <span class="iconify" data-icon="akar-icons:chevron-right"></span>
                                                 </button>
-                                                <ul id="dropdown-finance-admin" class="hidden py-2 space-y-2">
-                                                    <li>
-                                                        <a href=""
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Finance
-                                                            Dashboard</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                                            Request</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                                            Realization</a>
-                                                    </li>
-                                                </ul>
+                                                <!-- Dropdown menu -->
+                                                <div id="dropdown-finance-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
+                                                    <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Dashboard</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Request</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgheting Realization</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </li>
                                             <li>
-                                                <button type="button"
-                                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
-                                                    aria-controls="dropdown-advertiser-admin"
-                                                    data-collapse-toggle="dropdown-advertiser-admin">
-                                                    <span></span>
+                                                <button id="dropdownNavbarLink" data-dropdown-placement="right" data-dropdown-toggle="dropdown-advertiser-admin" class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
                                                     <span class="flex-1 ml-3 text-left ">Advertiser</span>
-                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd"
-                                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                            clip-rule="evenodd"></path>
-                                                    </svg>
+                                                    <span class="iconify" data-icon="akar-icons:chevron-right"></span>
                                                 </button>
-                                                <ul id="dropdown-advertiser-admin" class="hidden py-2 space-y-2">
-                                                    <li>
-                                                        <a href=""
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Campaign</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Operator</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                                            Advertising</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                                            Realization</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Routine
-                                                            Evaluation</a>
-                                                    </li>
-                                                </ul>
+                                                <!-- Dropdown menu -->
+                                                <div id="dropdown-advertiser-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
+                                                    <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Campaign</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Operator</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Advertising</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Routine Evaluation</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </li>
                                             <li>
-                                                <button type="button"
-                                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
-                                                    aria-controls="dropdown-cs-admin"
-                                                    data-collapse-toggle="dropdown-cs-admin">
-                                                    <span></span>
-                                                    <span class="flex-1 ml-3 text-left ">Customer Service</span>
-                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd"
-                                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                            clip-rule="evenodd"></path>
-                                                    </svg>
+                                                <button id="dropdownNavbarLink" data-dropdown-placement="right" data-dropdown-toggle="dropdown-cs-admin" class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
+                                                    <span class="flex-1 ml-3 text-left ">Custemer Service</span>
+                                                    <span class="iconify" data-icon="akar-icons:chevron-right"></span>
                                                 </button>
-                                                <ul id="dropdown-cs-admin" class="hidden py-2 space-y-2">
-                                                    <li>
-                                                        <a href=""
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Create
-                                                            Promotion</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Reimbursment
-                                                            CS</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Routine
-                                                            Evaluation</a>
-                                                    </li>
-                                                </ul>
+                                                <!-- Dropdown menu -->
+                                                <div id="dropdown-cs-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
+                                                    <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Create Promotion</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Reimbursment</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Routine Evaluation</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </li>
                                             <li>
-                                                <button type="button"
-                                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
-                                                    aria-controls="dropdown-inputer-admin"
-                                                    data-collapse-toggle="dropdown-inputer-admin">
-                                                    <span></span>
+                                                <button id="dropdownNavbarLink" data-dropdown-placement="right" data-dropdown-toggle="dropdown-inputer-admin" class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
                                                     <span class="flex-1 ml-3 text-left ">Admin Inputer</span>
-                                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path fill-rule="evenodd"
-                                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                            clip-rule="evenodd"></path>
-                                                    </svg>
+                                                    <span class="iconify" data-icon="akar-icons:chevron-right"></span>
                                                 </button>
-                                                <ul id="dropdown-inputer-admin" class="hidden py-2 space-y-2">
-                                                    <li>
-                                                        <a href=""
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Dashboard
-                                                            Inputer</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                                            Request</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"
-                                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                                            Realization</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-
+                                                <!-- Dropdown menu -->
+                                                <div id="dropdown-inputer-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
+                                                    <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Dashboard</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Request</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                         </ul>
-                                    </li>
-                                    <li>
-                                        <a href="/operator-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Operator</a>
-                                    </li>
-                                    <li>
-                                        <a href="/budgetingdibursement-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                            Disbursement</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting
-                                            Realization</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <button type="button"
-                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
                                     aria-controls="dropdown-logistik" data-collapse-toggle="dropdown-logistik">
                                     <span class="iconify w-5 h-5"
                                         data-icon="material-symbols:package-outline-rounded"></span>
@@ -222,20 +156,37 @@
                                 <ul id="dropdown-logistik" class="hidden py-2 space-y-2">
                                     <li>
                                         <a href=""
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Warehouse</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Warehouse</a>
                                     </li>
                                     <li>
                                         <a href="/operator-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Expedisi</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Expedisi</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="/routineevaluation-adv"
-                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
+                                <button type="button"
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
+                                    aria-controls="dropdown-reporting" data-collapse-toggle="dropdown-reporting">
                                     <span class="iconify w-5 h-5" data-icon="carbon:chart-combo"></span>
-                                    <span class="ml-3">Reporting</span>
-                                </a>
+                                    <span class="flex-1 ml-3 text-left ">Reporting</span>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <ul id="dropdown-reporting" class="hidden py-2 space-y-2">
+                                    <li>
+                                        <a href=""
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Live Reporting</a>
+                                    </li>
+                                    <li>
+                                        <a href=""
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Pivoting</a>
+                                    </li>
+                                </ul>
                             </li>
 
                         </ul>
@@ -245,7 +196,7 @@
                         <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                             <li>
                                 <a href="/logout"
-                                    class="flex items-center px-3 py-2 text-base font-normal text-gray-900 hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
+                                    class="flex items-center px-3 py-2 text-xs tracking-widest font-normal text-gray-900 hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
                                     <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                     <span class="ml-3">Logout</span>
                                 </a>

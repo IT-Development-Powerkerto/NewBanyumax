@@ -27,7 +27,7 @@
                         <ul class="space-y-2">
                             <li>
                                 <button type="button"
-                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
                                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                                     <span class="iconify w-5 h-5" data-icon="iconoir:home-simple"></span>
                                     <span class="flex-1 ml-3 text-left "
@@ -42,25 +42,25 @@
                                 <ul id="dropdown-example" class="hidden py-2 space-y-2">
                                     <li>
                                         <a href="/campaign-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Campaign</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Campaign</a>
                                     </li>
                                     <li>
                                         <a href="/operator-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Operator</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Operator</a>
                                     </li>
                                     <li>
                                         <a href="/budgetingdibursement-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Disbursement</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Disbursement</a>
                                     </li>
                                     <li>
                                         <a href="/budgetingrealization-adv"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Realization</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Realization</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="/routineevaluation-adv"
-                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
                                     <span class="iconify w-5 h-5" data-icon="ant-design:clock-circle-outlined"></span>
                                     <span class="ml-3">Routine Evaluation</span>
                                 </a>
@@ -74,7 +74,7 @@
                         <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                             <li>
                                 <a href="/logout"
-                                class="flex items-center px-3 py-2 text-base font-normal text-gray-900 hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
+                                class="flex items-center px-3 py-2 text-xs tracking-widest font-normal text-gray-900 hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
                                     <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                     <span class="ml-3">Logout</span>
                                 </a>
