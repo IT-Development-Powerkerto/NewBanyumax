@@ -12,7 +12,7 @@
                             </a>
                         </li>
                         <li class="-mb-px mr-2 last:mr-0 text-center">
-                            <a class="font-semibold px-5 py-3 text-gray-600 text-black bg-white flex justify-center gap-2 cursor-pointer"
+                            <a class="font-semibold px-5 py-3 text-black bg-white flex justify-center gap-2 cursor-pointer"
                                 onclick="changeAtiveTab(event,'tab-files')">
                                 Files
                             </a>
@@ -153,7 +153,54 @@
                                 </div>
 
                                 <div class="hidden" id="tab-files">
-                                    tab2
+                                    <div class="bg-gray-50 rounded-md p-2" id="tabs-id-2">
+                                        <div class="w-full flex flex-col md:flex-row lg:flex-row">
+                                            <div class="flex flex-col">
+                                                <div class="py-5 self-center">
+                                                    <button class="text-sm bg-red-700 hover:bg-red-500 text-white py-1 px-10 rounded-lg">
+                                                        + Upload
+                                                    </button>
+                                                </div>
+                                                <ul>
+                                                    <li class="-mb-px last:mr-0 flex-auto text-left">
+                                                        <a class="flex items-center gap-4 text-xs font-bold px-8 py-4 rounded leading-normal text-black bg-sky-100 cursor-pointer"
+                                                            onclick="changeAtiveTab2(event,'all-files')">
+                                                            <span class="iconify text-orange-400"  data-width="20" data-height="20" data-icon="ant-design:folder-open-outlined"></span>All Files
+                                                        </a>
+                                                    </li>
+                                                    <li class="-mb-px last:mr-0 flex-auto text-left">
+                                                        <a class="flex items-center gap-4  text-xs font-bold px-8 py-4 rounded leading-normal text-gray-500 bg-gray-50 cursor-pointer"
+                                                            onclick="changeAtiveTab2(event,'images')">
+                                                            <span class="iconify text-orange-400"  data-width="20" data-height="20" data-icon="carbon:image"></span></i>Images
+                                                        </a>
+                                                    </li>
+                                                    <li class="-mb-px last:mr-0 flex-auto text-left">
+                                                        <a class="flex items-center gap-4 text-xs font-bold px-8 py-4 rounded leading-normal text-gray-500 bg-gray-50 cursor-pointer"
+                                                            onclick="changeAtiveTab2(event,'documents')">
+                                                            <span class="iconify text-orange-400"  data-width="20" data-height="20" data-icon="carbon:document-blank"></span></i>Documents
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                    
+                                            <div class="w-full flex flex-col min-w-0 break-words mb-6 rounded border-l-2">
+                                                <div class="px-4 py-5 flex-auto">
+                                                    <div class="tab-content-2 tab-space">
+                                                        <div class="block" id="all-files">
+                                                            <livewire:table.all-files-profil/>
+                                                        </div>
+                                                        <div class="hidden" id="images">
+                                                            <livewire:table.image-files-profil/>
+                                                        </div>
+                                                        <div class="hidden" id="documents">
+                                                            <livewire:table.document-files-profil/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                        </div>
+                                    </div>
                                 </div>
 
                             </div>
@@ -165,3 +212,30 @@
         </div>
     </div>
 </div>
+
+{{-- scrip tabs dalam files --}}
+<script type="text/javascript">
+    function changeAtiveTab2(event,tabID2){
+      let element = event.target;
+      while(element.nodeName !== "A"){
+        element = element.parentNode;
+      }
+      ulElement = element.parentNode.parentNode;
+      aElements = ulElement.querySelectorAll("li > a");
+      tabContents = document.getElementById("tabs-id-2").querySelectorAll(".tab-content-2 > div");
+      for(let i = 0 ; i < aElements.length; i++){
+        aElements[i].classList.remove("text-black");
+        aElements[i].classList.remove("bg-sky-100");
+        aElements[i].classList.add("text-gray-500");
+        aElements[i].classList.add("bg-gray-50");
+        tabContents[i].classList.add("hidden");
+        tabContents[i].classList.remove("block");
+      }
+      element.classList.remove("text-gray-500");
+      element.classList.remove("bg-gray-50");
+      element.classList.add("text-black");
+      element.classList.add("bg-sky-100");
+      document.getElementById(tabID2).classList.remove("hidden");
+      document.getElementById(tabID2).classList.add("block");
+    }
+  </script>
