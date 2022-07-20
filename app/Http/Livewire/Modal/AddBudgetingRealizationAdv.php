@@ -24,6 +24,7 @@ class AddBudgetingRealizationAdv extends Component
         'item'          => 'required',
         'nominal'       => 'required',
         'description'   => 'required',
+        'attachment'    => 'nullable'
     ];
 
     // public function updated()
@@ -35,17 +36,17 @@ class AddBudgetingRealizationAdv extends Component
     {
         $validated = $this->validate();
 
-        if(!$this->image){
+        if(!$this->attachment){
             $path = null;
         }else{
-            $path = $this->image->store('public/image');
+            $path = $this->image->store('public/attachment');
         }
 
         $validated['admin_id']  = auth()->user()->admin_id;
         $validated['user_id']   = auth()->user()->id;
         $validated['user_name'] = auth()->user()->name;
         $validated['role_id']   = auth()->user()->role_id;
-        $validated['image']     = $path;
+        $validated['attachment']    = $path;
         $validated['created_at'] = Carbon::now()->format('Y-m-d H:i:s');
 
         BudgetingRealization::create($validated);

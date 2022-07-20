@@ -16,11 +16,12 @@ class BudgetingRealization extends Model
         'user_id',
         'campaign_id',
         'advertiser_id',
+        'user_name',
         'role_id',
         'item',
         'nominal',
         'description',
-        'image'
+        'attachment'
     ];
 
     public function users()

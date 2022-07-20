@@ -50,7 +50,7 @@
                     </div>
                     <div class="relative">
                         <span class="text-gray-500 px-1 mb-2">Upload Proof</span>
-                        <label type="file" name="image-eval" id="image-eval" required>
+                        <label type="file" name="file_attachment" id="file_attachment" required>
                             <span class="">
                                 {{-- @if ($image)
                                 <img src="{{ $image->temporaryUrl() }}" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer">
@@ -58,9 +58,9 @@
                                 <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
                                 @endif --}}
                             </span>
-                            <input wire:model.defer="image" type="file" id="image">
+                            <input wire:model.defer="attachment" type="file" id="image">
                         </label>
-                        <div wire:loading wire:target="image">
+                        <div wire:loading wire:target="attachment">
                             Uploading image...
                         </div>
                     </div>
