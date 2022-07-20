@@ -12,12 +12,15 @@
                     @csrf
                     <div class="relative">
                         <input type="text" wire:model.debounce.500ms='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal Request" required>
+                        @error('nominal') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <input type="text" wire:model.debounce.500ms='no_rek' id="no_rek" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="No. Rekening" required>
+                        @error('no_rek') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <input type="text" wire:model.debounce.500ms='target_omzet' id="target_omzet" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Target Omzet" required>
+                        @error('target_omzet') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <select wire:model.debounce.500ms="campaign_id" id="campaign_id"

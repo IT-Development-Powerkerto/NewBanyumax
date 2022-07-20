@@ -8,51 +8,64 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Budget Realization</h3>
-                <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
+                <form class="space-y-6" action="" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
-                        <select name="advertiser-name" id="advertiser-name"
+                        <select wire:model.debounce.500ms="advertiser_id" id="advertiser_id"
                             class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                             required>
-                            <option disabled selected>Advertiser Names</option>
+                            <option value="">Advertiser Names</option>
                             <option value="1">Azizi Asadel</option>
                             <option value="2">Marsha Lenathea</option>
                             <option value="3">Yesica Tamara</option>
+                            @error('advertiser_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>
                     </div>
                     <div class="relative">
-                        <input type="text" name="item" wire:model.debounce.500ms='item' id="item" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Item" required>
+                        <input type="text" wire:model.debounce.500ms='item' id="item" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Item" required>
+                        @error('item') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
-                        <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
+                        <input type="number" wire:model.debounce.500ms='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
+                        @error('nominal') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
-                        <select name="campaign" id="campaign"
+                        <select wire:model.debounce.500ms="campaign_id" id="campaign"
                             class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                             required>
-                            <option disabled selected>Select Campaign</option>
-                            <option value="1">Campaign One</option>
-                            <option value="2">Campaign Two</option>
-                            <option value="3">Campaign Three</option>
+                            <option value="">Select Campaign</option>
+                            @foreach ($campaigns as $campaign)
+                                <option value="{{$campaign->id}}">{{$campaign->campaign_name}}</option>
+                            @endforeach
+                            @error('campaign_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>
                     </div>
                     <div class="relative">
-                        <input type="number" name="funds" wire:model.defer='funds' id="funds" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Remaining Funds (Rp)" required>
+                        <input type="number" wire:model.debounce.500ms='funds' id="funds" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Remaining Funds (Rp)" required>
+                        @error('funds') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
-                        <textarea name="description" wire:model.defer='description' id="description" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description" required></textarea>
+                        <textarea wire:model.debounce.500ms='description' id="description" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description" required></textarea>
+                        @error('description') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <span class="text-gray-500 px-1 mb-2">Upload Proof</span>
-                            <label type="file" name="image-product" id="image-product" required>
-                                <span class="">
-                                    <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
-                                </span>
-                                <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
-                            </label>
+                        <label type="file" name="image-eval" id="image-eval" required>
+                            <span class="">
+                                {{-- @if ($image)
+                                <img src="{{ $image->temporaryUrl() }}" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer">
+                                @else
+                                <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
+                                @endif --}}
+                            </span>
+                            <input wire:model.defer="image" type="file" id="image">
+                        </label>
+                        <div wire:loading wire:target="image">
+                            Uploading image...
+                        </div>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click.prevent ='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
+                        <button type="submit" wire:click.prevent ='store' data-modal-toggle="add-budgeting-realization-adv" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
                     </div>
                 </form>
             </div>
