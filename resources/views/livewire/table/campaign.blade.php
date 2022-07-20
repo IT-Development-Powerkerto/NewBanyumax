@@ -19,8 +19,31 @@
                         </svg>
                     </div>
                     <input type="search" id="default-search"
-                        class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                        class="block px-4 py-2 pl-10 w-64 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Search..">
+                </div>
+                <div class="relative mr-2">
+                    <button id="FilterReporting" data-dropdown-toggle="FiltersReporting"
+                    class="text-gray-400 shadow bg-white border font-medium text-sm px-4 py-2 text-center inline-flex items-center"
+                    type="button">Automated Rotation <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                        </path>
+                    </svg></button>
+                <!-- Dropdown menu -->
+                <div id="FiltersReporting"
+                    class="z-10 hidden w-52 bg-white divide-y divide-gray-100 rounded shadow-lg">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="FilterReporting">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Automated Rotation</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 hover:text-blue-700">Ratio Based Rotation</a>
+                        </li>
+                    </ul>
+                </div>
                 </div>
                 <button
                     class="w-56 hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
@@ -106,3 +129,6 @@
 
     </div>
 </div>
+
+
+
