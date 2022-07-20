@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <title>Dashboard</title>
+    <title>CRM</title>
     <link href="../css/app.css" rel="stylesheet">
 
     <link rel="stylesheet"
@@ -29,10 +29,10 @@
                 <div class="py-5 mb-10 flex justify-between">
                     <div>
                         <p class="font-bold text-lg tracking-wide mb-2">
-                            Hi! Marsha Lenathea
+                            Customer Relationship Management (CRM)
                         </p>
                         <p class="text-xs text-gray-400">
-                            Good Morning!
+                            Role CS
                         </p>
                     </div>
 
@@ -99,57 +99,15 @@
                             </a>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="flex flex-row justify-between items-center pb-5">
-                    <h1 class="font-semibold text-[#7E8299] tracking-wide text-xl">Product Information</h1>
-                    <!-- Modal toggle -->
-                    <div class="">
-                        <button
-                            class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-orange-500 to-red-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-                            type="button" data-modal-toggle="add-product">
-                            + Add Product
-                        </button>
-                        <livewire:modal.add-product2 />
-                    </div>
                 </div>
 
                 <div>
-                    <livewire:card.product-information />
-                    <livewire:modal.edit-product />
-                    <livewire:modal.delete-product />
-                </div>
-
-                <div class="py-10 px-5">
-                    <livewire:table.lead-tunneling />
+                    <livewire:table.crm />
                 </div>
 
             </div>
         </main>
     </div>
-    {{-- <livewire:navbar.navbar-cs2 />
-    <div class="container mx-auto py-5 px-5">
-        <div class="flex flex-row justify-between items-center pb-5">
-            <h1 class="font-semibold tracking-wide text-xl">Product Information</h1>
-            <!-- Modal toggle -->
-            <button
-                class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-                type="button" data-modal-toggle="add-product">
-                + Add Product
-            </button>
-            <livewire:modal.add-product2 />
-        </div>
-        <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
-            <livewire:card.product-information />
-        </div>
-        <livewire:modal.edit-product />
-        <livewire:modal.delete-product />
-    </div>
-
-    <div class="px-5 -mt-10 mb-10 container mx-auto">
-        <livewire:table.lead-tunneling />
-    </div> --}}
 
 
     @livewireScripts
@@ -158,32 +116,6 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script>
-        $(function() {
-            $('input[name="selectdate"]').daterangepicker({
-                opens: 'left'
-            }, function(start, end, label) {
-                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
-                    .format('YYYY-MM-DD'));
-            });
-        });
-    </script>
-    <script>
-        function previewImage() {
-
-            const image = document.querySelector('#image');
-            const imgPreview = document.querySelector('.img-preview');
-
-            imgPreview.style.display = 'block';
-
-            const oFReader = new FileReader();
-
-            oFReader.readAsDataURL(image.files[0]);
-            oFReader.onload = function(oFREvent) {
-                imgPreview.src = oFREvent.target.result;
-            }
-        }
-    </script>
     <script>
         $(function() {
             $('input[name="daterange"]').daterangepicker({

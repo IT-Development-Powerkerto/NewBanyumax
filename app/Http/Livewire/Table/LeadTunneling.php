@@ -11,13 +11,24 @@ class LeadTunneling extends Component
 {
     use WithPagination;
     public $paginate = 5;
+    public $search;
     public function render()
     {
         // dd(date('Y-m-d'));
-        $leads = Lead::with([
-            'operator',
-            'product'
-        ])->paginate($this->paginate);
+        $leads = $this->search == null ?
+            Lead::with(['operator','product'])->latest()->paginate($this->paginate) :
+            // Lead::where('id', 'like', '%'.$this->search.'%')
+            //     ->with(['operator','product'])->latest()->paginate($this->paginate);
+            Lead::where('id', 'like', '%'.$this->search.'%')
+                ->orWhere('advertiser', 'like', '%'.$this->search.'%')
+                ->orWhere('client_name', 'like', '%'.$this->search.'%')
+                ->orWhere('client_whatsapp', 'like', '%'.$this->search.'%')
+                ->orWhereHas('operator', function($q){
+                    $q->where('name', 'like', '%'.$this->search.'%');
+                })
+                ->orWhereHas('product', function($q){
+                    $q->where('name', 'like', '%'.$this->search.'%');
+                })->latest()->paginate($this->paginate);
         // dd($leads);
         $data['jml_lead'] = Lead::all()->count();
         return view('livewire.table.lead-tunneling', $data, compact('leads'));
