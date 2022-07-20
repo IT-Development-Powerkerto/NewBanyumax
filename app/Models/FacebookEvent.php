@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class FacebookEvent extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'name',
         'event_pixel',
