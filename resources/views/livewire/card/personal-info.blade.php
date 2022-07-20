@@ -157,9 +157,10 @@
                                         <div class="w-full flex flex-col md:flex-row lg:flex-row">
                                             <div class="flex flex-col">
                                                 <div class="py-5 self-center">
-                                                    <button class="text-sm bg-red-700 hover:bg-red-500 text-white py-1 px-10 rounded-lg">
+                                                    <button type="button" data-modal-toggle="upload-file" class="text-sm bg-red-700 hover:bg-red-500 text-white py-1 px-10 rounded-lg">
                                                         + Upload
                                                     </button>
+                                                    <livewire:modal.upload-file />
                                                 </div>
                                                 <ul>
                                                     <li class="-mb-px last:mr-0 flex-auto text-left">
