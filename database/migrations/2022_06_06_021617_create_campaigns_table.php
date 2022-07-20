@@ -23,14 +23,13 @@ return new class extends Migration
             $table->string('tiktok_pixel');
             $table->foreignId('facebook_event_id');
             $table->foreignId('tiktok_event_id');
-            $table->foreignId('whatsapp_event_id');
+            $table->foreignId('facebook_wa_id');
             $table->string('customer_cs');
             $table->string('cs_customer');
             $table->string('thanks_page')->nullable();
+            $table->string('rotation_type');
             $table->timestamps();
             $table->softDeletes();
-
-
         });
     }
 
