@@ -32,7 +32,7 @@
                             Budgeting Request
                         </p>
                         <p class="text-xs text-gray-400">
-                            Adv Admin
+                            Role Admin
                         </p>
                     </div>
 
