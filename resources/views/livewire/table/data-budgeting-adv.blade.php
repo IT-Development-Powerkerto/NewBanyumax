@@ -1,4 +1,4 @@
-<div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Data Budgeting ADV</h1>

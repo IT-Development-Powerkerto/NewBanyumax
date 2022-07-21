@@ -1,4 +1,4 @@
-<div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Initial Card Registrations</h1>
@@ -80,7 +80,7 @@
             </div>
             <div class="mr-2 w-36 md:w-fit">
                 <button
-                    class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
+                    class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                     type="button" data-modal-toggle="add-card-regristration-adv">
                     <i class="las la-plus text-xl"></i>
                     <span>Card Registration</span>

@@ -23,7 +23,7 @@
     @resize.window="handleResize()">
 
     <div class="flex">
-        <livewire:sidebar.sidebar-adv />
+        <livewire:sidebar.sidebar-admin />
         <main class="w-screen">
             <div class="px-5 mt-5">
                 <div>

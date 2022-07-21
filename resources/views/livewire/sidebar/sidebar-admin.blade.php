@@ -85,7 +85,7 @@
                                                             <a href="/operator-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Operator</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/budgetingadvertising-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Advertising</a>
+                                                            <a href="/budgetingdisbursment-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Disbursment</a>
                                                         </li>
                                                         <li>
                                                             <a href="/budgetingrealization-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>

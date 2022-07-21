@@ -89,6 +89,9 @@ Route::resource('/operator-admin', OperatorAdmin::class);
 Route::resource('/budgetingadvertising-admin', BudgetingAdvertisingAdmin::class);
 Route::resource('/budgetingrealization-admin', BudgetingRealizationAdmin::class);
 Route::resource('/rountineevaluation-admin', RountineEvaluationAdmin::class);
+Route::get('/budgetingdisbursment-admin', function () {
+    return view('admin.advertiser.PageBudgetingDibursement');
+});
 // Admin. Finance
 Route::get('/dashboard-finance', function () {
     return view('admin.finance.PageDashboard');

@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="assets/img/favicon.png" rel="icon">
-    <title>Budgeting Realization</title>
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+    <title>Budgeting Disbursement</title>
+    <link href="../css/app.css" rel="stylesheet">
+
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
     @livewireStyles
 </head>
 
@@ -29,7 +29,7 @@
                 <div class="py-5 mb-10 flex justify-between">
                     <div>
                         <p class="font-bold text-lg tracking-wide mb-2">
-                            Budgeting Realization
+                            Budgeting Disbursement
                         </p>
                         <p class="text-xs text-gray-400">
                             Role Admin
@@ -104,19 +104,7 @@
                 </div>
 
                 <div class="py-5">
-                    <livewire:table.budgeting-realization />
-                </div>
-                <div class="py-5">
-                    <livewire:table.data-budgeting-adv />
-                </div>
-                <div class="py-5">
-                    <livewire:table.advertising-expenditure />
-                </div>
-                <div class="py-5">
-                    <livewire:table.initial-card-regristration />
-                </div>
-                    <div class="py-5">
-                    <livewire:table.reporting-budget-disbursement-adv />
+                    <livewire:table.data-budgeting-adv-log-activity />
                 </div>
 
 
@@ -148,21 +136,19 @@
 
 
     @livewireScripts
-    <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
+    <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
     <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
-
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <script>
         $(function() {
-          $('input[name="daterange"]').daterangepicker({
-            opens: 'left'
-          }, function(start, end, label) {
-            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-          });
+            $('input[name="selectdate"]').daterangepicker({
+                opens: 'left'
+            }, function(start, end, label) {
+                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end
+                    .format('YYYY-MM-DD'));
+            });
         });
     </script>
     <script>
@@ -180,31 +166,6 @@
                 imgPreview.src = oFREvent.target.result;
             }
         }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js" integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(document).ready(function () {
-            $('.repeater').repeater({
-                // (Optional)
-                // start with an empty list of repeaters. Set your first (and only)
-                // "data-repeater-item" with style="display:none;" and pass the
-                // following configuration flag
-                initEmpty: false,
-                defaultValues: {
-                    'text-input': 'foo'
-                },
-                show: function () {
-                    $(this).slideDown();
-                },
-                hide: function (deleteElement) {
-                    if(confirm('Are you sure you want to delete this materi?')) {
-                        $(this).slideUp(deleteElement);
-                    }
-                },
-                isFirstItemUndeletable: true
-            })
-        });
     </script>
 </body>
 
