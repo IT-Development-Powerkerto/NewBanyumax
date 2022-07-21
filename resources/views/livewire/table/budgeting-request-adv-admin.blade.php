@@ -2,7 +2,7 @@
     <div class="mt-1 flex flex-col w-full">
     </div>
 </div>
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Request Adv</h1>
@@ -41,15 +41,12 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto px-5 border-x">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    No
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Name
+                    Advertaiser
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Request
@@ -58,7 +55,7 @@
                     Target
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Target
+                    Status
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Action
@@ -67,9 +64,6 @@
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    1
-                </td>
                 <td class="px-6 py-4">
                     Hanif Muslim Azhar
                 </td>
@@ -98,21 +92,18 @@
                         id="dropdownAction">
                         <ul class="py-1" aria-labelledby="dropdownAction">
                             <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Approve</a>
                             </li>
                             <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Reject</a>
                             </li>
                         </ul>
                     </div>
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    2
-                </td>
                 <td class="px-6 py-4">
                     Awal Azwihani
                 </td>
@@ -141,21 +132,18 @@
                         id="dropdownAction">
                         <ul class="py-1" aria-labelledby="dropdownAction">
                             <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Approve</a>
                             </li>
                             <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Reject</a>
                             </li>
                         </ul>
                     </div>
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    3
-                </td>
                 <td class="px-6 py-4">
                     Rifan Tri Yulianto
                 </td>
@@ -184,21 +172,18 @@
                         id="dropdownAction">
                         <ul class="py-1" aria-labelledby="dropdownAction">
                             <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Approve</a>
                             </li>
                             <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Reject</a>
                             </li>
                         </ul>
                     </div>
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    4
-                </td>
                 <td class="px-6 py-4">
                     Isnan Aditia
                 </td>
@@ -227,21 +212,18 @@
                         id="dropdownAction">
                         <ul class="py-1" aria-labelledby="dropdownAction">
                             <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Approve</a>
                             </li>
                             <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Reject</a>
                             </li>
                         </ul>
                     </div>
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    5
-                </td>
                 <td class="px-6 py-4">
                     Jihad Salahudin
                 </td>
@@ -270,12 +252,12 @@
                         id="dropdownAction">
                         <ul class="py-1" aria-labelledby="dropdownAction">
                             <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Approve</a>
                             </li>
                             <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Reject</a>
                             </li>
                         </ul>
                     </div>

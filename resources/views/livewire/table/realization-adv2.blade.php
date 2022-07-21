@@ -2,12 +2,12 @@
     <div class="mt-1 flex flex-col w-full">
     </div>
 </div>
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Realization Adv</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">1 Aproofment</span>
+                <span class="font-medium text-sm text-zinc-400">1 Data</span>
             </div>
         </div>
 
@@ -97,13 +97,10 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto border-x px-5">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
             <tr>
-                <th scope="col" class="px-6 py-3">
-                    No
-                </th>
                 <th scope="col" class="px-6 py-3">
                     Name
                 </th>
@@ -123,9 +120,6 @@
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    1
-                </td>
                 <td class="px-6 py-4">
                     Hanif Muslim Azhar
                 </td>
@@ -147,9 +141,6 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    2
-                </td>
-                <td class="px-6 py-4">
                     Awal Azwihani
                 </td>
                 <td class="px-6 py-4">
@@ -169,9 +160,6 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    3
-                </td>
                 <td class="px-6 py-4">
                     Rifan Tri Yulianto
                 </td>
@@ -193,9 +181,6 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    4
-                </td>
-                <td class="px-6 py-4">
                     Isnan Aditia
                 </td>
                 <td class="px-6 py-4">
@@ -215,9 +200,6 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    5
-                </td>
                 <td class="px-6 py-4">
                     Hanif Muslim Azhar
                 </td>
