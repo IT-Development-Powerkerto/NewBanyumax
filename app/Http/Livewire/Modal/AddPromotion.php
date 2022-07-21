@@ -12,26 +12,35 @@ class AddPromotion extends Component
 {
     public $promotion_name, $product_id, $promotion_product_price, $promotion_product_percent, $total_promotion, $admin_id, $user_id;
 
+    protected $rules = [
+        'promotion_name'        => 'required',
+        'product_id'            => 'required',
+        'promotion_product_price'=> 'required',
+        'promotion_product_percent'=> 'nullable',
+    ];
+
     public function render()
     {
-        $products = Product::all();
+        $product = Product::where('admin_id', auth()->user()->admin_id)->get();
         $type_promotions = TypePromotion::all();
         return view('livewire.modal.add-promotion', compact('products', 'type_promotions'));
     }
 
+    // public function updated()
+    // {
+    //     $this->validate();
+    // }
+
     public function store()
     {
+        $validated = $this->validate();
         $total_promotion = $this->promotion_product_price;
-        Promotion::create([
-            'admin_id'                      => auth()->user()->admin_id,
-            'user_id'                       => Auth()->user()->id,
-            'promotion_name'                => $this->promotion_name,
-            'product_id'                    => $this->product_id,
-            'promotion_product_price'       => $this->promotion_product_price,
-            'promotion_product_percent'     => $this->promotion_product_percent,
-            'total_promotion'               => $total_promotion,
-            'created_at'                    => Carbon::now()->toDateTimeString(),
-            'updated_at'                    => Carbon::now()->toDateTimeString(),
-        ]);
+
+        $validated['admin_id']          = auth()->user()->admin_id;
+        $validated['user_id']           = auth()->user()->id;
+        $validated['total_promotion']   = $total_promotion;
+        $validated['created_at']= Carbon::now()->toDateTimeString();
+        $validated['updated_at']= Carbon::now()->toDateTimeString();
+
     }
 }
