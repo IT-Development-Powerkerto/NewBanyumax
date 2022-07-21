@@ -2,7 +2,7 @@
     <div class="mt-1 flex flex-col w-full">
     </div>
 </div>
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Request Non Adv</h1>
@@ -41,24 +41,21 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto px-5 border-x">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    No
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Name
+                    Division
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Request
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    attachment
+                    Attachment
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    Target
+                    Status
                 </th>
                 <th scope="col" class="px-6 py-3">
                     Action
@@ -68,10 +65,7 @@
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    1
-                </td>
-                <td class="px-6 py-4">
-                    Hanif Muslim Azhar
+                    Admin
                 </td>
                 <td class="px-6 py-4">
                     Rp 21.000.000
@@ -90,7 +84,7 @@
                 <td class="px-6 py-4">
                     <button type="button"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row"
-                        aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
+                        aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction-nud-req-non-adv">
                         Action
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
@@ -98,199 +92,19 @@
                         </svg>
                     </button>
                     <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
-                        id="dropdownAction">
-                        <ul class="py-1" aria-labelledby="dropdownAction">
+                        id="dropdownAction-nud-req-non-adv">
+                        <ul class="py-1" aria-labelledby="dropdownAction-nud-req-non-adv">
                             <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Approve</a>
                             </li>
                             <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
-                            </li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    2
-                </td>
-                <td class="px-6 py-4">
-                    Awal Azwihani
-                </td>
-                <td class="px-6 py-4">
-                    Rp 21.000.000
-                </td>
-                <td class="px-6 py-4 text-left">
-                    <a href="#"
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500 hover:from-blue-500 hover:to-red-500 text-2xl">
-                        <i class="las la-file-alt"></i>
-                    </a>
-                </td>
-                <td class="px-6 py-4">
-                    <div class="border w-20 px-4 py-1 justify-center rounded-lg text-red-500 bg-red-50">
-                        Rejected
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button"
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row"
-                        aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
-                        Action
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
-                        id="dropdownAction">
-                        <ul class="py-1" aria-labelledby="dropdownAction">
-                            <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Reject</a>
                             </li>
                             <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
-                            </li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    3
-                </td>
-                <td class="px-6 py-4">
-                    Rifan Tri Yulianto
-                </td>
-                <td class="px-6 py-4">
-                    Rp 21.000.000
-                </td>
-                <td class="px-6 py-4 text-left">
-                    <a href="#"
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500 hover:from-blue-500 hover:to-red-500 text-2xl">
-                        <i class="las la-file-alt"></i>
-                    </a>
-                </td>
-                <td class="px-6 py-4">
-                    <div class="border w-20 px-4 py-1 justify-center rounded-lg text-red-500 bg-red-50">
-                        Rejected
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button"
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row"
-                        aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
-                        Action
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
-                        id="dropdownAction">
-                        <ul class="py-1" aria-labelledby="dropdownAction">
-                            <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
-                            </li>
-                            <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
-                            </li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    4
-                </td>
-                <td class="px-6 py-4">
-                    Isnan Aditia
-                </td>
-                <td class="px-6 py-4">
-                    Rp 21.000.000
-                </td>
-                <td class="px-6 py-4 text-left">
-                    <a href="#"
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500 hover:from-blue-500 hover:to-red-500 text-2xl">
-                        <i class="las la-file-alt"></i>
-                    </a>
-                </td>
-                <td class="px-6 py-4">
-                    <div class="border w-20 px-7 py-1 justify-center rounded-lg text-blue-500 bg-blue-50">
-                        Wait
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button"
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row"
-                        aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
-                        Action
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
-                        id="dropdownAction">
-                        <ul class="py-1" aria-labelledby="dropdownAction">
-                            <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
-                            </li>
-                            <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
-                            </li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    5
-                </td>
-                <td class="px-6 py-4">
-                    Jihad Salahudin
-                </td>
-                <td class="px-6 py-4">
-                    Rp 21.000.000
-                </td>
-                <td class="px-6 py-4 text-left">
-                    <a href="#"
-                        class="self-left text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-blue-500 hover:from-blue-500 hover:to-red-500 text-2xl">
-                        <i class="las la-file-alt"></i>
-                    </a>
-                </td>
-                <td class="px-6 py-4">
-                    <div class="border w-20 px-4 py-1 justify-center rounded-lg text-red-500 bg-red-50">
-                        Rejected
-                    </div>
-                </td>
-                <td class="px-6 py-4">
-                    <button type="button"
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white py-2 px-4 rounded-lg flex flex-row"
-                        aria-expanded="false" type="button" data-dropdown-toggle="dropdownAction">
-                        Action
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div class="hidden text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
-                        id="dropdownAction">
-                        <ul class="py-1" aria-labelledby="dropdownAction">
-                            <li>
-                                <a href="#" data-modal-toggle="edit-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</a>
-                            </li>
-                            <li>
-                                <a href="#" data-modal-toggle="delete-promotion"
-                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                                <a href="#"
+                                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Download File</a>
                             </li>
                         </ul>
                     </div>
