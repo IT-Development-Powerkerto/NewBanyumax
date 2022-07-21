@@ -1,7 +1,7 @@
 <div class="flex flex-col bg-gradient-to-r from-cyan-500 to-blue-500 border rounded-lg w-96 h-96 px-6 py-6 text-white ">
-    <h1 class="text-xl font-semibold">Payment</h1>
+    <h1 class="text-xl font-semibold">Total Expense</h1>
     <div class="flex flex-col mt-10">
-        <span class="text-xs flex justify-center">Total Payment</span>
+        <span class="text-xs flex justify-center">Expense </span>
         <span class="text-2xl flex justify-center font-semibold">RRp 10.989.587.932</span>
     </div>
     <div class="mt-10 grid grid-cols-2 px-5 py-2 rounded-t-lg bg-white w-80 self-center">
