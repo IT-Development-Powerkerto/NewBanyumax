@@ -19,22 +19,42 @@
     @livewireStyles
 </head>
 
-<body class="bg-zinc-200" style="font-family: 'Poppins', sans-serif;">
-    <livewire:navbar.navbar-admin />
-    {{-- <livewire:navbar.navbar2 :$dashboard="dashboard"> --}}
-    <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 mx-5 my-5">
-        <livewire:card.total-operator />
-        <livewire:card.total-lead />
-        <livewire:card.total-campaign />
-    </div>
-    <div class="flex flex-col md:grid lg:grid grid-cols-3 h-full gap-3 mx-auto py-5 px-5">
-        <div class="col-span-2">
-            <livewire:table.operator-campaign />
-        </div>
-        <div class="col">
-            <livewire:table.operator-list />
-        </div>
-      
+<body class="bg-white" style="font-family: 'Poppins', sans-serif;" x-data="sidebar()"
+    @resize.window="handleResize()">
+
+    <div class="flex">
+        <livewire:sidebar.sidebar-admin />
+        <main class="w-screen">
+            <div class="px-5 mt-5">
+                <div>
+                    <p class="font-bold text-lg tracking-wide mb-2">
+                        Operators
+                    </p>
+                    <p class="text-xs text-gray-400">
+                        Role Admin
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap justify-center md:justify-between py-5">
+                    <livewire:card.total-campaign />
+                    <livewire:card.total-operator />
+                    <livewire:card.total-lead />
+                </div>
+
+                <div class="py-5">
+                    <div class="flex flex-col md:grid lg:grid grid-cols-3 h-full gap-3 mx-auto py-5 px-5">
+                        <div class="col-span-2">
+                            <livewire:table.operator-campaign />
+                        </div>
+                        <div class="col">
+                            <livewire:table.operator-list />
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
 
     @livewireScripts

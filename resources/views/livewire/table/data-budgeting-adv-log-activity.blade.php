@@ -37,7 +37,7 @@
             </div>
             <div class="mr-2 w-36 md:w-fit">
                 <button
-                    class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
+                    class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                     type="button" data-modal-toggle="add-budgeting-request-adv">
                     <i class="las la-plus text-xl"></i>
                     <span>Budgeting Request</span>
@@ -47,7 +47,7 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto px-5 border-x">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>

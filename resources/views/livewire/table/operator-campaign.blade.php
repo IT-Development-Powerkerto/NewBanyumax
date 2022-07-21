@@ -1,5 +1,5 @@
 <div style="w-full">
-    <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+    <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
         <div class="flex flex-row justify-between items-center w-full">
             <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Operator</h1>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="h-max bg-white overflow-x-auto">
+    <div class="h-max bg-white overflow-x-auto border-x px-5">
         <table class="text-sm text-left w-full">
             <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
                 <tr>

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="assets/img/favicon.png" rel="icon">
-    <title>Campaign</title>
-    <link href="/css/app.css" rel="stylesheet">
-    <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+    <title>Budgeting Disbursement</title>
+    <link href="../css/app.css" rel="stylesheet">
+
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
     @livewireStyles
 </head>
 
@@ -30,7 +29,7 @@
                 <div class="py-5 mb-10 flex justify-between">
                     <div>
                         <p class="font-bold text-lg tracking-wide mb-2">
-                            Campaign
+                            Budgeting Disbursement
                         </p>
                         <p class="text-xs text-gray-400">
                             Role Admin
@@ -101,20 +100,40 @@
                             </button>
                         </div>
                     </div>
+
                 </div>
-                <div class="flex flex-col md:grid lg:grid justify-between grid-cols-3 gap-4 mx-5 my-5">
-                    <livewire:card.total-campaign />
-                    <livewire:card.total-operator />
-                    <livewire:card.total-lead />
-                </div>
+
                 <div class="py-5">
-                    <livewire:table.campaign />
+                    <livewire:table.data-budgeting-adv-log-activity />
                 </div>
 
 
             </div>
         </main>
     </div>
+    {{-- <livewire:navbar.navbar-cs2 />
+    <div class="container mx-auto py-5 px-5">
+        <div class="flex flex-row justify-between items-center pb-5">
+            <h1 class="font-semibold tracking-wide text-xl">Product Information</h1>
+            <!-- Modal toggle -->
+            <button
+                class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+                type="button" data-modal-toggle="add-product">
+                + Add Product
+            </button>
+            <livewire:modal.add-product2 />
+        </div>
+        <div class="flex flex-col md:grid md:grid-cols-12 gap-4">
+            <livewire:card.product-information />
+        </div>
+        <livewire:modal.edit-product />
+        <livewire:modal.delete-product />
+    </div>
+
+    <div class="px-5 -mt-10 mb-10 container mx-auto">
+        <livewire:table.lead-tunneling />
+    </div> --}}
+
 
     @livewireScripts
     <script src="assets/vendor/flowbite/dist/flowbite.js"></script>
@@ -148,9 +167,6 @@
             }
         }
     </script>
-    <script src="https://unpkg.com/@yaireo/tagify"></script>
-    <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
-    <script src="assets/js/tags.js"></script>
 </body>
 
 </html>
