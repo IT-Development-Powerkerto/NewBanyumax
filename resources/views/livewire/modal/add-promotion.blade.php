@@ -11,6 +11,7 @@
                 <form class="space-y-6" enctype="multipart/form-data">
                     <div class="relative">
                         <input type="text" wire:model.debounce.500ms='promotion_name' id="promotion_name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Promotion Name" required>
+                        @error('promotion_name') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <select wire:model.debounce.500ms="product_id" id="product_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
@@ -18,6 +19,7 @@
                             @foreach ($products as $product)
                                 <option value="{{$product->id}}">{{$product->name}}</option>
                             @endforeach
+                            @error('product_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>
                     </div>
                     <div class="relative">
@@ -26,6 +28,7 @@
                             @foreach ($type_promotions as $type_promotion)
                                 <option value="{{$type_promotion->id}}">{{$type_promotion->name}}</option>
                             @endforeach
+                            @error('promotion_type_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>
                     </div>
                     <div class="text-sm flex flex-row gap-2">
@@ -39,12 +42,14 @@
                             IDR
                         </div>
                         <input type="number"  wire:model.debounce.500ms='promotion_product_price' id="price" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        @error('promotion_product_price') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <div class="flex w-9 justify-center absolute rounded-l-lg inset-y-0 left-0 items-center pointer-events-none bg-gray-200 text-xs text-gray-400">
                             %
                         </div>
                         <input type="number"  wire:model.debounce.500ms='promotion_product_percent' id="discount" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        @error('promotion_product_percent') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <input type="number" disabled wire:model.debounce.500ms='total_promotion' id="total" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Total Promotion">
