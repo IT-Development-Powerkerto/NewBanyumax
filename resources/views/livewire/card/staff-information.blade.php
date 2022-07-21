@@ -1,4 +1,4 @@
-<div class="px-6py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Staff </h1>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <button
-                class="text-gray-400 text-xs h-max shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg px-4 py-2 flex flex-row gap-2 items-center"
+                class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                 type="button" data-modal-toggle="add-staff-on-admin">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd"
@@ -95,16 +95,16 @@
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
-                <th scope="col" class="py-3">
+                <th scope="col" class="py-3 px-5">
                     Staff
                 </th>
-                <th scope="col" class="py-3">
+                <th scope="col" class="py-3 px-5">
                     Status
                 </th>
-                <th scope="col" class="py-3">
+                <th scope="col" class="py-3 px-5">
                     Poin
                 </th>
-                <th scope="col" class="py-3">
+                <th scope="col" class="py-3 px-5">
                     Action
                 </th>
             </tr>
@@ -114,14 +114,14 @@
                 <td class=" py-4">
                     <div class="flex items-center space-x-4">
                         <div class="flex-shrink-0">
-                            <img class="w-20 h-max rounded-full" src="assets/img/zee.jpeg" alt="Ava image">
+                            <img class="w-12 h-12 rounded-full" src="assets/img/zee.jpeg" alt="Ava image">
                         </div>
                         <div class="flex-1 min-w-0">
                             <p class="text-sm font-semibold text-black truncate dark:text-white">
                                 Azizi Asadel
                             </p>
                             <p class="text-sm font-reguler text-gray-500 truncate dark:text-white">
-                                +1234567890
+                                Custemer Service
                             </p>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                 </td>
                 <td class=" py-4">
                     <p
-                        class="text-sm w-max py-1 px-2 rounded-lg bg-purple-300 text-purple-500 font-semibold truncate dark:text-white border">
+                        class="text-sm w-max py-1 px-2 rounded-lg bg-purple-300 bg-opacity-25 text-purple-500 font-semibold truncate dark:text-white border">
                         50 Point</p>
                 </td>
                 <td class=" py-4">

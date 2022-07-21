@@ -161,27 +161,28 @@
                 <livewire:modal.add-product2 />
 
                 <div>
-
                     <livewire:card.product-information />
                     <livewire:modal.edit-product />
                     <livewire:modal.delete-product />
                 </div>
 
-                <div class="py-10">
-                    <livewire:table.lead-tunneling />
-                </div>
+                <div class="px-5">
+                    <div class="py-5">
+                        <livewire:table.lead-tunneling />
+                    </div>
+                    
+                    <div class="py-5">
+                        <livewire:card.staff-information />
+                        <livewire:modal.delete-staff-on-admin/>
+                        <livewire:modal.add-staff-on-admin />
+                        <livewire:modal.edit-staff-on-admin />
+                    </div>
 
-                <div class="py-10">
-                    <livewire:card.staff-information />
-                    <livewire:modal.delete-staff-on-admin/>
-                    <livewire:modal.add-staff-on-admin />
-                    <livewire:modal.edit-staff-on-admin />
-                </div>
-
-                <div class="py-10">
-                    <livewire:table.announcements />
-                    <livewire:modal.delete-announcement-on-admin/>
-                    <livewire:modal.add-announcement-on-admin />
+                    <div class="py-5">
+                        <livewire:table.announcements />
+                        <livewire:modal.delete-announcement-on-admin/>
+                        <livewire:modal.add-announcement-on-admin />
+                    </div>
                 </div>
 
             </div>
