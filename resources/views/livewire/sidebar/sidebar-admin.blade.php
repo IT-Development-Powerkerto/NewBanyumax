@@ -5,7 +5,7 @@
 
                 <div class="mt-5 grid grid-cols-12 bg-white justify-between justify-items-center items-center">
                     <div class="col-span-10 ">
-                        <a href="/dashboard-adv" class="flex">
+                        <a href="/dashboard-admin" class="flex">
                             <img src="assets/img/logo.png" class="mr-2 h-3" alt="Banyumax Logo" />
                         </a>
                     </div>
@@ -43,11 +43,11 @@
                                     <li>
                                         <ul class="px-5">
                                             <li class="px-3">
-                                                <a href=""
+                                                <a href="/dashboard-ceo"
                                                     class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">CEO</a>
                                             </li>
                                             <li class="px-3">
-                                                <a href=""
+                                                <a href="/dashboard-manager"
                                                     class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Manager</a>
                                             </li>
                                             <li>
@@ -59,13 +59,13 @@
                                                 <div id="dropdown-finance-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                                     <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Dashboard</a>
+                                                            <a href="/dashboard-finance" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Dashboard</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Request</a>
+                                                            <a href="/dashboard-budgetrequest-finance" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Request</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgheting Realization</a>
+                                                            <a href="/dashboard-budgetrealization-finance" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -79,19 +79,19 @@
                                                 <div id="dropdown-advertiser-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                                     <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Campaign</a>
+                                                            <a href="/campaign-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Campaign</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Operator</a>
+                                                            <a href="/operator-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Operator</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Advertising</a>
+                                                            <a href="/budgetingadvertising-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Advertising</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>
+                                                            <a href="/budgetingrealization-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Routine Evaluation</a>
+                                                            <a href="/rountineevaluation-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Routine Evaluation</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -105,13 +105,13 @@
                                                 <div id="dropdown-cs-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                                     <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Create Promotion</a>
+                                                            <a href="/createpromotion-cs-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Create Promotion</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Reimbursment</a>
+                                                            <a href="/reimbursment-cs-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Reimbursment</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Routine Evaluation</a>
+                                                            <a href="/routineevaluation-cs-admin" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Routine Evaluation</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -125,13 +125,13 @@
                                                 <div id="dropdown-inputer-admin" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-56 dark:bg-gray-700 dark:divide-gray-600">
                                                     <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Dashboard</a>
+                                                            <a href="/dashboard-inputer" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Dashboard</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Request</a>
+                                                            <a href="/budgetingrequest-inputer" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Request</a>
                                                         </li>
                                                         <li>
-                                                            <a href="/" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>
+                                                            <a href="/budgetingrealization-inputer" class="block px-4 py-2  text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] text-xs tracking-widest">Budgeting Realization</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -155,11 +155,11 @@
                                 </button>
                                 <ul id="dropdown-logistik" class="hidden py-2 space-y-2">
                                     <li>
-                                        <a href=""
+                                        <a href="/logistic-warehouse"
                                             class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Warehouse</a>
                                     </li>
                                     <li>
-                                        <a href="/operator-adv"
+                                        <a href="/logistic-expedisi"
                                             class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Expedisi</a>
                                     </li>
                                 </ul>
@@ -179,11 +179,11 @@
                                 </button>
                                 <ul id="dropdown-reporting" class="hidden py-2 space-y-2">
                                     <li>
-                                        <a href=""
+                                        <a href="/live-reporting"
                                             class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Live Reporting</a>
                                     </li>
                                     <li>
-                                        <a href=""
+                                        <a href="/pivoting"
                                             class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Pivoting</a>
                                     </li>
                                 </ul>
