@@ -19,6 +19,9 @@
                         <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal" required>
                     </div>
                     <div class="relative">
+                        <input type="number" name="no-rekening" wire:model.defer='no-rekening' id="no-rekening" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="No Rekening" required>
+                    </div>
+                    <div class="relative">
                         <div class="-mt-2 text-sm mb-3 text-gray-600">
                             Attachment
                         </div>
