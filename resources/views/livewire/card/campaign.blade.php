@@ -18,13 +18,12 @@
                 <button class="" type="button" data-modal-toggle="delete-campaign">
                     <span class="iconify cursor-pointer" data-icon="bytesize:trash"></span>
                 </button>
-                <button class="" type="button" data-modal-toggle="">
+                <button class="" type="button">
                     <span class="iconify cursor-pointer" data-icon="fluent:copy-20-regular"></span>
                 </button>
             </div>
             <livewire:modal.edit-campaign />
             <livewire:modal.add-operator />
-            
             <livewire:modal.delete-campaign />
         </div>
         <div class="grid grid-cols-12 text-xs py-5">
@@ -59,25 +58,27 @@
         </div>
         <div class="gap-4 flex flex-row items-center">
             <div class="flex flex-row items-center -space-x-2">
-                <button type="button" data-modal-toggle="edit-table-campaign">
                     <div>
                         <img src="Assets/img/zee.jpeg" class="w-8 h-8 rounded-full shadow-lg border-2 border-white"
                             alt="" data-tooltip-target="tooltip1">
                         <div id="tooltip1" role="tooltip"
                             class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             Zee
-                            <div class="tooltip-arrow" data-popper-arrow></div>
+                            <div class="tooltip-arrow" data-popper-arrow>
+
+                            </div>
                         </div>
                     </div>
                 </button>
-                <livewire:modal.edit-table-campaign />
                 <div>
                     <img src="Assets/img/marsha.jpeg" class="w-8 h-8 rounded-full shadow-lg border-2 border-white"
                         alt="" data-tooltip-target="tooltip2">
                     <div id="tooltip2" role="tooltip"
                         class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                         Marsha
-                        <div class="tooltip-arrow" data-popper-arrow></div>
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -86,7 +87,9 @@
                     <div id="tooltip3" role="tooltip"
                         class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                         Aji
-                        <div class="tooltip-arrow" data-popper-arrow></div>
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -95,12 +98,31 @@
                     <div id="tooltip4" role="tooltip"
                         class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                         Habib
-                        <div class="tooltip-arrow" data-popper-arrow></div>
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-8 h-8 flex items-center place-content-center rounded-full shadow-lg border-2 border-white bg-[#7E8299] text-xs cursor-default"
+                        data-tooltip-target="tooltip5">
+                        +10
+                    </div>
+                    <div id="tooltip5" role="tooltip"
+                        class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                        Lainnya
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <h1 class="text-[#7E8299] text-sm">4 Operators</h1>
+            <div>
+                <button type="button" data-modal-toggle="edit-table-campaign">
+                    <span class="text-[#7E8299] text-sm">4 Operators</span>
+                </button>
+            </div>
+            @livewire('modal.edit-table-campaign')
         </div>
-
     </div>
 </div>
