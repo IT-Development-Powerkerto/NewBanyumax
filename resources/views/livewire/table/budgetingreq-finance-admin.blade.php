@@ -1,8 +1,5 @@
-<div class="py-5">
-    <div class="mt-1 flex flex-col w-full py-5">
-    </div>
-</div>
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-x-2 border-t rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
         <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Request</h1>
@@ -19,6 +16,62 @@
                 </div>
                 <input type="search" id="default-search" class="block px-4 py-2 pl-10 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..">
             </div>
+            <div class="mr-2 w-36 md:w-fit">
+                <!-- Modal toggle -->
+                <button
+                    class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
+                    type="button" data-modal-toggle="export-budgetreq-finance">
+                    <i class="las la-print text-xl"></i>
+                    <span>Export</span>
+                </button>
+
+                <!-- Main modal -->
+                <div id="export-budgetreq-finance" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+                    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                        <!-- Modal content -->
+                        <div class="relative bg-slate-100 rounded-lg shadow">
+                            <button type="button"
+                                class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                data-modal-toggle="export-budgetreq-finance">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <div class="py-6  lg:px-8">
+                                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
+                                    Export to Excel</h3>
+                                <form class="space-y-6" action="#">
+                                    <div class="flex flex-row gap-2">
+                                        <div class="relative">
+                                            <input type="date" name="date-one" wire:model.defer='date-one'
+                                                id="date-one"
+                                                class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                                required>
+                                        </div>
+                                        <div class="relative self-center">
+                                            <p>-</p>
+                                        </div>
+                                        <div class="relative">
+                                            <input type="date" name="date-two" wire:model.defer='date-two'
+                                                id="date-two"
+                                                class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-row gap-3">
+                                        <button type="submit"
+                                            class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Export</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <button
                 class="text-blue-400 h-max w-56 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                 type="button" data-modal-toggle="request-budgeting-finance">
@@ -32,12 +85,12 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white border-x overflow-x-auto px-5">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
             <tr>
                 <th scope="col" class="px-6 py-3">
-                    TIME
+                    TIMESTAMP
                 </th>
                 <th scope="col" class="px-6 py-3">
                     DIVISION
@@ -49,14 +102,14 @@
                     NOMINAL
                 </th>
                 <th scope="col" class="px-6 py-3">
-                    SUBMISSION STATUS
+                    STATUS
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    2022-05-25 14.00.00
+                    16/07/2022 11:20
                 </td>
                 <td class="px-6 py-4">
                     Advertiser
@@ -68,14 +121,14 @@
                     Rp. 500.000
                 </td>
                 <td class="px-6 py-4">
-                    <Span class="bg-cyan-100 text-cyan-500 py-2 px-4 font-semibold rounded-md">
-                        Approved
+                    <Span class="bg-[#EBF2FF] text-[#3B82F6] py-2 px-4 font-semibold rounded-md">
+                        Wait
                     </Span> 
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    2022-05-25 14.00.00
+                    16/07/2022 11:20
                 </td>
                 <td class="px-6 py-4">
                     Advertiser
