@@ -33,7 +33,7 @@
                             Campaign
                         </p>
                         <p class="text-xs text-gray-400">
-                            Adv Role
+                            Role Admin
                         </p>
                     </div>
 
