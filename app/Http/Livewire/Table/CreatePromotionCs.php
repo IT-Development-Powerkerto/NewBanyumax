@@ -9,6 +9,12 @@ use App\Models\Promotion;
 class CreatePromotionCs extends Component
 {
 
+    public $listeners =[
+        'promotionCreated' => '$refresh',
+        'promotionUpdated' => '$refresh',
+        'promotionDeleted' => '$refresh'
+    ];
+
     public function render()
     {
         // $product = Product::where('admin_id', auth()->user()->admin_id)->get();
@@ -19,7 +25,7 @@ class CreatePromotionCs extends Component
         // }
 
         $products = Product::all();
-        $promotion_cs = Promotion::all();
+        $promotion_cs = Promotion::where('admin_id', auth()->user()->admin_id)->where('user_id', auth()->user()->id)->get();
         $data['jml_promotion'] = Promotion::all()->count();
         return view('livewire.table.create-promotion-cs',$data )->with('products', $products)->with('promotions', $promotion_cs);
     }

@@ -21,7 +21,7 @@ class AddPromotion extends Component
 
     public function render()
     {
-        $product = Product::where('admin_id', auth()->user()->admin_id)->get();
+        $products = Product::where('admin_id', auth()->user()->admin_id)->get();
         $type_promotions = TypePromotion::all();
         return view('livewire.modal.add-promotion', compact('products', 'type_promotions'));
     }
@@ -41,6 +41,8 @@ class AddPromotion extends Component
         $validated['total_promotion']   = $total_promotion;
         $validated['created_at']= Carbon::now()->toDateTimeString();
         $validated['updated_at']= Carbon::now()->toDateTimeString();
+
+        $this->emit('promotionCreated');
 
     }
 }

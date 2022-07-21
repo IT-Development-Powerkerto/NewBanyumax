@@ -75,7 +75,7 @@
                             {{ number_format($promotion->total_promotion, 2, ',', '.') }}
                         </td>
                         <td class="px-6 py-4">
-                            Hutari Tri
+                            {{$promotion->user->name}}
                         </td>
                         <td class="px-6 py-4">
                             <button type="button" class="bg-gray-200 py-1 px-3 rounded-lg flex flex-row"
