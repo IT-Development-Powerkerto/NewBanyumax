@@ -35,29 +35,29 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto px-5 border-x">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
             <tr>
-                <th scope="col" class="text-center py-3">
+                <th scope="col" class="px-4 py-3">
                     NO
                 </th>
-                <th scope="col" class="text-center py-3">
+                <th scope="col" class="px-4 py-3">
                     PRODUCT
                 </th>
-                <th scope="col" class="text-center py-3">
+                <th scope="col" class="px-4 py-3">
                     DATE
                 </th>
-                <th scope="col" class="text-center py-3">
+                <th scope="col" class="px-4 py-3">
                     TIME
                 </th>
-                <th scope="col" class="text-center py-3">
+                <th scope="col" class="px-4 py-3">
                     RESISTANCE
                 </th>
-                <th scope="col" class="text-center py-3">
+                <th scope="col" class="px-4 py-3">
                     SOLUTION
                 </th>
-                <th scope="col" class="text-center py-3">
+                <th scope="col" class="px-4 py-3">
                     ATTACHMENT
                 </th>
             </tr>
@@ -65,25 +65,25 @@
         <tbody>
             @foreach ($evaluations as $evaluation)
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
+                <td class="px-4 py-4">
                     {{$loop->iteration}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-4 py-4">
                     {{$evaluation->product->name}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-4 py-4">
                     {{$evaluation->date}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-4 py-4">
                     {{$evaluation->time}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-4 py-4">
                     {{$evaluation->resistance}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-4 py-4">
                     {{$evaluation->solution}}
                 </td>
-                <td class="px-6 py-4">
+                <td class="px-4 py-4">
                     <button class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 py-2 px-4 rounded-md">
                         Download
                     </button>
