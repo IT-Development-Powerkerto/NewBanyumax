@@ -104,7 +104,7 @@
 
                 <div class="px-5 py-5">
                     <livewire:table.routine-evaluation-cs />
-                    <livewire:modal.add-evaluation-cs />
+                    {{-- <livewire:modal.add-evaluation-cs /> --}}
                 </div>
 
             </div>
