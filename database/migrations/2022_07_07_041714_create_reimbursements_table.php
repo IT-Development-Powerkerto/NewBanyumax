@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('reason');
             $table->string('phone');
             $table->integer('nominal');
-            $table->string('attachment');
+            $table->string('attachment')->nullable();
+            $table->string('no_rekening');
             $table->boolean('status')->nullable();
             $table->timestamps();
         });
