@@ -31,7 +31,7 @@
                 </button>
             </div>
             {{-- @livewire('modal.add-routine-evaluation') --}}
-            <livewire:modal.add-routine-evaluation ></livewire:modal.add-routine-evaluation>
+            <livewire:modal.add-routine-evaluation />
         </div>
     </div>
 </div>

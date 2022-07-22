@@ -7,6 +7,10 @@ use App\Models\Evaluation;
 
 class RoutineEvaluationCs extends Component
 {
+    public $listeners =[
+        'routineEvaluationCreated' => '$refresh'
+    ];
+
     public function render()
     {
         $evaluations = Evaluation::all();
