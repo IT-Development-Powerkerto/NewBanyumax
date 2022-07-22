@@ -23,6 +23,7 @@ class AddCampaign extends Component
     public $facebook_pixel;
     public $tiktok_pixel;
     public $product_id;
+    public $rotation_type;
     public $thanks_page = null;
 
     public function render()
@@ -45,6 +46,7 @@ class AddCampaign extends Component
         'tiktok_event_id'   =>'required',
         'customer_cs'       =>'required',
         'cs_customer'       =>'required',
+        'rotation_type'     =>'required',
         'thanks_page'       =>'nullable'
     ];
 

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('customer_cs');
             $table->string('cs_customer');
             $table->string('thanks_page')->nullable();
-            $table->string('rotation_type');
+            $table->boolean('rotation_type')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

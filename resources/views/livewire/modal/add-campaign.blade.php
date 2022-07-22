@@ -106,11 +106,11 @@
                     </div>
                     <div class="flex flex-row justify-center gap-5 py-2">
                         <div class="flex items-center">
-                            <input checked id="automation_rotation" type="radio" value="" name="colored-radio" class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
+                            <input checked id="automation_rotation" type="radio" value="0" wire:model.debounce.500ms="rotation_type" name="colored-radio" class="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 focus:ring-purple-500">
                             <label for="automation_rotation" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Automation Rotation</label>
                         </div>
                         <div class="flex items-center">
-                            <input id="comparison_rotation" type="radio" value="" name="colored-radio" class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 focus:ring-teal-500">
+                            <input id="comparison_rotation" type="radio" value="1" name="colored-radio" wire:model.debounce.500ms="rotation_type" class="w-4 h-4 text-teal-600 bg-gray-100 border-gray-300 focus:ring-teal-500">
                             <label for="comparison_rotation" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Comparison Rotation</label>
                         </div>
                     </div>
