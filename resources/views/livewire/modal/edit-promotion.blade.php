@@ -20,7 +20,7 @@
                         <select wire:model.debounce.500ms="product_id" id="product_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                             <option disabled selected>Select Product</option>
                             @foreach ($products as $product)
-                                {{-- <option value="{{$product->id}}" {{($product->id == $promotion->product_id) ? "selected": ""}}>{{$product->name}}</option> --}}
+                                <option value="{{$product->id}}">{{$product->name}}</option>
                             @endforeach
                             @error('product_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>
@@ -29,7 +29,7 @@
                         <select wire:model.debounce.500ms="promotion_type_id" id="promotion_type_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                             <option disabled selected>Select Promotion Type</option>
                             @foreach ($type_promotions as $type_promotion)
-                                {{-- <option value="{{$type_promotion->id}}" {{($type_promotion->id == $promotion->promotion_type_id) ? "selected": ""}}>{{$type_promotion->name}}</option> --}}
+                                <option value="{{$type_promotion->id}}" >{{$type_promotion->name}}</option>
                             @endforeach
                             @error('promotion_type_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>

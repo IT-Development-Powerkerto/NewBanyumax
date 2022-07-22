@@ -72,7 +72,7 @@
                             {{ $promotion->type_promotion->name }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ number_format($promotion->total_promotion, 2, ',', '.') }}
+                            Rp.{{ number_format($promotion->total_promotion, 2, ',', '.') }}
                         </td>
                         <td class="px-6 py-4">
                             {{$promotion->user->name}}
@@ -91,7 +91,7 @@
                                 id="dropdownAction">
                                 <ul class="py-1" aria-labelledby="dropdownAction">
                                     <li>
-                                        <button data-modal-toggle="edit-promotion"
+                                        <button data-modal-toggle="edit-promotion" wire:click="$emit('getPromotion', {{ $promotion->id }})"
                                             class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Edit</button>
                                     </li>
                                     <li>

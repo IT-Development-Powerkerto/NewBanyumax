@@ -34,7 +34,7 @@ class EditPromotion extends Component
         'product_id'        => 'required',
         'promotion_type_id'     => 'required',
         'promotion_product_price'   => 'required',
-        'promotion_poduct_percent'  => 'nullable',
+        'promotion_product_percent'  => 'nullable',
     ];
 
     // public function updated()
