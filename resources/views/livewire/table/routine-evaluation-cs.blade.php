@@ -58,6 +58,10 @@
                     <th scope="col" class="px-6 py-3">
                         SOLUTION
                     </th>
+                    <th scope="col" class="px-6 py-3">
+                        ATTACHMENT
+                    </th>
+                </tr>
                 </tr>
             </thead>
             <tbody>
@@ -86,6 +90,11 @@
                         <td class="px-6 py-4">
                             asdkjabs sdlajdsa jasdlksad kasdl
                             {{-- {{ $evaluation->solution }} --}}
+                        </td>
+                        <td class="px-6 py-4">
+                            <button class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 py-2 px-4 rounded-md">
+                                Download
+                            </button>
                         </td>
                     </tr>
                 {{-- @endforeach --}}
