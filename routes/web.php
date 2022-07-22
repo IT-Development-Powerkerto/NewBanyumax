@@ -115,6 +115,9 @@ Route::get('/logistic-expedisi', function () {
 Route::get('/live-reporting', function () {
     return view('admin.reporting.LiveReporting');
 });
+Route::get('/pivoting', function () {
+    return view('admin.reporting.PagePivoting');
+});
 
 // Adv.Campaign
 Route::resource('/campaign-adv', CampaignController::class);
