@@ -29,7 +29,7 @@
                 <div class="py-5 mb-10 flex justify-between">
                     <div>
                         <p class="font-bold text-lg tracking-wide mb-2">
-                            Budgeting Request
+                            Budgeting Request Finance
                         </p>
                         <p class="text-xs text-gray-400">
                             Role Admin

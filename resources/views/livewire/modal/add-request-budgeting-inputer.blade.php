@@ -1,5 +1,5 @@
 <!-- Main modal -->
-<div id="add-request-budgeting-inputer" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+<div wire:ignore.self id="add-request-budgeting-inputer" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
         <div class="relative rounded-lg shadow bg-slate-100" >
@@ -8,47 +8,34 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Request Budgeting</h3>
-                <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
-                    @csrf
+                <form class="space-y-6" action="#">
                     <div class="relative">
-                        <input type="text" name="division" wire:model.defer='division' id="division" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Division" required>
+                        <select name="division" id="division"
+                            class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                            required>
+                            <option disabled selected class="text-[#7E8299]">Division</option>
+                            <option value="1">Select 1</option>
+                            <option value="2">Select 2 </option>
+                            <option value="3">Select 3</option>
+                        </select>
                     </div>
                     <div class="relative">
                         <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
                     </div>
                     <div class="relative">
-                        <textarea name="reason" wire:model.defer='reason' id="reason" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Reason" required></textarea>
+                        <textarea name="description" wire:model.defer='description' id="description" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description" required></textarea>
                     </div>
                     <div class="relative">
-                        <span class="text-gray-500 px-1 mb-2">Attachment</span>
-                            <label type="file" name="image-product" id="image-product" required>
-                                <span class="">
-                                    <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
-                                </span>
-                                <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
-                            </label>
+                        <div class="-mt-2 text-sm mb-3 text-gray-600">
+                            Attachment
+                        </div>
+                        <input type="file" name="image" id="image" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
+                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Save</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<script>
-    function previewImage(){
-
-        const image = document.querySelector('#image');
-        const imgPreview = document.querySelector('.img-preview');
-
-        imgPreview.style.display = 'block';
-
-        const oFReader = new FileReader();
-
-        oFReader.readAsDataURL(image.files[0]);
-        oFReader.onload = function(oFREvent){
-        imgPreview.src = oFREvent.target.result;
-        }
-        }
-</script>
