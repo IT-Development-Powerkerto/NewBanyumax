@@ -103,6 +103,13 @@ Route::get('/dashboard-budgetrealization-finance', function () {
     return view('admin.finance.PageBudgetRealizationFinance');
 });
 
+//Admin.Logistic
+Route::get('/logistic-warehouse', function () {
+    return view('admin.logistic.PageWarehouse');
+});
+Route::get('/logistic-expedisi', function () {
+    return view('admin.logistic.PageExpedition');
+});
 
 Route::get('/live-reporting', function () {
     return view('admin.LiveReporting');

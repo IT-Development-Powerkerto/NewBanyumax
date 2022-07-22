@@ -2,7 +2,7 @@
     <div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
         <div class="flex flex-row justify-between items-center w-full">
             <div class="">
-                <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Activity Logs</h1>
+                <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Warehouse</h1>
                 <div class="flex flex-row gap-2 py-2">
                     <span class="font-medium text-sm text-zinc-400">1000 Data</span>
                 </div>
@@ -18,85 +18,132 @@
                             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </div>
-                <input type="text" wire:model="search" id="default-search"
-                    class="block px-4 py-2 pl-10 w-56 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                <input type="search" id="default-search"
+                    class="block px-4 py-2 pl-10 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Search..">
             </div>
-
-            <div class="relative mr-2 w-36 md:w-56">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0  00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </div>
-                <input name="daterange"
-                    class="bg-white text-gray-400 border-gray-200 shadow sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 placeholder-gray-400 font-medium"
-                    placeholder="Select Date">
-            </div>
+            <button
+                class="w-40 hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
+                type="button" data-modal-toggle="add-warehouse">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                        clip-rule="evenodd" />
+                </svg>
+                <span class="text-xs">Add Warehouse</span>
+            </button>
         </div>
     </div>
 
-    <div class="h-max bg-white overflow-x-auto">
-        <table class="w-full text-sm text-left">
+    <div class="h-max bg-white text-left px-5 border-x overflow-x-auto">
+        <table class="w-full text-sm ">
             <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
                 <tr>
-                    <th scope="col" class="px-6 py-3">
-                        TIMESTAMP
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        NAME
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        DIVISION
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        NOMINAL
-                    </th>
-                    <th scope="col" class="px-6 py-3">
-                        STATUS
-                    </th>
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                           WAREHOUSE NAME
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            EMAIL
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            PHONE
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            ADDRESS
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            PROVINCE
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            CITY
+                        </th>
+                    </tr>
                 </tr>
             </thead>
             <tbody>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        15/06/2022 16:06
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <img src="assets/img/favicon.png" class="w-10 h-10 rounded-lg shadow-sm border" alt="">
+                            </div>
+                            <div>
+                                <p class="font-semibold">Pulau Gadung</p>
+                                <p class="text-xs text-gray-600">PGG</p>
+                            </div>
+                        </div>
                     </td>
                     <td class="px-6 py-4">
-                        Hanif Muslim
+                        email@mail.com
                     </td>
                     <td class="px-6 py-4">
-                        Advertaiser
+                        089263937618
                     </td>
                     <td class="px-6 py-4">
-                        Rp. 900.000
+                        Purwokerto Barat
                     </td>
                     <td class="px-6 py-4">
-                        <Span class="bg-[#EBF2FF] text-[#3B82F6] py-2 px-4 font-semibold rounded-md">
-                            Waiting
-                        </Span>  
+                        Jawa Tengah
+                    </td>
+                    <td class="px-6 py-4">
+                        Purwokerto
                     </td>
                 </tr>
                 <tr class="bg-white border-b text-xs text-black">
                     <td class="px-6 py-4">
-                        15/06/2022 16:06
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <img src="assets/img/favicon.png" class="w-10 h-10 rounded-lg shadow-sm border" alt="">
+                            </div>
+                            <div>
+                                <p class="font-semibold">Pulau Gadung</p>
+                                <p class="text-xs text-gray-600">PGG</p>
+                            </div>
+                        </div>
                     </td>
                     <td class="px-6 py-4">
-                        Hanif Muslim
+                        email@mail.com
                     </td>
                     <td class="px-6 py-4">
-                        Advertaiser
+                        089263937618
                     </td>
                     <td class="px-6 py-4">
-                        Rp. 900.000
+                        Purwokerto Barat
                     </td>
                     <td class="px-6 py-4">
-                        <Span class="bg-red-100 text-red-500 py-2 px-4 font-semibold rounded-md">
-                            Rejected
-                        </Span>  
+                        Jawa Tengah
+                    </td>
+                    <td class="px-6 py-4">
+                        Purwokerto
+                    </td>
+                </tr>
+                <tr class="bg-white border-b text-xs text-black">
+                    <td class="px-6 py-4">
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <img src="assets/img/favicon.png" class="w-10 h-10 rounded-lg shadow-sm border" alt="">
+                            </div>
+                            <div>
+                                <p class="font-semibold">Pulau Gadung</p>
+                                <p class="text-xs text-gray-600">PGG</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4">
+                        email@mail.com
+                    </td>
+                    <td class="px-6 py-4">
+                        089263937618
+                    </td>
+                    <td class="px-6 py-4">
+                        Purwokerto Barat
+                    </td>
+                    <td class="px-6 py-4">
+                        Jawa Tengah
+                    </td>
+                    <td class="px-6 py-4">
+                        Purwokerto
                     </td>
                 </tr>
             </tbody>
@@ -134,15 +181,16 @@
                 </li>
             </ul>
         </div>
-    
-    
+
+
         <nav aria-label="Page navigation example">
             <ul class="inline-flex items-center -space-x-px">
                 <li>
                     <a href="#"
                         class="block py-2 px-3 ml-0 leading-tight text-gray-500 hover:text-cyan-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                         <span class="sr-only">Previous</span>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
                                 clip-rule="evenodd"></path>
@@ -173,7 +221,8 @@
                     <a href="#"
                         class="block py-2 px-3 ml-0 leading-tight text-gray-500 hover:text-cyan-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                         <span class="sr-only">Next</span>
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
                                 clip-rule="evenodd"></path>
@@ -182,8 +231,8 @@
                 </li>
             </ul>
         </nav>
-    
+
         <div></div>
-    
+
     </div>
 </div>
