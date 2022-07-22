@@ -21,7 +21,7 @@
 
 <body class="bg-white" style="font-family: 'Poppins', sans-serif;" x-data="sidebar()"
     @resize.window="handleResize()">
-    
+
     <div class="flex">
         <livewire:sidebar.sidebar-admin />
         <main class="w-screen">
@@ -103,7 +103,13 @@
 
                 </div>
             </div>  
-
+        
+            <div class="flex flex-wrap justify-between pb-5 gap-2 mx-5">
+                <livewire:card.leads />
+                <livewire:card.omzet />
+                <livewire:card.expense />
+            </div>
+        
             <div class="px-5">
                 <div class="flex flex-row justify-between items-center py-3">
                     <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information
@@ -130,19 +136,32 @@
                     </div>
                 </div>
             </div>
-        
-            <div class="flex flex-wrap justify-between pb-5 gap-2 mx-5">
-                <livewire:card.warehouse-admin />
-                <livewire:card.payment-admin />
-                <livewire:card.staff-budgeting-request-admin />
+
+            <div class="w-full p-5">
+                <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 ">
+                    <livewire:card.advertising-cost-admin />
+                    <livewire:card.total-lead-admin />
+                    <livewire:card.total-closing-admin />
+                </div>
+                <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-4 gap-4 py-5">
+                    <livewire:card.total-box-admin />
+                    <livewire:card.cost-per-result-admin />
+                    <livewire:card.cross-selling-admin />
+                    <livewire:card.caq-lead-admin />
+                </div>
             </div>
             <div class="mt-5 mx-5 px-6 py-2 rounded-md bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold">
-                Data Budgeting
+                Information
             </div>
         
             <div class="container mx-auto px-5 mb-10">
-                <livewire:table.customer-service />
-            <livewire:table.data-closing />
+                <livewire:table.weekly-info-adv-admin />
+                <livewire:table.budgeting-request-adv-admin />
+                <livewire:table.budgeting-request-non-adv-admin />
+                <livewire:table.realization-adv2 />
+                <livewire:table.realization-non-adv />
+                <livewire:table.activity-evaluation />
+                <livewire:table.activity-logs-ceo />
             </div>
 
         </main>

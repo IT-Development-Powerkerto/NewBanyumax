@@ -10,6 +10,18 @@
 
 
             <div class="flex flex-col gap-2 md:gap-0 md:flex-row w-max">
+                <div class="relative mr-2">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                    <input type="text" wire:model="search" id="default-search"
+                        class="block px-4 py-2 pl-10 w-56 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Search..">
+                </div>
                 <div class="mr-2 w-36 md:w-fit">
                     <!-- Modal toggle -->
                     <button
@@ -18,7 +30,7 @@
                         <i class="las la-print text-xl"></i>
                         <span>Export</span>
                     </button>
-
+    
                     <!-- Main modal -->
                     <div id="export-lead" tabindex="-1" aria-hidden="true"
                         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
@@ -35,9 +47,8 @@
                                             clip-rule="evenodd"></path>
                                     </svg>
                                 </button>
-                                <div class="py-6 px-6 lg:px-8">
-                                    <h3
-                                        class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
+                                <div class="py-6  lg:px-8">
+                                    <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
                                         Export to Excel</h3>
                                     <form class="space-y-6" action="#">
                                         <div class="flex flex-row gap-2">
@@ -76,7 +87,7 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                     </div>
-                    <input datepicker datepicker-autohide type="text"
+                    <input name="daterange"
                         class="bg-white text-gray-400 border-gray-200 shadow sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2 placeholder-gray-400 font-medium"
                         placeholder="Select Date">
                 </div>
@@ -114,20 +125,20 @@
                             <!-- Modal toggle -->
                             <button
                                 class="text-blue-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
-                                type="button" data-modal-toggle="export-lead">
+                                type="button" data-modal-toggle="export-dataclosing">
                                 <i class="las la-print text-xl"></i>
                                 <span>Export</span>
                             </button>
 
                             <!-- Main modal -->
-                            <div id="export-lead" tabindex="-1" aria-hidden="true"
+                            <div id="export-dataclosing" tabindex="-1" aria-hidden="true"
                                 class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
                                 <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                                     <!-- Modal content -->
                                     <div class="relative bg-slate-100 rounded-lg shadow">
                                         <button type="button"
                                             class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
-                                            data-modal-toggle="export-lead">
+                                            data-modal-toggle="export-dataclosing">
                                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd"
@@ -184,13 +195,13 @@
                             <!-- Modal toggle -->
                             <button
                                 class="text-blue-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
-                                type="button" data-modal-toggle="export-lead">
+                                type="button" data-modal-toggle="export-dataclosing">
                                 <i class="las la-print text-xl"></i>
                                 <span>Export</span>
                             </button>
 
                             <!-- Main modal -->
-                            <div id="export-lead" tabindex="-1" aria-hidden="true"
+                            <div id="export-dataclosing" tabindex="-1" aria-hidden="true"
                                 class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
                                 <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                                     <!-- Modal content -->

@@ -111,8 +111,9 @@ Route::get('/logistic-expedisi', function () {
     return view('admin.logistic.PageExpedition');
 });
 
+//admin.reporting
 Route::get('/live-reporting', function () {
-    return view('admin.LiveReporting');
+    return view('admin.reporting.LiveReporting');
 });
 
 // Adv.Campaign

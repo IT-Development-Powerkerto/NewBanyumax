@@ -103,7 +103,13 @@
 
                 </div>
             </div>  
-
+        
+            <div class="flex flex-wrap justify-between pb-5 gap-2 mx-5">
+                <livewire:card.leads />
+                <livewire:card.omzet />
+                <livewire:card.expense />
+            </div>
+        
             <div class="px-5">
                 <div class="flex flex-row justify-between items-center py-3">
                     <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information
@@ -129,17 +135,6 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        
-            <div class="flex flex-wrap justify-between pb-5 gap-2 mx-5">
-                <livewire:card.leads />
-                <livewire:card.omzet />
-                <livewire:card.expense />
-            </div>
-        
-            <div class="items-center py-3 px-5">
-                <h1 class="text-black font-semibold tracking-wide text-xl" style="color: #7E8299">Dashboard Information
-                </h1>
             </div>
             <div class="w-full p-5">
                 <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-3 gap-4 ">
