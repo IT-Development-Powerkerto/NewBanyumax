@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Livewire\Modal;
+
+use App\Events\LeadEvent;
 use Livewire\WithFileUploads;
 use App\Models\Product;
 use Livewire\Component;
@@ -39,6 +41,7 @@ class AddProduct2 extends Component
         // dd($validated);
         Product::create($validated);
         // return redirect('/dashboard');
+        event(new LeadEvent('test'));
         $this->emit('productCreated');
     }
     public function render()

@@ -232,6 +232,8 @@
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
     <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    @livewireScripts
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
