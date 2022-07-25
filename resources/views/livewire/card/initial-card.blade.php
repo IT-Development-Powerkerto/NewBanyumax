@@ -2,11 +2,11 @@
     <div class="bg-gray-50 rounded-lg shadow-lg w-full h-max">
         <div class="grid grid-cols-12 gap-2 text-xs py-5 px-5">
             <div class="col-span-3">
-                <img src="/assets/img/zee.jpeg" alt="" class="w-20 h-20 rounded-lg shadow-xl shadow-gray-400">
+                <img src="/assets/img/zee.jpeg" alt="" class="w-16 h-16 rounded-lg shadow-xl shadow-gray-400">
             </div>
             <div class="col-span-7 text-sm">
                 <span class="py-1">Primary Holder Name</span>
-                <div class="flex py-1">
+                <div class="flex flex-wrap py-1 text-xs text-gray-600">
                     <span>Jenius-</span>
                     <span>1808765435678906</span>
                 </div>
@@ -14,7 +14,7 @@
                 <span></span>
             </div>
             <div class="col-span-2">
-                <div class="text-white text-xl -mt-1">
+                <div class="flex flex-row text-white text-xl -mt-1">
                     <button class="text-[#7E8299] rounded las la-edit hover:text-cyan-500"
                         data-modal-toggle="edit-reporitng-budget-disbursement"></button>
                     <button
@@ -59,24 +59,24 @@
                 </thead>
                 <tbody>
                     <tr class="bg-white border-b text-xs text-black">
-                        <td class="px-6 py-4">
+                        <td class="pl-2 py-4">
                             Wiwit Suganda
                         </td>
-                        <td class="px-6 py-4">
+                        <td class=" py-4">
                             1809876543456789
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="pr-2 py-4">
                             Rp 10.000.000
                         </td>
                     </tr>
                     <tr class="bg-white border-b text-xs text-black">
-                        <td class="px-6 py-4">
+                        <td class="pl-2 py-4">
                         Abdan Syakuro
                         </td>
-                        <td class="px-6 py-4">
+                        <td class=" py-4">
                             1809876543456789
                         </td>
-                        <td class="px-6 py-4">
+                        <td class="pr-2 py-4">
                             <span>Rp 15.000.000</span>
                         </td>
                     </tr>

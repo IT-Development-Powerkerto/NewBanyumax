@@ -20,16 +20,13 @@
                         <textarea name="reason" wire:model.defer='reason' id="reason" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Reason" required></textarea>
                     </div>
                     <div class="relative">
-                        <span class="text-gray-500 px-1 mb-2">Attachment</span>
-                            <label type="file" name="image-product" id="image-product" required>
-                                <span class="">
-                                    <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
-                                </span>
-                                <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
-                            </label>
+                        <div class="-mt-2 text-sm mb-3 text-gray-600">
+                            Attachment
+                        </div>
+                        <input type="file" name="image" id="image" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
+                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Save</button>
                     </div>
                 </form>
             </div>

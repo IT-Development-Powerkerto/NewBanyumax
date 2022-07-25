@@ -14,6 +14,7 @@ class Reimbursement extends Model
         'reason',
         'phone',
         'nominal',
+        'no_rekening',
         'attachment',
         'status',
     ];

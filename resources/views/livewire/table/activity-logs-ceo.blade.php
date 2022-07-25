@@ -2,12 +2,12 @@
     <div class="mt-1 flex flex-col w-full">
     </div>
 </div>
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Activity Logs</h1>
             <div class="flex flex-row gap-2 py-2">
-                <span class="font-medium text-sm text-zinc-400">10 Request</span>
+                <span class="font-medium text-sm text-zinc-400">10 Data</span>
             </div>
         </div>
 
@@ -41,7 +41,7 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto px-5 border-x">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
             <tr>

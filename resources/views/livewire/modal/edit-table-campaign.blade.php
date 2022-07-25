@@ -1,0 +1,194 @@
+<div>
+    <!-- Main modal -->
+    <div id="edit-table-campaign" wire:ignore.self tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4  w-max h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow bg-slate-100 pb-5 px-5">
+                <div class="flex justify-between pt-10">
+                    <div class="px-5">
+                        <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Budgeting Realization</h1>
+                        <div class="flex flex-row gap-2 py-2">
+                            <span class="font-medium text-sm text-zinc-400">1.000 Data</span>
+                        </div>
+                    </div>
+                    <button type="button"
+                        class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                        data-modal-toggle="edit-table-campaign">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="py-6 px-6 lg:px-8">
+
+
+                </div>
+                <div
+                    class="py-3 px-5 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
+                    <div class="flex flex-row justify-between items-center h-10 w-full">
+
+                    </div>
+                </div>
+                <div class="h-max bg-white overflow-x-auto border-x px-5">
+                    <table class="w-full text-sm text-left">
+                        <thead class="text-xs font-semibold text-gray-400 bg-gray-100 uppercase font-mono">
+                            <tr>
+                                <th scope="col" class="py-3 px-5">
+                                    NAME
+                                </th>
+                                <th scope="col" class="py-3 px-5">
+                                    EMAIL
+                                </th>
+                                <th scope="col" class="py-3 px-5">
+                                    WHATSAPP
+                                </th>
+                                <th scope="col" class="py-3 px-5">
+                                    ASSIGN TO
+                                </th>
+                                <th scope="col" class="py-3 px-5">
+                                    LEAD
+                                </th>
+                                <th scope="col" class="py-3 px-5">
+                                    CLOSING
+                                </th>
+                                <th scope="col" class="py-3 px-5">
+                                    ACTION
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b text-xs text-black">
+                                <td class=" px-6 py-4">
+                                    Nur Hayatun
+                                </td>
+                                <td class="px-6 py-4">
+                                    cshaya@gmail.com
+                                </td>
+                                <td class="px-6 py-4">
+                                    081221234435
+                                </td>
+                                <td class="px-6 py-4">
+                                    7 Campaign
+                                </td>
+                                <td class=" px-6 py-4">
+                                    <div class=" flex flex-col">
+                                        <span class="text-xs font-semibold">39 Leads</span>
+                                        <span class="text-xs">1 Daily Lead</span>
+                                    </div>
+                                </td>
+                                <td class=" py-4">
+                                    <div class=" flex flex-col">
+                                        <span class="text-xs font-semibold">39 Closing</span>
+                                        <span class="text-xs">1 Daily Closing</span>
+                                    </div>
+                                </td>
+                                <td class=" py-4">
+                                    <div class="flex gap-3">
+                                        <button
+                                            class="bg-[#EF4444] hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-4 py-2 text-white text-xl"><span
+                                                class="iconify" data-icon="bxs:file-export"></span>
+                                        </button>
+                                        <button
+                                            class="bg-[#EF4444] hover:bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-4 py-2 text-white text-xl"><span
+                                                class="iconify" data-icon="akar-icons:trash-can"></span>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="py-3 mb-10 px-5 flex justify-between items-center border rounded-b-lg bg-white">
+                    <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
+                        class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        type="button">10<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownFilter"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-20 dark:bg-gray-700"
+                        data-popper-placement="bottom"
+                        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(351.5px, 735.5px, 0px);">
+                        <ul class="py-1 text-sm text-gray-700 text-center dark:text-gray-200"
+                            aria-labelledby="dropdownDefault">
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">1</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">5</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">10</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">20</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="inline-flex items-center -space-x-px">
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-3 ml-0 leading-tight text-gray-500 hover:text-cyan-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only">Previous</span>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3  ml-2 rounded-lg leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3  ml-2 rounded-lg leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                            </li>
+                            <li>
+                                <a href="#" aria-current="page"
+                                    class="z-10 py-2 px-3  ml-2 rounded-lg leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3  ml-2 rounded-lg leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="py-2 px-3  ml-2 rounded-lg leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block py-2 px-3 ml-0 leading-tight text-gray-500 hover:text-cyan-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                    <span class="sr-only">Next</span>
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

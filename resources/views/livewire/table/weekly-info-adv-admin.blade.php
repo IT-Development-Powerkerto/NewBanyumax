@@ -2,7 +2,7 @@
     <div class="flex flex-col w-full">
     </div>
 </div>
-<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border rounded-t-lg">
+<div class="px-6 py-3 flex flex-row justify-between items-center bg-white border-t border-x rounded-t-lg">
     <div class="flex flex-row justify-between items-center w-full">
         <div class="">
             <h1 class="font-semibold text-xl antialiased text-black tracking-wide">Weekly Info Adv</h1>
@@ -98,13 +98,10 @@
         </div>
     </div>
 </div>
-<div class="h-max bg-white overflow-x-auto px-5">
+<div class="h-max bg-white overflow-x-auto px-5 border-x">
     <table class="w-full text-sm text-left">
         <thead class="text-xs font-semibold text-gray-400 bg-gray-100 greyuppercase font-mono">
             <tr>
-                <th scope="col" class="px-6 py-3">
-                    No
-                </th>
                 <th scope="col" class="px-6 py-3">
                     Advertiser
                 </th>
@@ -128,9 +125,6 @@
         <tbody>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    1
-                </td>
-                <td class="px-6 py-4">
                     Hanif Muslim Azhar
                 </td>
                 <td class="px-6 py-4">
@@ -150,9 +144,6 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    2
-                </td>
                 <td class="px-6 py-4">
                     Awal Azwihani
                 </td>
@@ -174,9 +165,6 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    3
-                </td>
-                <td class="px-6 py-4">
                     Rifan Tri Yulianto
                 </td>
                 <td class="px-6 py-4">
@@ -197,9 +185,6 @@
             </tr>
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    4
-                </td>
-                <td class="px-6 py-4">
                     Isnan Aditia
                 </td>
                 <td class="px-6 py-4">
@@ -219,9 +204,6 @@
                 </td>
             </tr>
             <tr class="bg-white border-b text-xs text-black">
-                <td class="px-6 py-4">
-                    5
-                </td>
                 <td class="px-6 py-4">
                     Hanif Muslim Azhar
                 </td>

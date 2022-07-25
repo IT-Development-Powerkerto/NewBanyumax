@@ -8,12 +8,23 @@
                 <span>Etawaku Platinum</span>
                 <span class="text-[#7E8299] ">100 Lead</span>
             </div>
-            <div class="col-span-4 flex text-[#7E8299] gap-3 justify-end">
-                <span class="iconify cursor-pointer" data-icon="akar-icons:edit"></span>
-                <span class="iconify cursor-pointer" data-icon="fluent:people-community-add-20-regular"></span>
-                <span class="iconify cursor-pointer" data-icon="bytesize:trash"></span>
-                <span class="iconify cursor-pointer" data-icon="fluent:copy-20-regular"></span>
+            <div class="col-span-4 flex items-start text-[#7E8299] gap-3 justify-end">
+                <button class="" type="button" data-modal-toggle="edit-campaign">
+                    <span class="iconify cursor-pointer" data-icon="akar-icons:edit"></span>
+                </button>
+                <button class="" type="button" data-modal-toggle="add-operator">
+                    <span class="iconify cursor-pointer" data-icon="fluent:people-community-add-20-regular"></span>
+                </button>
+                <button class="" type="button" data-modal-toggle="delete-campaign">
+                    <span class="iconify cursor-pointer" data-icon="bytesize:trash"></span>
+                </button>
+                <button class="" type="button">
+                    <span class="iconify cursor-pointer" data-icon="fluent:copy-20-regular"></span>
+                </button>
             </div>
+            <livewire:modal.edit-campaign />
+            <livewire:modal.add-operator />
+            <livewire:modal.delete-campaign />
         </div>
         <div class="grid grid-cols-12 text-xs py-5">
             <div class="col-span-6 px-4">
@@ -21,7 +32,7 @@
                 <form class="flex items-center">
                     <label for="copy-inputan" class="sr-only">Search</label>
                     <div class="relative w-full">
-                        <input type="text" id="copy-inputan"
+                        <input type="text" id="copy-inputan" disabled
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required>
                         <button type="button" class="flex absolute inset-y-0 right-0 items-center pr-3">
@@ -35,7 +46,7 @@
                 <form class="flex items-center">
                     <label for="copy-inputan" class="sr-only">Search</label>
                     <div class="relative w-full">
-                        <input type="text" id="copy-inputan"
+                        <input type="text" id="copy-inputan" disabled
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required>
                         <button type="button" class="flex absolute inset-y-0 right-0 items-center pr-3">
@@ -47,22 +58,27 @@
         </div>
         <div class="gap-4 flex flex-row items-center">
             <div class="flex flex-row items-center -space-x-2">
-                <div>
-                    <img src="Assets/img/zee.jpeg" class="w-8 h-8 rounded-full shadow-lg border-2 border-white"
-                        alt="" data-tooltip-target="tooltip1">
-                    <div id="tooltip1" role="tooltip"
-                        class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
-                        Zee
-                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    <div>
+                        <img src="Assets/img/zee.jpeg" class="w-8 h-8 rounded-full shadow-lg border-2 border-white"
+                            alt="" data-tooltip-target="tooltip1">
+                        <div id="tooltip1" role="tooltip"
+                            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                            Zee
+                            <div class="tooltip-arrow" data-popper-arrow>
+
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </button>
                 <div>
                     <img src="Assets/img/marsha.jpeg" class="w-8 h-8 rounded-full shadow-lg border-2 border-white"
                         alt="" data-tooltip-target="tooltip2">
                     <div id="tooltip2" role="tooltip"
                         class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                         Marsha
-                        <div class="tooltip-arrow" data-popper-arrow></div>
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -71,7 +87,9 @@
                     <div id="tooltip3" role="tooltip"
                         class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                         Aji
-                        <div class="tooltip-arrow" data-popper-arrow></div>
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -80,11 +98,31 @@
                     <div id="tooltip4" role="tooltip"
                         class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                         Habib
-                        <div class="tooltip-arrow" data-popper-arrow></div>
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-8 h-8 flex items-center place-content-center rounded-full shadow-lg border-2 border-white bg-[#7E8299] text-xs cursor-default"
+                        data-tooltip-target="tooltip5">
+                        +10
+                    </div>
+                    <div id="tooltip5" role="tooltip"
+                        class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
+                        Lainnya
+                        <div class="tooltip-arrow" data-popper-arrow>
+
+                        </div>
                     </div>
                 </div>
             </div>
-            <h1 class="text-[#7E8299] text-sm">4 Operators</h1>
+            <div>
+                <button type="button" data-modal-toggle="edit-table-campaign">
+                    <span class="text-[#7E8299] text-sm">4 Operators</span>
+                </button>
+            </div>
+            @livewire('modal.edit-table-campaign')
         </div>
     </div>
 </div>

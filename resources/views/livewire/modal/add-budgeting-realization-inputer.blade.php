@@ -7,11 +7,11 @@
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
             <div class="py-6 px-6 lg:px-8">
-                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Request Budgeting baru</h3>
-                <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
+                <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Budgeting Realization</h3>
+                <form class="space-y-6" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
-                        <input type="text" name="division" wire:model.defer='division' id="division" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Division" required>
+                        <input type="text" name="item" wire:model.defer='item' id="item" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Add Item" required>
                     </div>
                     <div class="relative">
                         <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal (Rp)" required>
@@ -20,22 +20,20 @@
                         <textarea name="reason" wire:model.defer='reason' id="reason" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Reason" required></textarea>
                     </div>
                     <div class="relative">
-                        <span class="text-gray-500 px-1 mb-2">Attachment</span>
-                            <label type="file" name="image-product" id="image-product" required>
-                                <span class="">
-                                    <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
-                                </span>
-                                <input class="hidden" type="file" name="image" id="image" onchange="previewImage()">
-                            </label>
+                        <div class="-mt-2 text-sm mb-3 text-gray-600">
+                            Attachment
+                        </div>
+                        <input type="file" name="image" id="image" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create</button>
+                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Save</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     function previewImage(){
 

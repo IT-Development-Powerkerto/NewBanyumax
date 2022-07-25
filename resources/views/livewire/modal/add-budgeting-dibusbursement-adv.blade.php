@@ -3,7 +3,7 @@
     class="hidden overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-96 md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
         <!-- Modal content -->
-        <div class="relative rounded-lg shadow h-96 overflow-y-auto bg-slate-100">
+        <div class="relative rounded-lg shadow bg-slate-100">
             <button type="button"
                 class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
                 data-modal-toggle="add-budgeting-dibusbursement-adv">
@@ -17,7 +17,7 @@
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Advertising
                     Expenditure</h3>
                 <span class="text-gray-500 px-1 py-10">Primary Card</span>
-                <form class="space-y-6" action="" method="POST" enctype="multipart/form-data">
+                <form class="space-y-6 h-96 overflow-y-auto" action="" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="relative">
                         <select name="primary-card" id="primary-card"

@@ -4,25 +4,42 @@ namespace App\Http\Livewire\Modal;
 use Livewire\Component;
 use App\Models\Reimbursement;
 use Carbon\Carbon;
+use Livewire\WithFileUploads;
 
 class AddReimbursement extends Component
 {
-    public $admin_id, $user_id, $reason, $phone, $nominal, $attachment;
+    public $admin_id, $user_id, $reason, $phone, $nominal, $attachment, $no_rekening, $status;
+
+    protected $rules = [
+        'reason'        =>'required',
+        'phone'         =>'required',
+        'nominal'       =>'required',
+        'no_rekening'   =>'required'
+    ];
+
+    // public function updated()
+    // {
+    //     $this->validate();
+    // }
 
     public function store()
     {
         // dd($this->all());
-        Reimbursement::insert([
-            'admin_id'     => auth()->user()->admin_id,
-            'user_id'      => auth()->user()->id,
-            'reason'       => $this->reason,
-            'phone'        => $this->phone,
-            'nominal'      => $this->nominal,
-            // 'attachment'   => $attachment,
-            'status'       => 2,
-            'created_at'   => Carbon::now()->toDateTimeString(),
-            'updated_at'   => Carbon::now()->toDateTimeString(),
-        ]);
+        $validated = $this->validate();
+
+        // if(!$this->image){
+        //     $path = null;
+        // }else{
+        //     $path = $this->image->store('public/image');
+        // }
+        $validated['admin_id']  = auth()->user()->admin_id;
+        $validated['user_id']   = auth()->user()->id;
+        // $validated['image']     = $path;
+        $validated['created_at']    = Carbon::now()->toDateTimeString();
+
+        Reimbursement::insert($validated);
+
+        $this->emit('reimbursementCreated');
     }
     public function render()
     {

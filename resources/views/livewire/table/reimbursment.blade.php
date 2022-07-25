@@ -56,25 +56,22 @@
             </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($reimbursements as $reimbursement) --}}
+            @foreach ($reimbursements as $reimbursement)
             <tr class="bg-white border-b text-xs text-black">
                 <td class="px-6 py-4">
-                    22/06/2022
-                    {{-- {{$reimbursment -> created_at}} --}}
+                    {{$reimbursement -> created_at}}
                 </td>
                 <td class="px-6 py-4">
-                    Alam Syah
+                    {{$reimbursement->user->name}}
                 </td>
                 <td class="px-6 py-4">
-                    pulsa untuk paket
-                    {{-- {{$reimbursment -> reason}} --}}
+                    {{$reimbursement -> reason}}
                 </td>
                 <td class="px-6 py-4">
-                    Rp. 100.000
-                    {{-- {{$reimbursment -> nominal}} --}}
+                    Rp. {{ number_format($reimbursement->nominal, 2, ',', '.') }}
                 </td>
                 <td class="px-6 py-4">
-                    112030187303719
+                    {{$reimbursement -> no_rekening}}
                 </td>
                 <td class="px-6 py-4">
                     <Span class="bg-blue-100 font-semibold text-blue-500 py-2 px-4 rounded-md">
@@ -96,7 +93,7 @@
                     </a>
                 </td>
             </tr>
-            {{-- @endforeach --}}
+            @endforeach
         </tbody>
     </table>
 </div>

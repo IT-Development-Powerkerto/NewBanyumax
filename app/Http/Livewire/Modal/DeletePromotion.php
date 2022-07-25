@@ -12,4 +12,20 @@ class DeletePromotion extends Component
         $promotions = Promotion::all();
         return view('livewire.modal.delete-promotion', compact('promotions'));
     }
+
+    public $listeners = [
+        'deletedId' => 'deletedId'
+    ];
+    public $deletedId = '';
+
+    public function deletedId($id)
+    {
+        $this->deletedId = $id;
+    }
+    public function delete()
+    {
+        // dd($this->deletedId);
+        Promotion::find($this->deletedId)->delete();
+        $this->emit('promotionDeleted');
+    }
 }

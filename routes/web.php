@@ -89,6 +89,9 @@ Route::resource('/operator-admin', OperatorAdmin::class);
 Route::resource('/budgetingadvertising-admin', BudgetingAdvertisingAdmin::class);
 Route::resource('/budgetingrealization-admin', BudgetingRealizationAdmin::class);
 Route::resource('/rountineevaluation-admin', RountineEvaluationAdmin::class);
+Route::get('/budgetingdisbursment-admin', function () {
+    return view('admin.advertiser.PageBudgetingDibursement');
+});
 // Admin. Finance
 Route::get('/dashboard-finance', function () {
     return view('admin.finance.PageDashboard');
@@ -100,9 +103,20 @@ Route::get('/dashboard-budgetrealization-finance', function () {
     return view('admin.finance.PageBudgetRealizationFinance');
 });
 
+//Admin.Logistic
+Route::get('/logistic-warehouse', function () {
+    return view('admin.logistic.PageWarehouse');
+});
+Route::get('/logistic-expedisi', function () {
+    return view('admin.logistic.PageExpedition');
+});
 
+//admin.reporting
 Route::get('/live-reporting', function () {
-    return view('admin.LiveReporting');
+    return view('admin.reporting.LiveReporting');
+});
+Route::get('/pivoting', function () {
+    return view('admin.reporting.PagePivoting');
 });
 
 // Adv.Campaign

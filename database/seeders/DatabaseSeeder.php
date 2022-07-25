@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             RoleSeeder::class,
             FacebookEventSeeder::class,
             FacebookWaSeeder::class,
+            TiktokEventSeeder::class,
             TypePromotionSeeder::class
         ]);
     }

@@ -8,25 +8,27 @@
             </button>
             <div class="py-6 px-6 lg:px-8">
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Add Promotion</h3>
-                <form method="POST" class="space-y-6" action="{{route('createpromotion.store')}}" enctype="multipart/form-data">
-                    @csrf
+                <form class="space-y-6" enctype="multipart/form-data">
                     <div class="relative">
-                        <input type="text" name="promotion_name" wire:model.defer='promotion_name' id="promotion_name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Promotion Name" required>
+                        <input type="text" wire:model.debounce.500ms='promotion_name' id="promotion_name" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Promotion Name" required>
+                        @error('promotion_name') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
-                        <select name="product_id" wire:model.defer="product_id" id="product_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
+                        <select wire:model.debounce.500ms="product_id" id="product_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" required>
                             <option disabled selected>Select Product</option>
                             @foreach ($products as $product)
                                 <option value="{{$product->id}}">{{$product->name}}</option>
                             @endforeach
+                            @error('product_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>
                     </div>
                     <div class="relative">
-                        <select name="promotion_type_id" wire:model.defer="promotion_type" id="promotion_type_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                        <select wire:model.debounce.500ms="promotion_type_id" id="promotion_type_id" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                             <option disabled selected>Select Promotion Type</option>
                             @foreach ($type_promotions as $type_promotion)
                                 <option value="{{$type_promotion->id}}">{{$type_promotion->name}}</option>
                             @endforeach
+                            @error('promotion_type_id') <span class="text-red-500">{{ $message }}</span> @enderror
                         </select>
                     </div>
                     <div class="text-sm flex flex-row gap-2">
@@ -39,19 +41,21 @@
                         <div class="flex w-9 justify-center absolute rounded-l-lg inset-y-0 left-0 items-center pointer-events-none bg-gray-200 text-xs text-gray-400">
                             IDR
                         </div>
-                        <input type="number" name="promotion_product_price" wire:model.defer='promotion_product_price' id="price" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        <input type="number"  wire:model.debounce.500ms='promotion_product_price' id="price" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        @error('promotion_product_price') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
                         <div class="flex w-9 justify-center absolute rounded-l-lg inset-y-0 left-0 items-center pointer-events-none bg-gray-200 text-xs text-gray-400">
                             %
                         </div>
-                        <input type="number" name="promotion_product_percent" wire:model.defer='promotion_product_percent' id="discount" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        <input type="number"  wire:model.debounce.500ms='promotion_product_percent' id="discount" class="block px-4 py-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="0" required>
+                        @error('promotion_product_percent') <span class="text-red-500">{{ $message }}</span> @enderror
                     </div>
                     <div class="relative">
-                        <input type="number" disabled name="total_promotion" wire:model.defer='total_promotion' id="total" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Total Promotion">
+                        <input type="number" disabled wire:model.debounce.500ms='total_promotion' id="total" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Total Promotion">
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create Promotion</button>
+                        <button type="button" wire:click.prevent="store" data-modal-toggle="add-promotion" class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Create Promotion</button>
                     </div>
                 </form>
             </div>

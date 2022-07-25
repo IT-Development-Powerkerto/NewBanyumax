@@ -27,7 +27,7 @@
                         <ul class="space-y-2">
                             <li>
                                 <button type="button"
-                                    class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
                                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                                     <span class="iconify w-5 h-5" data-icon="iconoir:home-simple"></span>
                                     <span class="flex-1 ml-3 text-left "
@@ -42,21 +42,21 @@
                                 <ul id="dropdown-example" class="hidden py-2 space-y-2">
                                     <li>
                                         <a href="/createpromotion"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] ">Create Promotion</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] ">Create Promotion</a>
                                     </li>
                                     <li>
                                         <a href="/reimbursment"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] ">Reimbursment</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] ">Reimbursment</a>
                                     </li>
                                     <li>
                                         <a href="/crm"
-                                            class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] ">CRM</a>
+                                            class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] ">CRM</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
                                 <a href="/routineevaluation-cs"
-                                    class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-[#06b6d41f] hover:text-[#06b6d4] dark:hover:bg-gray-700">
+                                    class="flex items-center p-2 text-xs tracking-widest font-normal text-gray-900 rounded-lg dark:text-white hover:bg-[#06b6d41f] hover:text-[#06b6d4] dark:hover:bg-gray-700">
                                     <span class="iconify w-5 h-5" data-icon="mdi:clock-outline"></span>
                                     <span class="ml-3">Routine Evaluation</span>
                                 </a>
@@ -70,7 +70,7 @@
                         <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                             <li>
                                 <a href="/logout"
-                                    class="flex items-center px-3 py-2 text-base font-normal  text-gray-900  hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
+                                    class="flex items-center px-3 py-2 text-xs tracking-widest font-normal  text-gray-900  hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
                                     <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                     <span class="ml-3">Logout</span>
                                 </a>

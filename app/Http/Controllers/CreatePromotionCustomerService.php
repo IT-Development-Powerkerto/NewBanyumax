@@ -20,7 +20,7 @@ class CreatePromotionCustomerService extends Controller
         $promotion_cs = Promotion::where('admin_id', auth()->user()->admin_id)->where('user_id', auth()->user()->id)->get();
 
         if(auth()->user()->role_id==5 || auth()->user()->role_id==13){
-            return view('admin.cs.PagePromotion')->compact('product', 'promotion_cs');
+            return view('admin.cs.PagePromotion');
         }
     }
 

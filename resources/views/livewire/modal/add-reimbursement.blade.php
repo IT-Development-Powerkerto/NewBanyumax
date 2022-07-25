@@ -10,22 +10,25 @@
                 <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">Add Reimbursement</h3>
                 <form class="space-y-6" action="#">
                     <div class="relative">
-                        <textarea name="reason" wire:model.defer='reason' id="reason" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Reason" required></textarea>
+                        <textarea wire:model.debounce.500ms='reason' id="reason" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Reason" required></textarea>
                     </div>
                     <div class="relative">
-                        <input type="text" name="phone" wire:model.defer='phone' id="phone" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Phone" required>
+                        <input type="text" wire:model.debounce.500ms='phone' id="phone" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Phone" required>
                     </div>
                     <div class="relative">
-                        <input type="number" name="nominal" wire:model.defer='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal" required>
+                        <input type="number" wire:model.debounce.500ms='nominal' id="nominal" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Nominal" required>
+                    </div>
+                    <div class="relative">
+                        <input type="number" wire:model.debounce.500ms='no_rekening' id="no_rekening" class="block px-4 py-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="No Rekening" required>
                     </div>
                     <div class="relative">
                         <div class="-mt-2 text-sm mb-3 text-gray-600">
                             Attachment
                         </div>
-                        <input type="file" name="image" id="image" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                        <input type="file" wire.model="image" id="image" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Submit</button>
+                        <button type="submit" data-modal-toggle="add-reimbursement" wire:click.prevent='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center">Submit</button>
                     </div>
                 </form>
             </div>

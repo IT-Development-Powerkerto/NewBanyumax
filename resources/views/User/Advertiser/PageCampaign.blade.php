@@ -8,6 +8,7 @@
     <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
     <title>Campaign</title>
     <link href="../css/app.css" rel="stylesheet">
+    <link href="https://unpkg.com/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css"/>
 
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -170,6 +171,9 @@
             }
         }
     </script>
+    <script src="https://unpkg.com/@yaireo/tagify"></script>
+    <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+    <script src="assets/js/tags.js"></script>
 </body>
 
 </html>
