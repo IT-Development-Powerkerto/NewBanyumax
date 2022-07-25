@@ -103,6 +103,60 @@
 
             </div>
 
+            <div class="container mx-auto py-5 mb-10">
+                <div class="flex flex-col md:grid lg:grid sm:grid grid-cols-4 gap-4">
+
+                    <div class="bg-white flex flex-row px-4 py-2 gap-2 rounded-lg shadow">
+                        <div class="">
+                            <span class="iconify text-[#3B82F6]" data-icon="bxs:grid-alt" data-width="35" data-height="35"></span>
+                        </div>
+                        <div class="text-[#3B82F6] font-bold self-center">
+                            10
+                        </div>
+                        <div class="text-[#3B82F6] font-bold self-center">
+                            Total Omzet
+                        </div>
+                    </div>
+
+                    <div class="bg-white flex flex-row px-4 py-2 gap-2 rounded-lg shadow">
+                        <div class="">
+                            <span class="iconify text-[#06B6D4]" data-icon="fluent:drink-bottle-32-filled" data-width="35" data-height="35"></span>
+                        </div>
+                        <div class="text-[#06B6D4] font-bold self-center">
+                            10
+                        </div>
+                        <div class="text-[#06B6D4] font-bold self-center">
+                            Total Bottle
+                        </div>
+                    </div>
+
+                    <div class="bg-white flex flex-row px-4 py-2 gap-2 rounded-lg shadow">
+                        <div class="">
+                            <span class="iconify text-[#F97316]" data-icon="ci:bar-chart"  data-width="35" data-height="35"></span>
+                        </div>
+                        <div class="text-[#F97316] font-bold self-center">
+                            10
+                        </div>
+                        <div class="text-[#F97316] font-bold self-center">
+                            Total Lead
+                        </div>
+                    </div>
+
+                    <div class="bg-white flex flex-row px-4 py-2 gap-2 rounded-lg shadow">
+                        <div class="">
+                            <span class="iconify text-[#EF4444]" data-icon="bi:bar-chart-fill" data-width="35" data-height="35"></span>
+                        </div>
+                        <div class="text-[#EF4444] font-bold self-center">
+                            10
+                        </div>
+                        <div class="text-[#EF4444] font-bold self-center">
+                            Total Closing
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <livewire:table.dashboard-information-product />
             
             <div class="flex flex-col md:flex-row lg:flex-row gap-4  py-5">
