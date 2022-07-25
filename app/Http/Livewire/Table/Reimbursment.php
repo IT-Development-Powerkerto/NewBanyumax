@@ -8,7 +8,8 @@ use App\Models\Reimbursement as Reimburs;
 class Reimbursment extends Component
 {
     public $listeners = [
-        'reimbursementCreated' => '$refresh'
+        'reimbursementCreated' => '$refresh',
+        'reimbursementDeleted' => '$refresh'
     ];
     public function render()
     {
