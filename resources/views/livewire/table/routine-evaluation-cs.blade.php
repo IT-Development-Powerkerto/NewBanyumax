@@ -19,7 +19,7 @@
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
-                    <input type="search" id="default-search"
+                    <input type="search" id="default-search" wire:model = "search"
                         class="block px-4 py-2 pl-10 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Search..">
                 </div>
@@ -68,31 +68,25 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach ($evaluations as $evaluation) --}}
+                @forelse ($evaluations as $evaluation)
                     <tr class="bg-white border-b text-xs text-black">
                         <td class="px-3 py-4">
-                            1
-                            {{-- {{ $evaluation->product->name }} --}}
+                            {{ $loop->iteration }}
                         </td>
                         <td class="px-6 py-4">
-                            Etawa
-                            {{-- {{ $evaluation->product->name }} --}}
+                            {{ $evaluation->product->name }}
                         </td>
                         <td class="px-6 py-4">
-                            22/06/2022
-                            {{-- {{ $evaluation->date }} --}}
+                            {{ $evaluation->date }}
                         </td>
                         <td class="px-6 py-4">
-                            22:08
-                            {{-- {{ $evaluation->time }} --}}
+                            {{ $evaluation->time }}
                         </td>
                         <td class="px-6 py-4">
-                            lasjabsakjbs ajsdkjsdb  ashdakjsbd askdgkajsd
-                            {{-- {{ $evaluation->resistance }} --}}
+                            {{ $evaluation->resistance }}
                         </td>
                         <td class="px-6 py-4">
-                            asdkjabs sdlajdsa jasdlksad kasdl
-                            {{-- {{ $evaluation->solution }} --}}
+                            {{ $evaluation->solution }}
                         </td>
                         <td class="px-6 py-4">
                             <button class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 py-2 px-4 rounded-md">
@@ -100,7 +94,15 @@
                             </button>
                         </td>
                     </tr>
-                {{-- @endforeach --}}
+                @empty
+                     <tr class="bg-white border-b text-xs text-black">
+                        <td class="py-4" colspan="10">
+                            <div class="text-gray-400 rounded-md px-3 py-1 text-center">
+                                Data Not Available
+                            </div>
+                        </td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
     </div>
@@ -109,7 +111,7 @@
 
         <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
             class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button">10<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            type="button">{{$paginate}}<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg></button>
@@ -120,26 +122,22 @@
             style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(351.5px, 735.5px, 0px);">
             <ul class="py-1 text-sm text-gray-700 text-center dark:text-gray-200" aria-labelledby="dropdownDefault">
                 <li>
-                    <a href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">1</a>
-                </li>
-                <li>
-                    <a href="#"
+                    <a href="javascript:void(0)" wire:click="setPaginate(5)"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">5</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="javascript:void(0)" wire:click="setPaginate(10)"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">10</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="javascript:void(0)" wire:click="setPaginate(20)"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">20</a>
                 </li>
             </ul>
         </div>
 
-
-        <nav aria-label="Page navigation example">
+        {{ $evaluations->onEachSide(1)->links('livewire.custom-pagination-links-view') }}
+        {{-- <nav aria-label="Page navigation example">
             <ul class="inline-flex items-center -space-x-px">
                 <li>
                     <a href="#"
@@ -185,7 +183,7 @@
                     </a>
                 </li>
             </ul>
-        </nav>
+        </nav> --}}
 
         <div></div>
 
