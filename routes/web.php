@@ -56,6 +56,9 @@ Route::middleware(['guest'])->group(function(){
 
     Route::resource('/login', LoginController::class);
 });
+
+Route::resource('/register', RegisterController::class);
+
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/logout',[LoginController::class, 'logout']);
