@@ -133,6 +133,9 @@ Route::resource('/budgetingdibursement-adv', BudgetingDibursement::class);
 Route::get('/profile-adv', function () {
     return view('User.Advertiser.PageProfile');
 });
+Route::get('/detaillead-adv', function () {
+    return view('User.Advertiser.Pagedetail-lead-tunneling');
+});
 
 // User.Ceo
 Route::resource('/ceo', CeoController::class);
