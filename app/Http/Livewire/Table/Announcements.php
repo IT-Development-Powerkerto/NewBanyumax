@@ -13,7 +13,8 @@ class Announcements extends Component
     public $search;
 
     public $listeners =[
-        'announcementCreated' => '$refresh'
+        'announcementCreated' => '$refresh',
+        'announcementDeleted' => '$refresh'
     ];
 
 
