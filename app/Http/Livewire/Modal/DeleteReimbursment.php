@@ -24,6 +24,6 @@ class DeleteReimbursment extends Component
     {
         // dd($this->deletedId);
         Reimbursement::find($this->deletedId)->delete();
-        $this->emit('promotionDeleted');
+        $this->emit('reimbursementDeleted');
     }
 }
