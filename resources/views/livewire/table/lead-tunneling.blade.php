@@ -22,6 +22,13 @@
                             placeholder="Search..">
                     </div>
                     <div class="mr-2 w-36 md:w-fit">
+                        <a href="/detaillead-adv"
+                            class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2">
+                            <i class="las la-chart-bar text-xl"></i>
+                            <span>Detail</span>
+                        </a>
+                    </div>
+                    <div class="mr-2 w-36 md:w-fit">
                         <button
                             class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
                             type="button" data-modal-toggle="filter-lead-tunneling">
@@ -56,7 +63,8 @@
                                         </svg>
                                     </button>
                                     <div class="py-6  lg:px-8">
-                                        <h3 class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
+                                        <h3
+                                            class="mb-4 text-base font-semibold text-gray-900 dark:text-white border-b pb-2">
                                             Export to Excel</h3>
                                         <form class="space-y-6" action="#">
                                             <div class="flex flex-row gap-2">
@@ -88,8 +96,8 @@
                     </div>
                     <div class="relative mr-2 w-36 md:w-56">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-5 h-5 text-gray-400 dark:text-gray-400" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd"
                                     d="M6 2a1 1 0 00-1 1v1H4a2 2 0  00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                                     clip-rule="evenodd"></path>
@@ -146,7 +154,7 @@
                             {{ $lead->advertiser }}
                         </td>
                         <td class=" py-4">
-                            {{ 'Ord - '.$lead->id }}
+                            {{ 'Ord - ' . $lead->id }}
                         </td>
                         <td class=" py-4">
                             {{ $lead->operator->name }}
@@ -171,27 +179,32 @@
                         <td class=" py-4">
                             {{-- Waiting --}}
                             @if ($lead->status_id == 3)
-                                <div class="font-semibold text-blue-700 bg-blue-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                <div
+                                    class="font-semibold text-blue-700 bg-blue-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
-                            {{-- Processing --}}
+                                {{-- Processing --}}
                             @elseif($lead->status_id == 4)
-                                <div class="font-semibold text-orange-500 bg-orange-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                <div
+                                    class="font-semibold text-orange-500 bg-orange-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
-                            {{-- Closing --}}
+                                {{-- Closing --}}
                             @elseif($lead->status_id == 5)
-                                <div class="font-semibold text-gray-700 bg-gray-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                <div
+                                    class="font-semibold text-gray-700 bg-gray-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
-                            {{-- Spam --}}
+                                {{-- Spam --}}
                             @elseif($lead->status_id == 6)
-                                <div class="font-semibold text-purple-700 bg-purple-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                <div
+                                    class="font-semibold text-purple-700 bg-purple-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
-                            {{-- Failed --}}
+                                {{-- Failed --}}
                             @elseif($lead->status_id == 7)
-                                <div class="font-semibold text-red-700 bg-red-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
+                                <div
+                                    class="font-semibold text-red-700 bg-red-600 bg-opacity-30 rounded-md px-3 py-1 text-center">
                                     {{ $lead->status->name }}
                                 </div>
                             @else
@@ -220,8 +233,8 @@
 
         <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
             class="text-gray-500 bg-gray-200 bg-gradient-to-r hover:text-white hover:from-cyan-400 hover:to-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            type="button">{{ $paginate }}<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
+            type="button">{{ $paginate }}<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
         </button>
