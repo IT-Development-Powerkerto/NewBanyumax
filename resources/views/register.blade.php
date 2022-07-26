@@ -55,7 +55,7 @@
                             <div class="progress-step progress-step-active" data-title="Account Type"></div>
                             <div class="progress-step" data-title="Account Info"></div>
                             <div class="progress-step" data-title="Pay to Complate"></div>
-                            <div class="progress-step" data-title="Password"></div>
+                            <div class="progress-step" data-title="Complate"></div>
                         </div>
 
                         <!-- Steps -->
@@ -276,6 +276,29 @@
                                                                     <div>Bank BNI</div>
                                                                 </label>
                                                             </div>
+                                                            <div class="flex gap-2 items-center py-2">
+                                                                <input id="permata" type="radio" value="" name="bank" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <img id="permata" src="assets/img/permata.jpg" for="permata" class="h-8 w-8" alt="">
+                                                                <label for="permata" class="pt-2 font-medium text-gray-900 dark:text-gray-300">
+                                                                    <div>Bank Permata</div>
+                                                                </label>
+                                                            </div>
+                                                            <div class="flex gap-2 items-center py-2">
+                                                                <input id="bri" type="radio" value="" name="bank" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <img id="bri" src="assets/img/bri.png" for="bri" class="h-8 w-8" alt="">
+                                                                <label for="bri" class="pt-2 font-medium text-gray-900 dark:text-gray-300">
+                                                                    <div>Bank BRI</div>
+                                                                </label>
+                                                            </div>
+                                                            <div class="flex gap-2 items-center py-2">
+                                                                <input id="other" type="radio" value="" name="bank" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                                <div class="h-8 w-8 bg-white rounded-sm flex items-center justify-center">
+                                                                    <span class="iconify h-5 w-5 text-gray-500" data-icon="fluent:building-bank-20-filled"></span>
+                                                                </div>
+                                                                <label for="other" class="pt-2 font-medium text-gray-900 dark:text-gray-300">
+                                                                    <div>Other Bank</div>
+                                                                </label>
+                                                            </div>
                                                         </div>
 
                                                         <div class="hidden" id="credit-debit">
@@ -309,7 +332,11 @@
                                         </svg>
                                         Back
                                     </a>
-                                    <a href="#"
+                                    <button class="btn bg-cyan-400 text-white py-2 px-5 rounded-lg" type="button" data-modal-toggle="payment">
+                                        Payment
+                                    </button>
+                                    <livewire:modal.payment/>
+                                    {{-- <a href="#"
                                         class="flex items-center btn btn-next bg-cyan-400 text-white py-2 px-5 rounded-lg">
                                         Continue
                                         <svg aria-hidden="true" class="ml-3 w-6 h-6" fill="currentColor"
@@ -318,23 +345,22 @@
                                                 d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
                                                 clip-rule="evenodd"></path>
                                         </svg>
-                                    </a>
+                                    </a> --}}
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-step">
-                            <div class="input-group">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password" />
-                            </div>
-                            <div class="input-group">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input type="password" name="confirmPassword" id="confirmPassword" />
-                            </div>
-                            <div class="btns-group">
-                                <a href="#" class="btn btn-prev">Previous</a>
-                                <input type="submit" value="Submit" class="btn" />
+                            <div class="bg-white rounded-lg p-5">
+                                <div class="mt-5">
+                                    <p class="font-bold text-3xl text-gray-700"> Thank You, Your Payment in Process! </p>
+                                    <p class="text-sm text-gray-400">Please wait a minute... </p>
+                                </div>
+                                <div class="mt-10 mb-10">
+                                    <p class="text-md text-gray-400">Your account is being verified by admin. The verification will be sent to your email account <a
+                                        class="text-blue-700 font-semibold" href="">(corp@support.com)</a> </p>
+                                </div>
+                                
                             </div>
                         </div>
                     </form>
@@ -373,6 +399,7 @@
             document.getElementById(tabsDashboardInfo).classList.add("block");
         }
     </script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
 </body>
 
