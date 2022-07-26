@@ -84,6 +84,9 @@ input {
 }
 
 .progress-step::after {
+  width:7rem;
+  display: flex;
+  justify-content: center;
   content: attr(data-title);
   position: absolute;
   top: calc(100% + 0.5rem);
