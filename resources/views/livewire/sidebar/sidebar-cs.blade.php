@@ -61,6 +61,13 @@
                                     <span class="ml-3">Routine Evaluation</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="/survey-cs"
+                                    class="flex items-center p-2 text-xs tracking-widest font-normal text-gray-900 rounded-lg dark:text-white hover:bg-[#06b6d41f] hover:text-[#06b6d4] dark:hover:bg-gray-700">
+                                    <span class="iconify w-5 h-5" data-icon="fluent:text-bullet-list-square-20-regular"></span>
+                                    <span class="ml-3">Survey</span>
+                                </a>
+                            </li>
 
 
                         </ul>

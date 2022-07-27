@@ -163,7 +163,9 @@ Route::get('/routineevaluation-cs', function () {
 Route::get('/profil-cs', function () {
     return view('User.Cs.PageProfilCS');
 });
-
+Route::get('/survey-cs', function () {
+    return view('User.Cs.PageSurveyCs');
+});
 
 // User.Finance
 Route::resource('/finance', FinanceDashboard::class);
