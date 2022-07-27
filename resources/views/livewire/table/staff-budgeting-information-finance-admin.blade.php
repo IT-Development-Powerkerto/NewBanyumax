@@ -25,20 +25,20 @@
                 <!-- Modal toggle -->
                 <button
                     class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
-                    type="button" data-modal-toggle="export-lead">
+                    type="button" data-modal-toggle="export-staff-budgeting-fin">
                     <i class="las la-print text-xl"></i>
                     <span>Export</span>
                 </button>
 
                 <!-- Main modal -->
-                <div id="export-lead" tabindex="-1" aria-hidden="true"
+                <div id="export-staff-budgeting-fin" tabindex="-1" aria-hidden="true"
                     class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
                     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                         <!-- Modal content -->
                         <div class="relative bg-slate-100 rounded-lg shadow">
                             <button type="button"
                                 class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
-                                data-modal-toggle="export-lead">
+                                data-modal-toggle="export-staff-budgeting-fin">
                                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
