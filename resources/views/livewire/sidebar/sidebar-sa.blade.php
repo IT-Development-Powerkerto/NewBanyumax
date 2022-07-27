@@ -1,19 +1,19 @@
 <aside class="h-screen sticky top-0">
     <div class="xl:flex">
-        <div x-show="isOpen()" class="fixed xl:static inset-0 flex bg-gray-200 h-screen">
-            <div @click.away="handleAway()" class="w-64 text-white bg-gray-200 shadow">
+        <div x-show="isOpen()" class="fixed xl:static inset-0 flex bg-white h-screen shadow-lg">
+            <div @click.away="handleAway()" class="w-64 text-white bg-white shadow">
 
-                <div class="mt-5 grid grid-cols-12 bg-gray-200 justify-between  justify-items-center items-center">
+                <div class="mt-5 grid grid-cols-12 bg-white justify-between justify-items-center items-center">
                     <div class="col-span-10 ">
-                        <a href="#" class="flex">
+                        <a href="/dashboard-sa" class="flex">
                             <img src="assets/img/logo.png" class="mr-2 h-3" alt="Banyumax Logo" />
                         </a>
                     </div>
                     <div class="col-span-2">
-                        <a @click.prevent="handleClose()" class="p-3 hover:text-cyan-500 text-black flex-1 flex items-center"
-                            href="#">
-                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
+                        <a @click.prevent="handleClose()"
+                            class="p-3 hover:text-cyan-500 text-black flex-1 flex items-center" href="#">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M6 18L18 6M6 6l12 12" />
                             </svg>
@@ -23,21 +23,38 @@
 
                 <div class="flex flex-col justify-between h-screen">
                     <div class="px-5 ">
-                        <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
+                        <!-- Dropdown menu -->
+                        <ul class="space-y-2">
                             <li>
-                                <a href="#"
-                                    class="flex items-center px-3 py-2 text-base font-normal text-gray-900 bg-white bg-gradient-to-r hover:from-cyan-400 hover:to-blue-600 hover:text-white rounded-lg">
-                                    <span class="iconify w-5 h-5" data-icon="ant-design:home-filled"></span>
+                                <a href="/dashboard-sa"
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">
+                                    <span class="iconify w-5 h-5" data-icon="iconoir:home-simple"></span>
                                     <span class="ml-3">Dashboard</span>
                                 </a>
                             </li>
+                            {{-- <li>
+                                <button type="button" 
+                                    class="flex items-center p-2 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4] "
+                                    aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                                    <span class="iconify w-5 h-5" data-icon="iconoir:home-simple"></span>
+                                    <span class="flex-1 ml-3 text-left "
+                                        >Dashboard</span>
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </li> --}}
                         </ul>
+
                     </div>
                     <div class="mb-28 px-5">
                         <ul class="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
                             <li>
-                                <a href="#"
-                                    class="flex items-center px-3 py-2 text-base font-normal text-white bg-blue-600 hover:bg-white hover:text-gray-900 rounded-lg">
+                                <a href="/logout"
+                                class="flex items-center px-3 py-2 text-xs tracking-widest font-normal text-gray-900 hover:bg-[#06b6d41f] hover:text-[#06b6d4] rounded-lg">
                                     <span class="iconify w-5 h-5" data-icon="ic:sharp-log-out"></span>
                                     <span class="ml-3">Logout</span>
                                 </a>
@@ -46,7 +63,7 @@
                     </div>
 
                 </div>
-                
+
             </div>
         </div>
         <div>
@@ -54,8 +71,8 @@
                 <div x-show="!isOpen()" class="flex fixed-top">
                     <a x-show="!isOpen()" @click.prevent="handleOpen()"
                         class="p-2 hover:bg-cyan-500 hover:text-white" href="#">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
