@@ -5,7 +5,7 @@
 
                 <div class="mt-5 grid grid-cols-12 bg-white justify-between justify-items-center items-center">
                     <div class="col-span-10 ">
-                        <a href="/finance" class="flex">
+                        <a href="/inputer" class="flex">
                             <img src="assets/img/logo.png" class="mr-2 h-3" alt="Banyumax Logo" />
                         </a>
                     </div>
@@ -31,7 +31,7 @@
                                     aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                                     <span class="iconify w-5 h-5" data-icon="iconoir:home-simple"></span>
                                     <span class="flex-1 ml-3 text-left "
-                                        >Finance Management</span>
+                                        >Inputer Management</span>
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -41,11 +41,11 @@
                                 </button>
                                 <ul id="dropdown-example" class="hidden py-2 space-y-2">
                                     <li>
-                                        <a href="/finance-budgeting-request"
+                                        <a href="/inputer-budgeting-request"
                                             class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Request</a>
                                     </li>
                                     <li>
-                                        <a href="/finance-budgeting-realization"
+                                        <a href="/inputer-budgeting-realization"
                                             class="flex items-center p-2 pl-11 w-full text-xs tracking-widest font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-[#06b6d41f] hover:text-[#06b6d4]">Budgeting Realization</a>
                                     </li>
                                 </ul>
