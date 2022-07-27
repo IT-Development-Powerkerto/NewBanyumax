@@ -49,7 +49,7 @@ class AddRoutineEvaluation extends Component
 
     public function render()
     {
-        $products = Product::all();
+        $products = Product::where('admin_id', auth()->user()->admin_id)->get();
         return view('livewire.modal.add-routine-evaluation', compact('products'));
     }
 }
