@@ -182,3 +182,13 @@ Route::resource('/viewdataclosing', ViewDataClosing::class);
 Route::get('/dashboard-sa', function () {
     return view('User.SuperAdmin.PageDashboardSA');
 });
+
+//role CEO
+
+Route::get('/dashboard-ceo', function () {
+    return view('ceo.PageDashboard');
+});
+//role Manager
+Route::get('/dashboard-manager', function () {
+    return view('manager.PageDashboard');
+});
