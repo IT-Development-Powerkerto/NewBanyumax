@@ -26,7 +26,7 @@
                 <div>
                     <button
                         class="w-56 hover:text-blue-400 h-max shadow bg-gradient-to-r from-cyan-500 to-blue-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-                        type="button" data-modal-toggle="add-evaluation-cs">
+                        type="button" data-modal-toggle="add-routine-evaluation">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
@@ -35,7 +35,7 @@
                         <span class="text-xs">Add Evaluation</span>
                     </button>
                 </div>
-                <livewire:modal.add-evaluation-cs />
+                <livewire:modal.add-routine-evaluation />
             </div>
         </div>
     </div>
