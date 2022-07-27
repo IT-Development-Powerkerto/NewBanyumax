@@ -26,20 +26,20 @@
                     <!-- Modal toggle -->
                     <button
                         class="text-gray-400 shadow w-full bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 text-center flex flex-row justify-center items-center gap-2"
-                        type="button" data-modal-toggle="export-cs">
+                        type="button" data-modal-toggle="export-data-cs">
                         <i class="las la-print text-xl"></i>
                         <span>Export</span>
                     </button>
     
                     <!-- Main modal -->
-                    <div id="export-cs" tabindex="-1" aria-hidden="true"
+                    <div id="export-data-cs" tabindex="-1" aria-hidden="true"
                         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
                         <div class="relative p-4 w-full max-w-md h-full md:h-auto">
                             <!-- Modal content -->
                             <div class="relative bg-slate-100 rounded-lg shadow">
                                 <button type="button"
                                     class="absolute top-5 right-6 text-white bg-red-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
-                                    data-modal-toggle="export-cs">
+                                    data-modal-toggle="export-data-cs">
                                     <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -94,7 +94,6 @@
                 <button
                     class="text-blue-400 h-max w-56 shadow bg-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 border hover:text-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
                     type="button" data-modal-toggle="add-cs">
-                    {{-- <a href= {{ route('campaign.create') }}> --}}
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
@@ -102,7 +101,6 @@
                     </svg>
                     <span>Customer Service</span>
                 </button>
-                <livewire:modal.add-cs />
             </div>
         </div>
     </div>
@@ -147,53 +145,14 @@
                             data-modal-toggle="delete-cs">
                             <i class="lar la-trash-alt"></i>
                         </button>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        2
-                    </td>
-                    <td class="px-6 py-4">
-                        Awal Azwihani
-                    </td>
-                    <td class="px-6 py-4">
-                        awalazwihani_adv@gmail.com
-                    </td>
-                    <td class="px-6 py-4">
-                        081234567890
-                    </td>
-                    <td class="px-6 py-4">
-                        <button
-                            class="bg-gradient-to-r from-orange-500 to-red-500 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
-                            data-modal-toggle="delete-cs">
-                            <i class="lar la-trash-alt"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="bg-white border-b text-xs text-black">
-                    <td class="px-6 py-4">
-                        3
-                    </td>
-                    <td class="px-6 py-4">
-                        Rifan Tri Yulianto
-                    </td>
-                    <td class="px-6 py-4">
-                        rifantriyulianto_adv@gmail.com
-                    </td>
-                    <td class="px-6 py-4">
-                        081234567890
-                    </td>
-                    <td class="px-6 py-4">
-                        <button
-                            class="bg-gradient-to-r from-orange-500 to-red-500 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl"
-                            data-modal-toggle="delete-cs">
-                            <i class="lar la-trash-alt"></i>
-                        </button>
+                       
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <livewire:modal.add-cs />
+    <livewire:modal.delete-cs/>
     <div class="px-6 py-3 flex justify-between items-center border rounded-b-lg bg-white">
 
         <button id="dropdownDefault" data-dropdown-toggle="dropdownFilter"
