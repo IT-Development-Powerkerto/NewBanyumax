@@ -27,6 +27,7 @@ class BudgetingRealization extends Component
                 ->orWhereHas('campaign', function($q){
                     $q->where('campaign_name', 'like', '%'.$this->search.'%');
                 })->latest()->paginate($this->paginate);
+            BudgetingReal::where('admin_id', auth()->user()->admin_id)->get();
 
         $data['jml_budgetingadv'] = BudgetingReal::all()->count();
         return view('livewire.table.budgeting-realization',$data, compact('budgeting_reals'));
