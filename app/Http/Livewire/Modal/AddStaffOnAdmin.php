@@ -10,7 +10,7 @@ use App\Models\Staff;
 class AddStaffOnAdmin extends Component
 {
     use WithFileUploads;
-    public $role_id, $name, $image;
+    public $role_id, $name, $image, $status;
 
     protected $rules = [
         'name'      => 'required',

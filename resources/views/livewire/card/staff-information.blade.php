@@ -140,7 +140,7 @@
                     </td>
                     <td class=" py-4">
                         <div class="flex flex-row">
-                            <button data-modal-toggle="edit-staff-on-admin" type="button"
+                            <button data-modal-toggle="edit-staff-on-admin" type="button" wire:click="$emit('getStaff' ,{{ $stf->id }})"
                                 class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 shadow-sm rounded-lg px-2 py-1 text-white text-xl">
                                 <i class="las la-edit"></i>
                             </button>
