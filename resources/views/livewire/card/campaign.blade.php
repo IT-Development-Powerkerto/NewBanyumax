@@ -22,9 +22,6 @@
                     <span class="iconify cursor-pointer" data-icon="fluent:copy-20-regular"></span>
                 </button>
             </div>
-            <livewire:modal.edit-campaign />
-            <livewire:modal.add-operator />
-            <livewire:modal.delete-campaign />
         </div>
         <div class="grid grid-cols-12 text-xs py-5 w-full">
             <div class="col-span-4 px-4">
@@ -112,7 +109,11 @@
                     <span class="text-[#7E8299] text-sm">4 Operators</span>
                 </button>
             </div>
-            @livewire('modal.edit-table-campaign')
+            <livewire:modal.edit-campaign />
+            <livewire:modal.add-operator />
+            <livewire:modal.delete-campaign />
+            <livewire:modal.edit-table-campaign/>
+            {{-- @livewire('modal.edit-table-campaign') --}}
         </div>
     </div>
 </div>
