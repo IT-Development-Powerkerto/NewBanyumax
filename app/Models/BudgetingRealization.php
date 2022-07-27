@@ -9,17 +9,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class BudgetingRealization extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+    // use SoftDeletes;
 
     protected $fillable = [
         'admin_id',
         'user_id',
         'campaign_id',
-        'advertiser_id',
-        'user_name',
-        'role_id',
         'item',
         'nominal',
+        'funds',
         'description',
         'attachment'
     ];
