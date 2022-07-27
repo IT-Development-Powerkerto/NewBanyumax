@@ -62,16 +62,17 @@
     </div>
 
 
-    <div class="h-max bg-gray-100 py-5 px-5 gap-5 flex flex-col md:flex-row">
+    <div class="h-max bg-gray-100 py-5 px-5 gap-5 flex flex-col md:flex-row justify-between">
         <livewire:card.campaign />
         <livewire:card.campaign />
         <livewire:card.campaign />
     </div>
-    <div class="h-max bg-gray-100 py-5 px-5 gap-5 flex flex-col md:flex-row">
+    <div class="h-max bg-gray-100 py-5 px-5 gap-5 flex flex-col md:flex-row justify-between">
         <livewire:card.campaign />
         <livewire:card.campaign />
         <livewire:card.campaign />
     </div>
+
 
     <div class="px-6 py-3 flex justify-center items-center border rounded-b-lg bg-white">
         <nav aria-label="Page navigation example">
