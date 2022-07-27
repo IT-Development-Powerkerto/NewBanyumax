@@ -107,7 +107,7 @@
                     <livewire:card.total-operator />
                     <livewire:card.total-lead />
                 </div>
-                <div class="py-5">
+                <div class="py-5 px-10">
                     <livewire:table.campaign />
                 </div>
 
