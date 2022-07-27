@@ -28,6 +28,7 @@ class RoutineEvaluationCs extends Component
                     ->orWhereHas('product', function($q){
                         $q->where('name', 'like', '%'.$this->search.'%');
                     })->latest()->paginate($this->paginate);
+            Evaluation::where('admin_id', auth()->user()->admin_id)->get();
 
         $data['jml_evaluation'] = Evaluation::all()->count();
         return view('livewire.table.routine-evaluation-cs',$data, compact('evaluations'));
