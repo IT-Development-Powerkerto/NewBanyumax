@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="submit" wire:click.prevent='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center" data-modal-toggle="add-staff-on-admin">Add Staff</button>
+                        <button type="button" wire:click.prevent='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center" data-modal-toggle="add-staff-on-admin">Add Staff</button>
                     </div>
                 </form>
             </div>
