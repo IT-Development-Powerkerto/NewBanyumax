@@ -70,4 +70,8 @@ class User extends Authenticatable
         return $this->hasMany(BudgetingDisbursement::class);
     }
 
+    public function staff(){
+        return $this->hasMany(Staff::class);
+    }
+
 }

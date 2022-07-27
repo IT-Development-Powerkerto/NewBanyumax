@@ -17,4 +17,9 @@ class Role extends Model
     public function budgeting_disbursement(){
         return $this->hasMany(BudgetingDisbursement::class);
     }
+
+    public function staff()
+    {
+        return $this->hasMany(Staff::class);
+    }
 }

@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('staff', function (Blueprint $table) {
             $table->id();
+            $table->integer('admin_id');
+            $table->string('name');
+            $table->foreignId('role_id');
+            $table->string('image')->nullable();
+            $table->foreignId('status_id')->nullable();
+            $table->integer('poin')->nullable();
             $table->timestamps();
         });
     }
