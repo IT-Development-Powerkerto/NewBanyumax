@@ -32,7 +32,7 @@
                             Dashboard Inputer
                         </p>
                         <p class="text-xs text-gray-400">
-                            Role Admin
+                            Role Admin Inputer
                         </p>
                     </div>
 

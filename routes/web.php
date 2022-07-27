@@ -194,12 +194,22 @@ Route::get('/dashboard-manager', function () {
 });
 
 //role Finance
-Route::get('/finance/budgeting-request', function () {
+Route::get('/finance-budgeting-request', function () {
     return view('finance.PageBudgetRequestFinance');
 });
-Route::get('/finance/budgeting-realization', function () {
+Route::get('/finance-budgeting-realization', function () {
     return view('finance.PageBudgetRealizationFinance');
 });
-Route::get('/finance/dashboard', function () {
+Route::get('/finance', function () {
     return view('finance.PageDashboard');
+});
+//role Inputer
+Route::get('/inputer-budgeting-request', function () {
+    return view('Inputer.PageBudgetingRequest');
+});
+Route::get('/inputer-budgeting-realization', function () {
+    return view('Inputer.PageBudgetingRealization');
+});
+Route::get('/inputer', function () {
+    return view('Inputer.PageDashboard');
 });
