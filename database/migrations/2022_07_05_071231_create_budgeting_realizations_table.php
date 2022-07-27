@@ -17,17 +17,16 @@ return new class extends Migration
             $table->id();
             $table->integer('admin_id');
             $table->foreignId('user_id');
-            $table->foreignId('role_id');
+            // $table->foreignId('role_id');
             $table->foreignId('campaign_id');
-            $table->string('user_name');
+            // $table->string('user_name');
             $table->string('item');
             $table->integer('nominal');
             $table->integer('funds');
             $table->string('description');
-            // $table->string('image')->nullable();
             $table->string('attachment')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
+            $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 
