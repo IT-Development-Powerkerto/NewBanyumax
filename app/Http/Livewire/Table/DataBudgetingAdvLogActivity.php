@@ -29,6 +29,7 @@ class DataBudgetingAdvLogActivity extends Component
                     ->orWhereHas('user', function($q){
                         $q->where('name', 'like', '%'.$this->search.'%');
                     })->latest()->paginate($this->paginate);
+            BudgetingDisbursement::where('admin_id', auth()->user()->admin_id)->get();
 
         $data['jml_budgetdis'] = BudgetingDisbursement::all()->count();
 
