@@ -192,3 +192,14 @@ Route::get('/dashboard-ceo', function () {
 Route::get('/dashboard-manager', function () {
     return view('manager.PageDashboard');
 });
+
+//role Finance
+Route::get('/finance/budgeting-request', function () {
+    return view('finance.PageBudgetRequestFinance');
+});
+Route::get('/finance/budgeting-realization', function () {
+    return view('finance.PageBudgetRealizationFinance');
+});
+Route::get('/finance/dashboard', function () {
+    return view('finance.PageDashboard');
+});
