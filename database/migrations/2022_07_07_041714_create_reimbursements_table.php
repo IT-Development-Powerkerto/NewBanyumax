@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('attachment')->nullable();
             $table->string('no_rekening');
             $table->boolean('status')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

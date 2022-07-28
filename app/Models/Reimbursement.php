@@ -17,6 +17,7 @@ class Reimbursement extends Model
         'no_rekening',
         'attachment',
         'status',
+        'image'
     ];
 
     public function user(){

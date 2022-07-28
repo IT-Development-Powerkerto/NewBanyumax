@@ -8,12 +8,14 @@ use Livewire\WithFileUploads;
 
 class AddReimbursement extends Component
 {
-    public $admin_id, $user_id, $reason, $phone, $nominal, $attachment, $no_rekening, $status;
+    use WithFileUploads;
+    public $admin_id, $user_id, $reason, $phone, $nominal, $attachment, $no_rekening, $status, $image;
 
     protected $rules = [
         'reason'        =>'required',
         'phone'         =>'required',
         'nominal'       =>'required',
+        'image'         => 'image|nullable',
         'no_rekening'   =>'required'
     ];
 
@@ -27,14 +29,14 @@ class AddReimbursement extends Component
         // dd($this->all());
         $validated = $this->validate();
 
-        // if(!$this->image){
-        //     $path = null;
-        // }else{
-        //     $path = $this->image->store('public/image');
-        // }
+        if(!$this->image){
+            $path = null;
+        }else{
+            $path = $this->image->store('public/image/reimbursement');
+        }
         $validated['admin_id']  = auth()->user()->admin_id;
         $validated['user_id']   = auth()->user()->id;
-        // $validated['image']     = $path;
+        $validated['image']     = $path;
         $validated['created_at']    = Carbon::now()->toDateTimeString();
 
         Reimbursement::insert($validated);
