@@ -116,7 +116,7 @@
                     <td class=" py-4">
                         <div class="flex items-center space-x-4">
                             <div class="flex-shrink-0">
-                                <img class="w-12 h-12 rounded-full" src="assets/img/zee.jpeg" alt="Ava image">
+                                <img class="w-12 h-12 rounded-full" src="{{ url( $stf->image != null ? 'storage/'.str_replace('public/', '',$stf->image) : 'assets/img/favicon.png') }}" alt="Ava image">
                             </div>
                             <div class="flex-1 min-w-0">
                                 <p class="text-sm font-semibold text-black truncate dark:text-white">

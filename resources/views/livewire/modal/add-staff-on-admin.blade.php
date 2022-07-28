@@ -25,23 +25,23 @@
                         </select>
                     </div>
                     <div class="relative">
-                        <span class="text-gray-500 px-1 mb-2">Image</span>
-                        <label type="file" name="image-product" id="image-product" required>
+                        <span class="text-gray-500 px-1 mb-2">Upload Proof</span>
+                        <label type="file" name="image-staff" id="image-staff" required>
                             <span class="">
-                                @if ($image)
+                                {{-- @if ($image)
                                 <img src="{{ $image->temporaryUrl() }}" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer">
                                 @else
                                 <img src="assets/img/icon-foto.png" class="img-preview w-24 h-24 border-2 rounded-2xl hover:bg-slate-200 cursor-pointer" alt="">
-                                @endif
+                                @endif --}}
                             </span>
-                            <input wire:model="image" class="hidden" type="file" id="image">
+                            <input wire:model.defer="image" type="file" id="image">
                         </label>
                         <div wire:loading wire:target="image">
                             Uploading image...
                         </div>
                     </div>
                     <div class="flex flex-row gap-3">
-                        <button type="button" wire:click.prevent='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center" data-modal-toggle="add-staff-on-admin">Add Staff</button>
+                        <button type="submit" wire:click.prevent='store' class="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 border focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center" data-modal-toggle="add-staff-on-admin">Add Staff</button>
                     </div>
                 </form>
             </div>
