@@ -34,7 +34,7 @@ class AddRoutineEvaluation extends Component
         if(!$this->image){
             $path = null;
         }else{
-            $path = $this->image->store('public/image');
+            $path = $this->image->store('public/image/routineval');
         }
         $validated['admin_id'] = auth()->user()->admin_id;
         $validated['user_id'] = auth()->user()->id;
