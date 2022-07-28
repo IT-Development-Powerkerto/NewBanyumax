@@ -19,7 +19,7 @@ class BudgetingRealization extends Model
         'nominal',
         'funds',
         'description',
-        'attachment'
+        'image'
     ];
 
     public function user()

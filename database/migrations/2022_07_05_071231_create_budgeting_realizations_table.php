@@ -24,7 +24,7 @@ return new class extends Migration
             $table->integer('nominal');
             $table->integer('funds');
             $table->string('description');
-            $table->string('attachment')->nullable();
+            $table->string('image')->nullable();
             $table->date('created_at');
             $table->date('updated_at');
         });
