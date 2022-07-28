@@ -18,7 +18,7 @@
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                         </svg>
                     </div>
-                    <input type="search" id="default-search"
+                    <input type="search" id="default-search" wire:model = 'search'
                         class="block px-4 py-2 pl-10 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                         placeholder="Search..">
                 </div>
@@ -60,7 +60,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($promotions as $promotion)
+                @forelse ($promotions as $promotion)
                     <tr class="bg-white border-b text-xs text-black">
                         <td class="px-6 py-4">
                             {{ $promotion->promotion_name }}
@@ -102,7 +102,15 @@
                             </div>
                         </td>
                     </tr>
-                @endforeach
+                @empty
+                    <tr class="bg-white border-b text-xs text-black">
+                        <td class="py-4" colspan="10">
+                            <div class="text-gray-400 rounded-md px-3 py-1 text-center">
+                                Data Not Available
+                            </div>
+                        </td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
     </div>
@@ -122,26 +130,22 @@
             style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(351.5px, 735.5px, 0px);">
             <ul class="py-1 text-sm text-gray-700 text-center dark:text-gray-200" aria-labelledby="dropdownDefault">
                 <li>
-                    <a href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">1</a>
-                </li>
-                <li>
-                    <a href="#"
+                    <a href="javascript:void(0)" wire:click="setPaginate(5)"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">5</a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="javascript:void(0)" wire:click="setPaginate(10)"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">10</a>
                 </li>
                 <li>
-                    <a href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">20</a>
+                    <a href="javascript:void(0)" wire:click="setPaginate(15)"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">15</a>
                 </li>
             </ul>
         </div>
 
-
-        <nav aria-label="Page navigation example">
+        {{ $promotions->onEachSide(1)->links('livewire.custom-pagination-links-view') }}
+        {{-- <nav aria-label="Page navigation example">
             <ul class="inline-flex items-center -space-x-px">
                 <li>
                     <a href="#"
@@ -188,33 +192,10 @@
                     </a>
                 </li>
             </ul>
-        </nav>
+        </nav> --}}
 
         <div></div>
 
     </div>
 
 </div>
-{{-- <div>
-    <!-- Main modal -->
-    <div id="modal_delete" tabindex="-1" aria-hidden="true" class="modal fade hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
-        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
-            <!-- Modal content -->
-            <div class="relative rounded-lg shadow bg-slate-100" >
-                <div class="py-6 px-6 lg:px-8">
-                    <form id="formDelete" class="space-y-6" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <div class="text-center text-xl text-gray-700 font-bold mb-12">
-                            <h1>Delete Promotion ?</h1>
-                        </div>
-                        <div class="flex flex-row gap-3">
-                            <button type="submit" class="w-full bg-red-600 text-white border font-medium rounded-xl text-sm px-5 py-2.5 text-center">Delete</button>
-                            <button type="button" class="w-full text-gray-400 font-medium rounded-xl text-sm px-5 py-2.5 text-center border-2" data-modal-toggle="delete-promotion">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
