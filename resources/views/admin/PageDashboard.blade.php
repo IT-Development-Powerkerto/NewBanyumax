@@ -149,38 +149,35 @@
                     <livewire:card.caq-total />
                 </div>
 
-                <div class="flex flex-row justify-between items-center py-10">
-                    <h1 class="font-semibold text-[#7E8299] tracking-wide text-xl">Product Information</h1>
-                    <!-- Modal toggle -->
-                    <button
-                        class="hover:text-blue-400 h-max shadow bg-gradient-to-r from-orange-500 to-red-500 border text-white hover:from-white hover:to-white font-medium rounded-lg text-sm px-4 py-2 flex flex-row gap-2 items-center"
-                        type="button" data-modal-toggle="add-product">
-                        + Add Product
-                    </button>
-                </div>
-                <livewire:modal.add-product2 />
 
-                <div>
-                    <livewire:card.product-information />
+
+                <div class="py-5">
+                    <livewire:table.product-info-admin />
+                    <livewire:modal.add-product2 />
                     <livewire:modal.edit-product />
                     <livewire:modal.delete-product />
+                </div>
+
+                <div class="py-5 px-5">
+                    <livewire:table.inventory-info-admin />
+                    <livewire:modal.add-inventory />
                 </div>
 
                 <div class="px-5">
                     <div class="py-5">
                         <livewire:table.lead-tunneling />
                     </div>
-                    
+
                     <div class="py-5">
                         <livewire:card.staff-information />
-                        <livewire:modal.delete-staff-on-admin/>
+                        <livewire:modal.delete-staff-on-admin />
                         <livewire:modal.add-staff-on-admin />
                         <livewire:modal.edit-staff-on-admin />
                     </div>
 
                     <div class="py-5">
                         <livewire:table.announcements />
-                        <livewire:modal.delete-announcement-on-admin/>
+                        <livewire:modal.delete-announcement-on-admin />
                         <livewire:modal.add-announcement-on-admin />
                     </div>
                 </div>
@@ -233,8 +230,6 @@
     @livewireScripts
     <script src="https://unpkg.com/flowbite@1.4.6/dist/flowbite.js"></script>
     <script src="assets/vendor/flowbite/dist/datepicker.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    @livewireScripts
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
@@ -265,6 +260,31 @@
                 imgPreview.src = oFREvent.target.result;
             }
         }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js" integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+            $('.repeater').repeater({
+                // (Optional)
+                // start with an empty list of repeaters. Set your first (and only)
+                // "data-repeater-item" with style="display:none;" and pass the
+                // following configuration flag
+                initEmpty: false,
+                defaultValues: {
+                    'text-input': 'foo'
+                },
+                show: function () {
+                    $(this).slideDown();
+                },
+                hide: function (deleteElement) {
+                    if(confirm('Are you sure you want to delete this materi?')) {
+                        $(this).slideUp(deleteElement);
+                    }
+                },
+                isFirstItemUndeletable: true
+            })
+        });
     </script>
 </body>
 
